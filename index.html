@@ -97,14 +97,7 @@ body {
     margin-top: 6px;
 }
 
-.subtitle {
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.75;
-    margin: 4px 0 0;
-}
-
-/* Islamic Crescent & Star Divider */
+/* Islamic Rub el Hizb (۞) Divider */
 .islamic-divider {
     display: flex;
     align-items: center;
@@ -118,6 +111,13 @@ body {
     flex: 1;
     max-width: 110px;
     background: linear-gradient(90deg, transparent, rgba(233, 185, 103, 0.45), transparent);
+}
+
+.rub-el-hizb {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 6px rgba(233, 185, 103, 0.35));
 }
 
 /* Host & Couple Card */
@@ -610,13 +610,16 @@ body {
         <p class="verse-translation">&ldquo;And We created you in pairs.&rdquo;</p>
         <div class="surah-ref">&mdash; SURAH AN-NABA (78:8)</div>
 
-        <!-- Inline SVG Islamic Crescent Moon & 8-Pointed Star Divider -->
+        <!-- Inline SVG Islamic Crescent Moon & Rub el Hizb (۞) Divider -->
         <div class="islamic-divider" aria-hidden="true">
             <span class="line"></span>
-            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.5 3C9.53 3 5.5 7.03 5.5 12C5.5 16.97 9.53 21 14.5 21C16.32 21 18.02 20.46 19.44 19.53C15.72 19.14 12.82 15.92 12.82 12C12.82 8.08 15.72 4.86 19.44 4.47C18.02 3.54 16.32 3 14.5 3Z" fill="#e9b967" fill-opacity="0.22" stroke="#e9b967" stroke-width="1.2"/>
-                <rect x="19" y="9" width="6" height="6" stroke="#55dce9" stroke-width="1.1"/>
-                <rect x="19" y="9" width="6" height="6" transform="rotate(45 22 12)" stroke="#55dce9" stroke-width="1.1"/>
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Crescent Moon (Hilal) -->
+                <path d="M13.5 3C8.53 3 4.5 7.03 4.5 12C4.5 16.97 8.53 21 13.5 21C15.32 21 17.02 20.46 18.44 19.53C14.72 19.14 11.82 15.92 11.82 12C11.82 8.08 14.72 4.86 18.44 4.47C17.02 3.54 15.32 3 13.5 3Z" fill="#e9b967" fill-opacity="0.24" stroke="#e9b967" stroke-width="1.25"/>
+                <!-- Rub el Hizb (۞) -->
+                <rect x="20.5" y="8" width="8" height="8" stroke="#e9b967" stroke-width="1.15"/>
+                <rect x="20.5" y="8" width="8" height="8" transform="rotate(45 24.5 12)" stroke="#55dce9" stroke-width="1.15"/>
+                <circle cx="24.5" cy="12" r="1.2" fill="#e9b967"/>
             </svg>
             <span class="line"></span>
         </div>
@@ -645,13 +648,14 @@ body {
             <div class="name">ALFIYAS MUHAMMED</div>
 
             <div class="ampersand-row">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M9.5 2C6.19 2 3.5 4.69 3.5 8C3.5 11.31 6.19 14 9.5 14C10.71 14 11.85 13.64 12.79 13.02C10.31 12.76 8.38 10.61 8.38 8C8.38 5.39 10.31 3.24 12.79 2.98C11.85 2.36 10.71 2 9.5 2Z" stroke="#e9b967" stroke-width="1.2"/>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M9.5 2C6.19 2 3.5 4.69 3.5 8C3.5 11.31 6.19 14 9.5 14C10.71 14 11.85 13.64 12.79 13.02C10.31 12.76 8.38 10.61 8.38 8C8.38 5.39 10.31 3.24 12.79 2.98C11.85 2.36 10.71 2 9.5 2Z" fill="#e9b967" fill-opacity="0.2" stroke="#e9b967" stroke-width="1.2"/>
                 </svg>
                 <span class="ampersand">&amp;</span>
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <rect x="4.5" y="4.5" width="7" height="7" stroke="#55dce9" stroke-width="1.1"/>
-                    <rect x="4.5" y="4.5" width="7" height="7" transform="rotate(45 8 8)" stroke="#55dce9" stroke-width="1.1"/>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="4" y="4" width="8" height="8" stroke="#e9b967" stroke-width="1.1"/>
+                    <rect x="4" y="4" width="8" height="8" transform="rotate(45 8 8)" stroke="#55dce9" stroke-width="1.1"/>
+                    <circle cx="8" cy="8" r="1.1" fill="#e9b967"/>
                 </svg>
             </div>
 
@@ -751,13 +755,16 @@ body {
 
     <!-- CARD 4: DIRECT DUAS, WISHES & CONTACT -->
     <section class="card">
-        <!-- Inline SVG Islamic Crescent Moon & 8-Pointed Star Divider -->
+        <!-- Inline SVG Islamic Crescent Moon & Rub el Hizb (۞) Divider -->
         <div class="islamic-divider" style="margin-top: 0;" aria-hidden="true">
             <span class="line"></span>
-            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.5 3C9.53 3 5.5 7.03 5.5 12C5.5 16.97 9.53 21 14.5 21C16.32 21 18.02 20.46 19.44 19.53C15.72 19.14 12.82 15.92 12.82 12C12.82 8.08 15.72 4.86 19.44 4.47C18.02 3.54 16.32 3 14.5 3Z" fill="#e9b967" fill-opacity="0.22" stroke="#e9b967" stroke-width="1.2"/>
-                <rect x="19" y="9" width="6" height="6" stroke="#55dce9" stroke-width="1.1"/>
-                <rect x="19" y="9" width="6" height="6" transform="rotate(45 22 12)" stroke="#55dce9" stroke-width="1.1"/>
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Crescent Moon (Hilal) -->
+                <path d="M13.5 3C8.53 3 4.5 7.03 4.5 12C4.5 16.97 8.53 21 13.5 21C15.32 21 17.02 20.46 18.44 19.53C14.72 19.14 11.82 15.92 11.82 12C11.82 8.08 14.72 4.86 18.44 4.47C17.02 3.54 15.32 3 13.5 3Z" fill="#e9b967" fill-opacity="0.24" stroke="#e9b967" stroke-width="1.25"/>
+                <!-- Rub el Hizb (۞) -->
+                <rect x="20.5" y="8" width="8" height="8" stroke="#e9b967" stroke-width="1.15"/>
+                <rect x="20.5" y="8" width="8" height="8" transform="rotate(45 24.5 12)" stroke="#55dce9" stroke-width="1.15"/>
+                <circle cx="24.5" cy="12" r="1.2" fill="#e9b967"/>
             </svg>
             <span class="line"></span>
         </div>
