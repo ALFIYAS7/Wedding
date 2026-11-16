@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walima Reception Invitation - Alfiyas & Sincila</title>
+    <meta name="theme-color" content="#050a0e">
+    <meta name="description" content="Walima Reception Invitation of Alfiyas Muhammed & Sincila KM — Sunday, 20 December 2026 at Diamond Banquet Hall A/C, Allapra, Perumbavoor.">
+    <title>Walima Reception | Alfiyas & Sincila</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,319 +19,796 @@
                         surface: '#0a141d',
                         cyberCyan: '#00f3ff',
                         champagneGold: '#ffaa00',
-                        deepBlue: '#0d1b2a'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         tech: ['Orbitron', 'sans-serif'],
+                        arabic: ['Amiri', 'serif'],
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts for Futuristic Tech & Clean Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --obsidian: #050a0e;
+            --surface: #0a141d;
+            --cyan: #00f3ff;
+            --gold: #ffaa00;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         body {
-            background-color: #050a0e;
+            background-color: var(--obsidian);
             color: #e2e8f0;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
+            margin: 0;
         }
-        .font-tech {
-            font-family: 'Orbitron', sans-serif;
+
+        /* Subtle Ambient Radial Halos & Micro-Grid */
+        .ambient-bg {
+            background-image:
+                radial-gradient(circle at 50% 12%, rgba(0, 243, 255, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 50% 88%, rgba(255, 170, 0, 0.07) 0%, transparent 45%),
+                linear-gradient(rgba(0, 243, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.025) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
         }
-        .font-arabic {
-            font-family: 'Amiri', serif;
-        }
-        /* Custom Glowing & Holographic Borders */
-        .glass-card {
-            background: rgba(10, 20, 29, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(0, 243, 255, 0.15);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 243, 255, 0.05);
-        }
-        .gold-glow {
-            text-shadow: 0 0 15px rgba(255, 170, 0, 0.4);
-        }
-        .cyan-glow {
-            text-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
-        }
-        .btn-cyber {
-            background: linear-gradient(135deg, rgba(0,243,255,0.1), rgba(255,170,0,0.1));
-            border: 1px solid #00f3ff;
-            box-shadow: 0 0 15px rgba(0,243,255,0.3);
-            transition: all 0.3s ease;
-        }
-        .btn-cyber:hover {
-            background: linear-gradient(135deg, rgba(0,243,255,0.3), rgba(255,170,0,0.3));
-            box-shadow: 0 0 25px rgba(0,243,255,0.6);
-            transform: translateY(-2px);
-        }
-        /* Rotating Geometric Astrolabe Background */
-        #bgCanvas {
+
+        #astrolabeCanvas {
             position: fixed;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100vw;
             height: 100vh;
             pointer-events: none;
             z-index: 0;
         }
-        .laser-grid {
-            background-image: linear-gradient(rgba(0,243,255,0.03) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(0,243,255,0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
+
+        /* Holographic Glass Card with 3D Tilt Support */
+        .holo-card {
+            background: linear-gradient(160deg, rgba(12, 24, 35, 0.84) 0%, rgba(7, 15, 22, 0.9) 100%);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(0, 243, 255, 0.18);
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.75),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                inset 0 0 24px rgba(0, 243, 255, 0.03);
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+            transform-style: preserve-3d;
+        }
+
+        .holo-card:hover {
+            border-color: rgba(0, 243, 255, 0.38);
+            box-shadow:
+                0 24px 60px rgba(0, 0, 0, 0.85),
+                0 0 28px rgba(0, 243, 255, 0.08),
+                inset 0 0 28px rgba(0, 243, 255, 0.05);
+        }
+
+        /* Corner Reticle Accents */
+        .corner-tl, .corner-tr, .corner-bl, .corner-br {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            pointer-events: none;
+            opacity: 0.75;
+        }
+        .corner-tl { top: 0; left: 0; border-top: 1.5px solid var(--cyan); border-left: 1.5px solid var(--cyan); border-top-left-radius: 1rem; }
+        .corner-tr { top: 0; right: 0; border-top: 1.5px solid var(--cyan); border-right: 1.5px solid var(--cyan); border-top-right-radius: 1rem; }
+        .corner-bl { bottom: 0; left: 0; border-bottom: 1.5px solid var(--gold); border-left: 1.5px solid var(--gold); border-bottom-left-radius: 1rem; }
+        .corner-br { bottom: 0; right: 0; border-bottom: 1.5px solid var(--gold); border-right: 1.5px solid var(--gold); border-bottom-right-radius: 1rem; }
+
+        .gold-glow {
+            text-shadow: 0 0 22px rgba(255, 170, 0, 0.35);
+        }
+
+        .cyan-glow {
+            text-shadow: 0 0 22px rgba(0, 243, 255, 0.32);
+        }
+
+        /* Primary Gold CTA */
+        .btn-gold {
+            background: linear-gradient(135deg, #e09619 0%, #ffbe42 50%, #e09619 100%);
+            background-size: 200% auto;
+            color: #050a0e;
+            box-shadow: 0 6px 24px rgba(255, 170, 0, 0.28);
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            background-position: right center;
+            box-shadow: 0 8px 30px rgba(255, 170, 0, 0.45);
+            transform: translateY(-2px);
+        }
+
+        /* Secondary Cyan Glass CTA */
+        .btn-glass {
+            background: rgba(0, 243, 255, 0.06);
+            border: 1px solid rgba(0, 243, 255, 0.28);
+            color: #e2e8f0;
+            transition: all 0.25s ease;
+        }
+        .btn-glass:hover {
+            background: rgba(0, 243, 255, 0.14);
+            border-color: var(--cyan);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 243, 255, 0.16);
+        }
+
+        /* Smooth Stagger Entrance */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .reveal-1 { animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        .reveal-2 { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.14s forwards; }
+        .reveal-3 { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.28s forwards; }
+
+        @keyframes slowSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .crest-spin {
+            transform-origin: center;
+            animation: slowSpin 48s linear infinite;
+        }
+
+        /* Modal Backdrop Transition */
+        .modal-backdrop {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.28s ease;
+        }
+        .modal-backdrop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-panel {
+            transform: translateY(16px) scale(0.98);
+            transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .modal-backdrop.active .modal-panel {
+            transform: translateY(0) scale(1);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+            }
         }
     </style>
 </head>
-<body class="laser-grid min-h-screen relative flex flex-col items-center justify-between p-4 sm:p-6 md:p-8">
+<body class="ambient-bg min-h-screen relative flex flex-col items-center justify-between px-4 py-6 sm:px-6 sm:py-10 selection:bg-cyberCyan/20 selection:text-cyberCyan">
 
-    <!-- Interactive Canvas Background for Robotic/Geometric Rings & Particles -->
-    <canvas id="bgCanvas"></canvas>
+    <!-- Interactive Geometric Astrolabe & Starfield Canvas -->
+    <canvas id="astrolabeCanvas" aria-hidden="true"></canvas>
 
-    <!-- Main Container -->
-    <main class="w-full max-w-xl z-10 my-auto flex flex-col gap-6 py-8">
+    <!-- Main Invitation Container -->
+    <main class="w-full max-w-lg z-10 my-auto flex flex-col gap-5">
 
-        <!-- Header / Bismillah Section -->
-        <div class="glass-card rounded-2xl p-6 text-center relative overflow-hidden transition-all duration-500 hover:border-cyberCyan/40">
-            <!-- Decorative Laser corner accents -->
-            <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyberCyan"></div>
-            <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyberCyan"></div>
-            <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cyberCyan"></div>
-            <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyberCyan"></div>
+        <!-- CARD 1: Islamic Geometric Crest & Quranic Opening -->
+        <section class="holo-card tilt-card rounded-2xl px-6 py-7 text-center relative overflow-hidden reveal-1">
+            <span class="corner-tl"></span>
+            <span class="corner-tr"></span>
+            <span class="corner-bl"></span>
+            <span class="corner-br"></span>
 
-            <p class="font-arabic text-2xl sm:text-3xl text-champagneGold gold-glow mb-2">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-            <p class="font-arabic text-lg sm:text-xl text-cyan-200 mb-1">وَخَلَقْنَاكُمْ أَزْوَاجًا</p>
-            <p class="text-xs sm:text-sm text-gray-400 italic font-sans mb-1">"And We created you in pairs."</p>
-            <p class="text-[10px] sm:text-xs text-cyberCyan font-tech tracking-widest uppercase">— Surah An-Naba (78:8)</p>
-        </div>
-
-        <!-- Host & Invitation Section -->
-        <div class="glass-card rounded-2xl p-6 text-center space-y-4">
-            <div class="inline-block px-3 py-1 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 text-cyberCyan text-xs font-tech tracking-widest uppercase mb-1">
-                System Transmission // Walima Invitation
+            <!-- Custom Rub el Hizb / Astrolabe Crest SVG -->
+            <div class="flex justify-center mb-3" aria-hidden="true">
+                <svg class="w-12 h-12 text-champagneGold" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="29" stroke="rgba(0, 243, 255, 0.3)" stroke-width="1" stroke-dasharray="3 3"/>
+                    <g class="crest-spin">
+                        <rect x="16" y="16" width="32" height="32" stroke="#ffaa00" stroke-width="1.2" stroke-opacity="0.85"/>
+                        <rect x="16" y="16" width="32" height="32" transform="rotate(45 32 32)" stroke="#00f3ff" stroke-width="1.2" stroke-opacity="0.85"/>
+                    </g>
+                    <circle cx="32" cy="32" r="6" stroke="#ffaa00" stroke-width="1.2"/>
+                    <circle cx="32" cy="32" r="2" fill="#00f3ff"/>
+                </svg>
             </div>
-            
-            <p class="text-xs sm:text-sm text-gray-300">
-                <span class="text-champagneGold font-semibold">MR. PAREETH K K & MRS. ZEENATH PAREETH</span><br>
-                <span class="text-gray-400 text-xs">Kottanattupara (h) Pallikavala, Perumbavoor</span>
-            </p>
 
-            <p class="text-xs sm:text-sm text-gray-300 mt-2">
-                Request the honor of your presence and blessings to celebrate the Walima reception of their beloved son,
+            <p class="font-arabic text-2xl sm:text-3xl text-champagneGold gold-glow leading-relaxed mb-2" lang="ar" dir="rtl">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
+            <p class="font-arabic text-xl sm:text-2xl text-cyan-200 leading-relaxed mb-1.5" lang="ar" dir="rtl">
+                وَخَلَقْنَاكُمْ أَزْوَاجًا
+            </p>
+            <p class="text-xs sm:text-sm text-slate-300 italic font-light">
+                “And We created you in pairs.”
+            </p>
+            <p class="mt-2 text-[10px] font-tech tracking-[0.22em] text-cyberCyan/90 uppercase">
+                Surah An-Naba · 78:8
+            </p>
+        </section>
 
-            <!-- Couple Names HUD Display -->
-            <div class="py-4 my-2 border-y border-cyberCyan/20 relative">
-                <div class="absolute inset-0 bg-cyberCyan/5 blur-xl -z-10 rounded-full"></div>
-                <h1 class="font-tech text-xl sm:text-3xl font-bold text-cyberCyan cyan-glow tracking-wider">
-                    ALFIYAS MUHAMMED
-                </h1>
-                <span class="text-champagneGold font-tech text-lg sm:text-xl my-1 block">&</span>
-                <h1 class="font-tech text-xl sm:text-3xl font-bold text-cyberCyan cyan-glow tracking-wider">
-                    SINCILA KM
-                </h1>
-                <p class="text-xs text-gray-400 mt-2">
-                    Beloved daughter of <span class="text-gray-200 font-medium">Moosa KB & Shyla MM</span><br>
-                    <span class="text-gray-500 text-[11px]">Kanjirathamthadam h, Randar p.o., Muvattupuzha</span>
+        <!-- CARD 2: Hosts, Couple & Family Lineage -->
+        <section class="holo-card tilt-card rounded-2xl px-6 py-7 text-center relative overflow-hidden reveal-2">
+            <span class="corner-tl"></span>
+            <span class="corner-tr"></span>
+            <span class="corner-bl"></span>
+            <span class="corner-br"></span>
+
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyberCyan/10 border border-cyberCyan/30 text-cyberCyan text-[10px] sm:text-xs font-tech tracking-[0.2em] uppercase mb-5">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagneGold animate-pulse"></span>
+                Walima Reception
+            </div>
+
+            <!-- Hosts -->
+            <div class="space-y-1">
+                <p class="text-sm sm:text-base font-bold text-champagneGold tracking-wide">
+                    MR. PAREETH K K &amp; MRS. ZEENATH PAREETH
+                </p>
+                <p class="text-xs text-slate-400">
+                    Kottanattupara (H), Pallikavala, Perumbavoor
                 </p>
             </div>
 
-            <p class="text-xs sm:text-sm text-gray-300 italic px-2">
-                "Invite you to share in our joy and shower your duas as we embark on a blessed journey together, Insha'Allah"
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mt-4 mb-5 max-w-md mx-auto">
+                Cordially invite your esteemed presence and prayers to grace the Walima reception of their beloved son
             </p>
-        </div>
 
-        <!-- Event Schedule & Countdown Card -->
-        <div class="glass-card rounded-2xl p-6 text-center space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                <!-- Date & Time Box -->
-                <div class="bg-surface/80 rounded-xl p-4 border border-champagneGold/30 flex items-center space-x-3">
-                    <div class="p-3 rounded-lg bg-champagneGold/10 text-champagneGold">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            <!-- Couple Showcase -->
+            <div class="py-5 px-3 my-2 rounded-xl bg-obsidian/60 border-y border-champagneGold/30 relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-cyberCyan/5 to-transparent pointer-events-none"></div>
+                
+                <h1 class="font-tech text-[1.15rem] sm:text-2xl md:text-[1.65rem] font-extrabold text-cyberCyan cyan-glow tracking-wider whitespace-nowrap">
+                    ALFIYAS MUHAMMED
+                </h1>
+                
+                <div class="my-2 flex items-center justify-center gap-3">
+                    <span class="h-px w-10 bg-gradient-to-r from-transparent to-champagneGold/60"></span>
+                    <span class="font-arabic italic text-2xl text-champagneGold leading-none">&amp;</span>
+                    <span class="h-px w-10 bg-gradient-to-l from-transparent to-champagneGold/60"></span>
+                </div>
+
+                <h1 class="font-tech text-[1.15rem] sm:text-2xl md:text-[1.65rem] font-extrabold text-cyberCyan cyan-glow tracking-wider whitespace-nowrap">
+                    SINCILA KM
+                </h1>
+
+                <div class="mt-4 pt-3 border-t border-slate-800/80 text-xs text-slate-400 leading-relaxed">
+                    Beloved daughter of <span class="text-slate-200 font-semibold">Moosa KB &amp; Shyla MM</span><br>
+                    <span class="text-[11px] text-slate-400">Kanjirathamthadam (H), Randar P.O., Muvattupuzha</span>
+                </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed mt-5 px-1">
+                “Join us in celebrating our joy and shower your duas as we embark on a blessed journey together, Insha’Allah.”
+            </p>
+        </section>
+
+        <!-- CARD 3: Date, Venue, IST Countdown & Actions -->
+        <section class="holo-card tilt-card rounded-2xl px-6 py-7 text-center relative overflow-hidden reveal-3">
+            <span class="corner-tl"></span>
+            <span class="corner-tr"></span>
+            <span class="corner-bl"></span>
+            <span class="corner-br"></span>
+
+            <!-- Event Details Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-left">
+                <!-- Date & Time -->
+                <div class="bg-obsidian/70 rounded-xl p-4 border border-champagneGold/30 flex items-start gap-3.5">
+                    <div class="p-2.5 rounded-lg bg-champagneGold/10 text-champagneGold shrink-0 mt-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                     </div>
                     <div>
-                        <div class="text-[10px] text-gray-400 font-tech uppercase tracking-wider">Date & Time</div>
-                        <div class="text-sm sm:text-base font-bold text-champagneGold">Sunday, 20 Dec 2026</div>
-                        <div class="text-xs text-cyan-300 font-medium">4:00 PM Onwards</div>
+                        <div class="text-[10px] text-slate-400 font-tech uppercase tracking-widest mb-1">Date &amp; Time</div>
+                        <div class="text-sm font-bold text-champagneGold leading-snug">Sunday, 20 Dec 2026</div>
+                        <div class="text-xs text-cyberCyan font-medium mt-0.5">4:00 PM Onwards (IST)</div>
                     </div>
                 </div>
 
-                <!-- Venue Box -->
-                <div class="bg-surface/80 rounded-xl p-4 border border-cyberCyan/30 flex items-center space-x-3">
-                    <div class="p-3 rounded-lg bg-cyberCyan/10 text-cyberCyan">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <!-- Venue -->
+                <div class="bg-obsidian/70 rounded-xl p-4 border border-cyberCyan/30 flex items-start gap-3.5">
+                    <div class="p-2.5 rounded-lg bg-cyberCyan/10 text-cyberCyan shrink-0 mt-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                     </div>
                     <div>
-                        <div class="text-[10px] text-gray-400 font-tech uppercase tracking-wider">Venue</div>
-                        <div class="text-sm sm:text-base font-bold text-white">Diamond Banquet Hall A/C</div>
-                        <div class="text-xs text-gray-300">Allapra, Perumbavoor</div>
+                        <div class="text-[10px] text-slate-400 font-tech uppercase tracking-widest mb-1">Venue</div>
+                        <div class="text-sm font-bold text-white leading-snug">Diamond Banquet Hall A/C</div>
+                        <div class="text-xs text-slate-300 mt-0.5">Allapra, Perumbavoor</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Live Countdown Timer -->
-            <div class="pt-2">
-                <div class="text-xs text-cyberCyan font-tech tracking-widest uppercase mb-3">SYSTEM COUNTDOWN TO RECEPTION</div>
-                <div class="grid grid-cols-4 gap-2 text-center">
-                    <div class="bg-surface/90 rounded-lg p-2 border border-cyberCyan/20">
-                        <div id="days" class="font-tech text-lg sm:text-2xl font-bold text-champagneGold">00</div>
-                        <div class="text-[9px] text-gray-400 uppercase font-tech">Days</div>
+            <!-- IST-Locked Countdown -->
+            <div class="mt-6 pt-5 border-t border-slate-800/80">
+                <div class="text-[10px] text-slate-400 font-tech tracking-[0.2em] uppercase mb-3" id="countdownHeading">
+                    Countdown to Reception
+                </div>
+                <div class="grid grid-cols-4 gap-2.5">
+                    <div class="bg-obsidian/80 rounded-xl py-3 px-1 border border-cyberCyan/20">
+                        <div id="days" class="font-tech text-xl sm:text-2xl font-bold text-champagneGold tabular-nums">00</div>
+                        <div class="text-[9px] text-slate-400 uppercase font-tech tracking-wider mt-1">Days</div>
                     </div>
-                    <div class="bg-surface/90 rounded-lg p-2 border border-cyberCyan/20">
-                        <div id="hours" class="font-tech text-lg sm:text-2xl font-bold text-champagneGold">00</div>
-                        <div class="text-[9px] text-gray-400 uppercase font-tech">Hours</div>
+                    <div class="bg-obsidian/80 rounded-xl py-3 px-1 border border-cyberCyan/20">
+                        <div id="hours" class="font-tech text-xl sm:text-2xl font-bold text-champagneGold tabular-nums">00</div>
+                        <div class="text-[9px] text-slate-400 uppercase font-tech tracking-wider mt-1">Hours</div>
                     </div>
-                    <div class="bg-surface/90 rounded-lg p-2 border border-cyberCyan/20">
-                        <div id="minutes" class="font-tech text-lg sm:text-2xl font-bold text-champagneGold">00</div>
-                        <div class="text-[9px] text-gray-400 uppercase font-tech">Mins</div>
+                    <div class="bg-obsidian/80 rounded-xl py-3 px-1 border border-cyberCyan/20">
+                        <div id="minutes" class="font-tech text-xl sm:text-2xl font-bold text-champagneGold tabular-nums">00</div>
+                        <div class="text-[9px] text-slate-400 uppercase font-tech tracking-wider mt-1">Mins</div>
                     </div>
-                    <div class="bg-surface/90 rounded-lg p-2 border border-cyberCyan/20">
-                        <div id="seconds" class="font-tech text-lg sm:text-2xl font-bold text-cyberCyan">00</div>
-                        <div class="text-[9px] text-gray-400 uppercase font-tech">Secs</div>
+                    <div class="bg-obsidian/80 rounded-xl py-3 px-1 border border-cyberCyan/20">
+                        <div id="seconds" class="font-tech text-xl sm:text-2xl font-bold text-cyberCyan tabular-nums">00</div>
+                        <div class="text-[9px] text-slate-400 uppercase font-tech tracking-wider mt-1">Secs</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Navigation Button -->
-            <a href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac" target="_blank" rel="noopener noreferrer" 
-               class="btn-cyber w-full py-4 rounded-xl flex items-center justify-center space-x-3 text-white font-tech tracking-wider uppercase text-sm font-bold shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyberCyan animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                </svg>
-                <span>Initialize Navigation</span>
-            </a>
-        </div>
+            <!-- Streamlined Action Bar -->
+            <div class="mt-6 flex flex-col gap-3">
+                <!-- Primary Navigation CTA -->
+                <a href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac" target="_blank" rel="noopener noreferrer"
+                   class="btn-gold w-full py-3.5 px-4 rounded-xl flex items-center justify-center gap-2.5 font-tech tracking-wider uppercase text-xs sm:text-sm font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Open in Google Maps</span>
+                </a>
+
+                <!-- Secondary Interactive Buttons -->
+                <div class="grid grid-cols-3 gap-2.5">
+                    <button type="button" onclick="downloadCalendar()"
+                            class="btn-glass py-3 px-2 rounded-xl flex flex-col sm:flex-row items-center justify-center gap-1.5 text-[11px] sm:text-xs font-medium cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-champagneGold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span>Save Date</span>
+                    </button>
+
+                    <button type="button" onclick="openDuaModal()"
+                            class="btn-glass py-3 px-2 rounded-xl flex flex-col sm:flex-row items-center justify-center gap-1.5 text-[11px] sm:text-xs font-medium cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-cyberCyan shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                        <span>Send Duas</span>
+                    </button>
+
+                    <button type="button" onclick="shareInvite()"
+                            class="btn-glass py-3 px-2 rounded-xl flex flex-col sm:flex-row items-center justify-center gap-1.5 text-[11px] sm:text-xs font-medium cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="z-10 text-center text-xs text-gray-500 py-4 font-tech tracking-widest">
-        SECURE TRANSMISSION // WALIMA 2026
+    <!-- Dignified Minimal Footer -->
+    <footer class="z-10 text-center text-[10px] text-slate-500 pt-6 pb-2 font-tech tracking-[0.22em] uppercase">
+        With Love &amp; Duas · Alfiyas &amp; Sincila · 2026
     </footer>
 
-    <!-- JavaScript for Canvas Animation & Countdown -->
+    <!-- Interactive "Send Duas & Blessings" Keepsake Modal -->
+    <div id="duaModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-obsidian/85 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="duaModalTitle">
+        <div class="modal-panel holo-card w-full max-w-md rounded-2xl p-6 relative">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h2 id="duaModalTitle" class="font-tech text-sm sm:text-base font-bold text-cyberCyan tracking-wider uppercase">
+                        Send Duas &amp; Blessings
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Craft a keepsake blessing for Alfiyas &amp; Sincila</p>
+                </div>
+                <button type="button" onclick="closeDuaModal()" aria-label="Close modal"
+                        class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/80 transition cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Preset Dua Chips -->
+            <div class="mb-3">
+                <label class="block text-[10px] font-tech uppercase tracking-widest text-slate-400 mb-2">Choose a Traditional Dua</label>
+                <div class="flex flex-wrap gap-1.5">
+                    <button type="button" onclick="selectPresetDua(0)" class="preset-chip text-[11px] px-2.5 py-1.5 rounded-lg border border-champagneGold/40 bg-champagneGold/10 text-champagneGold hover:bg-champagneGold/20 transition cursor-pointer">
+                        BarakAllahu Lakuma
+                    </button>
+                    <button type="button" onclick="selectPresetDua(1)" class="preset-chip text-[11px] px-2.5 py-1.5 rounded-lg border border-cyberCyan/30 bg-cyberCyan/5 text-cyan-200 hover:bg-cyberCyan/15 transition cursor-pointer">
+                        Mawaddah &amp; Rahmah
+                    </button>
+                    <button type="button" onclick="selectPresetDua(2)" class="preset-chip text-[11px] px-2.5 py-1.5 rounded-lg border border-cyberCyan/30 bg-cyberCyan/5 text-cyan-200 hover:bg-cyberCyan/15 transition cursor-pointer">
+                        Warm Walima Wishes
+                    </button>
+                </div>
+            </div>
+
+            <!-- Guest Name & Message Inputs -->
+            <div class="space-y-3 mb-4">
+                <div>
+                    <label for="guestName" class="block text-[10px] font-tech uppercase tracking-widest text-slate-400 mb-1">Your Name / Family</label>
+                    <input id="guestName" type="text" placeholder="e.g. Dr. Fasil & Family" oninput="updateKeepsakePreview()"
+                           class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian/90 border border-slate-700/80 focus:border-cyberCyan focus:outline-none text-xs sm:text-sm text-white placeholder-slate-500">
+                </div>
+                <div>
+                    <label for="guestMessage" class="block text-[10px] font-tech uppercase tracking-widest text-slate-400 mb-1">Your Dua or Message</label>
+                    <textarea id="guestMessage" rows="3" oninput="updateKeepsakePreview()"
+                              class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian/90 border border-slate-700/80 focus:border-cyberCyan focus:outline-none text-xs sm:text-sm text-white placeholder-slate-500 resize-none"></textarea>
+                </div>
+            </div>
+
+            <!-- Live Holographic Keepsake Preview -->
+            <div class="rounded-xl p-4 bg-gradient-to-br from-obsidian via-surface to-obsidian border border-champagneGold/35 mb-4 text-center relative overflow-hidden">
+                <div class="text-[9px] font-tech tracking-[0.2em] text-champagneGold uppercase mb-1.5">Keepsake Blessing Preview</div>
+                <p id="previewArabic" class="font-arabic text-base text-champagneGold mb-1" dir="rtl">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+                <p id="previewText" class="text-xs text-slate-200 italic leading-relaxed"></p>
+                <p id="previewAuthor" class="text-[11px] font-semibold text-cyberCyan mt-2">— Warm Regards</p>
+            </div>
+
+            <!-- Send Actions -->
+            <div class="grid grid-cols-2 gap-2.5">
+                <button type="button" onclick="sendDuaWhatsApp()"
+                        class="btn-gold py-3 px-3 rounded-xl flex items-center justify-center gap-2 font-tech text-[11px] font-bold uppercase tracking-wider cursor-pointer">
+                    <span>Send via WhatsApp</span>
+                </button>
+                <button type="button" onclick="copyDuaText()"
+                        class="btn-glass py-3 px-3 rounded-xl flex items-center justify-center gap-2 font-tech text-[11px] font-semibold uppercase tracking-wider cursor-pointer">
+                    <span>Copy Blessing</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" role="status" aria-live="polite"
+         class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 pointer-events-none z-50 px-5 py-2.5 rounded-full bg-surface/95 border border-cyberCyan/60 text-white text-xs font-medium shadow-2xl transition-all duration-300 whitespace-nowrap">
+        Done!
+    </div>
+
     <script>
-        // --- Canvas Rotating Astrolabe & Particle Grid Background ---
-        const canvas = document.getElementById('bgCanvas');
+        // ==========================================
+        // 1. ROTATING GEOMETRIC ASTROLABE CANVAS
+        // ==========================================
+        const canvas = document.getElementById('astrolabeCanvas');
         const ctx = canvas.getContext('2d');
+        let width = 0, height = 0, angle = 0;
 
         function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         }
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        let angle = 0;
-        const particles = [];
-        for (let i = 0; i < 50; i++) {
-            particles.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 1.5,
-                speedX: (Math.random() - 0.5) * 0.3,
-                speedY: (Math.random() - 0.5) * 0.3,
-                opacity: Math.random() * 0.5 + 0.2
-            });
+        const stars = Array.from({ length: 42 }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: Math.random() * 1.4 + 0.3,
+            vx: (Math.random() - 0.5) * 0.22,
+            vy: (Math.random() - 0.5) * 0.22,
+            alpha: Math.random() * 0.45 + 0.15,
+            gold: Math.random() > 0.72
+        }));
+
+        function drawPolygon(radius, sides, rotation) {
+            ctx.beginPath();
+            for (let i = 0; i <= sides; i++) {
+                const theta = rotation + (i * 2 * Math.PI) / sides;
+                const px = Math.cos(theta) * radius;
+                const py = Math.sin(theta) * radius;
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.stroke();
         }
 
-        function drawBackground() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        function animateAstrolabe() {
+            ctx.clearRect(0, 0, width, height);
 
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
+            const cx = width / 2;
+            const cy = height / 2;
+            const baseR = Math.min(width, height) * 0.42;
 
-            // Draw Rotating Sci-Fi Geometric Rings (Astrolabe effect)
             ctx.save();
-            ctx.translate(centerX, centerY);
-            
-            // Outer Ring
-            ctx.strokeStyle = 'rgba(0, 243, 255, 0.08)';
+            ctx.translate(cx, cy);
+
+            // Outer celestial circle
+            ctx.strokeStyle = 'rgba(0, 243, 255, 0.06)';
             ctx.lineWidth = 1;
             ctx.beginPath();
-            ctx.arc(0, 0, Math.min(centerX, centerY) * 0.75, 0, Math.PI * 2);
+            ctx.arc(0, 0, baseR * 1.35, 0, Math.PI * 2);
             ctx.stroke();
 
-            // Rotating Middle Hexagon / Polygon Ring
-            ctx.save();
-            ctx.rotate(angle);
-            ctx.strokeStyle = 'rgba(255, 170, 0, 0.12)';
-            ctx.lineWidth = 1.5;
-            ctx.beginPath();
-            ctx.arc(0, 0, Math.min(centerX, centerY) * 0.55, 0, Math.PI * 2);
-            ctx.setLineDash([10, 15]);
-            ctx.stroke();
-            ctx.restore();
-
-            // Inner Counter-Rotating Ring
-            ctx.save();
-            ctx.rotate(-angle * 1.5);
-            ctx.strokeStyle = 'rgba(0, 243, 255, 0.15)';
+            // Interlocking rotating octagram (Islamic star geometry)
+            ctx.strokeStyle = 'rgba(255, 170, 0, 0.08)';
             ctx.lineWidth = 1;
+            drawPolygon(baseR * 1.05, 4, angle);
+            drawPolygon(baseR * 1.05, 4, angle + Math.PI / 4);
+
+            // Dashed astrolabe ring
+            ctx.save();
+            ctx.rotate(-angle * 1.4);
+            ctx.strokeStyle = 'rgba(0, 243, 255, 0.1)';
+            ctx.setLineDash([6, 14]);
             ctx.beginPath();
-            ctx.arc(0, 0, Math.min(centerX, centerY) * 0.35, 0, Math.PI * 2);
-            ctx.setLineDash([5, 10]);
+            ctx.arc(0, 0, baseR * 0.72, 0, Math.PI * 2);
             ctx.stroke();
             ctx.restore();
 
             ctx.restore();
 
-            // Draw Floating Particles
-            particles.forEach(p => {
-                ctx.fillStyle = `rgba(0, 243, 255, ${p.opacity})`;
+            // Ambient drifting particles
+            for (const s of stars) {
+                ctx.fillStyle = s.gold
+                    ? `rgba(255, 170, 0, ${s.alpha})`
+                    : `rgba(0, 243, 255, ${s.alpha})`;
                 ctx.beginPath();
-                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
                 ctx.fill();
 
-                p.x += p.speedX;
-                p.y += p.speedY;
+                s.x += s.vx;
+                s.y += s.vy;
+                if (s.x < 0) s.x = width;
+                if (s.x > width) s.x = 0;
+                if (s.y < 0) s.y = height;
+                if (s.y > height) s.y = 0;
+            }
 
-                if (p.x < 0) p.x = canvas.width;
-                if (p.x > canvas.width) p.x = 0;
-                if (p.y < 0) p.y = canvas.height;
-                if (p.y > canvas.height) p.y = 0;
-            });
-
-            angle += 0.002;
-            requestAnimationFrame(drawBackground);
+            angle += 0.0014;
+            requestAnimationFrame(animateAstrolabe);
         }
-        drawBackground();
+        animateAstrolabe();
 
-        // --- Live Countdown Timer ---
-        // Target date: Sunday, Dec 20, 2026 at 16:00:00
-        const targetDate = new Date("Dec 20, 2026 16:00:00").getTime();
+        // ==========================================
+        // 2. SUBTLE 3D HOLOGRAPHIC CARD TILT
+        // ==========================================
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `perspective(900px) rotateX(${(-y * 4).toFixed(2)}deg) rotateY(${(x * 4).toFixed(2)}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+            });
+        });
+
+        // ==========================================
+        // 3. IST-LOCKED LIVE COUNTDOWN TIMER
+        // ==========================================
+        const EVENT_IST = new Date('2026-12-20T16:00:00+05:30').getTime();
+        const pad = n => String(n).padStart(2, '0');
 
         function updateCountdown() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
+            const diff = EVENT_IST - Date.now();
+            const heading = document.getElementById('countdownHeading');
 
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                document.getElementById('days').innerText = String(days).padStart(2, '0');
-                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-            } else {
-                document.getElementById('days').innerText = "00";
-                document.getElementById('hours').innerText = "00";
-                document.getElementById('minutes').innerText = "00";
-                document.getElementById('seconds').innerText = "00";
+            if (diff <= 0) {
+                ['days', 'hours', 'minutes', 'seconds'].forEach(id => {
+                    document.getElementById(id).textContent = '00';
+                });
+                heading.textContent = diff > -21600000
+                    ? 'The Walima Reception Has Begun'
+                    : 'Thank You For Your Blessings & Presence';
+                heading.classList.replace('text-slate-400', 'text-champagneGold');
+                return;
             }
+
+            const days = Math.floor(diff / 86400000);
+            const hours = Math.floor((diff % 86400000) / 3600000);
+            const minutes = Math.floor((diff % 3600000) / 60000);
+            const seconds = Math.floor((diff % 60000) / 1000);
+
+            document.getElementById('days').textContent = pad(days);
+            document.getElementById('hours').textContent = pad(hours);
+            document.getElementById('minutes').textContent = pad(minutes);
+            document.getElementById('seconds').textContent = pad(seconds);
         }
-        setInterval(updateCountdown, 1000);
         updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // ==========================================
+        // 4. TOAST HELPER & CLIPBOARD FALLBACK
+        // ==========================================
+        let toastTimer;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.remove('opacity-0', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-4');
+            }, 2600);
+        }
+
+        function copyTextSafe(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+                showToast('Copied to clipboard');
+            } catch (e) {
+                showToast('Unable to copy automatically');
+            }
+            document.body.removeChild(ta);
+        }
+
+        // ==========================================
+        // 5. ADD TO CALENDAR (.ICS DOWNLOAD IN IST)
+        // ==========================================
+        function downloadCalendar() {
+            const icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Walima Reception 2026//Alfiyas & Sincila//EN',
+                'CALSCALE:GREGORIAN',
+                'METHOD:PUBLISH',
+                'BEGIN:VEVENT',
+                'UID:walima-alfiyas-sincila-20261220@walima2026',
+                'DTSTAMP:20261116T180000Z',
+                'DTSTART:20261220T103000Z',
+                'DTEND:20261220T153000Z',
+                'SUMMARY:Walima Reception — Alfiyas Muhammed & Sincila KM',
+                'LOCATION:Diamond Banquet Hall A/C, Allapra, Perumbavoor, Kerala',
+                'DESCRIPTION:Walima reception of Alfiyas Muhammed (S/o Mr. Pareeth K K & Mrs. Zeenath Pareeth) and Sincila KM (D/o Moosa KB & Shyla MM).\\nVenue Map: https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac',
+                'URL:https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac',
+                'STATUS:CONFIRMED',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Walima-Alfiyas-Sincila-2026.ics';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+            showToast('Calendar invite downloaded');
+        }
+
+        // ==========================================
+        // 6. SHARE INVITATION
+        // ==========================================
+        const fullInviteShareText = [
+            'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
+            'وَخَلَقْنَاكُمْ أَزْوَاجًا — "And We created you in pairs." (Surah An-Naba 78:8)',
+            '',
+            '*WALIMA RECEPTION INVITATION*',
+            '*ALFIYAS MUHAMMED & SINCILA KM*',
+            '',
+            'Hosted by: Mr. Pareeth K K & Mrs. Zeenath Pareeth (Kottanattupara (H), Pallikavala, Perumbavoor)',
+            'Bride: Beloved daughter of Moosa KB & Shyla MM (Kanjirathamthadam (H), Randar P.O., Muvattupuzha)',
+            '',
+            '📅 *Date:* Sunday, 20 December 2026',
+            '🕓 *Time:* 4:00 PM Onwards',
+            '📍 *Venue:* Diamond Banquet Hall A/C, Allapra, Perumbavoor',
+            '🗺️ *Location:* https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac'
+        ].join('\n');
+
+        async function shareInvite() {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Walima Reception | Alfiyas & Sincila',
+                        text: fullInviteShareText
+                    });
+                    return;
+                } catch (err) {
+                    if (err && err.name === 'AbortError') return;
+                }
+            }
+            window.open('https://wa.me/?text=' + encodeURIComponent(fullInviteShareText), '_blank', 'noopener,noreferrer');
+        }
+
+        // ==========================================
+        // 7. INTERACTIVE DUAS & BLESSINGS KEEPSAKE
+        // ==========================================
+        const presetDuas = [
+            {
+                arabic: 'بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ',
+                text: 'May Allah bless you both, shower His blessings upon you, and unite you together in goodness and faith.'
+            },
+            {
+                arabic: 'رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ',
+                text: 'May Allah fill your home with Mawaddah (love), Rahmah (mercy), and lifelong tranquility. Heartfelt Walima Mubarak!'
+            },
+            {
+                arabic: 'أَلْفُ مَبْرُوكٍ لِلْعَرُوسَيْنِ',
+                text: 'Warmest congratulations to Alfiyas & Sincila on your Walima! Wishing you a lifetime of joy, barakah, and togetherness.'
+            }
+        ];
+
+        let selectedDuaIndex = 0;
+
+        function selectPresetDua(idx) {
+            selectedDuaIndex = idx;
+            document.getElementById('guestMessage').value = presetDuas[idx].text;
+            document.getElementById('previewArabic').textContent = presetDuas[idx].arabic;
+
+            document.querySelectorAll('.preset-chip').forEach((btn, i) => {
+                if (i === idx) {
+                    btn.className = 'preset-chip text-[11px] px-2.5 py-1.5 rounded-lg border border-champagneGold/50 bg-champagneGold/15 text-champagneGold transition cursor-pointer';
+                } else {
+                    btn.className = 'preset-chip text-[11px] px-2.5 py-1.5 rounded-lg border border-cyberCyan/30 bg-cyberCyan/5 text-cyan-200 hover:bg-cyberCyan/15 transition cursor-pointer';
+                }
+            });
+            updateKeepsakePreview();
+        }
+
+        function updateKeepsakePreview() {
+            const name = document.getElementById('guestName').value.trim();
+            const msg = document.getElementById('guestMessage').value.trim() || presetDuas[selectedDuaIndex].text;
+            document.getElementById('previewText').textContent = `“${msg}”`;
+            document.getElementById('previewAuthor').textContent = name ? `— With Duas, ${name}` : '— With Warm Duas';
+        }
+
+        function openDuaModal() {
+            selectPresetDua(selectedDuaIndex);
+            const modal = document.getElementById('duaModal');
+            modal.classList.add('active');
+        }
+
+        function closeDuaModal() {
+            const modal = document.getElementById('duaModal');
+            modal.classList.remove('active');
+        }
+
+        document.getElementById('duaModal').addEventListener('click', e => {
+            if (e.target.id === 'duaModal') closeDuaModal();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeDuaModal();
+        });
+
+        function buildFormattedBlessing() {
+            const arabic = presetDuas[selectedDuaIndex].arabic;
+            const msg = document.getElementById('guestMessage').value.trim() || presetDuas[selectedDuaIndex].text;
+            const name = document.getElementById('guestName').value.trim();
+            return [
+                arabic,
+                '',
+                `“${msg}”`,
+                name ? `— With Duas & Blessings, ${name}` : '— With Duas & Blessings',
+                '',
+                'Walima Mubarak to Alfiyas Muhammed & Sincila KM ✨'
+            ].join('\n');
+        }
+
+        function sendDuaWhatsApp() {
+            const text = buildFormattedBlessing();
+            window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+            closeDuaModal();
+        }
+
+        function copyDuaText() {
+            copyTextSafe(buildFormattedBlessing());
+        }
     </script>
 </body>
 </html>
