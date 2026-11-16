@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07111c">
+<meta name="theme-color" content="#050b12">
 <meta name="description" content="Join us to celebrate the Walima reception of Alfiyas Muhammed and Sincila KM on 20 December 2026.">
 <title>Walima 2026 | Alfiyas &amp; Sincila</title>
 
@@ -19,6 +19,7 @@
     --cyan: #55dce9;
     --text: #e8edf3;
     --muted: #91a0b1;
+    --whatsapp: #25d366;
 }
 
 *, *::before, *::after {
@@ -26,61 +27,70 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
+html, body {
     margin: 0;
-    min-height: 100vh;
-    padding: 26px 15px;
-    background:
-        radial-gradient(ellipse at 50% 0%, #14283b 0%, transparent 55%),
-        var(--bg);
+    padding: 0;
+    background-color: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 24px 15px 96px;
+    background:
+        radial-gradient(ellipse at 50% 0%, #14283b 0%, transparent 58%),
+        var(--bg);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .container {
     width: 100%;
     max-width: 550px;
     position: relative;
-    animation: appear 0.8s ease;
-}
-
-@keyframes appear {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
+    opacity: 1;
 }
 
 .card {
-    background: rgba(12, 24, 37, 0.94);
-    border: 1px solid rgba(85, 220, 233, 0.2);
+    background: rgba(12, 24, 37, 0.96);
+    border: 1px solid rgba(85, 220, 233, 0.22);
     border-radius: 20px;
-    padding: 27px 23px;
-    margin-bottom: 17px;
+    padding: 28px 22px;
+    margin-bottom: 18px;
     text-align: center;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
 }
 
+/* Opening Card Typography */
 .arabic {
-    font-family: 'Amiri', serif;
+    font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
     color: var(--gold);
-    font-size: 31px;
+    font-size: 30px;
     direction: rtl;
     line-height: 1.55;
+    margin: 0;
 }
 
 .quran-verse {
-    font-family: 'Amiri', serif;
-    color: var(--cyan);
+    font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
+    color: #b8eaf0;
     font-size: 26px;
     direction: rtl;
     line-height: 1.55;
-    margin-top: 24px;
+    margin: 24px 0 0;
+}
+
+.verse-translation {
+    color: var(--muted);
+    font-size: 12.5px;
+    font-style: italic;
+    margin: 6px 0 0;
 }
 
 .surah-ref {
-    font: 500 9.5px 'Orbitron', sans-serif;
+    font: 600 9.5px 'Orbitron', sans-serif;
     color: var(--gold);
     letter-spacing: 1.8px;
     text-transform: uppercase;
@@ -90,10 +100,11 @@ body {
 .subtitle {
     color: var(--muted);
     font-size: 12px;
-    line-height: 1.8;
+    line-height: 1.75;
     margin: 4px 0 0;
 }
 
+/* Islamic Crescent & Star Divider */
 .islamic-divider {
     display: flex;
     align-items: center;
@@ -109,59 +120,68 @@ body {
     background: linear-gradient(90deg, transparent, rgba(233, 185, 103, 0.45), transparent);
 }
 
+/* Host & Couple Card */
 .tag {
     display: inline-block;
-    border: 1px solid rgba(85, 220, 233, 0.3);
-    background: rgba(85, 220, 233, 0.07);
+    border: 1px solid rgba(85, 220, 233, 0.32);
+    background: rgba(85, 220, 233, 0.08);
     color: var(--cyan);
     border-radius: 30px;
     padding: 7px 14px;
-    font: 500 10px 'Orbitron', sans-serif;
+    font: 600 10px 'Orbitron', sans-serif;
     letter-spacing: 2px;
     margin-bottom: 18px;
 }
 
 .host {
     color: var(--gold);
-    font-size: 13px;
+    font-size: 13.5px;
     font-weight: 700;
-    line-height: 1.8;
+    line-height: 1.75;
 }
 
 .host-address {
     color: var(--muted);
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 400;
 }
 
 .intro {
     font-size: 13px;
     color: #c2ccd7;
-    line-height: 1.9;
-    margin: 17px 0;
+    line-height: 1.85;
+    margin: 16px 0;
 }
 
 .couple {
-    padding: 24px 5px;
+    padding: 24px 6px;
     margin: 20px 0;
-    border-top: 1px solid rgba(85, 220, 233, 0.2);
-    border-bottom: 1px solid rgba(85, 220, 233, 0.2);
+    border-top: 1px solid rgba(85, 220, 233, 0.22);
+    border-bottom: 1px solid rgba(85, 220, 233, 0.22);
 }
 
 .name {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(19px, 5vw, 28px);
+    font-size: clamp(19px, 5vw, 27px);
     font-weight: 700;
     color: var(--cyan);
     letter-spacing: 1px;
-    text-shadow: 0 0 20px rgba(85, 220, 233, 0.2);
+    text-shadow: 0 0 18px rgba(85, 220, 233, 0.22);
+}
+
+.ampersand-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 6px 0;
 }
 
 .ampersand {
     color: var(--gold);
-    font-family: 'Amiri', serif;
+    font-family: 'Amiri', Georgia, serif;
     font-size: 30px;
-    margin: 5px 0;
+    line-height: 1;
 }
 
 .family {
@@ -176,18 +196,20 @@ body {
 }
 
 .dua {
-    font-size: 12px;
+    font-size: 12.5px;
     line-height: 1.8;
     color: #b8c6d3;
     font-style: italic;
     margin: 0;
 }
 
+/* Section Titles & Event Info */
 .section-title {
-    font: 500 11px 'Orbitron', sans-serif;
+    font: 600 11px 'Orbitron', sans-serif;
     color: var(--cyan);
     letter-spacing: 2px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
 }
 
 .event-info {
@@ -199,38 +221,39 @@ body {
 
 .info-box {
     background: #101f2e;
-    border: 1px solid rgba(233, 185, 103, 0.22);
+    border: 1px solid rgba(233, 185, 103, 0.24);
     border-radius: 13px;
     padding: 16px 12px;
 }
 
 .info-box.venue {
-    border-color: rgba(85, 220, 233, 0.22);
+    border-color: rgba(85, 220, 233, 0.24);
 }
 
 .info-icon {
     font-size: 21px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .info-label {
-    font: 500 9px 'Orbitron', sans-serif;
+    font: 600 9px 'Orbitron', sans-serif;
     color: var(--muted);
     letter-spacing: 1px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .info-value {
     font-size: 13px;
     font-weight: 700;
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
 .gold { color: var(--gold); }
 .cyan { color: var(--cyan); }
 
+/* Countdown */
 .countdown {
-    margin: 27px 0 20px;
+    margin: 26px 0 18px;
 }
 
 .timer {
@@ -241,7 +264,7 @@ body {
 
 .timer-box {
     background: #07111c;
-    border: 1px solid rgba(85, 220, 233, 0.2);
+    border: 1px solid rgba(85, 220, 233, 0.22);
     padding: 13px 4px;
     border-radius: 11px;
 }
@@ -255,32 +278,33 @@ body {
 .timer-label {
     font: 500 9px 'Orbitron', sans-serif;
     color: var(--muted);
-    margin-top: 7px;
+    margin-top: 6px;
 }
 
 .event-status {
     color: var(--cyan);
     font-size: 12px;
-    margin-top: 14px;
+    margin-top: 13px;
 }
 
+/* Action Buttons */
 .actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 11px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 18px;
 }
 
 .btn {
-    border: 1px solid rgba(85, 220, 233, 0.45);
-    background: rgba(85, 220, 233, 0.07);
+    border: 1px solid rgba(85, 220, 233, 0.42);
+    background: rgba(85, 220, 233, 0.08);
     color: var(--text);
     text-decoration: none;
     border-radius: 11px;
-    padding: 14px 9px;
+    padding: 13px 10px;
     font: 600 11px 'Inter', sans-serif;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,36 +312,49 @@ body {
 }
 
 .btn:hover {
-    background: rgba(85, 220, 233, 0.17);
+    background: rgba(85, 220, 233, 0.18);
     border-color: var(--cyan);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .btn.primary {
     background: linear-gradient(110deg, #b98942, #e9c57f);
     border: none;
     color: #111820;
+    font-weight: 700;
 }
 
 .btn.primary:hover {
-    box-shadow: 0 5px 22px rgba(233, 185, 103, 0.25);
+    box-shadow: 0 5px 20px rgba(233, 185, 103, 0.28);
+}
+
+.btn.whatsapp-btn {
+    background: linear-gradient(135deg, #1ebd5a, #25d366);
+    border: none;
+    color: #06130b;
+    font-weight: 700;
+}
+
+.btn.whatsapp-btn:hover {
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
 }
 
 .btn.full {
     grid-column: 1 / -1;
 }
 
+/* Direct Duas & Wishes Section */
 .wish-chips {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 12px;
+    margin: 14px 0 12px;
 }
 
 .chip {
     background: rgba(233, 185, 103, 0.08);
-    border: 1px solid rgba(233, 185, 103, 0.32);
+    border: 1px solid rgba(233, 185, 103, 0.34);
     color: var(--gold);
     border-radius: 20px;
     padding: 6px 12px;
@@ -328,9 +365,8 @@ body {
 
 .chip:hover,
 .chip.active {
-    background: rgba(233, 185, 103, 0.2);
+    background: rgba(233, 185, 103, 0.22);
     border-color: var(--gold);
-    transform: translateY(-1px);
 }
 
 .wish-input {
@@ -338,13 +374,12 @@ body {
     min-height: 76px;
     resize: vertical;
     background: #07111c;
-    border: 1px solid rgba(85, 220, 233, 0.26);
+    border: 1px solid rgba(85, 220, 233, 0.28);
     border-radius: 12px;
     padding: 12px 14px;
     color: var(--text);
     font: 400 12.5px/1.6 'Inter', sans-serif;
     outline: none;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .wish-input::placeholder {
@@ -353,11 +388,10 @@ body {
 
 .wish-input:focus {
     border-color: var(--cyan);
-    box-shadow: 0 0 14px rgba(85, 220, 233, 0.14);
 }
 
 .contact-note {
-    font-size: 11.5px;
+    font-size: 12px;
     color: var(--muted);
     line-height: 1.7;
     margin: 6px 0 0;
@@ -373,26 +407,28 @@ body {
     color: #647587;
     font: 500 9px 'Orbitron', sans-serif;
     letter-spacing: 2px;
-    padding: 12px;
+    padding: 12px 0 4px;
 }
 
+/* Toast Notification */
 .toast {
     position: fixed;
-    bottom: 25px;
+    top: 18px;
     left: 50%;
-    transform: translate(-50%, 20px);
-    background: #173344;
+    transform: translate(-50%, -24px);
+    background: #142d3e;
     border: 1px solid var(--cyan);
     color: #ffffff;
-    padding: 12px 20px;
+    padding: 11px 18px;
     border-radius: 30px;
     font-size: 12px;
     opacity: 0;
     pointer-events: none;
-    transition: 0.3s;
-    z-index: 20;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 10000;
     text-align: center;
     max-width: 90vw;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 }
 
 .toast.show {
@@ -400,18 +436,163 @@ body {
     transform: translate(-50%, 0);
 }
 
-@media (max-width: 380px) {
-    .card { padding: 23px 15px; }
-    .event-info { grid-template-columns: 1fr; }
-    .actions { gap: 8px; }
-    .btn { font-size: 10px; }
+/* Always-Visible Floating WhatsApp Quick-Connect Widget */
+.wa-widget {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    max-width: calc(100vw - 32px);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
+.wa-popup {
+    width: 310px;
+    max-width: 100%;
+    background: #0c1825;
+    border: 1px solid rgba(37, 211, 102, 0.45);
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
+    display: none;
+}
+
+.wa-popup.open {
+    display: block;
+}
+
+.wa-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(85, 220, 233, 0.16);
+}
+
+.wa-popup-title {
+    font: 600 12px 'Inter', sans-serif;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wa-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--whatsapp);
+    box-shadow: 0 0 8px var(--whatsapp);
+    display: inline-block;
+}
+
+.wa-close-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: var(--muted);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wa-close-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.wa-quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.wa-quick-link {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    background: #101f2e;
+    border: 1px solid rgba(85, 220, 233, 0.22);
+    color: var(--text);
+    padding: 8px 11px;
+    border-radius: 10px;
+    font-size: 11.5px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.wa-quick-link:hover {
+    border-color: var(--whatsapp);
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.wa-popup-form {
+    display: flex;
+    gap: 6px;
+}
+
+.wa-popup-input {
+    flex: 1;
+    min-width: 0;
+    background: #07111c;
+    border: 1px solid rgba(85, 220, 233, 0.28);
+    border-radius: 9px;
+    padding: 8px 10px;
+    color: var(--text);
+    font: 400 11.5px 'Inter', sans-serif;
+    outline: none;
+}
+
+.wa-popup-input:focus {
+    border-color: var(--whatsapp);
+}
+
+.wa-popup-send {
+    background: var(--whatsapp);
+    color: #06130b;
+    border: none;
+    border-radius: 9px;
+    padding: 8px 12px;
+    font: 700 11px 'Inter', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.wa-fab {
+    background: linear-gradient(135deg, #1ebd5a, #25d366);
+    color: #06130b;
+    border: 1.5px solid #e9b967;
+    border-radius: 999px;
+    padding: 11px 16px;
+    font: 700 12px 'Inter', sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.38);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 400px) {
+    .card { padding: 22px 15px; }
+    .event-info { grid-template-columns: 1fr; }
+    .actions { gap: 8px; }
+    .btn { font-size: 10.5px; }
+    .wa-fab { padding: 10px 14px; font-size: 11.5px; }
 }
 </style>
 </head>
@@ -422,14 +603,14 @@ body {
 
     <!-- CARD 1: BISMILLAH & QURANIC OPENING -->
     <section class="card">
-        <div class="arabic" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <p class="arabic" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
         <p class="subtitle">In the name of Allah, the Most Gracious, the Most Merciful</p>
 
-        <div class="quran-verse" lang="ar">وَخَلَقْنَاكُمْ أَزْوَاجًا</div>
-        <p class="subtitle" style="font-style: italic;">&ldquo;And We created you in pairs.&rdquo;</p>
-        <div class="surah-ref">&mdash; Surah An-Naba (78:8)</div>
+        <p class="quran-verse" lang="ar">وَخَلَقْنَاكُمْ أَزْوَاجًا</p>
+        <p class="verse-translation">&ldquo;And We created you in pairs.&rdquo;</p>
+        <div class="surah-ref">&mdash; SURAH AN-NABA (78:8)</div>
 
-        <!-- Islamic Crescent Moon & 8-Pointed Star Divider -->
+        <!-- Inline SVG Islamic Crescent Moon & 8-Pointed Star Divider -->
         <div class="islamic-divider" aria-hidden="true">
             <span class="line"></span>
             <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,7 +625,7 @@ body {
         <p class="subtitle">With the blessings of Allah and our families</p>
     </section>
 
-    <!-- CARD 2: INVITATION -->
+    <!-- CARD 2: HOST & COUPLE INVITATION -->
     <section class="card">
         <div class="tag">WALIMA RECEPTION · 2026</div>
 
@@ -457,13 +638,22 @@ body {
 
         <p class="intro">
             Request the honour of your presence and blessings
-            to celebrate the Walima reception of their beloved son.
+            to celebrate the Walima reception of their beloved son,
         </p>
 
         <div class="couple">
             <div class="name">ALFIYAS MUHAMMED</div>
 
-            <div class="ampersand">&amp;</div>
+            <div class="ampersand-row">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M9.5 2C6.19 2 3.5 4.69 3.5 8C3.5 11.31 6.19 14 9.5 14C10.71 14 11.85 13.64 12.79 13.02C10.31 12.76 8.38 10.61 8.38 8C8.38 5.39 10.31 3.24 12.79 2.98C11.85 2.36 10.71 2 9.5 2Z" stroke="#e9b967" stroke-width="1.2"/>
+                </svg>
+                <span class="ampersand">&amp;</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="4.5" y="4.5" width="7" height="7" stroke="#55dce9" stroke-width="1.1"/>
+                    <rect x="4.5" y="4.5" width="7" height="7" transform="rotate(45 8 8)" stroke="#55dce9" stroke-width="1.1"/>
+                </svg>
+            </div>
 
             <div class="name">SINCILA KM</div>
 
@@ -475,13 +665,12 @@ body {
         </div>
 
         <p class="dua">
-            Join us in our happiness and shower your duas
-            as we embark on a blessed journey together.
-            Insha&#39;Allah.
+            &ldquo;Join us in our happiness and shower your duas
+            as we embark on a blessed journey together, Insha&#39;Allah.&rdquo;
         </p>
     </section>
 
-    <!-- CARD 3: EVENT DETAILS & LIVE COUNTDOWN -->
+    <!-- CARD 3: EVENT DETAILS, COUNTDOWN & ACTIONS -->
     <section class="card">
         <div class="section-title">EVENT DETAILS</div>
 
@@ -502,7 +691,7 @@ body {
             </div>
         </div>
 
-        <!-- LIVE COUNTDOWN -->
+        <!-- LIVE IST COUNTDOWN -->
         <div class="countdown">
             <div class="section-title">COUNTDOWN TO OUR SPECIAL DAY</div>
 
@@ -533,7 +722,7 @@ body {
             </div>
         </div>
 
-        <!-- INTERACTIVE BUTTONS -->
+        <!-- ACTION BUTTONS -->
         <div class="actions">
             <a class="btn primary full"
                href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
@@ -562,35 +751,8 @@ body {
 
     <!-- CARD 4: DIRECT DUAS, WISHES & CONTACT -->
     <section class="card">
-        <div class="section-title">SEND DUAS &amp; WISHES</div>
-        <p class="subtitle" style="margin-bottom: 14px;">
-            Tap a blessing below or write your personal message to send directly to us on WhatsApp:
-        </p>
-
-        <div class="wish-chips">
-            <button type="button" class="chip" onclick="selectWish(this, 'BarakAllahu Lakuma wa Baraka Alaykuma wa Jama\'a Baynakuma fi Khayr! Heartfelt Walima wishes to Alfiyas & Sincila. 🤲✨')">
-                🤲 BarakAllahu Lakuma
-            </button>
-            <button type="button" class="chip" onclick="selectWish(this, 'Wishing Alfiyas & Sincila a lifetime filled with love, peace, and endless Barakah. Insha\'Allah! ❤️')">
-                ❤️ Lifetime of Barakah
-            </button>
-            <button type="button" class="chip" onclick="selectWish(this, 'Heartfelt congratulations on your Walima reception! Looking forward to celebrating with you both. 🎉')">
-                🎉 Warm Congratulations
-            </button>
-        </div>
-
-        <textarea id="wishMessage"
-                  class="wish-input"
-                  placeholder="Write your dua or wishes for Alfiyas & Sincila..."></textarea>
-
-        <div class="actions" style="margin-top: 14px;">
-            <button type="button" class="btn primary full" onclick="sendDirectWish()">
-                💬 SEND WISHES ON WHATSAPP
-            </button>
-        </div>
-
-        <!-- Islamic Crescent Moon & 8-Pointed Star Divider -->
-        <div class="islamic-divider" aria-hidden="true">
+        <!-- Inline SVG Islamic Crescent Moon & 8-Pointed Star Divider -->
+        <div class="islamic-divider" style="margin-top: 0;" aria-hidden="true">
             <span class="line"></span>
             <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.5 3C9.53 3 5.5 7.03 5.5 12C5.5 16.97 9.53 21 14.5 21C16.32 21 18.02 20.46 19.44 19.53C15.72 19.14 12.82 15.92 12.82 12C12.82 8.08 15.72 4.86 19.44 4.47C18.02 3.54 16.32 3 14.5 3Z" fill="#e9b967" fill-opacity="0.22" stroke="#e9b967" stroke-width="1.2"/>
@@ -600,12 +762,38 @@ body {
             <span class="line"></span>
         </div>
 
-        <div class="section-title" style="margin-bottom: 8px;">NEED HELP OR HAVE ANY DOUBTS?</div>
-        <p class="contact-note">
-            Feel free to call or message <strong>+91 7510628386</strong> anytime for venue directions or any queries.
+        <div class="section-title" style="margin-bottom: 8px;">SEND DUAS, WISHES &amp; QUERIES</div>
+        <p class="subtitle">
+            Have any doubts about the venue or route, or want to send your blessings? Reach out directly to Alfiyas.
         </p>
 
-        <div class="actions" style="margin-top: 14px;">
+        <div class="wish-chips">
+            <button type="button" class="chip" onclick="selectWish(this, 'BarakAllahu Lakuma wa Baraka Alaykuma wa Jama\'a Baynakuma fi Khayr! Heartfelt Walima wishes to Alfiyas & Sincila. 🤲✨')">
+                🤲 BarakAllahu Lakuma...
+            </button>
+            <button type="button" class="chip" onclick="selectWish(this, 'Heartfelt Walima Mubarak to Alfiyas & Sincila! Wishing you a lifetime of love and Barakah. ✨❤️')">
+                ✨ Heartfelt Walima Mubarak!
+            </button>
+            <button type="button" class="chip" onclick="selectWish(this, 'Assalamu Alaikum Alfiyas, I need a little help with the exact location/route to Diamond Banquet Hall. 📍')">
+                📍 Need help with hall location
+            </button>
+        </div>
+
+        <textarea id="wishMessage"
+                  class="wish-input"
+                  placeholder="Write your dua, wishes, or venue question for Alfiyas..."></textarea>
+
+        <div class="actions" style="margin-top: 12px;">
+            <button type="button" class="btn whatsapp-btn full" onclick="sendDirectWish()">
+                💬 SEND DIRECTLY ON WHATSAPP
+            </button>
+        </div>
+
+        <p class="contact-note" style="margin-top: 16px;">
+            Direct Contact: <strong>+91 7510628386</strong>
+        </p>
+
+        <div class="actions" style="margin-top: 12px;">
             <a class="btn" href="tel:+917510628386">
                 📞 CALL 7510628386
             </a>
@@ -624,10 +812,58 @@ body {
 
 </main>
 
+<!-- ALWAYS-VISIBLE FLOATING WHATSAPP QUICK-CONNECT WIDGET -->
+<div class="wa-widget" id="waWidget">
+    <div class="wa-popup" id="waPopup" role="dialog" aria-label="Quick WhatsApp Help">
+        <div class="wa-popup-header">
+            <span class="wa-popup-title">
+                <span class="wa-status-dot"></span>
+                WhatsApp · +91 7510628386
+            </span>
+            <button type="button" class="wa-close-btn" onclick="toggleWaPopup(false)" aria-label="Close popup">&times;</button>
+        </div>
+
+        <div class="wa-quick-links">
+            <a class="wa-quick-link"
+               href="https://wa.me/917510628386?text=Assalamu%20Alaikum%20Alfiyas%2C%20please%20send%20me%20the%20exact%20location%20for%20Diamond%20Banquet%20Hall."
+               target="_blank"
+               rel="noopener noreferrer">
+                📍 Send me exact hall location
+            </a>
+            <a class="wa-quick-link"
+               href="https://wa.me/917510628386?text=Assalamu%20Alaikum%20Alfiyas%2C%20I%20need%20route%20help%20to%20Diamond%20Banquet%20Hall%2C%20Allapra."
+               target="_blank"
+               rel="noopener noreferrer">
+                🧭 Need route help to Diamond Hall
+            </a>
+            <a class="wa-quick-link"
+               href="https://wa.me/917510628386?text=Assalamu%20Alaikum%20Alfiyas%20%26%20Sincila%2C%20BarakAllahu%20Lakuma!%20Heartfelt%20Walima%20Mubarak%20and%20duas%20to%20you%20both.%20%F0%9F%A4%B2%E2%9C%A8"
+               target="_blank"
+               rel="noopener noreferrer">
+                🤲 Send Walima Duas
+            </a>
+        </div>
+
+        <form class="wa-popup-form" onsubmit="sendPopupWhatsApp(event)">
+            <input type="text"
+                   id="waPopupInput"
+                   class="wa-popup-input"
+                   placeholder="Type a quick message..."
+                   aria-label="Type a quick WhatsApp message">
+            <button type="submit" class="wa-popup-send">Send</button>
+        </form>
+    </div>
+
+    <button type="button" class="wa-fab" onclick="toggleWaPopup()" aria-expanded="false" aria-controls="waPopup" id="waFab">
+        <span>💬</span>
+        <span>Need Location? WhatsApp</span>
+    </button>
+</div>
+
 <div class="toast" id="toast" role="status" aria-live="polite">Copied successfully!</div>
 
 <script>
-// EVENT DATE: 20 DECEMBER 2026, 4 PM IST
+// EVENT DATE: 20 DECEMBER 2026, 4:00 PM IST
 const eventDate = new Date("2026-12-20T16:00:00+05:30");
 const pad = n => String(n).padStart(2, "0");
 
@@ -645,7 +881,6 @@ function updateCountdown() {
             difference > -86400000
                 ? "The celebration has begun! ❤️"
                 : "Thank you for being part of our celebration! ❤️";
-
         return;
     }
 
@@ -666,19 +901,20 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// INVITATION TEXT
+// INVITATION TEXT FOR SHARING & COPYING
 const invitationText = `بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
 
-You are cordially invited to the Walima Reception of
+وَخَلَقْنَاكُمْ أَزْوَاجًا
+"And We created you in pairs." — Surah An-Naba (78:8)
 
+WALIMA RECEPTION · 2026
 ALFIYAS MUHAMMED & SINCILA KM
 
-With the blessings of our families.
+With the blessings of our families, we request the honour of your presence and duas.
 
 Date: Sunday, 20 December 2026
 Time: 4:00 PM Onwards
-Venue: Diamond Banquet Hall A/C,
-Allapra, Perumbavoor.
+Venue: Diamond Banquet Hall A/C, Allapra, Perumbavoor
 
 Hosted by:
 Mr. Pareeth K K & Mrs. Zeenath Pareeth
@@ -686,11 +922,9 @@ Mr. Pareeth K K & Mrs. Zeenath Pareeth
 Beloved daughter of:
 Moosa KB & Shyla MM
 
-We request your presence and duas as we begin our blessed journey together.
-
 Insha'Allah ❤️
 
-Location:
+Location Map:
 https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac`;
 
 // TOAST NOTIFICATION
@@ -703,10 +937,10 @@ function showToast(message) {
     clearTimeout(toastTimeout);
     toastTimeout = setTimeout(() => {
         toast.classList.remove("show");
-    }, 2800);
+    }, 2600);
 }
 
-// COPY INVITATION (with iframe-safe fallback)
+// COPY INVITATION (with fallback for sandboxed iframes)
 async function copyDetails() {
     try {
         if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -714,7 +948,7 @@ async function copyDetails() {
             showToast("Invitation details copied successfully!");
             return;
         }
-    } catch (error) {
+    } catch (e) {
         // Fallback below
     }
 
@@ -733,26 +967,9 @@ async function copyDetails() {
     document.body.removeChild(ta);
 }
 
-// WHATSAPP SHARING
+// WHATSAPP INVITATION SHARE
 function shareWhatsApp() {
     const url = "https://wa.me/?text=" + encodeURIComponent(invitationText);
-    window.open(url, "_blank", "noopener,noreferrer");
-}
-
-// DIRECT WHATSAPP DUAS & WISHES TO +91 7510628386
-function selectWish(btn, text) {
-    document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById("wishMessage").value = text;
-}
-
-function sendDirectWish() {
-    const input = document.getElementById("wishMessage").value.trim();
-    const message = input
-        ? `Assalamu Alaikum Alfiyas & Sincila,\n\n${input}`
-        : `Assalamu Alaikum Alfiyas & Sincila,\n\nBarakAllahu Lakuma wa Baraka Alaykuma wa Jama'a Baynakuma fi Khayr! Heartfelt wishes and duas on your Walima reception. 🤲❤️`;
-
-    const url = "https://wa.me/917510628386?text=" + encodeURIComponent(message);
     window.open(url, "_blank", "noopener,noreferrer");
 }
 
@@ -774,7 +991,7 @@ async function shareInvitation() {
     }
 }
 
-// DOWNLOAD CALENDAR EVENT
+// DOWNLOAD CALENDAR EVENT (.ics)
 function addToCalendar() {
     const mapUrl = "https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac";
     const ics = [
@@ -803,19 +1020,14 @@ function addToCalendar() {
     ].join("\r\n");
 
     try {
-        const blob = new Blob([ics], {
-            type: "text/calendar;charset=utf-8"
-        });
+        const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");
-
         link.href = url;
         link.download = "Walima-Alfiyas-Sincila.ics";
-
         document.body.appendChild(link);
         link.click();
         link.remove();
-
         setTimeout(() => URL.revokeObjectURL(url), 1000);
         showToast("Calendar invitation downloaded!");
     } catch (err) {
@@ -828,6 +1040,49 @@ function addToCalendar() {
         window.open(gcalUrl, "_blank", "noopener,noreferrer");
         showToast("Opening Google Calendar...");
     }
+}
+
+// DIRECT DUAS & WISHES TO +91 7510628386
+function selectWish(btn, text) {
+    document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById("wishMessage").value = text;
+}
+
+function sendDirectWish() {
+    const input = document.getElementById("wishMessage").value.trim();
+    const message = input
+        ? `Assalamu Alaikum Alfiyas & Sincila,\n\n${input}`
+        : `Assalamu Alaikum Alfiyas & Sincila,\n\nBarakAllahu Lakuma wa Baraka Alaykuma wa Jama'a Baynakuma fi Khayr! Heartfelt Walima wishes and duas to you both. 🤲❤️`;
+
+    const url = "https://wa.me/917510628386?text=" + encodeURIComponent(message);
+    window.open(url, "_blank", "noopener,noreferrer");
+}
+
+// FLOATING WHATSAPP POPUP CONTROLS
+function toggleWaPopup(forceState) {
+    const popup = document.getElementById("waPopup");
+    const fab = document.getElementById("waFab");
+    const isOpen = typeof forceState === "boolean"
+        ? forceState
+        : !popup.classList.contains("open");
+
+    popup.classList.toggle("open", isOpen);
+    fab.setAttribute("aria-expanded", String(isOpen));
+}
+
+function sendPopupWhatsApp(event) {
+    event.preventDefault();
+    const input = document.getElementById("waPopupInput");
+    const text = input.value.trim() || "Assalamu Alaikum Alfiyas, I need help with the Walima reception location.";
+    const url = "https://wa.me/917510628386?text=" + encodeURIComponent(text);
+    window.open(url, "_blank", "noopener,noreferrer");
+    input.value = "";
+}
+
+// Open the quick-help popup automatically on wider desktop screens while keeping mobile clean
+if (window.innerWidth >= 768) {
+    toggleWaPopup(true);
 }
 </script>
 
