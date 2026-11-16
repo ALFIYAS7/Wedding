@@ -47,7 +47,7 @@ html, body {
 
 body {
     min-height: 100vh;
-    padding: 24px 15px 92px;
+    padding: 24px 15px 116px;
     background:
         radial-gradient(ellipse at 50% 0%, #14283b 0%, transparent 58%),
         var(--bg);
@@ -588,13 +588,39 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.38);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(37, 211, 102, 0.35);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .wa-fab:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), 0 0 22px rgba(37, 211, 102, 0.5);
+}
+
+/* Floating Google Maps Pin (Anchored in Bottom-Left Corner) */
+.maps-fab {
+    position: fixed;
+    bottom: 18px;
+    left: 18px;
+    z-index: 9998;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(12, 24, 37, 0.94);
+    border: 1.5px solid var(--gold);
+    color: var(--cyan);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55), 0 0 12px rgba(85, 220, 233, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.maps-fab:hover {
+    transform: translateY(-2px) scale(1.05);
+    border-color: var(--cyan);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 16px rgba(233, 185, 103, 0.4);
 }
 
 @media (max-width: 400px) {
@@ -603,11 +629,29 @@ body {
     .actions { gap: 8px; }
     .btn { font-size: 10.5px; }
     .wa-fab { padding: 10px 14px; font-size: 11.5px; }
+    .maps-fab { bottom: 18px; left: 16px; width: 40px; height: 40px; }
 }
 </style>
 </head>
 
 <body>
+
+<!-- ALWAYS-VISIBLE FLOATING GOOGLE MAPS PIN (BOTTOM-RIGHT THUMB ZONE) -->
+<a class="maps-fab"
+   href="https://maps.app.goo.gl/kc9tydjnTQtXhhy77"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Open Venue in Google Maps"
+   aria-label="Open Venue in Google Maps">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M14.7 2.5C13.85 2.18 12.95 2 12 2C9.5 2 7.3 3.24 5.95 5.14L9.28 7.93L14.7 2.5Z" fill="#EA4335"/>
+        <path d="M5.95 5.14C5.04 6.42 4.5 7.99 4.5 9.68C4.5 10.97 4.76 12.02 5.21 12.95L9.28 7.93L5.95 5.14Z" fill="#FBBC04"/>
+        <path d="M12 6.82C13.58 6.82 14.86 8.1 14.86 9.68C14.86 10.38 14.61 11.02 14.19 11.52L18.23 6.72C17.39 4.8 15.86 3.29 14.7 2.5L9.28 7.93C9.8 7.25 10.83 6.82 12 6.82Z" fill="#4285F4"/>
+        <path d="M12 12.54C10.42 12.54 9.14 11.26 9.14 9.68C9.14 8.99 9.39 8.35 9.8 7.85L5.21 12.95C6.02 14.61 7.37 16.01 8.68 17.73L14.19 11.52C13.67 12.14 12.88 12.54 12 12.54Z" fill="#34A853"/>
+        <path d="M13.62 19.29C15.96 16.07 19.5 13.71 19.5 9.68C19.5 8.62 19.27 7.62 18.85 6.72L8.68 17.73C9.15 18.35 9.61 19.01 10.03 19.71C10.93 21.2 10.67 22 12 22C13.33 22 13.07 21.2 13.97 19.71L13.62 19.29Z" fill="#34A853"/>
+        <circle cx="12" cy="9.68" r="2.85" fill="#0c1825"/>
+    </svg>
+</a>
 
 <main class="container">
 
@@ -739,7 +783,7 @@ body {
         <!-- ACTION BUTTONS -->
         <div class="actions">
             <a class="btn primary full"
-               href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
+               href="https://maps.app.goo.gl/kc9tydjnTQtXhhy77"
                target="_blank"
                rel="noopener noreferrer">
                 📍 GET DIRECTIONS
@@ -942,7 +986,7 @@ Moosa KB & Shyla MM
 Insha'Allah ❤️
 
 Location Map:
-https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac`;
+https://maps.app.goo.gl/kc9tydjnTQtXhhy77`;
 
 // TOAST NOTIFICATION
 let toastTimeout;
@@ -1008,9 +1052,31 @@ async function shareInvitation() {
     }
 }
 
-// DOWNLOAD CALENDAR EVENT (.ics)
+// OPEN DIRECTLY IN GOOGLE CALENDAR (with .ics fallback)
 function addToCalendar() {
-    const mapUrl = "https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac";
+    const mapUrl = "https://maps.app.goo.gl/kc9tydjnTQtXhhy77";
+    const title = "Walima Reception - Alfiyas & Sincila";
+    const location = "Diamond Banquet Hall A/C, Allapra, Perumbavoor";
+    const details =
+        "Walima reception of Alfiyas Muhammed and Sincila KM.\n\n" +
+        "Hosted by: Mr. Pareeth K K & Mrs. Zeenath Pareeth\n" +
+        "Google Maps Venue Link: " + mapUrl;
+
+    const gcalUrl =
+        "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+        "&text=" + encodeURIComponent(title) +
+        "&dates=20261220T103000Z/20261220T153000Z" +
+        "&ctz=" + encodeURIComponent("Asia/Kolkata") +
+        "&location=" + encodeURIComponent(location) +
+        "&details=" + encodeURIComponent(details);
+
+    const popup = window.open(gcalUrl, "_blank", "noopener,noreferrer");
+    if (popup) {
+        showToast("Opening Google Calendar...");
+        return;
+    }
+
+    // Fallback to .ics download if browser blocks popups
     const ics = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -1022,8 +1088,8 @@ function addToCalendar() {
         "DTSTAMP:20261116T180000Z",
         "DTSTART:20261220T103000Z",
         "DTEND:20261220T153000Z",
-        "SUMMARY:Walima Reception - Alfiyas & Sincila",
-        "LOCATION:Diamond Banquet Hall A/C, Allapra, Perumbavoor",
+        "SUMMARY:" + title,
+        "LOCATION:" + location,
         "DESCRIPTION:Walima reception of Alfiyas Muhammed and Sincila KM.\\nVenue Map: " + mapUrl,
         "URL:" + mapUrl,
         "STATUS:CONFIRMED",
@@ -1036,27 +1102,16 @@ function addToCalendar() {
         "END:VCALENDAR"
     ].join("\r\n");
 
-    try {
-        const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = "Walima-Alfiyas-Sincila.ics";
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-        showToast("Calendar invitation downloaded!");
-    } catch (err) {
-        const gcalUrl =
-            "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-            "&text=" + encodeURIComponent("Walima Reception - Alfiyas & Sincila") +
-            "&dates=20261220T103000Z/20261220T153000Z" +
-            "&location=" + encodeURIComponent("Diamond Banquet Hall A/C, Allapra, Perumbavoor") +
-            "&details=" + encodeURIComponent("Walima reception of Alfiyas Muhammed and Sincila KM.\nVenue Map: " + mapUrl);
-        window.open(gcalUrl, "_blank", "noopener,noreferrer");
-        showToast("Opening Google Calendar...");
-    }
+    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Walima-Alfiyas-Sincila.ics";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    showToast("Calendar invitation downloaded!");
 }
 
 // DIRECT DUAS & WISHES TO +91 7510628386
