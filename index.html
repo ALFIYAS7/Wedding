@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Walima Invitation — Alfiyas Muhammed &amp; Sincila K. M. | 20 Dec 2026</title>
 
   <!-- Embedded Google Fonts: Cinzel Decorative, Cormorant Garamond, Montserrat & Amiri -->
@@ -15,11 +15,11 @@
 
   <style>
     /* ==========================================================================
-       1. ROYAL MUGHAL PALACE DESIGN TOKENS & TYPOGRAPHY
+       1. ROYAL MUGHAL PALACE DESIGN TOKENS & STRICT ZERO-SCROLL (100dvh) LOCK
        ========================================================================== */
     :root {
-      --door-mahogany-deep: #2b0912;
-      --door-mahogany-rich: #4a0e1e;
+      --door-mahogany-deep: #260710;
+      --door-mahogany-rich: #4d0f20;
       --gold-leaf-primary: #d4af37;
       --gold-leaf-highlight: #f3e5ab;
       --gold-leaf-bronze: #aa771c;
@@ -27,7 +27,7 @@
       --card-ivory-warm: #f7f1e3;
       --crimson-royal: #7e1326;
       --ink-charcoal: #231f20;
-      --door-swing-duration: 2.15s;
+      --door-swing-duration: 2.1s;
       --door-swing-ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -39,12 +39,15 @@
     html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
-      min-height: 100dvh;
-      overflow-x: hidden;
-      background-color: #170409;
+      width: 100vw;
+      height: 100dvh;
+      max-width: 100vw;
+      max-height: 100dvh;
+      overflow: hidden !important;
+      background-color: #160308;
       font-family: 'Cormorant Garamond', Georgia, serif;
       color: var(--ink-charcoal);
+      touch-action: manipulation;
     }
 
     .font-cinzel-dec { font-family: 'Cinzel Decorative', Georgia, serif; }
@@ -53,85 +56,122 @@
     .font-amiri { font-family: 'Amiri', serif; }
 
     /* ==========================================================================
-       2. PALACE COURTYARD ATMOSPHERE & 3D PORTAL PERSPECTIVE (1800px)
+       2. PALACE COURTYARD BACKDROP & 3D PORTAL PERSPECTIVE (1800px)
        ========================================================================== */
     .palace-courtyard-bg {
       background:
-        radial-gradient(circle at 50% 35%, rgba(243, 229, 171, 0.14) 0%, rgba(74, 14, 30, 0.42) 45%, rgba(18, 3, 7, 0.98) 92%),
-        linear-gradient(168deg, #160308 0%, #2b0912 50%, #120206 100%);
+        radial-gradient(circle at 50% 42%, rgba(77, 15, 32, 0.45) 0%, rgba(22, 3, 8, 0.98) 85%),
+        linear-gradient(168deg, #140207 0%, #260710 50%, #120206 100%);
     }
 
-    /* Warm Golden Radial Glow Behind the Center Seam */
+    /* Subtle Golden Radial Aura Behind Closed Doors — Immediately Removed on Open */
     .seam-sanctuary-glow {
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 4;
-      background: radial-gradient(ellipse at 50% 44%, rgba(243, 229, 171, 0.32) 0%, rgba(212, 175, 55, 0.11) 40%, transparent 72%);
-      opacity: 0.65;
-      transition: opacity 1.8s ease, transform 2.1s ease;
+      background: radial-gradient(ellipse at 50% 48%, rgba(243, 229, 171, 0.24) 0%, rgba(212, 175, 55, 0.08) 38%, transparent 68%);
+      opacity: 0.7;
+      transition: opacity 0.45s ease-out;
     }
 
     body.doors-opened .seam-sanctuary-glow {
-      opacity: 1;
-      transform: scale(1.06);
+      opacity: 0 !important;
+      display: none !important;
     }
 
     /* 3D Perspective Stage */
     .palace-stage-3d {
       perspective: 1800px;
-      perspective-origin: 50% 45%;
+      perspective-origin: 50% 48%;
       transform-style: preserve-3d;
     }
 
-    /* Grand Palace Archway Frame */
+    /* Grand Palace Archway Frame Sized Strictly Inside 100dvh */
     .palace-portal {
       position: relative;
-      width: min(94vw, 540px);
-      border-radius: 26px 26px 14px 14px;
-      padding: 10px;
-      background: linear-gradient(155deg, #3c0c19 0%, #22060d 52%, #380b17 100%);
-      border: 1.5px solid rgba(212, 175, 55, 0.68);
+      width: min(94vw, 500px);
+      height: calc(100dvh - 58px);
+      max-height: 760px;
+      border-radius: 24px 24px 14px 14px;
+      padding: 8px;
+      background: linear-gradient(155deg, #3f0c1b 0%, #1f050c 52%, #3a0b18 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.72);
       box-shadow:
-        0 34px 80px -14px rgba(0, 0, 0, 0.92),
-        0 0 60px rgba(212, 175, 55, 0.16),
-        inset 0 0 0 3px #1b040a,
-        inset 0 0 0 4px rgba(243, 229, 171, 0.32);
+        0 28px 70px -12px rgba(0, 0, 0, 0.94),
+        0 0 46px rgba(212, 175, 55, 0.14),
+        inset 0 0 0 3px #180308,
+        inset 0 0 0 4px rgba(243, 229, 171, 0.34);
       transform-style: preserve-3d;
     }
 
     @media (max-width: 480px) {
       .palace-portal {
         width: 95vw;
-        padding: 7px;
-        border-radius: 22px 22px 12px 12px;
+        height: calc(100dvh - 52px);
+        padding: 6px;
+        border-radius: 20px 20px 12px 12px;
       }
     }
 
     /* ==========================================================================
-       3. INNER CREAM-IVORY INVITATION CARD (SCALE 0.94 -> 1.00 DEPTH GLIDE)
+       3. INNER CREAM-IVORY 3-PAGE ROYAL BOOK (#fdfbf7)
        ========================================================================== */
-    .invitation-card {
+    .royal-book-shell {
       position: relative;
       width: 100%;
-      border-radius: 18px 18px 8px 8px;
+      height: 100%;
+      border-radius: 16px 16px 8px 8px;
       background-color: var(--card-ivory);
-      /* Subtle inline SVG damask pattern + warm ivory radial light */
+      /* Subtle inline SVG damask pattern + crisp cream-ivory background */
       background-image:
-        radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.94) 0%, rgba(253, 251, 247, 0.78) 58%, rgba(244, 236, 218, 0.88) 100%),
-        url("data:image/svg+xml,%3Csvg width='96' height='96' viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.06'%3E%3Cpath d='M48 8c6 10 14 14 24 16-10 2-18 6-24 16-6-10-14-14-24-16 10-2 18-6 24-16zm0 48c6 10 14 14 24 16-10 2-18 6-24 16-6-10-14-14-24-16 10-2 18-6 24-16zM12 32c4 7 10 10 16 12-6 2-12 5-16 12-4-7-10-10-16-12 6-2 12-5 16-12zm72 0c4 7 10 10 16 12-6 2-12 5-16 12-4-7-10-10-16-12 6-2 12-5 16-12z'/%3E%3Ccircle cx='48' cy='48' r='2.2'/%3E%3Ccircle cx='12' cy='12' r='1.6'/%3E%3Ccircle cx='84' cy='12' r='1.6'/%3E%3Ccircle cx='12' cy='84' r='1.6'/%3E%3Ccircle cx='84' cy='84' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+        radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.96) 0%, rgba(253, 251, 247, 0.88) 60%, rgba(245, 237, 220, 0.94) 100%),
+        url("data:image/svg+xml,%3Csvg width='96' height='96' viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.065'%3E%3Cpath d='M48 8c6 10 14 14 24 16-10 2-18 6-24 16-6-10-14-14-24-16 10-2 18-6 24-16zm0 48c6 10 14 14 24 16-10 2-18 6-24 16-6-10-14-14-24-16 10-2 18-6 24-16zM12 32c4 7 10 10 16 12-6 2-12 5-16 12-4-7-10-10-16-12 6-2 12-5 16-12zm72 0c4 7 10 10 16 12-6 2-12 5-16 12-4-7-10-10-16-12 6-2 12-5 16-12z'/%3E%3Ccircle cx='48' cy='48' r='2.2'/%3E%3Ccircle cx='12' cy='12' r='1.6'/%3E%3Ccircle cx='84' cy='12' r='1.6'/%3E%3Ccircle cx='12' cy='84' r='1.6'/%3E%3Ccircle cx='84' cy='84' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
       box-shadow:
-        inset 0 0 34px rgba(170, 119, 28, 0.2),
-        0 10px 30px rgba(0, 0, 0, 0.45);
-      /* Start at scale(0.94) behind the closed doors and glide smoothly to scale(1) */
-      transform: scale(0.94) translateZ(-24px);
+        inset 0 0 28px rgba(170, 119, 28, 0.16),
+        0 10px 28px rgba(0, 0, 0, 0.45);
+      /* Glides smoothly from scale(0.94) to scale(1) when doors open */
+      transform: scale(0.94) translateZ(-20px);
       transition: transform var(--door-swing-duration) var(--door-swing-ease);
       will-change: transform;
       z-index: 10;
+      overflow: hidden;
     }
 
-    body.doors-opened .invitation-card {
+    body.doors-opened .royal-book-shell {
       transform: scale(1) translateZ(0px);
+    }
+
+    /* Book Pages Track (3 Horizontal Pages Sliding Smoothly) */
+    .book-pages-viewport {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      touch-action: pan-y;
+    }
+
+    .book-pages-track {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      transition: transform 0.68s cubic-bezier(0.25, 1, 0.35, 1);
+      will-change: transform;
+    }
+
+    .book-page {
+      width: 33.333333%;
+      height: 100%;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: clamp(22px, 3.6vh, 34px) clamp(14px, 4vw, 26px) clamp(44px, 6.8vh, 56px);
+      position: relative;
+      overflow: hidden;
+      user-select: none;
     }
 
     /* CSS Metallic Gold-Foil Shimmer Animation */
@@ -197,38 +237,36 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      filter: drop-shadow(0 1px 0 #f3e5ab) drop-shadow(0 2px 6px rgba(212, 175, 55, 0.35));
-      line-height: 1.22;
+      filter: drop-shadow(0 1px 0 #f3e5ab) drop-shadow(0 2px 5px rgba(212, 175, 55, 0.32));
+      line-height: 1.18;
     }
 
-    /* Staggered IntersectionObserver Scroll Choreography */
-    .reveal-section {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      will-change: opacity, transform;
+    /* Animated Swipe Gesture Cue */
+    @keyframes swipeHandNudge {
+      0%, 100% { transform: translateX(0px) rotate(0deg); opacity: 0.85; }
+      35% { transform: translateX(-8px) rotate(-8deg); opacity: 1; }
+      70% { transform: translateX(6px) rotate(6deg); opacity: 0.9; }
     }
 
-    .reveal-section.is-visible {
-      opacity: 1;
-      transform: translateY(0);
+    .swipe-gesture-icon {
+      animation: swipeHandNudge 2.4s ease-in-out infinite;
     }
 
     /* ==========================================================================
-       4. 3D ROYAL PALACE DOUBLE DOORS (SWING OUTWARD -122deg / +122deg)
+       4. ULTRA-LUXURIOUS 3D ROYAL MUGHAL PALACE DOUBLE DOORS
        ========================================================================== */
     .palace-doors-overlay {
       position: absolute;
-      inset: 7px;
+      inset: 6px;
       z-index: 30;
       transform-style: preserve-3d;
-      border-radius: 20px 20px 8px 8px;
+      border-radius: 18px 18px 8px 8px;
       cursor: pointer;
     }
 
     @media (max-width: 480px) {
       .palace-doors-overlay {
-        inset: 5px;
+        inset: 4px;
       }
     }
 
@@ -236,33 +274,33 @@
       pointer-events: none;
     }
 
-    /* Warm Golden Radial Glow Behind the Center Seam */
+    /* Central Seam Light — Immediately Fades Out & Hides Once Doors Open */
     .center-seam-glow {
       position: absolute;
-      top: 5%;
-      bottom: 5%;
+      top: 6%;
+      bottom: 6%;
       left: 50%;
-      width: 10px;
+      width: 6px;
       transform: translateX(-50%) translateZ(14px);
-      background: radial-gradient(ellipse at center, rgba(243, 229, 171, 0.98) 0%, rgba(212, 175, 55, 0.6) 45%, transparent 80%);
-      filter: blur(2.5px);
+      background: radial-gradient(ellipse at center, rgba(243, 229, 171, 0.95) 0%, rgba(212, 175, 55, 0.45) 45%, transparent 80%);
+      filter: blur(2px);
       z-index: 35;
       pointer-events: none;
       animation: seamRadiantPulse 2.4s ease-in-out infinite;
-      transition: opacity 0.75s ease, width 1.2s ease;
+      transition: opacity 0.4s ease-out;
     }
 
     .palace-doors-overlay.is-open .center-seam-glow {
-      opacity: 0;
-      width: 110px;
+      opacity: 0 !important;
+      display: none !important;
     }
 
     @keyframes seamRadiantPulse {
-      0%, 100% { opacity: 0.58; transform: translateX(-50%) translateZ(14px) scaleY(0.96); }
-      50% { opacity: 1; transform: translateX(-50%) translateZ(14px) scaleY(1); }
+      0%, 100% { opacity: 0.52; transform: translateX(-50%) translateZ(14px) scaleY(0.96); }
+      50% { opacity: 0.95; transform: translateX(-50%) translateZ(14px) scaleY(1); }
     }
 
-    /* Individual 3D Door Leaf */
+    /* Individual 3D Beveled Palace Door Leaf */
     .palace-door {
       position: absolute;
       top: 0;
@@ -300,27 +338,28 @@
       -webkit-backface-visibility: hidden;
     }
 
-    /* Deep Mahogany-Burgundy (#2b0912 to #4a0e1e) Exterior Door Face */
+    /* Deep Mahogany-Burgundy (#260710 to #4d0f20) Lacquered Exterior Door Face */
     .palace-door-front {
       transform: translateZ(3px);
       background:
-        radial-gradient(circle at 85% 48%, rgba(243, 229, 171, 0.16) 0%, transparent 56%),
-        linear-gradient(155deg, #2b0912 0%, #4a0e1e 50%, #2b0912 100%);
+        radial-gradient(circle at 50% 46%, rgba(243, 229, 171, 0.14) 0%, transparent 58%),
+        linear-gradient(155deg, #260710 0%, #4d0f20 48%, #260710 100%);
       box-shadow:
-        inset 0 0 32px rgba(0, 0, 0, 0.84),
-        0 12px 28px rgba(0, 0, 0, 0.65);
+        inset 0 0 34px rgba(0, 0, 0, 0.88),
+        inset 0 1px 0 rgba(243, 229, 171, 0.45),
+        0 14px 30px rgba(0, 0, 0, 0.72);
     }
 
     .palace-door-left .palace-door-front {
-      border-top-left-radius: 18px;
+      border-top-left-radius: 16px;
       border-bottom-left-radius: 8px;
-      border-right: 1px solid rgba(243, 229, 171, 0.36);
+      border-right: 1.5px solid rgba(243, 229, 171, 0.48);
     }
 
     .palace-door-right .palace-door-front {
-      border-top-right-radius: 18px;
+      border-top-right-radius: 16px;
       border-bottom-right-radius: 8px;
-      border-left: 1px solid rgba(20, 4, 8, 0.9);
+      border-left: 1.5px solid rgba(18, 3, 7, 0.95);
     }
 
     /* Interior Backface of Palace Doors */
@@ -328,18 +367,18 @@
       transform: rotateY(180deg) translateZ(3px);
       background: linear-gradient(160deg, #fdfbf7 0%, #efe3c8 100%);
       box-shadow:
-        inset 0 0 0 8px #380b17,
-        inset 0 0 0 10px #d4af37,
-        inset 0 0 22px rgba(170, 119, 28, 0.3);
+        inset 0 0 0 7px #360a16,
+        inset 0 0 0 9px #d4af37,
+        inset 0 0 22px rgba(170, 119, 28, 0.28);
     }
 
     .palace-door-left .palace-door-back {
-      border-top-right-radius: 18px;
+      border-top-right-radius: 16px;
       border-bottom-right-radius: 8px;
     }
 
     .palace-door-right .palace-door-back {
-      border-top-left-radius: 18px;
+      border-top-left-radius: 16px;
       border-bottom-left-radius: 8px;
     }
 
@@ -362,30 +401,36 @@
     .palace-door-left .full-door-canvas { left: 0; }
     .palace-door-right .full-door-canvas { left: -100%; }
 
+    /* Raised 3D Beveled Architectural Panel Styling */
+    .beveled-panel-3d {
+      background: linear-gradient(145deg, rgba(77, 15, 32, 0.58) 0%, rgba(28, 5, 11, 0.78) 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.72);
+      box-shadow:
+        inset 2px 2px 6px rgba(243, 229, 171, 0.22),
+        inset -3px -3px 8px rgba(0, 0, 0, 0.85),
+        0 4px 12px rgba(0, 0, 0, 0.65);
+    }
+
+    .beveled-panel-inner {
+      border: 1px solid rgba(243, 229, 171, 0.35);
+      box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.75);
+    }
+
     /* ==========================================================================
-       5. 3D WING-FLAPPING GOLD & IVORY BUTTERFLY (DOOR -> TOP-LEFT CARD CORNER)
+       5. 3D WING-FLAPPING GOLD & IVORY BUTTERFLY (CONTINUOUSLY FLYING FOREVER)
        ========================================================================== */
     #butterfly-actor {
       position: fixed;
       left: 0;
       top: 0;
-      width: 68px;
-      height: 68px;
+      width: 60px;
+      height: 60px;
       pointer-events: none !important;
       z-index: 60;
       perspective: 750px;
       opacity: 0;
       will-change: transform, opacity;
-    }
-
-    /* Once landed on top-left corner of the inner card frame, anchor cleanly to card */
-    #butterfly-actor.anchored-to-card {
-      position: absolute !important;
-      left: -14px !important;
-      top: -14px !important;
-      z-index: 28 !important;
-      transform: scale(0.82) rotateX(20deg) rotateY(10deg) rotateZ(24deg) !important;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.45s ease;
     }
 
     .butterfly-3d-rig {
@@ -400,42 +445,42 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 4.5px;
-      height: 26px;
+      width: 4px;
+      height: 22px;
       transform: translate(-50%, -46%) translateZ(2px);
       border-radius: 999px;
       background: linear-gradient(180deg, #f3e5ab 0%, #aa771c 50%, #3a111b 100%);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.42);
     }
 
     .butterfly-body::before,
     .butterfly-body::after {
       content: '';
       position: absolute;
-      top: -9px;
-      width: 6px;
-      height: 11px;
-      border-top: 1.3px solid #d4af37;
+      top: -8px;
+      width: 5px;
+      height: 10px;
+      border-top: 1.2px solid #d4af37;
       border-radius: 50%;
     }
 
     .butterfly-body::before {
-      left: -4px;
+      left: -3.5px;
       border-right: 1px solid #d4af37;
       transform: rotate(-18deg);
     }
 
     .butterfly-body::after {
-      right: -4px;
+      right: -3.5px;
       border-left: 1px solid #d4af37;
       transform: rotate(18deg);
     }
 
     .wing-hinge {
       position: absolute;
-      top: 8px;
-      width: 32px;
-      height: 48px;
+      top: 7px;
+      width: 28px;
+      height: 42px;
       transform-style: preserve-3d;
     }
 
@@ -452,11 +497,11 @@
     }
 
     #butterfly-actor.is-perched .wing-hinge-left {
-      animation: flapLeftRest 2.2s ease-in-out infinite alternate;
+      animation: flapLeftRest 2.1s ease-in-out infinite alternate;
     }
 
     #butterfly-actor.is-perched .wing-hinge-right {
-      animation: flapRightRest 2.2s ease-in-out infinite alternate;
+      animation: flapRightRest 2.1s ease-in-out infinite alternate;
     }
 
     @keyframes flapLeftFlight {
@@ -470,26 +515,26 @@
     }
 
     @keyframes flapLeftRest {
-      0% { transform: rotateY(-50deg) rotateZ(5deg); }
+      0% { transform: rotateY(-52deg) rotateZ(5deg); }
       100% { transform: rotateY(-12deg) rotateZ(0deg); }
     }
 
     @keyframes flapRightRest {
-      0% { transform: rotateY(50deg) rotateZ(-5deg); }
+      0% { transform: rotateY(52deg) rotateZ(-5deg); }
       100% { transform: rotateY(12deg) rotateZ(0deg); }
     }
 
     /* ==========================================================================
-       6. ROYAL MESSENGER PIGEON (FLIES ON GOOGLE MAPS / VENUE ARCH CLICK)
+       6. ROYAL MESSENGER PIGEON CARRYING A SEALED LETTER
        ========================================================================== */
     #pigeon-actor {
       position: fixed;
       left: 0;
       top: 0;
-      width: 92px;
-      height: 92px;
+      width: 108px;
+      height: 108px;
       pointer-events: none !important;
-      z-index: 80;
+      z-index: 85;
       opacity: 0;
       will-change: transform, opacity;
     }
@@ -502,7 +547,7 @@
 
     .pigeon-wing-flap {
       transform-origin: 46px 46px;
-      animation: pigeonWingBeat 0.24s ease-in-out infinite;
+      animation: pigeonWingBeat 0.22s ease-in-out infinite;
     }
 
     /* ==========================================================================
@@ -531,11 +576,11 @@
         transform: translate3d(0, -30px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
         opacity: 0;
       }
-      10% { opacity: var(--petal-opacity, 0.88); }
+      10% { opacity: var(--petal-opacity, 0.86); }
       50% {
         transform: translate3d(var(--sway-mid, 40px), 52vh, 20px) rotateX(210deg) rotateY(160deg) rotateZ(140deg);
       }
-      90% { opacity: var(--petal-opacity, 0.84); }
+      90% { opacity: var(--petal-opacity, 0.82); }
       100% {
         transform: translate3d(var(--sway-end, -30px), 108vh, -10px) rotateX(410deg) rotateY(330deg) rotateZ(290deg);
         opacity: 0;
@@ -543,20 +588,20 @@
     }
   </style>
 </head>
-<body class="palace-courtyard-bg flex flex-col items-center justify-between min-h-dvh py-3 px-2.5 sm:py-5 sm:px-5 relative">
+<body class="palace-courtyard-bg flex flex-col items-center justify-between w-screen h-dvh py-2 px-2 sm:py-3 sm:px-4 relative">
 
-  <!-- Warm Golden Radial Glow Behind the Doors -->
-  <div class="seam-sanctuary-glow" aria-hidden="true"></div>
+  <!-- Subtle Golden Radial Aura Behind Closed Doors — Immediately Removed on Open -->
+  <div id="seam-sanctuary-glow" class="seam-sanctuary-glow" aria-hidden="true"></div>
 
   <!-- Drifting Blush-Rose & Gold-Foil Petals Layer (pointer-events: none) -->
   <div id="petals-layer" aria-hidden="true"></div>
 
-  <!-- 3D Gold & Ivory Butterfly (Starts Perched on Door -> Lands Top-Left Card Corner) -->
+  <!-- 3D Gold & Ivory Butterfly (Perched on Upper-Right Door Lattice -> Flies Continuously Forever) -->
   <div id="butterfly-actor" class="is-perched" aria-hidden="true">
     <div class="butterfly-3d-rig">
       <!-- Left Wing -->
       <div class="wing-hinge wing-hinge-left">
-        <svg viewBox="0 0 64 100" class="w-full h-full overflow-visible drop-shadow-[0_4px_8px_rgba(0,0,0,0.42)]">
+        <svg viewBox="0 0 64 100" class="w-full h-full overflow-visible drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]">
           <defs>
             <linearGradient id="mughalWingL" x1="100%" y1="12%" x2="0%" y2="88%">
               <stop offset="0%" stop-color="#f3e5ab" stop-opacity="0.98" />
@@ -581,7 +626,7 @@
 
       <!-- Right Wing -->
       <div class="wing-hinge wing-hinge-right">
-        <svg viewBox="0 0 64 100" class="w-full h-full overflow-visible drop-shadow-[0_4px_8px_rgba(0,0,0,0.42)]" style="transform: scaleX(-1);">
+        <svg viewBox="0 0 64 100" class="w-full h-full overflow-visible drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]" style="transform: scaleX(-1);">
           <defs>
             <linearGradient id="mughalWingR" x1="100%" y1="12%" x2="0%" y2="88%">
               <stop offset="0%" stop-color="#f3e5ab" stop-opacity="0.98" />
@@ -603,9 +648,9 @@
     </div>
   </div>
 
-  <!-- Royal Ivory & 24k Gold Messenger Pigeon (Flies on Google Maps / Venue Arch Click) -->
+  <!-- Royal White & 24k Gold Messenger Pigeon Carrying a Sealed Letter -->
   <div id="pigeon-actor" aria-hidden="true">
-    <svg viewBox="0 0 100 100" class="w-full h-full overflow-visible drop-shadow-[0_10px_18px_rgba(0,0,0,0.45)]">
+    <svg viewBox="0 0 120 110" class="w-full h-full overflow-visible drop-shadow-[0_12px_20px_rgba(0,0,0,0.5)]">
       <defs>
         <linearGradient id="pigeonBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stop-color="#ffffff" />
@@ -619,7 +664,7 @@
         </linearGradient>
       </defs>
 
-      <!-- Far Wing (Subtle Depth) -->
+      <!-- Far Wing -->
       <path d="M44,44 C34,20 14,14 8,24 C16,32 28,40 42,46 Z"
             fill="#e8d49c" stroke="#aa771c" stroke-width="0.9" opacity="0.85" />
 
@@ -627,18 +672,27 @@
       <path d="M24,56 L6,66 L10,58 L4,55 L22,49 Z"
             fill="url(#pigeonBodyGrad)" stroke="#d4af37" stroke-width="1.1" />
 
-      <!-- Sculpted Dove / Royal Pigeon Body -->
+      <!-- Sculpted White & Gold Pigeon Body -->
       <path d="M22,50 C32,42 48,38 62,38 C70,38 77,32 82,34 C86,36 85,43 79,47 C72,53 58,60 40,60 C31,60 25,56 22,50 Z"
             fill="url(#pigeonBodyGrad)" stroke="#d4af37" stroke-width="1.2" />
 
       <!-- Golden Beak & Royal Eye -->
-      <polygon points="84,35 92,38 83,40" fill="#d4af37" stroke="#aa771c" stroke-width="0.6" />
-      <circle cx="79" cy="36.5" r="1.4" fill="#2b0912" />
+      <polygon points="84,35 93,38 83,40" fill="#d4af37" stroke="#aa771c" stroke-width="0.6" />
+      <circle cx="79" cy="36.5" r="1.4" fill="#260710" />
 
-      <!-- Olive / Gold Branch Held Gently in Beak -->
-      <path d="M86,39 Q94,45 97,50" fill="none" stroke="#aa771c" stroke-width="1" />
-      <ellipse cx="92" cy="43" rx="2.5" ry="1.2" transform="rotate(-25 92 43)" fill="#d4af37" />
-      <ellipse cx="95" cy="47" rx="2.5" ry="1.2" transform="rotate(20 95 47)" fill="#d4af37" />
+      <!-- Sealed Royal Invitation Letter Held by Golden Ribbon from Beak -->
+      <g transform="translate(86, 40) rotate(12)">
+        <!-- Ribbon Cord -->
+        <line x1="2" y1="-2" x2="8" y2="5" stroke="#d4af37" stroke-width="1.2" />
+        <!-- Cream-Ivory Envelope with 24k Gold Trim -->
+        <rect x="0" y="4" width="22" height="15" rx="2" fill="#fdfbf7" stroke="#d4af37" stroke-width="1.3" />
+        <!-- Envelope Flap Lines -->
+        <polyline points="0.5,4.5 11,12.5 21.5,4.5" fill="none" stroke="#aa771c" stroke-width="1" />
+        <line x1="0.5" y1="18.5" x2="8" y2="11.5" stroke="#d4af37" stroke-width="0.7" />
+        <line x1="21.5" y1="18.5" x2="14" y2="11.5" stroke="#d4af37" stroke-width="0.7" />
+        <!-- Royal Crimson Wax Seal -->
+        <circle cx="11" cy="12" r="2.6" fill="#7e1326" stroke="#f3e5ab" stroke-width="0.6" />
+      </g>
 
       <!-- Near Flapping Royal Wing -->
       <g class="pigeon-wing-flap">
@@ -651,12 +705,12 @@
   </div>
 
   <!-- ==========================================================================
-       TOP CORNER TRANSLUCENT PILL CONTROLS (SOUND ON/MUTED & REPLAY DOORS)
+       TOP CORNER TRANSLUCENT PILL CONTROLS (SOUND TOGGLE & REPLAY DOORS)
        ========================================================================== -->
-  <header class="w-full max-w-[540px] flex items-center justify-between px-0.5 mb-2.5 z-40">
-    <!-- Top-Left: Sound On / Muted Toggle -->
+  <header class="w-full max-w-[500px] flex items-center justify-between px-0.5 z-40 shrink-0">
+    <!-- Top-Left: Sound Toggle -->
     <button id="btn-sound" type="button" title="Toggle Ceremonial Sound"
-            class="px-3 py-1.5 rounded-full border border-[#d4af37]/45 bg-[#2b0912]/75 text-[#f3e5ab] hover:border-[#f3e5ab] hover:bg-[#4a0e1e]/85 transition text-[11px] font-montserrat font-medium tracking-wider flex items-center gap-1.5 backdrop-blur-md shadow-lg cursor-pointer">
+            class="px-3 py-1 rounded-full border border-[#d4af37]/50 bg-[#260710]/80 text-[#f3e5ab] hover:border-[#f3e5ab] hover:bg-[#4d0f20]/90 transition text-[10.5px] font-montserrat font-medium tracking-wider flex items-center gap-1.5 backdrop-blur-md shadow-lg cursor-pointer">
       <svg id="icon-sound-on" class="w-3.5 h-3.5 text-[#f3e5ab]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
         <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
         <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
@@ -667,12 +721,12 @@
         <line x1="23" y1="9" x2="17" y2="15"></line>
         <line x1="17" y1="9" x2="23" y2="15"></line>
       </svg>
-      <span id="sound-label">Sound On</span>
+      <span id="sound-label">Sound</span>
     </button>
 
     <!-- Top-Right: Replay Doors Button -->
     <button id="btn-replay" type="button"
-            class="opacity-0 pointer-events-none px-3 py-1.5 rounded-full border border-[#d4af37]/50 bg-[#2b0912]/75 text-[#f3e5ab] hover:border-[#f3e5ab] hover:bg-[#4a0e1e]/85 transition-all duration-500 text-[11px] font-montserrat font-medium tracking-wider flex items-center gap-1.5 backdrop-blur-md shadow-lg cursor-pointer">
+            class="opacity-0 pointer-events-none px-3 py-1 rounded-full border border-[#d4af37]/55 bg-[#260710]/80 text-[#f3e5ab] hover:border-[#f3e5ab] hover:bg-[#4d0f20]/90 transition-all duration-500 text-[10.5px] font-montserrat font-medium tracking-wider flex items-center gap-1.5 backdrop-blur-md shadow-lg cursor-pointer">
       <svg class="w-3.5 h-3.5 text-[#f3e5ab]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
         <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
         <path d="M3 3v5h5"></path>
@@ -682,22 +736,27 @@
   </header>
 
   <!-- ==========================================================================
-       MAIN 3D ROYAL MUGHAL PALACE PORTAL & INVITATION SANCTUARY
+       MAIN 3D ROYAL MUGHAL PALACE PORTAL & ZERO-SCROLL 3-PAGE ROYAL BOOK
        ========================================================================== -->
-  <main class="palace-stage-3d w-full flex flex-col items-center justify-center my-auto z-20">
+  <main class="palace-stage-3d w-full flex-1 flex items-center justify-center overflow-hidden z-20">
     <div id="palace-portal" class="palace-portal" role="region" aria-label="Walima Wedding Invitation">
 
       <!-- ======================================================================
-           1. INNER CREAM-IVORY INVITATION CARD (#fdfbf7)
+           1. INNER CREAM-IVORY 3-PAGE ROYAL BOOK (#fdfbf7)
            ====================================================================== -->
-      <article id="invitation-card" class="invitation-card p-2.5 sm:p-4">
-        <!-- Double 24k Gold Hairline Border Frame with Subtle Metallic Shimmer -->
-        <div class="relative border-[1.5px] border-[#d4af37] rounded-2xl p-1 sm:p-1.5 gold-border-shimmer shadow-[inset_0_0_16px_rgba(212,175,55,0.18)]">
-          <div class="relative border border-[#aa771c]/55 rounded-xl px-4 py-6 sm:px-7 sm:py-8 text-center overflow-hidden">
+      <article id="royal-book-shell" class="royal-book-shell p-1.5 sm:p-2.5">
+        <!-- Double 24k Gold Hairline Border Frame with Metallic Gold-Foil Shimmer -->
+        <div class="relative w-full h-full border-[1.5px] border-[#d4af37] rounded-2xl p-1 gold-border-shimmer shadow-[inset_0_0_16px_rgba(212,175,55,0.16)] overflow-hidden">
+          <div class="relative w-full h-full border border-[#aa771c]/55 rounded-xl overflow-hidden">
 
-            <!-- FOUR ORNATE MUGHAL CORNER FILIGREE INLINE SVGS -->
-            <!-- Top-Left Mughal Corner Filigree -->
-            <svg class="absolute top-1.5 left-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] pointer-events-none" viewBox="0 0 100 100" fill="none">
+            <!-- Slim 5-Second Golden Auto-Slide Progress Bar at Top of Book Frame -->
+            <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#d4af37]/20 z-30 pointer-events-none">
+              <div id="book-auto-progress"
+                   class="h-full w-full bg-gradient-to-r from-[#aa771c] via-[#d4af37] to-[#f3e5ab] origin-left scale-x-0"></div>
+            </div>
+
+            <!-- FOUR ORNATE MUGHAL CORNER FILIGREE INLINE SVGS (PERSISTENT ON BOOK FRAME) -->
+            <svg class="absolute top-1 left-1 w-11 h-11 sm:w-14 sm:h-14 text-[#d4af37] pointer-events-none z-20" viewBox="0 0 100 100" fill="none">
               <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
               <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
               <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
@@ -705,8 +764,7 @@
               <circle cx="18" cy="18" r="3" fill="#aa771c"/>
             </svg>
 
-            <!-- Top-Right Mughal Corner Filigree -->
-            <svg class="absolute top-1.5 right-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] -scale-x-100 pointer-events-none" viewBox="0 0 100 100" fill="none">
+            <svg class="absolute top-1 right-1 w-11 h-11 sm:w-14 sm:h-14 text-[#d4af37] -scale-x-100 pointer-events-none z-20" viewBox="0 0 100 100" fill="none">
               <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
               <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
               <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
@@ -714,8 +772,7 @@
               <circle cx="18" cy="18" r="3" fill="#aa771c"/>
             </svg>
 
-            <!-- Bottom-Left Mughal Corner Filigree -->
-            <svg class="absolute bottom-1.5 left-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] -scale-y-100 pointer-events-none" viewBox="0 0 100 100" fill="none">
+            <svg class="absolute bottom-1 left-1 w-11 h-11 sm:w-14 sm:h-14 text-[#d4af37] -scale-y-100 pointer-events-none z-20" viewBox="0 0 100 100" fill="none">
               <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
               <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
               <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
@@ -723,8 +780,7 @@
               <circle cx="18" cy="18" r="3" fill="#aa771c"/>
             </svg>
 
-            <!-- Bottom-Right Mughal Corner Filigree -->
-            <svg class="absolute bottom-1.5 right-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] scale-[-1] pointer-events-none" viewBox="0 0 100 100" fill="none">
+            <svg class="absolute bottom-1 right-1 w-11 h-11 sm:w-14 sm:h-14 text-[#d4af37] scale-[-1] pointer-events-none z-20" viewBox="0 0 100 100" fill="none">
               <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
               <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
               <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
@@ -732,276 +788,374 @@
               <circle cx="18" cy="18" r="3" fill="#aa771c"/>
             </svg>
 
-            <!-- SOFT BLUSH-ROSE BOTANICAL INLINE SVG SIDE ILLUSTRATIONS FLANKING COUPLE -->
-            <!-- Left Blush-Rose Botanical Illustration -->
-            <svg class="absolute left-0 top-[40%] -translate-y-1/2 w-14 h-44 sm:w-20 sm:h-52 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
-              <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
-              <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
-              <path d="M46,148 C56,154 62,164 58,172 C50,166 46,156 46,148 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
-              <!-- Ivory Rose Blossom -->
-              <g transform="translate(24, 96)">
-                <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
-                <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
-                <path d="M-5,-2 C-3,-7 3,-7 5,-2 C6,3 2,6 -2,5 C-5,4 -6,1 -5,-2 Z" fill="#edd39e"/>
-              </g>
-              <!-- Blush-Rose Blossom -->
-              <g transform="translate(20, 134)">
-                <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
-                <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
-                <path d="M-4,-2 C-2,-5 2,-5 4,-2 C5,2 2,5 -2,4 C-4,3 -5,1 -4,-2 Z" fill="#e6a1b2"/>
-              </g>
-              <circle cx="46" cy="92" r="4.5" fill="#f7cfd8" stroke="#d4af37" stroke-width="0.6"/>
-              <circle cx="54" cy="124" r="2" fill="#d4af37"/>
-            </svg>
-
-            <!-- Right Blush-Rose Botanical Illustration (Mirrored) -->
-            <svg class="absolute right-0 top-[40%] -translate-y-1/2 w-14 h-44 sm:w-20 sm:h-52 -scale-x-100 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
-              <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
-              <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
-              <path d="M46,148 C56,154 62,164 58,172 C50,166 46,156 46,148 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
-              <g transform="translate(24, 96)">
-                <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
-                <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
-                <path d="M-5,-2 C-3,-7 3,-7 5,-2 C6,3 2,6 -2,5 C-5,4 -6,1 -5,-2 Z" fill="#edd39e"/>
-              </g>
-              <g transform="translate(20, 134)">
-                <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
-                <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
-                <path d="M-4,-2 C-2,-5 2,-5 4,-2 C5,2 2,5 -2,4 C-4,3 -5,1 -4,-2 Z" fill="#e6a1b2"/>
-              </g>
-              <circle cx="46" cy="92" r="4.5" fill="#f7cfd8" stroke="#d4af37" stroke-width="0.6"/>
-              <circle cx="54" cy="124" r="2" fill="#d4af37"/>
-            </svg>
-
             <!-- ================================================================
-                 SECTION A: SACRED OPENING (TOP) — CUSTOM INLINE SVG ARABIC CALLIGRAPHY
+                 3-PAGE HORIZONTAL SLIDER VIEWPORT
                  ================================================================ -->
-            <section class="reveal-section relative z-10 pt-1">
-              <!-- Custom Inline SVG Bismillah Calligraphy with Metallic Gold Shimmer -->
-              <svg class="w-60 sm:w-72 h-12 sm:h-14 mx-auto overflow-visible" viewBox="0 0 360 66" role="img" aria-label="Bismillah-ir-Rahman-ir-Rahim">
-                <defs>
-                  <linearGradient id="bismillahGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#8a5d12">
-                      <animate attributeName="stop-color" values="#8a5d12;#d4af37;#f3e5ab;#aa771c;#8a5d12" dur="5s" repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="50%" stop-color="#f3e5ab">
-                      <animate attributeName="stop-color" values="#f3e5ab;#aa771c;#8a5d12;#d4af37;#f3e5ab" dur="5s" repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="100%" stop-color="#aa771c">
-                      <animate attributeName="stop-color" values="#aa771c;#8a5d12;#d4af37;#f3e5ab;#aa771c" dur="5s" repeatCount="indefinite" />
-                    </stop>
-                  </linearGradient>
-                </defs>
-                <!-- Decorative Mughal Calligraphic Swash & Dots -->
-                <path d="M46,54 Q180,62 314,54" fill="none" stroke="url(#bismillahGoldGrad)" stroke-width="1.1" stroke-linecap="round" opacity="0.7" />
-                <circle cx="180" cy="58" r="2.2" fill="#d4af37" />
-                <text x="180" y="38" text-anchor="middle" direction="rtl" lang="ar"
-                      font-family="'Amiri', serif" font-weight="700" font-size="30"
-                      fill="url(#bismillahGoldGrad)">
-                  بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-                </text>
-              </svg>
+            <div id="book-pages-viewport" class="book-pages-viewport">
+              <div id="book-pages-track" class="book-pages-track">
 
-              <!-- Quranic Verse: Surah An-Naba (78:8) -->
-              <p class="font-amiri text-xl sm:text-2xl font-bold text-[#8a631e] mt-0.5 leading-snug" dir="rtl" lang="ar">
-                وَخَلَقْنَاكُمْ أَزْوَاجًا
-              </p>
-              <p class="font-cormorant italic font-semibold text-sm sm:text-base text-[#6d4f1d] mt-0.5">
-                “And We created you in pairs.”
-              </p>
-              <p class="font-montserrat text-[10px] sm:text-[11px] font-medium tracking-[0.16em] uppercase text-[#8a682a] mt-0.5">
-                — Surah An-Naba (78:8) —
-              </p>
-            </section>
+                <!-- ============================================================
+                     PAGE 1: SACRED OPENING, GROOM'S PARENTS, COUPLE & LOCATION TAG
+                     ============================================================ -->
+                <section class="book-page" aria-label="Page 1: Sacred Opening and Couple">
+                  <!-- Soft Blush-Rose Botanical Side SVGs Flanking Couple -->
+                  <svg class="absolute left-0 top-[56%] -translate-y-1/2 w-12 h-36 sm:w-16 sm:h-44 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
+                    <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
+                    <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
+                    <g transform="translate(24, 96)">
+                      <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
+                      <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
+                    </g>
+                    <g transform="translate(20, 134)">
+                      <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
+                      <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
+                    </g>
+                  </svg>
 
-            <!-- ================================================================
-                 SECTION B: GROOM'S PARENTS
-                 ================================================================ -->
-            <section class="reveal-section relative z-10 mt-4 sm:mt-5">
-              <h2 class="font-cinzel-dec text-xs sm:text-[14px] font-bold tracking-[0.05em] text-[#231f20] leading-snug">
-                Mr. Pareeth K. K. &amp; Mrs. Zeenath Pareeth
-              </h2>
-              <p class="font-cormorant font-semibold text-sm sm:text-[15.5px] text-[#3d3738] mt-0.5">
-                Kottanattupara (H), Pallikavala, Perumbavoor
-              </p>
+                  <svg class="absolute right-0 top-[56%] -translate-y-1/2 w-12 h-36 sm:w-16 sm:h-44 -scale-x-100 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
+                    <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
+                    <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
+                    <g transform="translate(24, 96)">
+                      <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
+                      <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
+                    </g>
+                    <g transform="translate(20, 134)">
+                      <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
+                      <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
+                    </g>
+                  </svg>
 
-              <p class="font-cormorant italic text-[15px] sm:text-[17px] text-[#2b2627] leading-snug mt-3 max-w-md mx-auto">
-                cordially request the honor of your presence and blessings to celebrate the Walima reception of their beloved son
-              </p>
-            </section>
-
-            <!-- ================================================================
-                 SECTION C: COUPLE'S NAMES (ALFIYAS MUHAMMED & SINCILA K. M.)
-                 ================================================================ -->
-            <section class="reveal-section relative z-10 my-3 sm:my-4 py-1">
-              <h1 class="couple-crimson-gold text-2xl sm:text-[32px]">
-                ALFIYAS MUHAMMED
-              </h1>
-              <div class="my-1 flex items-center justify-center gap-2.5">
-                <span class="h-[1px] w-10 bg-gradient-to-r from-transparent to-[#d4af37]"></span>
-                <span class="font-cinzel-dec text-lg sm:text-xl font-bold gold-foil-shimmer-text">&amp;</span>
-                <span class="h-[1px] w-10 bg-gradient-to-l from-transparent to-[#d4af37]"></span>
-              </div>
-              <h2 class="couple-crimson-gold text-2xl sm:text-[32px]">
-                SINCILA K. M.
-              </h2>
-            </section>
-
-            <!-- ================================================================
-                 SECTION D: BRIDE'S PARENTS
-                 ================================================================ -->
-            <section class="reveal-section relative z-10">
-              <p class="font-cormorant italic text-sm sm:text-[16px] text-[#3d3738]">
-                Beloved daughter of
-              </p>
-              <h3 class="font-cinzel-dec text-xs sm:text-[14px] font-bold tracking-[0.05em] text-[#231f20] mt-0.5 leading-snug">
-                Mr. Moosa K. B. &amp; Mrs. Shyla M. M.
-              </h3>
-              <p class="font-cormorant font-semibold text-sm sm:text-[15.5px] text-[#3d3738] mt-0.5">
-                Kanjiramthadam (H), Randar P.O., Muvattupuzha
-              </p>
-            </section>
-
-            <!-- ================================================================
-                 SECTION E: INVITATION & MARRIAGE DUA (INLINE SVG CALLIGRAPHY)
-                 ================================================================ -->
-            <section class="reveal-section relative z-10 mt-3.5 sm:mt-4">
-              <p class="font-cormorant italic text-sm sm:text-[16px] text-[#2b2627] leading-snug max-w-md mx-auto">
-                Invite you to share in our joy and shower your duas as we embark on a blessed journey together, Insha’Allah
-              </p>
-
-              <!-- Custom Inline SVG Arabic Marriage Dua -->
-              <svg class="w-full max-w-[380px] h-12 sm:h-14 mx-auto mt-2 overflow-visible" viewBox="0 0 420 62" role="img" aria-label="Barakallahu lakuma wa baraka alaykuma wa jamaa baynakuma fi khayr">
-                <text x="210" y="36" text-anchor="middle" direction="rtl" lang="ar"
-                      font-family="'Amiri', serif" font-weight="700" font-size="25"
-                      fill="#7e5b19">
-                  بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
-                </text>
-                <path d="M90,50 Q210,57 330,50" fill="none" stroke="#d4af37" stroke-width="0.9" opacity="0.65" />
-              </svg>
-            </section>
-
-            <!-- ================================================================
-                 SECTION F: ORNAMENTAL GOLD DIVIDER, DATE & TIME (CLEAN EDITORIAL)
-                 ================================================================ -->
-            <section class="reveal-section relative z-10 mt-3 sm:mt-4">
-              <!-- Ornamental Gold Divider -->
-              <div class="flex items-center justify-center gap-2 my-2">
-                <span class="h-[1px] flex-1 max-w-[90px] bg-gradient-to-r from-transparent via-[#d4af37] to-[#aa771c]"></span>
-                <svg class="w-5 h-5 text-[#d4af37]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
-                </svg>
-                <span class="h-[1px] flex-1 max-w-[90px] bg-gradient-to-l from-transparent via-[#d4af37] to-[#aa771c]"></span>
-              </div>
-
-              <div class="py-1.5">
-                <p class="font-cinzel-dec text-base sm:text-xl font-bold tracking-[0.12em] text-[#7e1326]">
-                  SUNDAY, 20 DEC 2026
-                </p>
-                <p class="font-montserrat text-xs sm:text-[13px] font-semibold tracking-[0.22em] uppercase text-[#6d4f1d] mt-1">
-                  4:00 PM ONWARDS
-                </p>
-              </div>
-            </section>
-
-            <!-- ================================================================
-                 SECTION G: MUGHAL MEHRAB VENUE ARCH (CLICKABLE -> PIGEON + MAPS)
-                 ================================================================ -->
-            <section class="reveal-section relative z-10 mt-3 sm:mt-4 flex flex-col items-center">
-              <a id="venue-mehrab-link"
-                 href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 title="Tap to fly to Diamond Banquet Hall A/C on Google Maps"
-                 class="group relative w-full max-w-[330px] pt-8 pb-5 px-5 block cursor-pointer transition-transform duration-300 hover:scale-[1.015] active:scale-[0.99]">
-
-                <!-- Gold-Lined Mughal Pointed Mehrab Arch Silhouette SVG -->
-                <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 320 175" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="mehrabArchFill" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stop-color="#f3e5ab" stop-opacity="0.32" />
-                      <stop offset="100%" stop-color="#fdfbf7" stop-opacity="0.78" />
-                    </linearGradient>
-                  </defs>
-                  <!-- Outer Pointed Mughal Mehrab Arch -->
-                  <path d="M12,171 L12,76 C12,46 58,34 114,22 C136,17 150,9 160,3 C170,9 184,17 206,22 C262,34 308,46 308,76 L308,171 Z"
-                        fill="url(#mehrabArchFill)" stroke="#d4af37" stroke-width="1.8" />
-                  <!-- Inner Hairline Pointed Arch -->
-                  <path d="M18,166 L18,79 C18,52 62,40 116,28 C137,23 150,16 160,10 C170,16 183,23 204,28 C258,40 302,52 302,79 L302,166 Z"
-                        fill="none" stroke="#aa771c" stroke-width="0.9" stroke-dasharray="3 2" />
-                  <!-- Crown Finial -->
-                  <circle cx="160" cy="18" r="2.5" fill="#d4af37" />
-                </svg>
-
-                <div class="relative z-10 text-center">
-                  <span class="inline-flex items-center gap-1 font-montserrat text-[9px] sm:text-[10px] font-semibold tracking-[0.22em] uppercase text-[#8a631e]">
-                    <svg class="w-3 h-3 text-[#7e1326]" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  <!-- Top: Bismillah SVG & Surah An-Naba (78:8) -->
+                  <div class="w-full relative z-10">
+                    <svg class="w-52 sm:w-64 h-10 sm:h-12 mx-auto overflow-visible" viewBox="0 0 360 66" role="img" aria-label="Bismillah-ir-Rahman-ir-Rahim">
+                      <defs>
+                        <linearGradient id="bismillahGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#8a5d12">
+                            <animate attributeName="stop-color" values="#8a5d12;#d4af37;#f3e5ab;#aa771c;#8a5d12" dur="5s" repeatCount="indefinite" />
+                          </stop>
+                          <stop offset="50%" stop-color="#f3e5ab">
+                            <animate attributeName="stop-color" values="#f3e5ab;#aa771c;#8a5d12;#d4af37;#f3e5ab" dur="5s" repeatCount="indefinite" />
+                          </stop>
+                          <stop offset="100%" stop-color="#aa771c">
+                            <animate attributeName="stop-color" values="#aa771c;#8a5d12;#d4af37;#f3e5ab;#aa771c" dur="5s" repeatCount="indefinite" />
+                          </stop>
+                        </linearGradient>
+                      </defs>
+                      <path d="M54,53 Q180,61 306,53" fill="none" stroke="url(#bismillahGoldGrad)" stroke-width="1.1" stroke-linecap="round" opacity="0.7" />
+                      <circle cx="180" cy="57" r="2.2" fill="#d4af37" />
+                      <text x="180" y="38" text-anchor="middle" direction="rtl" lang="ar"
+                            font-family="'Amiri', serif" font-weight="700" font-size="30"
+                            fill="url(#bismillahGoldGrad)">
+                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                      </text>
                     </svg>
-                    Walima Venue
-                  </span>
-                  <h4 class="font-cinzel-dec text-sm sm:text-base font-bold text-[#231f20] group-hover:text-[#7e1326] transition-colors mt-1 leading-snug">
-                    Diamond Banquet Hall A/C
-                  </h4>
-                  <p class="font-cormorant font-semibold text-base sm:text-lg text-[#3d3738] leading-tight">
-                    Allapra, Perumbavoor
-                  </p>
-                  <span class="inline-block mt-1.5 font-montserrat text-[9px] font-medium tracking-[0.14em] uppercase text-[#7e1326] underline decoration-[#d4af37] underline-offset-4">
-                    Tap for Directions →
-                  </span>
-                </div>
-              </a>
-            </section>
+
+                    <p class="font-amiri text-[clamp(1.05rem,2.4vh,1.35rem)] font-bold text-[#8a631e] leading-tight" dir="rtl" lang="ar">
+                      وَخَلَقْنَاكُمْ أَزْوَاجًا
+                    </p>
+                    <p class="font-cormorant italic font-semibold text-[clamp(0.82rem,1.85vh,0.98rem)] text-[#6d4f1d]">
+                      “And We created you in pairs.” <span class="font-montserrat not-italic text-[9px] tracking-[0.12em] uppercase text-[#8a682a]">— Surah An-Naba (78:8)</span>
+                    </p>
+                  </div>
+
+                  <!-- Middle: Groom's Parents & Invitation Line -->
+                  <div class="w-full relative z-10 px-1">
+                    <h2 class="font-cinzel-dec text-[clamp(0.74rem,1.65vh,0.88rem)] font-bold tracking-[0.04em] text-[#231f20] leading-snug">
+                      Mr. Pareeth K. K. &amp; Mrs. Zeenath Pareeth
+                    </h2>
+                    <p class="font-cormorant font-semibold text-[clamp(0.84rem,1.8vh,0.98rem)] text-[#3d3738]">
+                      Kottanattupara (H), Pallikavala, Perumbavoor
+                    </p>
+                    <p class="font-cormorant italic text-[clamp(0.86rem,1.9vh,1.02rem)] text-[#2b2627] leading-snug mt-1.5 max-w-sm mx-auto">
+                      cordially request the honour of your presence and blessings to celebrate the Walima reception of their beloved son
+                    </p>
+                  </div>
+
+                  <!-- Centerpiece: Couple's Names -->
+                  <div class="w-full relative z-10 py-0.5">
+                    <h1 class="couple-crimson-gold text-[clamp(1.25rem,3.3vh,1.85rem)]">
+                      ALFIYAS MUHAMMED
+                    </h1>
+                    <div class="my-0.5 flex items-center justify-center gap-2">
+                      <span class="h-[1px] w-9 bg-gradient-to-r from-transparent to-[#d4af37]"></span>
+                      <span class="font-cinzel-dec text-[clamp(0.95rem,2.1vh,1.2rem)] font-bold gold-foil-shimmer-text">&amp;</span>
+                      <span class="h-[1px] w-9 bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+                    </div>
+                    <h2 class="couple-crimson-gold text-[clamp(1.25rem,3.3vh,1.85rem)]">
+                      SINCILA K. M.
+                    </h2>
+                  </div>
+
+                  <!-- Bottom Non-Interfering Location Pill Tag -->
+                  <div class="w-full relative z-20 flex justify-center pt-0.5">
+                    <a id="page1-location-tag"
+                       href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-no-swipe="true"
+                       title="Open Diamond Banquet Hall A/C in Google Maps"
+                       class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#260710] via-[#4d0f20] to-[#260710] border border-[#d4af37] text-[#f3e5ab] hover:brightness-110 active:scale-95 transition shadow-[0_4px_14px_rgba(38,7,16,0.32)] cursor-pointer">
+                      <svg class="w-3.5 h-3.5 text-[#f3e5ab] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <span class="font-montserrat text-[9.5px] sm:text-[10px] font-semibold tracking-[0.16em] uppercase">
+                        Go to Location
+                      </span>
+                    </a>
+                  </div>
+                </section>
+
+                <!-- ============================================================
+                     PAGE 2: BRIDE'S PARENTS & ARABIC MARRIAGE DUA
+                     ============================================================ -->
+                <section class="book-page" aria-label="Page 2: Bride's Parents and Marriage Dua">
+                  <!-- Top Ornamental Mughal Crown Motif -->
+                  <div class="w-full relative z-10 flex flex-col items-center">
+                    <span class="font-montserrat text-[9px] sm:text-[10px] font-semibold tracking-[0.26em] uppercase text-[#8a631e]">
+                      With Family Blessings
+                    </span>
+                    <div class="flex items-center justify-center gap-2 mt-1 w-full">
+                      <span class="h-[1px] flex-1 max-w-[75px] bg-gradient-to-r from-transparent to-[#d4af37]"></span>
+                      <svg class="w-5 h-5 text-[#d4af37]" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+                      </svg>
+                      <span class="h-[1px] flex-1 max-w-[75px] bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+                    </div>
+                  </div>
+
+                  <!-- Bride's Parents Section -->
+                  <div class="w-full relative z-10 px-2">
+                    <p class="font-cormorant italic text-[clamp(0.95rem,2.1vh,1.12rem)] text-[#6d4f1d]">
+                      Beloved daughter of
+                    </p>
+                    <h2 class="font-cinzel-dec text-[clamp(0.85rem,2.05vh,1.08rem)] font-bold tracking-[0.05em] text-[#7e1326] mt-1 leading-snug">
+                      Mr. Moosa K. B. &amp; Mrs. Shyla M. M.
+                    </h2>
+                    <p class="font-cormorant font-semibold text-[clamp(0.92rem,2vh,1.08rem)] text-[#2b2627] mt-0.5">
+                      Kanjiramthadam (H), Randar P.O., Muvattupuzha
+                    </p>
+                  </div>
+
+                  <!-- Ornamental Gold Divider -->
+                  <div class="flex items-center justify-center gap-2.5 w-full">
+                    <span class="h-[1px] flex-1 max-w-[90px] bg-gradient-to-r from-transparent via-[#d4af37] to-[#aa771c]"></span>
+                    <span class="w-2 h-2 rotate-45 border border-[#d4af37] bg-[#f3e5ab]"></span>
+                    <span class="h-[1px] flex-1 max-w-[90px] bg-gradient-to-l from-transparent via-[#d4af37] to-[#aa771c]"></span>
+                  </div>
+
+                  <!-- Heartfelt Invitation Message & Arabic Marriage Dua SVG -->
+                  <div class="w-full relative z-10 px-2">
+                    <p class="font-cormorant italic text-[clamp(0.95rem,2.1vh,1.14rem)] text-[#231f20] leading-relaxed max-w-sm mx-auto">
+                      We invite you to share in our joy and shower your duas as they embark on a blessed journey together, Insha’Allah.
+                    </p>
+
+                    <!-- Custom Inline SVG Arabic Marriage Dua -->
+                    <div class="mt-3 pt-2.5 px-2 rounded-2xl border border-[#d4af37]/45 bg-[#fdfbf7]/85 shadow-[inset_0_0_12px_rgba(212,175,55,0.12)]">
+                      <svg class="w-full max-w-[360px] h-12 sm:h-14 mx-auto overflow-visible" viewBox="0 0 420 62" role="img" aria-label="Barakallahu lakuma wa baraka alaykuma wa jamaa baynakuma fi khayr">
+                        <text x="210" y="36" text-anchor="middle" direction="rtl" lang="ar"
+                              font-family="'Amiri', serif" font-weight="700" font-size="25"
+                              fill="#7e5b19">
+                          بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+                        </text>
+                        <path d="M90,50 Q210,57 330,50" fill="none" stroke="#d4af37" stroke-width="0.9" opacity="0.65" />
+                      </svg>
+                      <p class="font-cormorant italic text-[clamp(0.75rem,1.6vh,0.88rem)] text-[#6d4f1d] pb-2 leading-snug">
+                        “May Allah bless you both, shower His blessings upon you, and unite you together in goodness.”
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- ============================================================
+                     PAGE 3: DATE & TIME, MUGHAL ARCH VENUE, LIVE COUNTDOWN & 2×2 DOCK
+                     (No "With Best Wishes" section)
+                     ============================================================ -->
+                <section class="book-page" aria-label="Page 3: Venue, Countdown and Concierge Actions">
+                  <!-- Top: Date & Time -->
+                  <div class="w-full relative z-10">
+                    <span class="font-montserrat text-[9px] font-semibold tracking-[0.24em] uppercase text-[#8a631e]">
+                      Save The Date
+                    </span>
+                    <h2 class="font-cinzel-dec text-[clamp(0.95rem,2.3vh,1.25rem)] font-bold tracking-[0.1em] text-[#7e1326] mt-0.5 leading-tight">
+                      SUNDAY, 20 DEC 2026
+                    </h2>
+                    <p class="font-montserrat text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase text-[#6d4f1d] mt-0.5">
+                      4:00 PM ONWARDS
+                    </p>
+                  </div>
+
+                  <!-- Clickable Mughal Mehrab Venue Arch (Launches Pigeon with Letter -> Google Maps) -->
+                  <div class="w-full relative z-10 flex justify-center">
+                    <a id="venue-mehrab-link"
+                       href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       data-no-swipe="true"
+                       title="Tap to fly to Diamond Banquet Hall A/C on Google Maps"
+                       class="group relative w-full max-w-[300px] pt-5 pb-3 px-4 block cursor-pointer transition-transform duration-300 hover:scale-[1.015] active:scale-[0.98]">
+
+                      <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 320 175" preserveAspectRatio="none">
+                        <defs>
+                          <linearGradient id="mehrabArchFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#f3e5ab" stop-opacity="0.34" />
+                            <stop offset="100%" stop-color="#fdfbf7" stop-opacity="0.82" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M12,171 L12,76 C12,46 58,34 114,22 C136,17 150,9 160,3 C170,9 184,17 206,22 C262,34 308,46 308,76 L308,171 Z"
+                              fill="url(#mehrabArchFill)" stroke="#d4af37" stroke-width="1.8" />
+                        <path d="M18,166 L18,79 C18,52 62,40 116,28 C137,23 150,16 160,10 C170,16 183,23 204,28 C258,40 302,52 302,79 L302,166 Z"
+                              fill="none" stroke="#aa771c" stroke-width="0.9" stroke-dasharray="3 2" />
+                        <circle cx="160" cy="18" r="2.5" fill="#d4af37" />
+                      </svg>
+
+                      <div class="relative z-10 text-center">
+                        <span class="inline-flex items-center gap-1 font-montserrat text-[8.5px] font-semibold tracking-[0.2em] uppercase text-[#8a631e]">
+                          <svg class="w-3 h-3 text-[#7e1326]" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                          </svg>
+                          Walima Venue
+                        </span>
+                        <h3 class="font-cinzel-dec text-[clamp(0.8rem,1.9vh,0.98rem)] font-bold text-[#231f20] group-hover:text-[#7e1326] transition-colors mt-0.5 leading-snug">
+                          Diamond Banquet Hall A/C
+                        </h3>
+                        <p class="font-cormorant font-semibold text-[clamp(0.88rem,1.9vh,1.02rem)] text-[#3d3738] leading-tight">
+                          Allapra, Perumbavoor
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Live Countdown Timer in Gold-Rimmed Boxes -->
+                  <div class="w-full relative z-10">
+                    <div class="grid grid-cols-4 gap-1.5 max-w-[290px] sm:max-w-[320px] mx-auto">
+                      <div class="rounded-lg bg-[#fdfbf7] border border-[#d4af37] py-1 px-1 shadow-[0_2px_6px_rgba(212,175,55,0.16)]">
+                        <span id="cd-days" class="block font-cinzel-dec text-[clamp(0.9rem,2.1vh,1.15rem)] font-bold text-[#7e1326] leading-tight">00</span>
+                        <span class="block font-montserrat text-[7.5px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Days</span>
+                      </div>
+                      <div class="rounded-lg bg-[#fdfbf7] border border-[#d4af37] py-1 px-1 shadow-[0_2px_6px_rgba(212,175,55,0.16)]">
+                        <span id="cd-hours" class="block font-cinzel-dec text-[clamp(0.9rem,2.1vh,1.15rem)] font-bold text-[#7e1326] leading-tight">00</span>
+                        <span class="block font-montserrat text-[7.5px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Hours</span>
+                      </div>
+                      <div class="rounded-lg bg-[#fdfbf7] border border-[#d4af37] py-1 px-1 shadow-[0_2px_6px_rgba(212,175,55,0.16)]">
+                        <span id="cd-mins" class="block font-cinzel-dec text-[clamp(0.9rem,2.1vh,1.15rem)] font-bold text-[#7e1326] leading-tight">00</span>
+                        <span class="block font-montserrat text-[7.5px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Mins</span>
+                      </div>
+                      <div class="rounded-lg bg-[#fdfbf7] border border-[#d4af37] py-1 px-1 shadow-[0_2px_6px_rgba(212,175,55,0.16)]">
+                        <span id="cd-secs" class="block font-cinzel-dec text-[clamp(0.9rem,2.1vh,1.15rem)] font-bold text-[#7e1326] leading-tight">00</span>
+                        <span class="block font-montserrat text-[7.5px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Secs</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 2×2 Concierge Action Dock -->
+                  <div class="w-full relative z-20 grid grid-cols-2 gap-1.5 sm:gap-2 max-w-[390px] mx-auto" data-no-swipe="true">
+                    <!-- 1. Google Maps (Launches Pigeon with Letter -> Redirects to Google Maps) -->
+                    <a id="btn-open-maps"
+                       href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="py-2 px-2 rounded-xl font-montserrat text-[9.5px] sm:text-[10px] font-semibold tracking-wider uppercase text-[#260710] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37] hover:brightness-105 active:scale-[0.97] transition shadow border border-[#aa771c]/50 flex items-center justify-center gap-1.5 cursor-pointer text-center">
+                      <svg class="w-3.5 h-3.5 shrink-0 text-[#260710]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <span>Google Maps</span>
+                    </a>
+
+                    <!-- 2. Add to Calendar (.ICS Download) -->
+                    <button id="btn-add-calendar" type="button"
+                            class="py-2 px-2 rounded-xl font-montserrat text-[9.5px] sm:text-[10px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#260710] hover:bg-[#4d0f20] active:scale-[0.97] transition shadow border border-[#d4af37]/60 flex items-center justify-center gap-1.5 cursor-pointer">
+                      <svg class="w-3.5 h-3.5 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Add Calendar</span>
+                    </button>
+
+                    <!-- 3. Connect with WhatsApp (Authentic Inline SVG WhatsApp Logo) -->
+                    <button id="btn-connect-whatsapp" type="button"
+                            class="py-2 px-2 rounded-xl font-montserrat text-[9.5px] sm:text-[10px] font-semibold tracking-wider uppercase text-white bg-[#1b743e] hover:bg-[#155d31] active:scale-[0.97] transition shadow border border-[#d4af37]/55 flex items-center justify-center gap-1.5 cursor-pointer">
+                      <svg class="w-3.5 h-3.5 shrink-0 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                        <path d="M12 2C6.486 2 2 6.486 2 12c0 1.849.505 3.633 1.461 5.19L2.05 22l4.946-1.384A9.93 9.93 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18.182c-1.564 0-3.095-.421-4.432-1.217l-.318-.189-2.936.822.784-2.862-.207-.33A8.153 8.153 0 0 1 3.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z"/>
+                      </svg>
+                      <span>Connect WhatsApp</span>
+                    </button>
+
+                    <!-- 4. Share Invite (Native Share + Copy Link + Scannable QR) -->
+                    <button id="btn-share-invite" type="button"
+                            class="py-2 px-2 rounded-xl font-montserrat text-[9.5px] sm:text-[10px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#260710] hover:bg-[#4d0f20] active:scale-[0.97] transition shadow border border-[#d4af37]/60 flex items-center justify-center gap-1.5 cursor-pointer">
+                      <svg class="w-3.5 h-3.5 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                      </svg>
+                      <span>Share Invite</span>
+                    </button>
+                  </div>
+                </section>
+
+              </div>
+            </div>
 
             <!-- ================================================================
-                 SECTION H: WITH BEST WISHES & LIVE COUNTDOWN TIMER
+                 BOTTOM BOOK NAVIGATION BAR: ARROWS, DOTS (1 • 2 • 3) & GESTURE HINT
                  ================================================================ -->
-            <section class="reveal-section relative z-10 mt-3 sm:mt-4">
-              <p class="font-cormorant italic font-semibold text-xs sm:text-sm text-[#6d4f1d]">
-                With Best Wishes:
-              </p>
-              <p class="font-cormorant font-bold text-base sm:text-lg text-[#7e1326] mt-0.5">
-                Ashik Pareeth, Ashna &amp; Shameer
-              </p>
+            <div class="absolute bottom-1.5 left-0 right-0 z-30 flex flex-col items-center justify-center px-3 pointer-events-none">
+              <div class="flex items-center justify-center gap-3 pointer-events-auto">
+                <!-- Left Arrow -->
+                <button id="btn-prev-page" type="button" aria-label="Previous Page"
+                        class="w-6 h-6 rounded-full border border-[#d4af37]/65 bg-[#fdfbf7]/90 text-[#7e1326] hover:bg-[#f3e5ab] flex items-center justify-center text-xs font-bold shadow-sm transition cursor-pointer">
+                  ‹
+                </button>
 
-              <!-- Real-Time Ticking Countdown in Gold-Rimmed Boxes -->
-              <div class="mt-4 pt-3 border-t border-[#d4af37]/35">
-                <p class="font-montserrat text-[9px] sm:text-[10px] font-semibold tracking-[0.2em] uppercase text-[#6d4f1d] mb-2">
-                  Counting Down to the Celebration
-                </p>
-                <div class="grid grid-cols-4 gap-2 max-w-xs sm:max-w-sm mx-auto">
-                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
-                    <span id="cd-days" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
-                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Days</span>
-                  </div>
-                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
-                    <span id="cd-hours" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
-                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Hours</span>
-                  </div>
-                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
-                    <span id="cd-mins" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
-                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Mins</span>
-                  </div>
-                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
-                    <span id="cd-secs" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
-                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Secs</span>
-                  </div>
+                <!-- Clickable Page Dots (1 • 2 • 3) -->
+                <div class="flex items-center gap-2">
+                  <button type="button" data-page-dot="0" aria-label="Page 1"
+                          class="page-dot w-5 h-2 rounded-full bg-[#7e1326] transition-all duration-300 cursor-pointer"></button>
+                  <button type="button" data-page-dot="1" aria-label="Page 2"
+                          class="page-dot w-2 h-2 rounded-full bg-[#d4af37]/55 hover:bg-[#d4af37] transition-all duration-300 cursor-pointer"></button>
+                  <button type="button" data-page-dot="2" aria-label="Page 3"
+                          class="page-dot w-2 h-2 rounded-full bg-[#d4af37]/55 hover:bg-[#d4af37] transition-all duration-300 cursor-pointer"></button>
                 </div>
+
+                <!-- Right Arrow -->
+                <button id="btn-next-page" type="button" aria-label="Next Page"
+                        class="w-6 h-6 rounded-full border border-[#d4af37]/65 bg-[#fdfbf7]/90 text-[#7e1326] hover:bg-[#f3e5ab] flex items-center justify-center text-xs font-bold shadow-sm transition cursor-pointer">
+                  ›
+                </button>
               </div>
-            </section>
+
+              <!-- Animated Swipe Gesture Hint -->
+              <div id="swipe-gesture-hint" class="flex items-center gap-1 mt-0.5 text-[#8a631e]/85">
+                <svg class="w-3 h-3 swipe-gesture-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                  <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+                  <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+                </svg>
+                <span class="font-montserrat text-[8px] sm:text-[8.5px] font-medium tracking-[0.14em] uppercase">
+                  Swipe or tap to turn pages
+                </span>
+              </div>
+            </div>
 
           </div>
         </div>
       </article>
 
       <!-- ======================================================================
-           2. 3D ROYAL PALACE DOUBLE DOORS (SWING OUTWARD AT 3s OR UPON TAP)
+           2. ULTRA-LUXURIOUS 3D ROYAL MUGHAL PALACE DOUBLE DOORS
            ====================================================================== -->
       <div id="palace-doors-overlay" class="palace-doors-overlay" role="button" tabindex="0"
            aria-label="Royal Mughal Palace Double Doors — Tap to Open Invitation">
 
-        <!-- Warm Golden Radial Glow Behind the Center Seam -->
-        <div class="center-seam-glow" aria-hidden="true"></div>
+        <!-- Warm Golden Seam Glow (Immediately Fades Out & Hides on Open) -->
+        <div id="center-seam-glow" class="center-seam-glow" aria-hidden="true"></div>
 
         <!-- LEFT PALACE DOOR -->
         <div id="palace-door-left" class="palace-door palace-door-left">
@@ -1033,18 +1187,18 @@
           </div>
         </div>
 
-        <!-- INVISIBLE PERCH ANCHOR ON THE DOOR BESIDE THE CENTRAL MEDALLION -->
+        <!-- UPPER-RIGHT LATTICE BUTTERFLY PERCH (WELL AWAY FROM CENTER "A & S" MEDALLION) -->
         <div id="door-butterfly-perch"
-             class="absolute left-[56%] top-[46%] w-2 h-2 pointer-events-none"
+             class="absolute left-[78%] top-[21%] w-2 h-2 pointer-events-none"
              aria-hidden="true"></div>
 
         <!-- BOTTOM DOOR PROMPT ("Tap to Open Invitation") & THIN 3-SECOND GOLDEN PROGRESS BAR -->
         <div id="door-prompt-pill"
-             class="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#1d050c]/90 border border-[#d4af37]/65 shadow-[0_10px_28px_rgba(0,0,0,0.85)] backdrop-blur-md transition-opacity duration-500 pointer-events-none">
-          <span class="font-montserrat text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase text-[#f3e5ab] whitespace-nowrap">
+             class="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-1.5 px-4 py-2 rounded-full bg-[#1a040a]/92 border border-[#d4af37]/70 shadow-[0_10px_28px_rgba(0,0,0,0.88)] backdrop-blur-md transition-opacity duration-500 pointer-events-none">
+          <span class="font-montserrat text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.2em] uppercase text-[#f3e5ab] whitespace-nowrap">
             Tap to Open Invitation
           </span>
-          <div class="w-40 sm:w-48 h-[3px] rounded-full bg-[#4a0e1e] overflow-hidden">
+          <div class="w-36 sm:w-44 h-[3px] rounded-full bg-[#4d0f20] overflow-hidden">
             <div id="door-countdown-bar"
                  class="h-full w-full bg-gradient-to-r from-[#aa771c] via-[#f3e5ab] to-[#d4af37] origin-left"></div>
           </div>
@@ -1052,128 +1206,60 @@
 
       </div>
     </div>
-
-    <!-- ========================================================================
-         3. CONCIERGE 2×2 BOTTOM ACTION DOCK
-         ======================================================================== -->
-    <section id="concierge-action-dock" class="w-full max-w-[540px] mt-4 z-30">
-      <div class="grid grid-cols-2 gap-2.5">
-        <!-- 1. Open Google Maps (Flies Royal Pigeon -> Redirects to Google Maps) -->
-        <a id="btn-open-maps"
-           href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#2b0912] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37] hover:brightness-105 active:scale-[0.98] transition shadow-lg border border-[#f3e5ab] flex items-center justify-center gap-2 cursor-pointer text-center">
-          <svg class="w-4 h-4 shrink-0 text-[#2b0912]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          <span>Open Google Maps</span>
-        </a>
-
-        <!-- 2. Add to Calendar (.ICS Download) -->
-        <button id="btn-add-calendar" type="button"
-                class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#2b0912]/90 hover:bg-[#4a0e1e] active:scale-[0.98] transition shadow-lg border border-[#d4af37]/50 flex items-center justify-center gap-2 cursor-pointer">
-          <svg class="w-4 h-4 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg>
-          <span>Add to Calendar</span>
-        </button>
-
-        <!-- 3. Send Dua / RSVP (WhatsApp + Copy Message Modal) -->
-        <button id="btn-open-rsvp" type="button"
-                class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#2b0912]/90 hover:bg-[#4a0e1e] active:scale-[0.98] transition shadow-lg border border-[#d4af37]/50 flex items-center justify-center gap-2 cursor-pointer">
-          <svg class="w-4 h-4 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-          </svg>
-          <span>Send Dua / RSVP</span>
-        </button>
-
-        <!-- 4. Share Invite (Native Share + Copy Link + Scannable Inline SVG QR) -->
-        <button id="btn-share-invite" type="button"
-                class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#2b0912]/90 hover:bg-[#4a0e1e] active:scale-[0.98] transition shadow-lg border border-[#d4af37]/50 flex items-center justify-center gap-2 cursor-pointer">
-          <svg class="w-4 h-4 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="18" cy="5" r="3"></circle>
-            <circle cx="6" cy="12" r="3"></circle>
-            <circle cx="18" cy="19" r="3"></circle>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-          </svg>
-          <span>Share Invite</span>
-        </button>
-      </div>
-    </section>
   </main>
 
   <!-- ==========================================================================
-       MODAL 1: SEND DUA / RSVP (WHATSAPP + COPY MESSAGE)
+       MODAL 1: CONNECT WITH WHATSAPP (PRE-FILLED GREETING / RSVP + 1-TAP OPEN)
        ========================================================================== -->
-  <div id="rsvp-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+  <div id="whatsapp-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
     <div class="relative w-full max-w-md rounded-2xl border-2 border-[#d4af37] bg-[#fdfbf7] text-[#231f20] p-5 sm:p-6 shadow-2xl">
-      <button type="button" data-close-modal="rsvp-modal"
+      <button type="button" data-close-modal="whatsapp-modal"
               class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full border border-[#aa771c]/35 text-[#231f20] hover:bg-[#f3e5ab]/50 flex items-center justify-center transition cursor-pointer"
-              aria-label="Close RSVP Modal">✕</button>
+              aria-label="Close WhatsApp Modal">✕</button>
 
-      <div class="text-center mb-4">
-        <span class="font-montserrat text-[10px] font-semibold tracking-[0.22em] uppercase text-[#8a631e]">
-          Warmest Blessings
-        </span>
-        <h2 class="font-cinzel-dec text-lg sm:text-xl font-bold text-[#7e1326] mt-0.5">
-          Send Dua &amp; RSVP
+      <div class="text-center mb-3.5">
+        <div class="w-11 h-11 rounded-full bg-[#1b743e] text-white flex items-center justify-center mx-auto mb-2 shadow-md border border-[#d4af37]">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            <path d="M12 2C6.486 2 2 6.486 2 12c0 1.849.505 3.633 1.461 5.19L2.05 22l4.946-1.384A9.93 9.93 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18.182c-1.564 0-3.095-.421-4.432-1.217l-.318-.189-2.936.822.784-2.862-.207-.33A8.153 8.153 0 0 1 3.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z"/>
+          </svg>
+        </div>
+        <h2 class="font-cinzel-dec text-lg sm:text-xl font-bold text-[#7e1326]">
+          Connect with WhatsApp
         </h2>
         <p class="font-cormorant italic text-sm text-[#4a4344]">
           Walima of Alfiyas Muhammed &amp; Sincila K. M.
         </p>
       </div>
 
-      <form id="rsvp-form" class="space-y-3">
+      <form id="whatsapp-form" class="space-y-3">
         <div>
-          <label for="rsvp-name" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
-            Guest Name / Family *
+          <label for="wa-name" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+            Your Name / Family
           </label>
-          <input id="rsvp-name" type="text" required placeholder="e.g., Abdul Rahman & Family"
+          <input id="wa-name" type="text" placeholder="e.g., Abdul Rahman & Family"
                  class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]" />
         </div>
 
         <div>
-          <label for="rsvp-guests" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
-            Number of Attendees
+          <label for="wa-preset" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+            Select Walima Greeting / RSVP
           </label>
-          <select id="rsvp-guests"
+          <select id="wa-preset"
                   class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]">
-            <option value="1 Guest">1 Guest</option>
-            <option value="2 Guests" selected>2 Guests</option>
-            <option value="3 Guests">3 Guests</option>
-            <option value="4 Guests">4 Guests</option>
-            <option value="5+ Family Members">5+ Family Members</option>
-            <option value="Sending Duas Only">Sending Duas Only</option>
+            <option value="Assalamu Alaikum! Confirming our presence for the Walima of Alfiyas Muhammed & Sincila K. M. on 20 Dec 2026. BarakAllahu Lakuma!">Confirming Attendance &amp; Blessings</option>
+            <option value="Assalamu Alaikum! Heartiest congratulations and warmest duas for Alfiyas Muhammed & Sincila K. M. on their Walima. BarakAllahu Lakuma wa Baraka Alaykuma!">Sending Warm Walima Duas</option>
+            <option value="Assalamu Alaikum! Please share location/timing details for the Walima of Alfiyas Muhammed & Sincila K. M.">Requesting Venue / Timing Info</option>
           </select>
         </div>
 
-        <div>
-          <label for="rsvp-message" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
-            Blessing / Dua Message
-          </label>
-          <textarea id="rsvp-message" rows="3"
-                    placeholder="BarakAllahu Lakuma wa Baraka Alaykuma wa Jama’a Baynakuma fi Khayr..."
-                    class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]"></textarea>
-        </div>
-
-        <div class="pt-1 flex flex-col sm:flex-row gap-2">
+        <div class="pt-1 flex flex-col gap-2">
           <button type="submit"
-                  class="flex-1 py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-white bg-[#1f7a44] hover:bg-[#196337] active:scale-[0.98] transition shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
+                  class="w-full py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-white bg-[#1b743e] hover:bg-[#155d31] active:scale-[0.98] transition shadow-md flex items-center justify-center gap-2 cursor-pointer">
             <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
             </svg>
-            <span>Send via WhatsApp</span>
-          </button>
-
-          <button id="btn-copy-rsvp" type="button"
-                  class="py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#7e1326] bg-[#f3e5ab]/65 hover:bg-[#f3e5ab] border border-[#d4af37] transition cursor-pointer">
-            Copy Message
+            <span>Open WhatsApp</span>
           </button>
         </div>
       </form>
@@ -1211,7 +1297,7 @@
 
       <div class="mt-4 space-y-2">
         <button id="btn-native-share" type="button"
-                class="w-full py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#2b0912] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37] border border-[#f3e5ab] shadow-md hover:brightness-105 transition cursor-pointer">
+                class="w-full py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#260710] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37] border border-[#f3e5ab] shadow-md hover:brightness-105 transition cursor-pointer">
           Share Invitation Sheet
         </button>
 
@@ -1225,43 +1311,87 @@
 
   <!-- Non-Intrusive Toast Notification -->
   <div id="toast-banner"
-       class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 rounded-full border border-[#d4af37]/80 bg-[#2b0912]/95 text-[#f3e5ab] font-montserrat text-[11px] font-medium tracking-wider shadow-2xl opacity-0 pointer-events-none transition-all duration-300 text-center max-w-[90vw]">
+       class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 px-5 py-2 rounded-full border border-[#d4af37]/80 bg-[#260710]/95 text-[#f3e5ab] font-montserrat text-[10.5px] font-medium tracking-wider shadow-2xl opacity-0 pointer-events-none transition-all duration-300 text-center max-w-[90vw]">
   </div>
 
   <!-- ==========================================================================
-       TEMPLATE: 200%-WIDTH CLEAN ROYAL MUGHAL PALACE DOUBLE-DOOR ARTWORK
-       (No floral garlands on doors — crisp gold arabesque latticework, carved
-        architectural panels, circular brass ring handles & split central medallion)
+       TEMPLATE: ULTRA-LUXURIOUS 200%-WIDTH ROYAL MUGHAL PALACE DOOR ARTWORK
+       (Raised 3D beveled panels, Mughal floral & geometric jali latticework,
+        embossed gold dome studs, circular brass ring handles & split 8-pointed
+        Mughal star central medallion engraved with "A & S • WALIMA • 20 DEC 2026")
        ========================================================================== -->
   <template id="palace-door-artwork-template">
-    <div class="relative w-full h-full flex flex-col items-center justify-center p-5">
+    <div class="relative w-full h-full flex flex-col items-center justify-center p-4">
 
       <!-- Outer & Inner 24k Gold Leaf Architectural Frame Moldings -->
-      <div class="absolute inset-3 rounded-xl border-[1.5px] border-[#d4af37]/85 shadow-[inset_0_0_20px_rgba(243,229,171,0.22)]"></div>
-      <div class="absolute inset-5 rounded-lg border border-[#f3e5ab]/45"></div>
+      <div class="absolute inset-2.5 rounded-xl border-[2px] border-[#d4af37] shadow-[inset_0_0_24px_rgba(243,229,171,0.28)]"></div>
+      <div class="absolute inset-4 rounded-lg border border-[#f3e5ab]/55"></div>
 
-      <!-- Intricate Mughal / Islamic Floral Arabesque SVG Latticework -->
-      <svg class="absolute inset-5 w-[calc(100%-2.5rem)] h-[calc(100%-2.5rem)] opacity-30 pointer-events-none" viewBox="0 0 240 360" preserveAspectRatio="none">
+      <!-- Intricate Mughal Floral & Geometric Jali Latticework SVG -->
+      <svg class="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] opacity-35 pointer-events-none" viewBox="0 0 240 360" preserveAspectRatio="none">
         <defs>
-          <pattern id="mughalArabesqueLattice" width="48" height="48" patternUnits="userSpaceOnUse">
-            <path d="M24,0 L48,24 L24,48 L0,24 Z" fill="none" stroke="#d4af37" stroke-width="0.75"/>
-            <circle cx="24" cy="24" r="9" fill="none" stroke="#f3e5ab" stroke-width="0.65"/>
-            <path d="M24,6 C28,13 28,18 24,24 C20,18 20,13 24,6 Z M24,42 C28,35 28,30 24,24 C20,30 20,35 24,42 Z M6,24 C13,28 18,28 24,24 C18,20 13,20 6,24 Z M42,24 C35,28 30,28 24,24 C30,20 35,20 42,24 Z" fill="#d4af37" fill-opacity="0.38"/>
+          <pattern id="mughalJaliLattice" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M24,0 L48,24 L24,48 L0,24 Z" fill="none" stroke="#d4af37" stroke-width="0.8"/>
+            <path d="M12,0 L36,0 L48,12 L48,36 L36,48 L12,48 L0,36 L0,12 Z" fill="none" stroke="#aa771c" stroke-width="0.6"/>
+            <circle cx="24" cy="24" r="9.5" fill="none" stroke="#f3e5ab" stroke-width="0.7"/>
+            <path d="M24,6 C28,13 28,18 24,24 C20,18 20,13 24,6 Z M24,42 C28,35 28,30 24,24 C20,30 20,35 24,42 Z M6,24 C13,28 18,28 24,24 C18,20 13,20 6,24 Z M42,24 C35,28 30,28 24,24 C30,20 35,20 42,24 Z" fill="#d4af37" fill-opacity="0.42"/>
             <circle cx="24" cy="24" r="2.2" fill="#f3e5ab"/>
           </pattern>
         </defs>
-        <rect width="240" height="360" fill="url(#mughalArabesqueLattice)"/>
+        <rect width="240" height="360" fill="url(#mughalJaliLattice)"/>
       </svg>
 
-      <!-- Carved Upper & Lower Architectural Wainscoting Panels (Left & Right Leaves) -->
-      <div class="absolute top-9 bottom-[54%] left-8 right-[53.5%] rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
-      <div class="absolute top-9 bottom-[54%] left-[53.5%] right-8 rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
-      <div class="absolute top-[55%] bottom-16 left-8 right-[53.5%] rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
-      <div class="absolute top-[55%] bottom-16 left-[53.5%] right-8 rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
+      <!-- Raised 3D Beveled Architectural Panels (Upper & Lower Left/Right Leaves) -->
+      <div class="beveled-panel-3d absolute top-7 bottom-[55%] left-6 right-[53%] rounded-lg p-1.5">
+        <div class="beveled-panel-inner w-full h-full rounded"></div>
+      </div>
+      <div class="beveled-panel-3d absolute top-7 bottom-[55%] left-[53%] right-6 rounded-lg p-1.5">
+        <div class="beveled-panel-inner w-full h-full rounded"></div>
+      </div>
+      <div class="beveled-panel-3d absolute top-[55%] bottom-14 left-6 right-[53%] rounded-lg p-1.5">
+        <div class="beveled-panel-inner w-full h-full rounded"></div>
+      </div>
+      <div class="beveled-panel-3d absolute top-[55%] bottom-14 left-[53%] right-6 rounded-lg p-1.5">
+        <div class="beveled-panel-inner w-full h-full rounded"></div>
+      </div>
 
-      <!-- Center Brass Ring Handles & Split Royal Medallion ("A & S • WALIMA • 20 DEC 2026") -->
+      <!-- Embossed 24k Gold Dome Studs Along Stiles & Rails -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 600" preserveAspectRatio="none">
+        <defs>
+          <radialGradient id="goldDomeStud" cx="35%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="35%" stop-color="#f3e5ab" />
+            <stop offset="75%" stop-color="#d4af37" />
+            <stop offset="100%" stop-color="#7a5110" />
+          </radialGradient>
+        </defs>
+        <!-- Left & Right Outer Stile Studs -->
+        <circle cx="22" cy="56" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="22" cy="180" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="22" cy="300" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="22" cy="420" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="22" cy="544" r="4" fill="url(#goldDomeStud)" />
+
+        <circle cx="378" cy="56" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="378" cy="180" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="378" cy="300" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="378" cy="420" r="4" fill="url(#goldDomeStud)" />
+        <circle cx="378" cy="544" r="4" fill="url(#goldDomeStud)" />
+
+        <!-- Center Lock-Rail Studs -->
+        <circle cx="192" cy="56" r="3.6" fill="url(#goldDomeStud)" />
+        <circle cx="208" cy="56" r="3.6" fill="url(#goldDomeStud)" />
+        <circle cx="192" cy="145" r="3.6" fill="url(#goldDomeStud)" />
+        <circle cx="208" cy="145" r="3.6" fill="url(#goldDomeStud)" />
+        <circle cx="192" cy="455" r="3.6" fill="url(#goldDomeStud)" />
+        <circle cx="208" cy="455" r="3.6" fill="url(#goldDomeStud)" />
+        <circle cx="192" cy="544" r="3.6" fill="url(#goldDomeStud)" />
+        <circle cx="208" cy="544" r="3.6" fill="url(#goldDomeStud)" />
+      </svg>
+
+      <!-- Circular Brass Ring Handles & Split Eight-Pointed Mughal Star Central Medallion -->
       <div class="relative z-20 flex items-center justify-center w-full">
-        <svg class="w-76 h-76 sm:w-84 sm:h-84 drop-shadow-[0_14px_26px_rgba(0,0,0,0.92)]" viewBox="0 0 340 340" fill="none">
+        <svg class="w-80 h-80 sm:w-88 sm:h-88 drop-shadow-[0_16px_28px_rgba(0,0,0,0.95)]" viewBox="0 0 360 360" fill="none">
           <defs>
             <linearGradient id="mughalGoldLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#f3e5ab"/>
@@ -1271,43 +1401,44 @@
             </linearGradient>
           </defs>
 
-          <!-- Left Door Engraved Circular Brass Ring Handle -->
-          <g transform="translate(88, 170)">
-            <circle cx="0" cy="0" r="23" fill="#2b0912" stroke="url(#mughalGoldLeafGrad)" stroke-width="2.2"/>
-            <circle cx="0" cy="0" r="15" stroke="#f3e5ab" stroke-width="0.9" stroke-dasharray="2 2"/>
-            <circle cx="0" cy="14" r="14.5" fill="none" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.8"/>
+          <!-- Left Door Circular Brass Ring Handle -->
+          <g transform="translate(76, 180)">
+            <circle cx="0" cy="0" r="22" fill="#260710" stroke="url(#mughalGoldLeafGrad)" stroke-width="2.2"/>
+            <circle cx="0" cy="0" r="14" stroke="#f3e5ab" stroke-width="0.9" stroke-dasharray="2 2"/>
+            <circle cx="0" cy="13" r="14" fill="none" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.8"/>
             <circle cx="0" cy="0" r="4.5" fill="url(#mughalGoldLeafGrad)"/>
           </g>
 
-          <!-- Right Door Engraved Circular Brass Ring Handle -->
-          <g transform="translate(252, 170)">
-            <circle cx="0" cy="0" r="23" fill="#2b0912" stroke="url(#mughalGoldLeafGrad)" stroke-width="2.2"/>
-            <circle cx="0" cy="0" r="15" stroke="#f3e5ab" stroke-width="0.9" stroke-dasharray="2 2"/>
-            <circle cx="0" cy="14" r="14.5" fill="none" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.8"/>
+          <!-- Right Door Circular Brass Ring Handle -->
+          <g transform="translate(284, 180)">
+            <circle cx="0" cy="0" r="22" fill="#260710" stroke="url(#mughalGoldLeafGrad)" stroke-width="2.2"/>
+            <circle cx="0" cy="0" r="14" stroke="#f3e5ab" stroke-width="0.9" stroke-dasharray="2 2"/>
+            <circle cx="0" cy="13" r="14" fill="none" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.8"/>
             <circle cx="0" cy="0" r="4.5" fill="url(#mughalGoldLeafGrad)"/>
           </g>
 
-          <!-- Split Central Royal Gold Medallion Perfectly Spanning the Seam -->
-          <circle cx="170" cy="170" r="94" fill="#22060d" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.5"/>
-          <circle cx="170" cy="170" r="85" stroke="#f3e5ab" stroke-width="1.1" stroke-dasharray="4 3"/>
-          <circle cx="170" cy="170" r="78" stroke="#aa771c" stroke-width="1"/>
-
-          <!-- Mughal Compass Starburst Finials -->
-          <polygon points="170,66 177,78 163,78" fill="#f3e5ab"/>
-          <polygon points="170,274 177,262 163,262" fill="#f3e5ab"/>
-          <polygon points="66,170 78,163 78,177" fill="#f3e5ab"/>
-          <polygon points="274,170 262,163 262,177" fill="#f3e5ab"/>
+          <!-- Split Eight-Pointed Mughal Star Central Medallion (Rub el Hizb Octagram) -->
+          <!-- Square 1 (0 deg) -->
+          <rect x="94" y="94" width="172" height="172" rx="4" fill="#1e040b" stroke="url(#mughalGoldLeafGrad)" stroke-width="3"/>
+          <!-- Square 2 (Rotated 45 deg) -->
+          <rect x="94" y="94" width="172" height="172" rx="4" transform="rotate(45 180 180)" fill="#1e040b" stroke="url(#mughalGoldLeafGrad)" stroke-width="3"/>
+          <!-- Inner Filigree Octagram Outline -->
+          <rect x="103" y="103" width="154" height="154" rx="2" fill="none" stroke="#f3e5ab" stroke-width="0.9" stroke-opacity="0.65"/>
+          <rect x="103" y="103" width="154" height="154" rx="2" transform="rotate(45 180 180)" fill="none" stroke="#f3e5ab" stroke-width="0.9" stroke-opacity="0.65"/>
+          <!-- Inner Circular Sanctuary Disc -->
+          <circle cx="180" cy="180" r="76" fill="#260710" stroke="url(#mughalGoldLeafGrad)" stroke-width="2.2"/>
+          <circle cx="180" cy="180" r="69" stroke="#f3e5ab" stroke-width="0.9" stroke-dasharray="3 2.5"/>
         </svg>
 
-        <!-- Engraved Central Medallion Typography -->
+        <!-- Engraved Central Medallion Typography ("A & S • WALIMA • 20 DEC 2026") -->
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
           <span class="font-cinzel-dec text-2xl sm:text-3xl font-bold tracking-[0.14em] pl-[0.14em] gold-foil-shimmer-text">
             A &amp; S
           </span>
-          <span class="my-1 px-3 py-0.5 rounded-full border border-[#d4af37]/65 bg-[#2b0912]/95 font-montserrat text-[9px] sm:text-[10px] font-bold tracking-[0.26em] pl-[0.26em] text-[#f3e5ab]">
+          <span class="my-1 px-3 py-0.5 rounded-full border border-[#d4af37]/70 bg-[#260710]/95 font-montserrat text-[9px] sm:text-[10px] font-bold tracking-[0.26em] pl-[0.26em] text-[#f3e5ab]">
             WALIMA
           </span>
-          <span class="font-montserrat text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] pl-[0.2em] text-[#f3e5ab]/90 mt-0.5">
+          <span class="font-montserrat text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.2em] pl-[0.2em] text-[#f3e5ab]/95 mt-0.5">
             20 DEC 2026
           </span>
         </div>
@@ -1317,7 +1448,7 @@
   </template>
 
   <!-- ==========================================================================
-       JAVASCRIPT: 3D PALACE DOORS, SOFT VELVET-HARP AUDIO, BUTTERFLY, PIGEON & QR
+       JAVASCRIPT: 3D PALACE DOORS, CONTINUOUS BUTTERFLY, 3-PAGE BOOK & PIGEON
        ========================================================================== -->
   <script>
     (function () {
@@ -1329,6 +1460,8 @@
       const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac';
       const WHATSAPP_NUMBER = '917510628386';
       const TARGET_WALIMA_ISO = '2026-12-20T16:00:00+05:30';
+      const TOTAL_BOOK_PAGES = 3;
+      const AUTO_SLIDE_INTERVAL_MS = 5000;
 
       /* ------------------------------------------------------------------------
          1. HYDRATE 200%-WIDTH SEAMLESS ROYAL PALACE DOOR ARTWORK
@@ -1342,10 +1475,19 @@
          2. DOM REFERENCES & STATE
          ------------------------------------------------------------------------ */
       const palaceDoorsOverlay = document.getElementById('palace-doors-overlay');
+      const centerSeamGlow = document.getElementById('center-seam-glow');
+      const seamSanctuaryGlow = document.getElementById('seam-sanctuary-glow');
       const doorPromptPill = document.getElementById('door-prompt-pill');
       const doorCountdownBar = document.getElementById('door-countdown-bar');
       const doorButterflyPerch = document.getElementById('door-butterfly-perch');
-      const invitationCard = document.getElementById('invitation-card');
+
+      const bookPagesViewport = document.getElementById('book-pages-viewport');
+      const bookPagesTrack = document.getElementById('book-pages-track');
+      const bookAutoProgress = document.getElementById('book-auto-progress');
+      const pageDots = document.querySelectorAll('.page-dot');
+      const btnPrevPage = document.getElementById('btn-prev-page');
+      const btnNextPage = document.getElementById('btn-next-page');
+
       const butterflyActor = document.getElementById('butterfly-actor');
       const pigeonActor = document.getElementById('pigeon-actor');
       const petalsLayer = document.getElementById('petals-layer');
@@ -1358,17 +1500,22 @@
 
       let isDoorsOpen = false;
       let autoOpenTimer = null;
-      let countdownAnim = null;
+      let doorProgressAnim = null;
       let ambientPetalInterval = null;
       let butterflyAnimFrame = null;
-      let butterflyState = 'perched-door'; // 'perched-door' | 'flying' | 'perched-card'
+      let butterflyMode = 'perched'; // 'perched' | 'flying'
       let isPigeonFlying = false;
       let soundEnabled = true;
       let sharedAudioCtx = null;
 
+      // 3-Page Book Slider State
+      let currentPageIndex = 0;
+      let bookAutoTimer = null;
+      let bookProgressAnim = null;
+      let bookAutoStopped = false;
+
       /* ------------------------------------------------------------------------
          3. WEB AUDIO API: SOFT VELVET AIR WHOOSH + SHIMMERING HARP/CHIME CHORD
-            (No harsh creaking sounds; respects mobile browser autoplay policies)
          ------------------------------------------------------------------------ */
       function getUnlockedAudioContext() {
         try {
@@ -1400,8 +1547,8 @@
         try {
           const now = ctx.currentTime;
 
-          // --- LAYER 1: Soft Velvet Air Whoosh (Smoothly Filtered Pink Noise Sweep) ---
-          const duration = 2.1;
+          // Layer 1: Soft Velvet Air Whoosh
+          const duration = 2.0;
           const bufferSize = Math.floor(ctx.sampleRate * duration);
           const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
           const output = noiseBuffer.getChannelData(0);
@@ -1420,12 +1567,12 @@
           const velvetFilter = ctx.createBiquadFilter();
           velvetFilter.type = 'lowpass';
           velvetFilter.frequency.setValueAtTime(140, now);
-          velvetFilter.frequency.exponentialRampToValueAtTime(480, now + 0.85);
+          velvetFilter.frequency.exponentialRampToValueAtTime(460, now + 0.8);
           velvetFilter.frequency.exponentialRampToValueAtTime(160, now + duration);
 
           const velvetGain = ctx.createGain();
           velvetGain.gain.setValueAtTime(0.0001, now);
-          velvetGain.gain.linearRampToValueAtTime(0.08, now + 0.55);
+          velvetGain.gain.linearRampToValueAtTime(0.075, now + 0.5);
           velvetGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
 
           noiseSource.connect(velvetFilter);
@@ -1434,10 +1581,10 @@
           noiseSource.start(now);
           noiseSource.stop(now + duration + 0.05);
 
-          // --- LAYER 2: Warm Shimmering Harp / Bell Harmonic Chord (Dmaj9 Lydian) ---
+          // Layer 2: Warm Shimmering Harp / Chime Harmonic Chord
           const harpChord = [293.66, 440.0, 554.37, 659.25, 739.99, 880.0, 1174.66];
           harpChord.forEach((freq, idx) => {
-            const startAt = now + 0.25 + idx * 0.14;
+            const startAt = now + 0.22 + idx * 0.13;
             const osc = ctx.createOscillator();
             const overtone = ctx.createOscillator();
             const noteGain = ctx.createGain();
@@ -1452,8 +1599,8 @@
             overtoneGain.gain.setValueAtTime(0.14, startAt);
 
             noteGain.gain.setValueAtTime(0.0001, startAt);
-            noteGain.gain.exponentialRampToValueAtTime(0.042, startAt + 0.045);
-            noteGain.gain.exponentialRampToValueAtTime(0.0001, startAt + 2.2);
+            noteGain.gain.exponentialRampToValueAtTime(0.04, startAt + 0.045);
+            noteGain.gain.exponentialRampToValueAtTime(0.0001, startAt + 2.1);
 
             osc.connect(noteGain);
             overtone.connect(overtoneGain);
@@ -1462,8 +1609,8 @@
 
             osc.start(startAt);
             overtone.start(startAt);
-            osc.stop(startAt + 2.25);
-            overtone.stop(startAt + 2.25);
+            osc.stop(startAt + 2.15);
+            overtone.stop(startAt + 2.15);
           });
         } catch (err) {
           // Ignore gracefully if restricted
@@ -1477,8 +1624,7 @@
 
         try {
           const now = ctx.currentTime;
-          const notes = [587.33, 880.0, 1174.66];
-          notes.forEach((freq, i) => {
+          [587.33, 880.0, 1174.66].forEach((freq, i) => {
             const t = now + i * 0.09;
             const osc = ctx.createOscillator();
             const gain = ctx.createGain();
@@ -1501,7 +1647,7 @@
         soundEnabled = !soundEnabled;
         iconSoundOn.classList.toggle('hidden', !soundEnabled);
         iconSoundOff.classList.toggle('hidden', soundEnabled);
-        soundLabel.textContent = soundEnabled ? 'Sound On' : 'Muted';
+        soundLabel.textContent = soundEnabled ? 'Sound' : 'Muted';
         if (soundEnabled) {
           getUnlockedAudioContext();
           showToast('Ceremonial Sound Enabled');
@@ -1521,12 +1667,12 @@
 
       function spawnSinglePetal() {
         const isGold = Math.random() < 0.45;
-        const size = 12 + Math.random() * 13;
+        const size = 11 + Math.random() * 12;
         const startX = Math.random() * 100;
-        const duration = 6.5 + Math.random() * 4.8;
-        const swayMid = (Math.random() - 0.5) * 110;
-        const swayEnd = (Math.random() - 0.5) * 140;
-        const opacity = isGold ? (0.8 + Math.random() * 0.16) : (0.74 + Math.random() * 0.2);
+        const duration = 6.2 + Math.random() * 4.5;
+        const swayMid = (Math.random() - 0.5) * 100;
+        const swayEnd = (Math.random() - 0.5) * 130;
+        const opacity = isGold ? (0.78 + Math.random() * 0.16) : (0.72 + Math.random() * 0.2);
         const shapePath = PETAL_SHAPES[Math.floor(Math.random() * PETAL_SHAPES.length)];
 
         const wrapper = document.createElement('div');
@@ -1560,16 +1706,16 @@
 
       function startPetalShower() {
         stopPetalShower();
-        for (let i = 0; i < 26; i++) {
+        for (let i = 0; i < 24; i++) {
           setTimeout(() => {
             if (isDoorsOpen) spawnSinglePetal();
           }, i * 65);
         }
         ambientPetalInterval = setInterval(() => {
-          if (isDoorsOpen && petalsLayer.childElementCount < 42) {
+          if (isDoorsOpen && petalsLayer.childElementCount < 38) {
             spawnSinglePetal();
           }
-        }, 440);
+        }, 460);
       }
 
       function stopPetalShower() {
@@ -1581,20 +1727,10 @@
       }
 
       /* ------------------------------------------------------------------------
-         5. 3D BUTTERFLY FLIGHT: PERCHED ON DOOR -> S-CURVE -> TOP-LEFT CARD CORNER
+         5. 3D BUTTERFLY: PERCHED ON UPPER-RIGHT LATTICE -> FLIES FOREVER ALL AROUND
+            (Leaves center "A & S" medallion 100% unobstructed; subtle opacity &
+             scale in flight with pointer-events: none so it never blocks text/taps)
          ------------------------------------------------------------------------ */
-      function evalCubicBezier(p0, p1, p2, p3, t) {
-        const u = 1 - t;
-        const tt = t * t;
-        const uu = u * u;
-        const uuu = uu * u;
-        const ttt = tt * t;
-        return {
-          x: uuu * p0.x + 3 * uu * t * p1.x + 3 * u * tt * p2.x + ttt * p3.x,
-          y: uuu * p0.y + 3 * uu * t * p1.y + 3 * u * tt * p2.y + ttt * p3.y
-        };
-      }
-
       function getDoorPerchViewportCoords() {
         const rect = doorButterflyPerch.getBoundingClientRect();
         return {
@@ -1603,115 +1739,234 @@
         };
       }
 
-      function getCardTopLeftViewportCoords() {
-        const cardRect = invitationCard.getBoundingClientRect();
-        return {
-          x: cardRect.left + 20,
-          y: cardRect.top + 20
-        };
-      }
-
-      function placeButterflyOnDoor() {
-        butterflyState = 'perched-door';
-        // Ensure butterfly is attached to document.body while perched on the 3D door
-        if (butterflyActor.parentElement !== document.body) {
-          document.body.appendChild(butterflyActor);
+      function placeButterflyOnDoorUpperRight() {
+        butterflyMode = 'perched';
+        if (butterflyAnimFrame) {
+          cancelAnimationFrame(butterflyAnimFrame);
+          butterflyAnimFrame = null;
         }
-        butterflyActor.classList.remove('anchored-to-card');
         butterflyActor.classList.add('is-perched');
 
         const pos = getDoorPerchViewportCoords();
         butterflyActor.style.opacity = '1';
-        butterflyActor.style.transform = `translate3d(${pos.x - 34}px, ${pos.y - 34}px, 40px) scale(0.94) rotateX(18deg) rotateZ(-16deg)`;
+        butterflyActor.style.transform = `translate3d(${pos.x - 30}px, ${pos.y - 30}px, 40px) scale(0.92) rotateX(18deg) rotateZ(-22deg)`;
       }
 
-      function anchorButterflyToCardTopLeft() {
-        butterflyState = 'perched-card';
-        butterflyActor.classList.add('is-perched', 'anchored-to-card');
-        // Attach inside #invitation-card so it naturally stays on the top-left gold frame during scroll
-        if (butterflyActor.parentElement !== invitationCard) {
-          invitationCard.appendChild(butterflyActor);
-        }
-        butterflyActor.style.opacity = '1';
-      }
-
-      function launchButterflyFromDoorToTopLeftCard() {
+      function startContinuousButterflyFlight() {
         if (butterflyAnimFrame) cancelAnimationFrame(butterflyAnimFrame);
-        butterflyState = 'flying';
-        if (butterflyActor.parentElement !== document.body) {
-          document.body.appendChild(butterflyActor);
-        }
-        butterflyActor.classList.remove('is-perched', 'anchored-to-card');
+        butterflyMode = 'flying';
+        butterflyActor.classList.remove('is-perched');
 
         const startPos = getDoorPerchViewportCoords();
-        const flightDuration = 3200; // 3.2s graceful sweeping S-curve
         let startTime = null;
 
-        function step(timestamp) {
-          if (!isDoorsOpen) return;
+        function animateContinuousFlight(timestamp) {
+          if (!isDoorsOpen || butterflyMode !== 'flying') return;
           if (!startTime) startTime = timestamp;
-          const elapsed = timestamp - startTime;
-          const rawT = Math.min(1, elapsed / flightDuration);
 
-          const t = rawT < 0.5
-            ? 2 * rawT * rawT
-            : 1 - Math.pow(-2 * rawT + 2, 2) / 2;
+          const elapsedSec = (timestamp - startTime) / 1000;
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
 
-          const cardRect = invitationCard.getBoundingClientRect();
-          const finalPerch = getCardTopLeftViewportCoords();
+          // Smooth Lissajous / Figure-Eight meandering trajectory across the entire screen
+          const centerX = vw * 0.5;
+          const centerY = vh * 0.46;
+          const radiusX = Math.min(vw * 0.43, 280);
+          const radiusY = vh * 0.38;
 
-          // Sweeping S-curve across the right & lower-center of the card before ascending to top-left corner
-          const rightArcSwing = {
-            x: Math.min(window.innerWidth - 36, cardRect.right - cardRect.width * 0.18),
-            y: cardRect.top + cardRect.height * 0.34
-          };
-          const centerDip = {
-            x: cardRect.left + cardRect.width * 0.46,
-            y: cardRect.top + cardRect.height * 0.56
-          };
+          // Angular frequencies chosen for a graceful, non-repetitive figure-eight glide
+          const w1 = 0.46;
+          const w2 = 0.92;
+          const phaseShift = 0.45;
 
-          let pos, nextPos;
-          if (t < 0.5) {
-            const localT = t / 0.5;
-            const c1 = { x: startPos.x + 65, y: startPos.y - 75 };
-            const c2 = { x: rightArcSwing.x + 15, y: rightArcSwing.y - 25 };
-            pos = evalCubicBezier(startPos, c1, c2, centerDip, localT);
-            nextPos = evalCubicBezier(startPos, c1, c2, centerDip, Math.min(1, localT + 0.02));
-          } else {
-            const localT = (t - 0.5) / 0.5;
-            const c1 = { x: centerDip.x - 85, y: centerDip.y + 35 };
-            const c2 = { x: finalPerch.x + 40, y: finalPerch.y - 45 };
-            pos = evalCubicBezier(centerDip, c1, c2, finalPerch, localT);
-            nextPos = evalCubicBezier(centerDip, c1, c2, finalPerch, Math.min(1, localT + 0.02));
-          }
+          const targetX = centerX + radiusX * Math.sin(elapsedSec * w1 + phaseShift);
+          const targetY = centerY + radiusY * Math.sin(elapsedSec * w2) * Math.cos(elapsedSec * 0.23);
 
-          const dx = nextPos.x - pos.x;
-          const dy = nextPos.y - pos.y;
+          // Look ahead slightly to compute smooth heading angle
+          const dt = 0.04;
+          const nextX = centerX + radiusX * Math.sin((elapsedSec + dt) * w1 + phaseShift);
+          const nextY = centerY + radiusY * Math.sin((elapsedSec + dt) * w2) * Math.cos((elapsedSec + dt) * 0.23);
+
+          // Blend smoothly from the upper-right door perch over the first 1.2 seconds
+          const blend = Math.min(1, elapsedSec / 1.2);
+          const easeBlend = blend * blend * (3 - 2 * blend);
+
+          const x = startPos.x * (1 - easeBlend) + targetX * easeBlend;
+          const y = startPos.y * (1 - easeBlend) + targetY * easeBlend;
+
+          const dx = nextX - targetX;
+          const dy = nextY - targetY;
           const headingDeg = (Math.atan2(dy, dx) * 180) / Math.PI + 90;
 
-          const settleBlend = rawT > 0.85 ? (rawT - 0.85) / 0.15 : 0;
-          const finalAngle = headingDeg * (1 - settleBlend) + 24 * settleBlend;
-          const scale = 0.94 + Math.sin(rawT * Math.PI) * 0.14 - rawT * 0.12;
+          // Subtle scale & gentle opacity so it never blocks reading or taps
+          const scale = 0.72 + Math.sin(elapsedSec * 1.4) * 0.08;
+          const opacity = 0.78 + Math.sin(elapsedSec * 1.1) * 0.1;
 
-          butterflyActor.style.opacity = '1';
-          butterflyActor.style.transform = `translate3d(${pos.x - 34}px, ${pos.y - 34}px, 40px) scale(${scale.toFixed(3)}) rotateX(22deg) rotateZ(${finalAngle.toFixed(1)}deg)`;
+          butterflyActor.style.opacity = opacity.toFixed(2);
+          butterflyActor.style.transform = `translate3d(${x - 30}px, ${y - 30}px, 40px) scale(${scale.toFixed(3)}) rotateX(22deg) rotateZ(${headingDeg.toFixed(1)}deg)`;
 
-          if (rawT < 1) {
-            butterflyAnimFrame = requestAnimationFrame(step);
-          } else {
-            anchorButterflyToCardTopLeft();
-          }
+          butterflyAnimFrame = requestAnimationFrame(animateContinuousFlight);
         }
 
-        butterflyAnimFrame = requestAnimationFrame(step);
+        butterflyAnimFrame = requestAnimationFrame(animateContinuousFlight);
       }
 
       window.addEventListener('resize', () => {
-        if (butterflyState === 'perched-door') placeButterflyOnDoor();
+        if (butterflyMode === 'perched') placeButterflyOnDoorUpperRight();
       });
 
       /* ------------------------------------------------------------------------
-         6. 3-SECOND AUTO-OPEN & TAP-TO-OPEN PALACE DOORS CHOREOGRAPHY
+         6. 3-PAGE ROYAL BOOK SLIDER (5s AUTO-SLIDE + SWIPE + TAP + GESTURES)
+         ------------------------------------------------------------------------ */
+      function updateBookPageUI(pageIdx) {
+        currentPageIndex = Math.max(0, Math.min(TOTAL_BOOK_PAGES - 1, pageIdx));
+        bookPagesTrack.style.transform = `translate3d(-${currentPageIndex * (100 / TOTAL_BOOK_PAGES)}%, 0, 0)`;
+
+        pageDots.forEach((dot, idx) => {
+          if (idx === currentPageIndex) {
+            dot.classList.remove('w-2', 'bg-[#d4af37]/55');
+            dot.classList.add('w-5', 'bg-[#7e1326]');
+          } else {
+            dot.classList.remove('w-5', 'bg-[#7e1326]');
+            dot.classList.add('w-2', 'bg-[#d4af37]/55');
+          }
+        });
+      }
+
+      function stopBookAutoSlide() {
+        bookAutoStopped = true;
+        if (bookAutoTimer) {
+          clearTimeout(bookAutoTimer);
+          bookAutoTimer = null;
+        }
+        if (bookProgressAnim) {
+          bookProgressAnim.cancel();
+          bookProgressAnim = null;
+        }
+        bookAutoProgress.style.transform = 'scaleX(0)';
+      }
+
+      function scheduleNextBookAutoSlide() {
+        if (bookAutoTimer) clearTimeout(bookAutoTimer);
+        if (bookProgressAnim) bookProgressAnim.cancel();
+
+        // Pause cleanly once on Page 3 or if user manually touched/interacted
+        if (bookAutoStopped || currentPageIndex >= TOTAL_BOOK_PAGES - 1 || !isDoorsOpen) {
+          bookAutoProgress.style.transform = 'scaleX(0)';
+          return;
+        }
+
+        if (bookAutoProgress && bookAutoProgress.animate) {
+          bookProgressAnim = bookAutoProgress.animate(
+            [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }],
+            { duration: AUTO_SLIDE_INTERVAL_MS, easing: 'linear', fill: 'forwards' }
+          );
+        }
+
+        bookAutoTimer = setTimeout(() => {
+          if (!bookAutoStopped && currentPageIndex < TOTAL_BOOK_PAGES - 1) {
+            updateBookPageUI(currentPageIndex + 1);
+            scheduleNextBookAutoSlide();
+          } else {
+            stopBookAutoSlide();
+          }
+        }, AUTO_SLIDE_INTERVAL_MS);
+      }
+
+      function goToPageManual(targetIdx) {
+        stopBookAutoSlide();
+        updateBookPageUI(targetIdx);
+      }
+
+      btnPrevPage.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const prev = (currentPageIndex - 1 + TOTAL_BOOK_PAGES) % TOTAL_BOOK_PAGES;
+        goToPageManual(prev);
+      });
+
+      btnNextPage.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const next = (currentPageIndex + 1) % TOTAL_BOOK_PAGES;
+        goToPageManual(next);
+      });
+
+      pageDots.forEach((dot) => {
+        dot.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = Number(dot.getAttribute('data-page-dot'));
+          goToPageManual(idx);
+        });
+      });
+
+      // Touch Swipe & Mouse Drag Support on Book Pages
+      let swipeStartX = 0;
+      let swipeStartY = 0;
+      let isDraggingBook = false;
+
+      function isInteractiveControl(target) {
+        return Boolean(target.closest('a, button, input, select, textarea, [data-no-swipe="true"]'));
+      }
+
+      bookPagesViewport.addEventListener('touchstart', (e) => {
+        if (isInteractiveControl(e.target)) return;
+        const touch = e.touches[0];
+        swipeStartX = touch.clientX;
+        swipeStartY = touch.clientY;
+        isDraggingBook = true;
+      }, { passive: true });
+
+      bookPagesViewport.addEventListener('touchend', (e) => {
+        if (!isDraggingBook) return;
+        isDraggingBook = false;
+        const touch = e.changedTouches[0];
+        const dx = touch.clientX - swipeStartX;
+        const dy = touch.clientY - swipeStartY;
+
+        if (Math.abs(dx) > 36 && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0 && currentPageIndex < TOTAL_BOOK_PAGES - 1) {
+            goToPageManual(currentPageIndex + 1);
+          } else if (dx > 0 && currentPageIndex > 0) {
+            goToPageManual(currentPageIndex - 1);
+          } else {
+            stopBookAutoSlide();
+          }
+        }
+      }, { passive: true });
+
+      bookPagesViewport.addEventListener('mousedown', (e) => {
+        if (isInteractiveControl(e.target)) return;
+        swipeStartX = e.clientX;
+        swipeStartY = e.clientY;
+        isDraggingBook = true;
+      });
+
+      window.addEventListener('mouseup', (e) => {
+        if (!isDraggingBook) return;
+        isDraggingBook = false;
+        const dx = e.clientX - swipeStartX;
+        const dy = e.clientY - swipeStartY;
+        if (Math.abs(dx) > 42 && Math.abs(dx) > Math.abs(dy)) {
+          if (dx < 0 && currentPageIndex < TOTAL_BOOK_PAGES - 1) {
+            goToPageManual(currentPageIndex + 1);
+          } else if (dx > 0 && currentPageIndex > 0) {
+            goToPageManual(currentPageIndex - 1);
+          } else {
+            stopBookAutoSlide();
+          }
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (!isDoorsOpen) return;
+        if (e.key === 'ArrowRight' && currentPageIndex < TOTAL_BOOK_PAGES - 1) {
+          goToPageManual(currentPageIndex + 1);
+        } else if (e.key === 'ArrowLeft' && currentPageIndex > 0) {
+          goToPageManual(currentPageIndex - 1);
+        }
+      });
+
+      /* ------------------------------------------------------------------------
+         7. 3-SECOND AUTO-OPEN & TAP-TO-OPEN PALACE DOORS CHOREOGRAPHY
          ------------------------------------------------------------------------ */
       function openPalaceDoors() {
         if (isDoorsOpen) return;
@@ -1721,35 +1976,49 @@
           clearTimeout(autoOpenTimer);
           autoOpenTimer = null;
         }
-        if (countdownAnim) {
-          countdownAnim.cancel();
-          countdownAnim = null;
+        if (doorProgressAnim) {
+          doorProgressAnim.cancel();
+          doorProgressAnim = null;
         }
 
         // Play soft velvet whoosh + shimmering harp chord
         playCeremonialDoorChime();
 
-        // Swing doors outward in 3D & smoothly glide inner card from scale(0.94) to scale(1)
+        // Swing doors outward in 3D & immediately fade out central yellow glow
         palaceDoorsOverlay.classList.add('is-open');
+        centerSeamGlow.style.opacity = '0';
+        seamSanctuaryGlow.style.opacity = '0';
+        setTimeout(() => {
+          if (isDoorsOpen) {
+            centerSeamGlow.style.display = 'none';
+            seamSanctuaryGlow.style.display = 'none';
+          }
+        }, 420);
+
         document.body.classList.add('doors-opened');
         doorPromptPill.style.opacity = '0';
         btnReplay.classList.remove('opacity-0', 'pointer-events-none');
 
-        // Launch butterfly from door to top-left corner of inner gold card frame
-        launchButterflyFromDoorToTopLeftCard();
+        // Launch butterfly into continuous infinite figure-eight flight all around screen
+        startContinuousButterflyFlight();
 
         // Start drifting blush-rose & gold-foil petals
         setTimeout(() => {
           if (isDoorsOpen) startPetalShower();
-        }, 260);
+        }, 250);
+
+        // Start 5-second auto-slide across the 3 pages of the Royal Book
+        bookAutoStopped = false;
+        updateBookPageUI(0);
+        scheduleNextBookAutoSlide();
       }
 
       function scheduleThreeSecondAutoOpen() {
         if (autoOpenTimer) clearTimeout(autoOpenTimer);
-        if (countdownAnim) countdownAnim.cancel();
+        if (doorProgressAnim) doorProgressAnim.cancel();
 
         if (doorCountdownBar && doorCountdownBar.animate) {
-          countdownAnim = doorCountdownBar.animate(
+          doorProgressAnim = doorCountdownBar.animate(
             [{ transform: 'scaleX(1)' }, { transform: 'scaleX(0)' }],
             { duration: 3000, easing: 'linear', fill: 'forwards' }
           );
@@ -1762,17 +2031,24 @@
 
       function replayPalaceDoors() {
         if (autoOpenTimer) clearTimeout(autoOpenTimer);
-        if (butterflyAnimFrame) cancelAnimationFrame(butterflyAnimFrame);
+        stopBookAutoSlide();
+        stopPetalShower();
         isDoorsOpen = false;
 
-        stopPetalShower();
+        // Restore subtle closed-door seam glow
+        centerSeamGlow.style.display = '';
+        seamSanctuaryGlow.style.display = '';
+        centerSeamGlow.style.opacity = '';
+        seamSanctuaryGlow.style.opacity = '';
+
         palaceDoorsOverlay.classList.remove('is-open');
         document.body.classList.remove('doors-opened');
         doorPromptPill.style.opacity = '1';
         btnReplay.classList.add('opacity-0', 'pointer-events-none');
 
         setTimeout(() => {
-          placeButterflyOnDoor();
+          updateBookPageUI(0);
+          placeButterflyOnDoorUpperRight();
           scheduleThreeSecondAutoOpen();
         }, 240);
       }
@@ -1791,35 +2067,31 @@
       btnReplay.addEventListener('click', replayPalaceDoors);
 
       /* ------------------------------------------------------------------------
-         7. INTERSECTION OBSERVER: STAGGERED SCROLL CHOREOGRAPHY (0.6s ease-out)
+         8. ROYAL MESSENGER PIGEON CARRYING SEALED LETTER -> GOOGLE MAPS REDIRECT
          ------------------------------------------------------------------------ */
-      const revealSections = document.querySelectorAll('.reveal-section');
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const idx = Array.from(revealSections).indexOf(entry.target);
-              entry.target.style.transitionDelay = `${Math.min(idx * 70, 350)}ms`;
-              entry.target.classList.add('is-visible');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12 }
-      );
+      function evalCubicBezier(p0, p1, p2, p3, t) {
+        const u = 1 - t;
+        const tt = t * t;
+        const uu = u * u;
+        const uuu = uu * u;
+        const ttt = tt * t;
+        return {
+          x: uuu * p0.x + 3 * uu * t * p1.x + 3 * u * tt * p2.x + ttt * p3.x,
+          y: uuu * p0.y + 3 * uu * t * p1.y + 3 * u * tt * p2.y + ttt * p3.y
+        };
+      }
 
-      revealSections.forEach((sec) => revealObserver.observe(sec));
-
-      /* ------------------------------------------------------------------------
-         8. ROYAL MESSENGER PIGEON FLIGHT -> REDIRECT TO GOOGLE MAPS
-         ------------------------------------------------------------------------ */
-      function triggerPigeonFlightAndOpenMaps(originElement, e) {
-        if (e) e.preventDefault();
+      function triggerPigeonWithLetterAndOpenMaps(originElement, e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
         if (isPigeonFlying) return;
         isPigeonFlying = true;
+        stopBookAutoSlide();
 
         playPigeonSoftChime();
-        showToast('Guiding you to Diamond Banquet Hall A/C...');
+        showToast('Dispatching royal messenger to Diamond Banquet Hall A/C...');
 
         const originRect = originElement.getBoundingClientRect();
         const start = {
@@ -1828,16 +2100,16 @@
         };
 
         const end = {
-          x: window.innerWidth + 70,
-          y: Math.max(40, start.y - 340)
+          x: window.innerWidth + 80,
+          y: Math.max(36, start.y - 320)
         };
 
         const c1 = {
           x: start.x - 45,
-          y: start.y - 130
+          y: start.y - 125
         };
         const c2 = {
-          x: start.x + (end.x - start.x) * 0.55,
+          x: start.x + (end.x - start.x) * 0.56,
           y: end.y - 45
         };
 
@@ -1848,16 +2120,15 @@
           if (!startTime) startTime = timestamp;
           const elapsed = timestamp - startTime;
           const rawT = Math.min(1, elapsed / flightMs);
-          // Smooth ease-in-out acceleration
           const t = rawT < 0.5 ? 2 * rawT * rawT : 1 - Math.pow(-2 * rawT + 2, 2) / 2;
 
           const pos = evalCubicBezier(start, c1, c2, end, t);
           const nextPos = evalCubicBezier(start, c1, c2, end, Math.min(1, t + 0.02));
           const angleDeg = (Math.atan2(nextPos.y - pos.y, nextPos.x - pos.x) * 180) / Math.PI;
-          const scale = 0.85 + Math.sin(rawT * Math.PI) * 0.35;
+          const scale = 0.86 + Math.sin(rawT * Math.PI) * 0.34;
 
           pigeonActor.style.opacity = rawT < 0.08 ? (rawT / 0.08).toFixed(2) : '1';
-          pigeonActor.style.transform = `translate3d(${pos.x - 46}px, ${pos.y - 46}px, 0) scale(${scale.toFixed(3)}) rotate(${angleDeg.toFixed(1)}deg)`;
+          pigeonActor.style.transform = `translate3d(${pos.x - 54}px, ${pos.y - 54}px, 0) scale(${scale.toFixed(3)}) rotate(${angleDeg.toFixed(1)}deg)`;
 
           if (rawT < 1) {
             requestAnimationFrame(animatePigeon);
@@ -1871,17 +2142,18 @@
         requestAnimationFrame(animatePigeon);
       }
 
-      // Reset pigeon cleanly if guest navigates back from Google Maps
       window.addEventListener('pageshow', () => {
         pigeonActor.style.opacity = '0';
         isPigeonFlying = false;
       });
 
-      const btnOpenMaps = document.getElementById('btn-open-maps');
+      const page1LocationTag = document.getElementById('page1-location-tag');
       const venueMehrabLink = document.getElementById('venue-mehrab-link');
+      const btnOpenMaps = document.getElementById('btn-open-maps');
 
-      btnOpenMaps.addEventListener('click', (e) => triggerPigeonFlightAndOpenMaps(btnOpenMaps, e));
-      venueMehrabLink.addEventListener('click', (e) => triggerPigeonFlightAndOpenMaps(venueMehrabLink, e));
+      page1LocationTag.addEventListener('click', (e) => triggerPigeonWithLetterAndOpenMaps(page1LocationTag, e));
+      venueMehrabLink.addEventListener('click', (e) => triggerPigeonWithLetterAndOpenMaps(venueMehrabLink, e));
+      btnOpenMaps.addEventListener('click', (e) => triggerPigeonWithLetterAndOpenMaps(btnOpenMaps, e));
 
       /* ------------------------------------------------------------------------
          9. LIVE COUNTDOWN TIMER TO 2026-12-20T16:00:00+05:30
@@ -1911,7 +2183,9 @@
       /* ------------------------------------------------------------------------
          10. ADD TO CALENDAR (.ICS DOWNLOAD: 4:00 PM TO 8:00 PM IST)
          ------------------------------------------------------------------------ */
-      document.getElementById('btn-add-calendar').addEventListener('click', () => {
+      document.getElementById('btn-add-calendar').addEventListener('click', (e) => {
+        e.stopPropagation();
+        stopBookAutoSlide();
         const icsLines = [
           'BEGIN:VCALENDAR',
           'VERSION:2.0',
@@ -1924,7 +2198,7 @@
           'DTSTART:20261220T103000Z',
           'DTEND:20261220T143000Z',
           'SUMMARY:Walima Reception: Alfiyas Muhammed & Sincila K. M.',
-          'DESCRIPTION:Mr. Pareeth K. K. & Mrs. Zeenath Pareeth cordially request the honor of your presence and blessings to celebrate the Walima reception of Alfiyas Muhammed & Sincila K. M.',
+          'DESCRIPTION:Mr. Pareeth K. K. & Mrs. Zeenath Pareeth cordially request the honour of your presence and blessings to celebrate the Walima reception of Alfiyas Muhammed & Sincila K. M.',
           'LOCATION:Diamond Banquet Hall A/C, Allapra, Perumbavoor, Kerala',
           'URL:' + GOOGLE_MAPS_URL,
           'END:VEVENT',
@@ -1944,7 +2218,7 @@
       });
 
       /* ------------------------------------------------------------------------
-         11. MODALS: SEND DUA / RSVP (WHATSAPP + COPY) & SHARE INVITE (WITH QR)
+         11. MODALS: CONNECT WITH WHATSAPP & SHARE INVITE (WITH SCANNABLE QR)
          ------------------------------------------------------------------------ */
       function showToast(message) {
         toastBanner.textContent = message;
@@ -1952,10 +2226,11 @@
         clearTimeout(toastBanner._timer);
         toastBanner._timer = setTimeout(() => {
           toastBanner.classList.add('opacity-0');
-        }, 3200);
+        }, 3000);
       }
 
       function openModal(id) {
+        stopBookAutoSlide();
         const modal = document.getElementById(id);
         if (!modal) return;
         modal.classList.remove('hidden');
@@ -1973,55 +2248,35 @@
         btn.addEventListener('click', () => closeModal(btn.getAttribute('data-close-modal')));
       });
 
-      ['rsvp-modal', 'share-modal'].forEach((id) => {
+      ['whatsapp-modal', 'share-modal'].forEach((id) => {
         const el = document.getElementById(id);
         el.addEventListener('click', (e) => {
           if (e.target === el) closeModal(id);
         });
       });
 
-      // Build formatted RSVP & Dua text
-      function formatRsvpMessage() {
-        const name = document.getElementById('rsvp-name').value.trim() || 'Honoured Guest';
-        const guests = document.getElementById('rsvp-guests').value;
-        const msg =
-          document.getElementById('rsvp-message').value.trim() ||
-          'BarakAllahu Lakuma wa Baraka Alaykuma wa Jama’a Baynakuma fi Khayr.';
+      // Connect with WhatsApp Modal & Direct Launch
+      document.getElementById('btn-connect-whatsapp').addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModal('whatsapp-modal');
+      });
 
-        return (
-          `Assalamu Alaikum!\n` +
-          `*Walima RSVP & Blessings — Alfiyas Muhammed & Sincila K. M.*\n\n` +
-          `• *Guest:* ${name}\n` +
-          `• *Attendees:* ${guests}\n` +
-          `• *Dua / Wishes:* ${msg}`
-        );
-      }
-
-      document.getElementById('btn-open-rsvp').addEventListener('click', () => openModal('rsvp-modal'));
-
-      // Send via WhatsApp (https://wa.me/917510628386)
-      document.getElementById('rsvp-form').addEventListener('submit', (e) => {
+      document.getElementById('whatsapp-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        const formattedText = formatRsvpMessage();
-        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(formattedText)}`;
-        closeModal('rsvp-modal');
-        showToast('Opening WhatsApp to send your Dua & RSVP...');
+        const guestName = document.getElementById('wa-name').value.trim();
+        const presetMsg = document.getElementById('wa-preset').value;
+        const finalText = guestName ? `${presetMsg}\n— ${guestName}` : presetMsg;
+        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(finalText)}`;
+        closeModal('whatsapp-modal');
+        showToast('Opening WhatsApp...');
         window.open(waUrl, '_blank', 'noopener,noreferrer');
       });
 
-      // Copy Message Button
-      document.getElementById('btn-copy-rsvp').addEventListener('click', () => {
-        const nameInput = document.getElementById('rsvp-name');
-        if (!nameInput.value.trim()) {
-          nameInput.focus();
-          showToast('Please enter your name first');
-          return;
-        }
-        copyTextSafe(formatRsvpMessage(), 'Dua & RSVP message copied to clipboard!');
-      });
-
       // Share Invite Sheet
-      document.getElementById('btn-share-invite').addEventListener('click', () => openModal('share-modal'));
+      document.getElementById('btn-share-invite').addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModal('share-modal');
+      });
 
       document.getElementById('btn-native-share').addEventListener('click', async () => {
         const sharePayload = {
@@ -2036,7 +2291,7 @@
             await navigator.share(sharePayload);
             return;
           } catch (err) {
-            // Fallback to clipboard copy if dismissed or unsupported
+            // Fallback to copy
           }
         }
         copyTextSafe(`${sharePayload.text}\n${sharePayload.url}`, 'Invitation link copied to share!');
@@ -2067,11 +2322,10 @@
              Encodes: https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac
          ------------------------------------------------------------------------ */
       function renderScannableQrSvg(text, containerEl) {
-        const SIZE = 29; // Version 3 (29x29 modules)
+        const SIZE = 29;
         const DATA_CW = 55;
         const EC_CW = 15;
 
-        // GF(256) exp & log tables (primitive poly 0x11D)
         const gfExp = new Uint8Array(512);
         const gfLog = new Uint8Array(256);
         let x = 1;
@@ -2088,7 +2342,6 @@
           return gfExp[gfLog[a] + gfLog[b]];
         }
 
-        // Reed-Solomon generator polynomial of degree 15
         let gen = [1];
         for (let i = 0; i < EC_CW; i++) {
           const next = new Array(gen.length + 1).fill(0);
@@ -2100,17 +2353,16 @@
           gen = next;
         }
 
-        // Encode UTF-8 bytes in Byte Mode (0100)
         const bytes = Array.from(new TextEncoder().encode(text));
         const bits = [];
         const pushBits = (val, len) => {
           for (let i = len - 1; i >= 0; i--) bits.push((val >>> i) & 1);
         };
 
-        pushBits(0b0100, 4); // Byte mode
-        pushBits(bytes.length, 8); // Char count (Version 1-9)
+        pushBits(0b0100, 4);
+        pushBits(bytes.length, 8);
         bytes.forEach((b) => pushBits(b, 8));
-        pushBits(0, Math.min(4, DATA_CW * 8 - bits.length)); // Terminator
+        pushBits(0, Math.min(4, DATA_CW * 8 - bits.length));
         while (bits.length % 8 !== 0) bits.push(0);
 
         const dataCodewords = new Uint8Array(DATA_CW);
@@ -2124,7 +2376,6 @@
           dataCodewords[i] = padBytes[(i - bits.length / 8) % 2];
         }
 
-        // Compute 15 Reed-Solomon EC codewords
         const msg = new Uint8Array(DATA_CW + EC_CW);
         msg.set(dataCodewords);
         for (let i = 0; i < DATA_CW; i++) {
@@ -2140,7 +2391,6 @@
         allCodewords.set(dataCodewords);
         allCodewords.set(ecCodewords, DATA_CW);
 
-        // Matrix setup (-1 = unreserved, 0 = light, 1 = dark)
         const modules = Array.from({ length: SIZE }, () => new Int8Array(SIZE).fill(-1));
         const isFunction = Array.from({ length: SIZE }, () => new Uint8Array(SIZE));
 
@@ -2166,7 +2416,6 @@
         drawFinder(0, SIZE - 7);
         drawFinder(SIZE - 7, 0);
 
-        // Version 3 Alignment Pattern at (22, 22)
         for (let r = -2; r <= 2; r++) {
           for (let c = -2; c <= 2; c++) {
             const dark = Math.max(Math.abs(r), Math.abs(c)) !== 1;
@@ -2174,29 +2423,24 @@
           }
         }
 
-        // Timing Patterns
         for (let i = 8; i < SIZE - 8; i++) {
           setFunc(6, i, i % 2 === 0);
           setFunc(i, 6, i % 2 === 0);
         }
 
-        // Dark Module & Format Information (Level L, Mask 0 -> 0x77C4)
         setFunc(SIZE - 8, 8, 1);
-        const fmt = 0x77c4; // 111011111000100
+        const fmt = 0x77c4;
         for (let i = 0; i < 15; i++) {
           const bit = (fmt >>> i) & 1;
-          // Copy 1 (around top-left finder)
           if (i < 6) setFunc(8, i, bit);
           else if (i < 8) setFunc(8, i + 1, bit);
           else if (i === 8) setFunc(7, 8, bit);
           else setFunc(14 - i, 8, bit);
 
-          // Copy 2 (bottom-left & top-right)
           if (i < 7) setFunc(SIZE - 1 - i, 8, bit);
           else setFunc(8, SIZE - 15 + i, bit);
         }
 
-        // Zig-Zag Data Placement + Mask 0 ((r + c) % 2 === 0)
         const allBits = [];
         allCodewords.forEach((cw) => {
           for (let b = 7; b >= 0; b--) allBits.push((cw >>> b) & 1);
@@ -2206,7 +2450,7 @@
         let bitIdx = 0;
         let upward = true;
         for (let rightCol = SIZE - 1; rightCol >= 1; rightCol -= 2) {
-          if (rightCol === 6) rightCol = 5; // Skip vertical timing column
+          if (rightCol === 6) rightCol = 5;
           for (let step = 0; step < SIZE; step++) {
             const r = upward ? SIZE - 1 - step : step;
             for (let dx = 0; dx < 2; dx++) {
@@ -2221,14 +2465,13 @@
           upward = !upward;
         }
 
-        // Render Crisp Inline SVG with Quiet Zone
         const quiet = 2;
         const total = SIZE + quiet * 2;
         let rects = `<rect width="${total}" height="${total}" fill="#ffffff"/>`;
         for (let r = 0; r < SIZE; r++) {
           for (let c = 0; c < SIZE; c++) {
             if (modules[r][c] === 1) {
-              rects += `<rect x="${c + quiet}" y="${r + quiet}" width="1" height="1" fill="#2b0912"/>`;
+              rects += `<rect x="${c + quiet}" y="${r + quiet}" width="1" height="1" fill="#260710"/>`;
             }
           }
         }
@@ -2243,10 +2486,10 @@
       renderScannableQrSvg(GOOGLE_MAPS_URL, document.getElementById('venue-qr-container'));
 
       /* ------------------------------------------------------------------------
-         13. INITIALIZE BUTTERFLY PERCHED ON DOOR & 3-SECOND AUTO-OPEN
+         13. INITIALIZE BUTTERFLY ON UPPER-RIGHT LATTICE & 3-SECOND AUTO-OPEN
          ------------------------------------------------------------------------ */
       function initPalaceOpening() {
-        placeButterflyOnDoor();
+        placeButterflyOnDoorUpperRight();
         scheduleThreeSecondAutoOpen();
       }
 
