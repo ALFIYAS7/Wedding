@@ -72,11 +72,12 @@
       z-index: 4;
       background: radial-gradient(ellipse at 50% 48%, rgba(243, 229, 171, 0.24) 0%, rgba(212, 175, 55, 0.08) 38%, transparent 68%);
       opacity: 0.7;
-      transition: opacity 0.45s ease-out;
+      transition: opacity 0.2s ease-out;
     }
 
     body.doors-opened .seam-sanctuary-glow {
       opacity: 0 !important;
+      visibility: hidden !important;
       display: none !important;
     }
 
@@ -168,10 +169,50 @@
       justify-content: space-between;
       align-items: center;
       text-align: center;
-      padding: clamp(22px, 3.6vh, 34px) clamp(14px, 4vw, 26px) clamp(44px, 6.8vh, 56px);
+      padding: clamp(18px, 3vh, 30px) clamp(14px, 4vw, 26px) clamp(42px, 6.4vh, 54px);
       position: relative;
       overflow: hidden;
       user-select: none;
+    }
+
+    /* Couple Royal Header Crest for Pages 2 & 3 (Responsive: Full Names -> Embossed "A & S" Badge) */
+    .couple-page-crest {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 15;
+    }
+
+    .couple-page-crest .crest-full-names {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.22rem 0.9rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(212, 175, 55, 0.65);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(247, 241, 227, 0.92) 100%);
+      box-shadow: 0 2px 8px rgba(170, 119, 28, 0.14), inset 0 0 0 1px rgba(243, 229, 171, 0.65);
+    }
+
+    .couple-page-crest .crest-monogram-badge {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 0.18rem 0.85rem;
+      border-radius: 9999px;
+      border: 1.25px solid #d4af37;
+      background: linear-gradient(145deg, #260710 0%, #4d0f20 55%, #260710 100%);
+      box-shadow: 0 3px 10px rgba(38, 7, 16, 0.28), inset 0 0 0 1px rgba(243, 229, 171, 0.45);
+    }
+
+    @media (max-height: 680px), (max-width: 360px) {
+      .couple-page-crest .crest-full-names {
+        display: none;
+      }
+      .couple-page-crest .crest-monogram-badge {
+        display: inline-flex;
+      }
     }
 
     /* CSS Metallic Gold-Foil Shimmer Animation */
@@ -241,6 +282,28 @@
       line-height: 1.18;
     }
 
+    /* Royal Couple Crest Header on Pages 2 & 3 (Responsive Fallback to "A & S") */
+    .page-couple-crest .couple-name-monogram {
+      display: none;
+    }
+
+    @media (max-width: 365px), (max-height: 640px) {
+      .page-couple-crest .couple-name-full {
+        display: none;
+      }
+      .page-couple-crest .couple-name-monogram {
+        display: inline-block;
+      }
+    }
+
+    body.compact-crest .page-couple-crest .couple-name-full {
+      display: none;
+    }
+
+    body.compact-crest .page-couple-crest .couple-name-monogram {
+      display: inline-block;
+    }
+
     /* Animated Swipe Gesture Cue */
     @keyframes swipeHandNudge {
       0%, 100% { transform: translateX(0px) rotate(0deg); opacity: 0.85; }
@@ -287,11 +350,12 @@
       z-index: 35;
       pointer-events: none;
       animation: seamRadiantPulse 2.4s ease-in-out infinite;
-      transition: opacity 0.4s ease-out;
+      transition: opacity 0.2s ease-out;
     }
 
     .palace-doors-overlay.is-open .center-seam-glow {
       opacity: 0 !important;
+      visibility: hidden !important;
       display: none !important;
     }
 
@@ -795,110 +859,111 @@
               <div id="book-pages-track" class="book-pages-track">
 
                 <!-- ============================================================
-                     PAGE 1: SACRED OPENING, GROOM'S PARENTS, COUPLE & LOCATION TAG
+                     PAGE 1: BISMILLAH, QURANIC VERSE, GROOM'S PARENTS, COUPLE & LOCATION TAG
                      ============================================================ -->
-                <section class="book-page" aria-label="Page 1: Sacred Opening and Couple">
-                  <!-- Soft Blush-Rose Botanical Side SVGs Flanking Couple -->
-                  <svg class="absolute left-0 top-[56%] -translate-y-1/2 w-12 h-36 sm:w-16 sm:h-44 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
-                    <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
-                    <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
-                    <g transform="translate(24, 96)">
-                      <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
-                      <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
-                    </g>
-                    <g transform="translate(20, 134)">
-                      <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
-                      <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
-                    </g>
-                  </svg>
-
-                  <svg class="absolute right-0 top-[56%] -translate-y-1/2 w-12 h-36 sm:w-16 sm:h-44 -scale-x-100 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
-                    <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
-                    <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
-                    <g transform="translate(24, 96)">
-                      <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
-                      <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
-                    </g>
-                    <g transform="translate(20, 134)">
-                      <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
-                      <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
-                    </g>
-                  </svg>
-
-                  <!-- Top: Bismillah SVG & Surah An-Naba (78:8) -->
-                  <div class="w-full relative z-10">
-                    <svg class="w-52 sm:w-64 h-10 sm:h-12 mx-auto overflow-visible" viewBox="0 0 360 66" role="img" aria-label="Bismillah-ir-Rahman-ir-Rahim">
+                <section id="book-page-1" class="book-page" aria-label="Page 1: Bismillah, Groom's Parents and Couple">
+                  <!-- Top: Sacred Opening (Bismillah SVG + Surah An-Naba 78:8) -->
+                  <div class="w-full relative z-10 flex flex-col items-center">
+                    <svg class="w-full max-w-[270px] sm:max-w-[300px] h-11 sm:h-13 mx-auto overflow-visible" viewBox="0 0 360 66" role="img" aria-label="Bismillah-ir-Rahman-ir-Rahim">
                       <defs>
-                        <linearGradient id="bismillahGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <linearGradient id="bismillahGoldShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
                           <stop offset="0%" stop-color="#8a5d12">
-                            <animate attributeName="stop-color" values="#8a5d12;#d4af37;#f3e5ab;#aa771c;#8a5d12" dur="5s" repeatCount="indefinite" />
+                            <animate attributeName="stop-color" values="#8a5d12;#d4af37;#aa771c;#8a5d12" dur="5s" repeatCount="indefinite" />
                           </stop>
-                          <stop offset="50%" stop-color="#f3e5ab">
-                            <animate attributeName="stop-color" values="#f3e5ab;#aa771c;#8a5d12;#d4af37;#f3e5ab" dur="5s" repeatCount="indefinite" />
+                          <stop offset="50%" stop-color="#d4af37">
+                            <animate attributeName="stop-color" values="#d4af37;#8a5d12;#f3e5ab;#d4af37" dur="5s" repeatCount="indefinite" />
                           </stop>
                           <stop offset="100%" stop-color="#aa771c">
-                            <animate attributeName="stop-color" values="#aa771c;#8a5d12;#d4af37;#f3e5ab;#aa771c" dur="5s" repeatCount="indefinite" />
+                            <animate attributeName="stop-color" values="#aa771c;#f3e5ab;#8a5d12;#aa771c" dur="5s" repeatCount="indefinite" />
                           </stop>
                         </linearGradient>
                       </defs>
-                      <path d="M54,53 Q180,61 306,53" fill="none" stroke="url(#bismillahGoldGrad)" stroke-width="1.1" stroke-linecap="round" opacity="0.7" />
-                      <circle cx="180" cy="57" r="2.2" fill="#d4af37" />
-                      <text x="180" y="38" text-anchor="middle" direction="rtl" lang="ar"
-                            font-family="'Amiri', serif" font-weight="700" font-size="30"
-                            fill="url(#bismillahGoldGrad)">
+                      <text x="180" y="42" text-anchor="middle" direction="rtl" lang="ar"
+                            font-family="'Amiri', serif" font-weight="700" font-size="33"
+                            fill="url(#bismillahGoldShimmer)">
                         بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
                       </text>
+                      <path d="M72,56 Q180,64 288,56" fill="none" stroke="#d4af37" stroke-width="0.9" opacity="0.7" />
                     </svg>
 
-                    <p class="font-amiri text-[clamp(1.05rem,2.4vh,1.35rem)] font-bold text-[#8a631e] leading-tight" dir="rtl" lang="ar">
+                    <p class="font-amiri text-[clamp(1.05rem,2.4vh,1.3rem)] font-bold text-[#7e1326] mt-0.5 leading-tight" dir="rtl" lang="ar">
                       وَخَلَقْنَاكُمْ أَزْوَاجًا
                     </p>
-                    <p class="font-cormorant italic font-semibold text-[clamp(0.82rem,1.85vh,0.98rem)] text-[#6d4f1d]">
-                      “And We created you in pairs.” <span class="font-montserrat not-italic text-[9px] tracking-[0.12em] uppercase text-[#8a682a]">— Surah An-Naba (78:8)</span>
+                    <p class="font-cormorant italic text-[clamp(0.84rem,1.85vh,0.98rem)] text-[#4a4344]">
+                      “And We created you in pairs.” <span class="not-italic text-[11px] font-semibold text-[#8a631e]">— Surah An-Naba (78:8)</span>
                     </p>
                   </div>
 
-                  <!-- Middle: Groom's Parents & Invitation Line -->
-                  <div class="w-full relative z-10 px-1">
-                    <h2 class="font-cinzel-dec text-[clamp(0.74rem,1.65vh,0.88rem)] font-bold tracking-[0.04em] text-[#231f20] leading-snug">
+                  <!-- Middle: Groom's Parents & Couple's Names Flanked by Blush-Rose Botanicals -->
+                  <div class="w-full relative z-10 flex flex-col items-center">
+                    <h2 class="font-cinzel-dec text-[clamp(0.82rem,1.95vh,1.02rem)] font-bold tracking-[0.04em] text-[#231f20] leading-snug">
                       Mr. Pareeth K. K. &amp; Mrs. Zeenath Pareeth
                     </h2>
-                    <p class="font-cormorant font-semibold text-[clamp(0.84rem,1.8vh,0.98rem)] text-[#3d3738]">
+                    <p class="font-cormorant font-semibold text-[clamp(0.86rem,1.85vh,1rem)] text-[#4a4344]">
                       Kottanattupara (H), Pallikavala, Perumbavoor
                     </p>
-                    <p class="font-cormorant italic text-[clamp(0.86rem,1.9vh,1.02rem)] text-[#2b2627] leading-snug mt-1.5 max-w-sm mx-auto">
+                    <p class="font-cormorant italic text-[clamp(0.86rem,1.9vh,1.02rem)] text-[#59431d] mt-1 max-w-xs mx-auto leading-snug">
                       cordially request the honour of your presence and blessings to celebrate the Walima reception of their beloved son
                     </p>
-                  </div>
 
-                  <!-- Centerpiece: Couple's Names -->
-                  <div class="w-full relative z-10 py-0.5">
-                    <h1 class="couple-crimson-gold text-[clamp(1.25rem,3.3vh,1.85rem)]">
-                      ALFIYAS MUHAMMED
-                    </h1>
-                    <div class="my-0.5 flex items-center justify-center gap-2">
-                      <span class="h-[1px] w-9 bg-gradient-to-r from-transparent to-[#d4af37]"></span>
-                      <span class="font-cinzel-dec text-[clamp(0.95rem,2.1vh,1.2rem)] font-bold gold-foil-shimmer-text">&amp;</span>
-                      <span class="h-[1px] w-9 bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+                    <!-- Couple Names Flanked by Soft Blush-Rose Botanical Side Illustrations -->
+                    <div class="relative w-full mt-2 py-1 flex items-center justify-center">
+                      <!-- Left Blush-Rose Botanical SVG -->
+                      <svg class="w-11 h-24 sm:w-14 sm:h-28 shrink-0 opacity-90 pointer-events-none" viewBox="0 0 80 150" fill="none" aria-hidden="true">
+                        <path d="M58,136 C36,108 26,76 34,36 C37,22 44,12 52,6" stroke="#aa771c" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M34,88 C18,84 10,72 16,62 C25,64 32,74 34,88 Z" fill="#d4af37" fill-opacity="0.28" stroke="#aa771c" stroke-width="0.9"/>
+                        <path d="M36,56 C52,52 60,40 54,30 C45,32 38,42 36,56 Z" fill="#d4af37" fill-opacity="0.24" stroke="#aa771c" stroke-width="0.9"/>
+                        <circle cx="30" cy="48" r="13" fill="#f9d8e0" stroke="#d88c9a" stroke-width="0.9"/>
+                        <circle cx="30" cy="48" r="7.5" fill="#f3b6c3" stroke="#c97485" stroke-width="0.8"/>
+                        <circle cx="30" cy="48" r="3" fill="#d4af37"/>
+                        <circle cx="22" cy="84" r="10" fill="#fce7ec" stroke="#d88c9a" stroke-width="0.85"/>
+                        <circle cx="22" cy="84" r="5" fill="#f4beca"/>
+                        <circle cx="44" cy="24" r="7.5" fill="#f9d8e0" stroke="#d88c9a" stroke-width="0.8"/>
+                      </svg>
+
+                      <!-- Couple Names -->
+                      <div class="px-1 text-center">
+                        <h1 class="couple-crimson-gold text-[clamp(1.22rem,3vh,1.72rem)]">
+                          ALFIYAS<br />MUHAMMED
+                        </h1>
+                        <div class="my-0.5 flex items-center justify-center gap-2">
+                          <span class="h-[1px] w-7 bg-gradient-to-r from-transparent to-[#d4af37]"></span>
+                          <span class="font-cinzel-dec text-sm sm:text-base font-bold text-[#aa771c]">&amp;</span>
+                          <span class="h-[1px] w-7 bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+                        </div>
+                        <h1 class="couple-crimson-gold text-[clamp(1.22rem,3vh,1.72rem)]">
+                          SINCILA K. M.
+                        </h1>
+                      </div>
+
+                      <!-- Right Blush-Rose Botanical SVG -->
+                      <svg class="w-11 h-24 sm:w-14 sm:h-28 shrink-0 -scale-x-100 opacity-90 pointer-events-none" viewBox="0 0 80 150" fill="none" aria-hidden="true">
+                        <path d="M58,136 C36,108 26,76 34,36 C37,22 44,12 52,6" stroke="#aa771c" stroke-width="1.2" stroke-linecap="round"/>
+                        <path d="M34,88 C18,84 10,72 16,62 C25,64 32,74 34,88 Z" fill="#d4af37" fill-opacity="0.28" stroke="#aa771c" stroke-width="0.9"/>
+                        <path d="M36,56 C52,52 60,40 54,30 C45,32 38,42 36,56 Z" fill="#d4af37" fill-opacity="0.24" stroke="#aa771c" stroke-width="0.9"/>
+                        <circle cx="30" cy="48" r="13" fill="#f9d8e0" stroke="#d88c9a" stroke-width="0.9"/>
+                        <circle cx="30" cy="48" r="7.5" fill="#f3b6c3" stroke="#c97485" stroke-width="0.8"/>
+                        <circle cx="30" cy="48" r="3" fill="#d4af37"/>
+                        <circle cx="22" cy="84" r="10" fill="#fce7ec" stroke="#d88c9a" stroke-width="0.85"/>
+                        <circle cx="22" cy="84" r="5" fill="#f4beca"/>
+                        <circle cx="44" cy="24" r="7.5" fill="#f9d8e0" stroke="#d88c9a" stroke-width="0.8"/>
+                      </svg>
                     </div>
-                    <h2 class="couple-crimson-gold text-[clamp(1.25rem,3.3vh,1.85rem)]">
-                      SINCILA K. M.
-                    </h2>
                   </div>
 
-                  <!-- Bottom Non-Interfering Location Pill Tag -->
-                  <div class="w-full relative z-20 flex justify-center pt-0.5">
+                  <!-- Bottom of Page 1: Non-Intrusive "Go to Location" Pill (Launches Pigeon with Letter -> Maps) -->
+                  <div class="w-full relative z-20 flex justify-center">
                     <a id="page1-location-tag"
                        href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
                        target="_blank"
                        rel="noopener noreferrer"
                        data-no-swipe="true"
-                       title="Open Diamond Banquet Hall A/C in Google Maps"
-                       class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#260710] via-[#4d0f20] to-[#260710] border border-[#d4af37] text-[#f3e5ab] hover:brightness-110 active:scale-95 transition shadow-[0_4px_14px_rgba(38,7,16,0.32)] cursor-pointer">
-                      <svg class="w-3.5 h-3.5 text-[#f3e5ab] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                       title="Open Walima Venue in Google Maps"
+                       class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full border border-[#d4af37]/75 bg-[#fdfbf7]/95 hover:bg-[#f3e5ab]/45 active:scale-95 text-[#7e1326] shadow-[0_3px_10px_rgba(170,119,28,0.16)] transition cursor-pointer">
+                      <svg class="w-3.5 h-3.5 text-[#7e1326] shrink-0" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                       </svg>
-                      <span class="font-montserrat text-[9.5px] sm:text-[10px] font-semibold tracking-[0.16em] uppercase">
+                      <span class="font-montserrat text-[9.5px] sm:text-[10px] font-semibold tracking-[0.14em] uppercase">
                         Go to Location
                       </span>
                     </a>
@@ -906,32 +971,41 @@
                 </section>
 
                 <!-- ============================================================
-                     PAGE 2: BRIDE'S PARENTS & ARABIC MARRIAGE DUA
+                     PAGE 2: COUPLE CREST, BRIDE'S PARENTS & ARABIC MARRIAGE DUA
                      ============================================================ -->
-                <section class="book-page" aria-label="Page 2: Bride's Parents and Marriage Dua">
-                  <!-- Top Ornamental Mughal Crown Motif -->
-                  <div class="w-full relative z-10 flex flex-col items-center">
-                    <span class="font-montserrat text-[9px] sm:text-[10px] font-semibold tracking-[0.26em] uppercase text-[#8a631e]">
-                      With Family Blessings
-                    </span>
-                    <div class="flex items-center justify-center gap-2 mt-1 w-full">
-                      <span class="h-[1px] flex-1 max-w-[75px] bg-gradient-to-r from-transparent to-[#d4af37]"></span>
-                      <svg class="w-5 h-5 text-[#d4af37]" viewBox="0 0 24 24" fill="currentColor">
+                <section id="book-page-2" class="book-page" aria-label="Page 2: Couple Crest, Bride's Parents and Marriage Dua">
+                  <!-- Top Royal Gold-Ornamented Couple Crest Header ("Alfiyas & Sincila" / "A & S") -->
+                  <div class="page-couple-crest w-full relative z-10 flex flex-col items-center">
+                    <div class="flex items-center justify-center gap-2 w-full px-2">
+                      <span class="h-[1px] flex-1 max-w-[54px] bg-gradient-to-r from-transparent via-[#d4af37] to-[#aa771c]"></span>
+                      <svg class="w-3.5 h-3.5 text-[#d4af37] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
                       </svg>
-                      <span class="h-[1px] flex-1 max-w-[75px] bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+                      <span class="couple-crimson-gold couple-name-full text-[clamp(0.92rem,2.15vh,1.18rem)] whitespace-nowrap">
+                        Alfiyas &amp; Sincila
+                      </span>
+                      <span class="couple-crimson-gold couple-name-monogram text-[clamp(0.98rem,2.25vh,1.22rem)] tracking-[0.12em] whitespace-nowrap">
+                        A &amp; S
+                      </span>
+                      <svg class="w-3.5 h-3.5 text-[#d4af37] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+                      </svg>
+                      <span class="h-[1px] flex-1 max-w-[54px] bg-gradient-to-l from-transparent via-[#d4af37] to-[#aa771c]"></span>
                     </div>
+                    <span class="font-montserrat text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#8a631e] mt-0.5">
+                      With Family Blessings
+                    </span>
                   </div>
 
                   <!-- Bride's Parents Section -->
                   <div class="w-full relative z-10 px-2">
-                    <p class="font-cormorant italic text-[clamp(0.95rem,2.1vh,1.12rem)] text-[#6d4f1d]">
+                    <p class="font-cormorant italic text-[clamp(0.92rem,2vh,1.1rem)] text-[#6d4f1d]">
                       Beloved daughter of
                     </p>
-                    <h2 class="font-cinzel-dec text-[clamp(0.85rem,2.05vh,1.08rem)] font-bold tracking-[0.05em] text-[#7e1326] mt-1 leading-snug">
+                    <h2 class="font-cinzel-dec text-[clamp(0.84rem,2vh,1.06rem)] font-bold tracking-[0.05em] text-[#7e1326] mt-0.5 leading-snug">
                       Mr. Moosa K. B. &amp; Mrs. Shyla M. M.
                     </h2>
-                    <p class="font-cormorant font-semibold text-[clamp(0.92rem,2vh,1.08rem)] text-[#2b2627] mt-0.5">
+                    <p class="font-cormorant font-semibold text-[clamp(0.9rem,1.95vh,1.06rem)] text-[#2b2627] mt-0.5">
                       Kanjiramthadam (H), Randar P.O., Muvattupuzha
                     </p>
                   </div>
@@ -945,21 +1019,34 @@
 
                   <!-- Heartfelt Invitation Message & Arabic Marriage Dua SVG -->
                   <div class="w-full relative z-10 px-2">
-                    <p class="font-cormorant italic text-[clamp(0.95rem,2.1vh,1.14rem)] text-[#231f20] leading-relaxed max-w-sm mx-auto">
-                      We invite you to share in our joy and shower your duas as they embark on a blessed journey together, Insha’Allah.
+                    <p class="font-cormorant italic text-[clamp(0.92rem,2vh,1.1rem)] text-[#231f20] leading-snug max-w-sm mx-auto">
+                      Invite you to share in our joy and shower your duas as we embark on a blessed journey together, Insha’Allah.
                     </p>
 
-                    <!-- Custom Inline SVG Arabic Marriage Dua -->
-                    <div class="mt-3 pt-2.5 px-2 rounded-2xl border border-[#d4af37]/45 bg-[#fdfbf7]/85 shadow-[inset_0_0_12px_rgba(212,175,55,0.12)]">
-                      <svg class="w-full max-w-[360px] h-12 sm:h-14 mx-auto overflow-visible" viewBox="0 0 420 62" role="img" aria-label="Barakallahu lakuma wa baraka alaykuma wa jamaa baynakuma fi khayr">
+                    <!-- Custom Inline SVG Arabic Marriage Dua with Gold Shimmer -->
+                    <div class="mt-2.5 pt-2 px-2 rounded-2xl border border-[#d4af37]/45 bg-[#fdfbf7]/85 shadow-[inset_0_0_12px_rgba(212,175,55,0.12)]">
+                      <svg class="w-full max-w-[350px] h-11 sm:h-13 mx-auto overflow-visible" viewBox="0 0 420 62" role="img" aria-label="Barakallahu lakuma wa baraka alaykuma wa jamaa baynakuma fi khayr">
+                        <defs>
+                          <linearGradient id="duaGoldShimmerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#7e5b19">
+                              <animate attributeName="stop-color" values="#7e5b19;#d4af37;#aa771c;#7e5b19" dur="5.5s" repeatCount="indefinite" />
+                            </stop>
+                            <stop offset="50%" stop-color="#c99e32">
+                              <animate attributeName="stop-color" values="#c99e32;#7e5b19;#d4af37;#c99e32" dur="5.5s" repeatCount="indefinite" />
+                            </stop>
+                            <stop offset="100%" stop-color="#aa771c">
+                              <animate attributeName="stop-color" values="#aa771c;#c99e32;#7e5b19;#aa771c" dur="5.5s" repeatCount="indefinite" />
+                            </stop>
+                          </linearGradient>
+                        </defs>
                         <text x="210" y="36" text-anchor="middle" direction="rtl" lang="ar"
                               font-family="'Amiri', serif" font-weight="700" font-size="25"
-                              fill="#7e5b19">
+                              fill="url(#duaGoldShimmerGrad)">
                           بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
                         </text>
                         <path d="M90,50 Q210,57 330,50" fill="none" stroke="#d4af37" stroke-width="0.9" opacity="0.65" />
                       </svg>
-                      <p class="font-cormorant italic text-[clamp(0.75rem,1.6vh,0.88rem)] text-[#6d4f1d] pb-2 leading-snug">
+                      <p class="font-cormorant italic text-[clamp(0.74rem,1.55vh,0.86rem)] text-[#6d4f1d] pb-1.5 leading-snug">
                         “May Allah bless you both, shower His blessings upon you, and unite you together in goodness.”
                       </p>
                     </div>
@@ -967,19 +1054,33 @@
                 </section>
 
                 <!-- ============================================================
-                     PAGE 3: DATE & TIME, MUGHAL ARCH VENUE, LIVE COUNTDOWN & 2×2 DOCK
+                     PAGE 3: COUPLE CREST, DATE & TIME, MUGHAL ARCH VENUE, COUNTDOWN & 2×2 DOCK
                      (No "With Best Wishes" section)
                      ============================================================ -->
-                <section class="book-page" aria-label="Page 3: Venue, Countdown and Concierge Actions">
-                  <!-- Top: Date & Time -->
-                  <div class="w-full relative z-10">
-                    <span class="font-montserrat text-[9px] font-semibold tracking-[0.24em] uppercase text-[#8a631e]">
-                      Save The Date
-                    </span>
-                    <h2 class="font-cinzel-dec text-[clamp(0.95rem,2.3vh,1.25rem)] font-bold tracking-[0.1em] text-[#7e1326] mt-0.5 leading-tight">
+                <section id="book-page-3" class="book-page" aria-label="Page 3: Couple Crest, Venue, Countdown and Concierge Actions">
+                  <!-- Top Royal Gold-Ornamented Couple Crest Header + Date & Time -->
+                  <div class="w-full relative z-10 flex flex-col items-center">
+                    <div class="page-couple-crest flex items-center justify-center gap-2 w-full px-2">
+                      <span class="h-[1px] flex-1 max-w-[50px] bg-gradient-to-r from-transparent via-[#d4af37] to-[#aa771c]"></span>
+                      <svg class="w-3 h-3 text-[#d4af37] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+                      </svg>
+                      <span class="couple-crimson-gold couple-name-full text-[clamp(0.88rem,2vh,1.12rem)] whitespace-nowrap">
+                        Alfiyas &amp; Sincila
+                      </span>
+                      <span class="couple-crimson-gold couple-name-monogram text-[clamp(0.95rem,2.1vh,1.16rem)] tracking-[0.12em] whitespace-nowrap">
+                        A &amp; S
+                      </span>
+                      <svg class="w-3 h-3 text-[#d4af37] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
+                      </svg>
+                      <span class="h-[1px] flex-1 max-w-[50px] bg-gradient-to-l from-transparent via-[#d4af37] to-[#aa771c]"></span>
+                    </div>
+
+                    <h2 class="font-cinzel-dec text-[clamp(0.9rem,2.15vh,1.18rem)] font-bold tracking-[0.09em] text-[#7e1326] mt-1 leading-tight">
                       SUNDAY, 20 DEC 2026
                     </h2>
-                    <p class="font-montserrat text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase text-[#6d4f1d] mt-0.5">
+                    <p class="font-montserrat text-[9.5px] sm:text-[10.5px] font-semibold tracking-[0.2em] uppercase text-[#6d4f1d]">
                       4:00 PM ONWARDS
                     </p>
                   </div>
@@ -992,7 +1093,7 @@
                        rel="noopener noreferrer"
                        data-no-swipe="true"
                        title="Tap to fly to Diamond Banquet Hall A/C on Google Maps"
-                       class="group relative w-full max-w-[300px] pt-5 pb-3 px-4 block cursor-pointer transition-transform duration-300 hover:scale-[1.015] active:scale-[0.98]">
+                       class="group relative w-full max-w-[295px] pt-4 pb-2.5 px-4 block cursor-pointer transition-transform duration-300 hover:scale-[1.015] active:scale-[0.98]">
 
                       <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 320 175" preserveAspectRatio="none">
                         <defs>
@@ -1209,7 +1310,7 @@
   </main>
 
   <!-- ==========================================================================
-       MODAL 1: CONNECT WITH WHATSAPP (PRE-FILLED GREETING / RSVP + 1-TAP OPEN)
+       MODAL 1: CONNECT WITH WHATSAPP (GUEST NAME, ATTENDEES, DUA + SEND/COPY)
        ========================================================================== -->
   <div id="whatsapp-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
     <div class="relative w-full max-w-md rounded-2xl border-2 border-[#d4af37] bg-[#fdfbf7] text-[#231f20] p-5 sm:p-6 shadow-2xl">
@@ -1217,9 +1318,9 @@
               class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full border border-[#aa771c]/35 text-[#231f20] hover:bg-[#f3e5ab]/50 flex items-center justify-center transition cursor-pointer"
               aria-label="Close WhatsApp Modal">✕</button>
 
-      <div class="text-center mb-3.5">
-        <div class="w-11 h-11 rounded-full bg-[#1b743e] text-white flex items-center justify-center mx-auto mb-2 shadow-md border border-[#d4af37]">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+      <div class="text-center mb-3">
+        <div class="w-10 h-10 rounded-full bg-[#1b743e] text-white flex items-center justify-center mx-auto mb-1.5 shadow-md border border-[#d4af37]">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
             <path d="M12 2C6.486 2 2 6.486 2 12c0 1.849.505 3.633 1.461 5.19L2.05 22l4.946-1.384A9.93 9.93 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18.182c-1.564 0-3.095-.421-4.432-1.217l-.318-.189-2.936.822.784-2.862-.207-.33A8.153 8.153 0 0 1 3.818 12c0-4.512 3.67-8.182 8.182-8.182 4.512 0 8.182 3.67 8.182 8.182 0 4.512-3.67 8.182-8.182 8.182z"/>
           </svg>
@@ -1228,38 +1329,55 @@
           Connect with WhatsApp
         </h2>
         <p class="font-cormorant italic text-sm text-[#4a4344]">
-          Walima of Alfiyas Muhammed &amp; Sincila K. M.
+          Send RSVP &amp; Duas for Alfiyas Muhammed &amp; Sincila K. M.
         </p>
       </div>
 
-      <form id="whatsapp-form" class="space-y-3">
-        <div>
-          <label for="wa-name" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
-            Your Name / Family
-          </label>
-          <input id="wa-name" type="text" placeholder="e.g., Abdul Rahman & Family"
-                 class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]" />
+      <form id="whatsapp-form" class="space-y-2.5">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <div class="sm:col-span-2">
+            <label for="wa-name" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+              Your Name / Family
+            </label>
+            <input id="wa-name" type="text" placeholder="e.g., Abdul Rahman & Family"
+                   class="w-full px-3 py-1.5 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]" />
+          </div>
+
+          <div>
+            <label for="wa-guests" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+              Attendees
+            </label>
+            <select id="wa-guests"
+                    class="w-full px-2.5 py-1.5 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]">
+              <option value="1 Guest">1 Guest</option>
+              <option value="2 Guests" selected>2 Guests</option>
+              <option value="3 Guests">3 Guests</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="5+ Family">5+ Family</option>
+            </select>
+          </div>
         </div>
 
         <div>
-          <label for="wa-preset" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
-            Select Walima Greeting / RSVP
+          <label for="wa-message" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+            Dua / Blessing Message
           </label>
-          <select id="wa-preset"
-                  class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]">
-            <option value="Assalamu Alaikum! Confirming our presence for the Walima of Alfiyas Muhammed & Sincila K. M. on 20 Dec 2026. BarakAllahu Lakuma!">Confirming Attendance &amp; Blessings</option>
-            <option value="Assalamu Alaikum! Heartiest congratulations and warmest duas for Alfiyas Muhammed & Sincila K. M. on their Walima. BarakAllahu Lakuma wa Baraka Alaykuma!">Sending Warm Walima Duas</option>
-            <option value="Assalamu Alaikum! Please share location/timing details for the Walima of Alfiyas Muhammed & Sincila K. M.">Requesting Venue / Timing Info</option>
-          </select>
+          <textarea id="wa-message" rows="2"
+                    class="w-full px-3 py-1.5 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base leading-snug focus:outline-none focus:border-[#7e1326]">Assalamu Alaikum! Heartiest congratulations and warmest duas for Alfiyas Muhammed &amp; Sincila K. M. on their Walima. BarakAllahu Lakuma!</textarea>
         </div>
 
-        <div class="pt-1 flex flex-col gap-2">
+        <div class="pt-1 grid grid-cols-1 sm:grid-cols-2 gap-2">
           <button type="submit"
-                  class="w-full py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-white bg-[#1b743e] hover:bg-[#155d31] active:scale-[0.98] transition shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                  class="w-full py-2.5 px-3 rounded-xl font-montserrat text-[10.5px] font-semibold tracking-wider uppercase text-white bg-[#1b743e] hover:bg-[#155d31] active:scale-[0.98] transition shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
             <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
             </svg>
-            <span>Open WhatsApp</span>
+            <span>Send via WhatsApp</span>
+          </button>
+
+          <button id="btn-copy-wa-msg" type="button"
+                  class="w-full py-2.5 px-3 rounded-xl font-montserrat text-[10.5px] font-semibold tracking-wider uppercase text-[#7e1326] bg-[#f3e5ab]/60 hover:bg-[#f3e5ab]/90 border border-[#d4af37]/70 active:scale-[0.98] transition flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>Copy Message</span>
           </button>
         </div>
       </form>
@@ -1813,7 +1931,25 @@
 
       window.addEventListener('resize', () => {
         if (butterflyMode === 'perched') placeButterflyOnDoorUpperRight();
+        updateCoupleCrestResponsiveFit();
       });
+
+      /* ------------------------------------------------------------------------
+         5B. SPACE-AWARE RESPONSIVE COUPLE CREST CHECK ("Alfiyas & Sincila" -> "A & S")
+         ------------------------------------------------------------------------ */
+      const bookPage2El = document.getElementById('book-page-2');
+      const bookPage3El = document.getElementById('book-page-3');
+
+      function updateCoupleCrestResponsiveFit() {
+        document.body.classList.remove('compact-crest');
+        const isTightViewport = window.innerWidth <= 365 || window.innerHeight <= 640;
+        const isPage2Overflow = bookPage2El && bookPage2El.scrollHeight > bookPage2El.clientHeight + 2;
+        const isPage3Overflow = bookPage3El && bookPage3El.scrollHeight > bookPage3El.clientHeight + 2;
+
+        if (isTightViewport || isPage2Overflow || isPage3Overflow) {
+          document.body.classList.add('compact-crest');
+        }
+      }
 
       /* ------------------------------------------------------------------------
          6. 3-PAGE ROYAL BOOK SLIDER (5s AUTO-SLIDE + SWIPE + TAP + GESTURES)
@@ -1984,30 +2120,22 @@
         // Play soft velvet whoosh + shimmering harp chord
         playCeremonialDoorChime();
 
-        // Swing doors outward in 3D & immediately fade out central yellow glow
+        // Swing doors outward in 3D & immediately hide central yellow glow
         palaceDoorsOverlay.classList.add('is-open');
-        centerSeamGlow.style.opacity = '0';
-        seamSanctuaryGlow.style.opacity = '0';
-        setTimeout(() => {
-          if (isDoorsOpen) {
-            centerSeamGlow.style.display = 'none';
-            seamSanctuaryGlow.style.display = 'none';
-          }
-        }, 420);
-
         document.body.classList.add('doors-opened');
-        doorPromptPill.style.opacity = '0';
+        if (centerSeamGlow) centerSeamGlow.style.display = 'none';
+        if (seamSanctuaryGlow) seamSanctuaryGlow.style.display = 'none';
+
+        // Hide bottom prompt pill and enable Replay Doors control
+        doorPromptPill.classList.add('opacity-0');
         btnReplay.classList.remove('opacity-0', 'pointer-events-none');
+        btnReplay.classList.add('opacity-100', 'pointer-events-auto');
 
-        // Launch butterfly into continuous infinite figure-eight flight all around screen
+        // Launch continuous butterfly flight & petal shower
         startContinuousButterflyFlight();
+        startPetalShower();
 
-        // Start drifting blush-rose & gold-foil petals
-        setTimeout(() => {
-          if (isDoorsOpen) startPetalShower();
-        }, 250);
-
-        // Start 5-second auto-slide across the 3 pages of the Royal Book
+        // Start 5-second auto-slide sequence from Page 1
         bookAutoStopped = false;
         updateBookPageUI(0);
         scheduleNextBookAutoSlide();
@@ -2030,203 +2158,198 @@
       }
 
       function replayPalaceDoors() {
-        if (autoOpenTimer) clearTimeout(autoOpenTimer);
+        isDoorsOpen = false;
         stopBookAutoSlide();
         stopPetalShower();
-        isDoorsOpen = false;
 
-        // Restore subtle closed-door seam glow
-        centerSeamGlow.style.display = '';
-        seamSanctuaryGlow.style.display = '';
-        centerSeamGlow.style.opacity = '';
-        seamSanctuaryGlow.style.opacity = '';
+        if (butterflyAnimFrame) {
+          cancelAnimationFrame(butterflyAnimFrame);
+          butterflyAnimFrame = null;
+        }
 
+        // Restore closed doors, seam glow & prompt pill
         palaceDoorsOverlay.classList.remove('is-open');
         document.body.classList.remove('doors-opened');
-        doorPromptPill.style.opacity = '1';
-        btnReplay.classList.add('opacity-0', 'pointer-events-none');
+        if (centerSeamGlow) centerSeamGlow.style.display = '';
+        if (seamSanctuaryGlow) seamSanctuaryGlow.style.display = '';
 
-        setTimeout(() => {
-          updateBookPageUI(0);
+        doorPromptPill.classList.remove('opacity-0');
+        btnReplay.classList.add('opacity-0', 'pointer-events-none');
+        btnReplay.classList.remove('opacity-100', 'pointer-events-auto');
+
+        updateBookPageUI(0);
+
+        // Re-perch butterfly on upper-right door lattice and restart 3-second timer
+        requestAnimationFrame(() => {
           placeButterflyOnDoorUpperRight();
           scheduleThreeSecondAutoOpen();
-        }, 240);
+        });
       }
 
       palaceDoorsOverlay.addEventListener('click', () => {
-        if (!isDoorsOpen) openPalaceDoors();
-      });
-
-      palaceDoorsOverlay.addEventListener('keydown', (e) => {
-        if ((e.key === 'Enter' || e.key === ' ') && !isDoorsOpen) {
-          e.preventDefault();
+        if (!isDoorsOpen) {
+          getUnlockedAudioContext();
           openPalaceDoors();
         }
       });
 
-      btnReplay.addEventListener('click', replayPalaceDoors);
+      palaceDoorsOverlay.addEventListener('keydown', (e) => {
+        if (!isDoorsOpen && (e.key === 'Enter' || e.key === ' ')) {
+          e.preventDefault();
+          getUnlockedAudioContext();
+          openPalaceDoors();
+        }
+      });
+
+      btnReplay.addEventListener('click', (e) => {
+        e.stopPropagation();
+        replayPalaceDoors();
+      });
 
       /* ------------------------------------------------------------------------
-         8. ROYAL MESSENGER PIGEON CARRYING SEALED LETTER -> GOOGLE MAPS REDIRECT
+         8. ROYAL MESSENGER PIGEON FLIGHT WITH SEALED LETTER -> GOOGLE MAPS
          ------------------------------------------------------------------------ */
-      function evalCubicBezier(p0, p1, p2, p3, t) {
-        const u = 1 - t;
-        const tt = t * t;
-        const uu = u * u;
-        const uuu = uu * u;
-        const ttt = tt * t;
-        return {
-          x: uuu * p0.x + 3 * uu * t * p1.x + 3 * u * tt * p2.x + ttt * p3.x,
-          y: uuu * p0.y + 3 * uu * t * p1.y + 3 * u * tt * p2.y + ttt * p3.y
-        };
-      }
-
-      function triggerPigeonWithLetterAndOpenMaps(originElement, e) {
-        if (e) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
+      function launchPigeonWithLetterToMaps(triggerEl) {
         if (isPigeonFlying) return;
         isPigeonFlying = true;
         stopBookAutoSlide();
-
         playPigeonSoftChime();
-        showToast('Dispatching royal messenger to Diamond Banquet Hall A/C...');
+        showToast('Dispatching royal messenger to Google Maps...');
 
-        const originRect = originElement.getBoundingClientRect();
-        const start = {
-          x: originRect.left + originRect.width * 0.5,
-          y: originRect.top + originRect.height * 0.5
-        };
+        const rect = triggerEl
+          ? triggerEl.getBoundingClientRect()
+          : { left: window.innerWidth * 0.5, top: window.innerHeight * 0.72, width: 0, height: 0 };
 
-        const end = {
-          x: window.innerWidth + 80,
-          y: Math.max(36, start.y - 320)
-        };
+        const startX = rect.left + rect.width * 0.5 - 54;
+        const startY = rect.top + rect.height * 0.5 - 54;
+        const endX = window.innerWidth + 130;
+        const endY = Math.max(40, window.innerHeight * 0.14) - 54;
+        const flightDuration = 1150;
+        let flightStart = null;
 
-        const c1 = {
-          x: start.x - 45,
-          y: start.y - 125
-        };
-        const c2 = {
-          x: start.x + (end.x - start.x) * 0.56,
-          y: end.y - 45
-        };
+        pigeonActor.style.opacity = '1';
 
-        const flightMs = 1350;
-        let startTime = null;
+        function stepPigeonFlight(ts) {
+          if (!flightStart) flightStart = ts;
+          const t = Math.min(1, (ts - flightStart) / flightDuration);
+          const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
-        function animatePigeon(timestamp) {
-          if (!startTime) startTime = timestamp;
-          const elapsed = timestamp - startTime;
-          const rawT = Math.min(1, elapsed / flightMs);
-          const t = rawT < 0.5 ? 2 * rawT * rawT : 1 - Math.pow(-2 * rawT + 2, 2) / 2;
+          // Graceful upward arc toward the top-right horizon
+          const arcLift = Math.sin(t * Math.PI) * 95;
+          const curX = startX + (endX - startX) * ease;
+          const curY = startY + (endY - startY) * ease - arcLift;
+          const tiltDeg = -18 + Math.sin(t * Math.PI) * -10;
+          const scale = 0.92 + Math.sin(t * Math.PI) * 0.24;
 
-          const pos = evalCubicBezier(start, c1, c2, end, t);
-          const nextPos = evalCubicBezier(start, c1, c2, end, Math.min(1, t + 0.02));
-          const angleDeg = (Math.atan2(nextPos.y - pos.y, nextPos.x - pos.x) * 180) / Math.PI;
-          const scale = 0.86 + Math.sin(rawT * Math.PI) * 0.34;
+          pigeonActor.style.transform = `translate3d(${curX.toFixed(1)}px, ${curY.toFixed(1)}px, 60px) rotate(${tiltDeg.toFixed(1)}deg) scale(${scale.toFixed(3)})`;
 
-          pigeonActor.style.opacity = rawT < 0.08 ? (rawT / 0.08).toFixed(2) : '1';
-          pigeonActor.style.transform = `translate3d(${pos.x - 54}px, ${pos.y - 54}px, 0) scale(${scale.toFixed(3)}) rotate(${angleDeg.toFixed(1)}deg)`;
-
-          if (rawT < 1) {
-            requestAnimationFrame(animatePigeon);
+          if (t < 1) {
+            requestAnimationFrame(stepPigeonFlight);
           } else {
             pigeonActor.style.opacity = '0';
             isPigeonFlying = false;
-            window.location.href = GOOGLE_MAPS_URL;
+            const popup = window.open(GOOGLE_MAPS_URL, '_blank', 'noopener,noreferrer');
+            if (!popup) {
+              window.location.href = GOOGLE_MAPS_URL;
+            }
           }
         }
 
-        requestAnimationFrame(animatePigeon);
+        requestAnimationFrame(stepPigeonFlight);
       }
 
-      window.addEventListener('pageshow', () => {
-        pigeonActor.style.opacity = '0';
-        isPigeonFlying = false;
+      ['page1-location-tag', 'venue-mehrab-link', 'btn-open-maps'].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            launchPigeonWithLetterToMaps(el);
+          });
+        }
       });
 
-      const page1LocationTag = document.getElementById('page1-location-tag');
-      const venueMehrabLink = document.getElementById('venue-mehrab-link');
-      const btnOpenMaps = document.getElementById('btn-open-maps');
-
-      page1LocationTag.addEventListener('click', (e) => triggerPigeonWithLetterAndOpenMaps(page1LocationTag, e));
-      venueMehrabLink.addEventListener('click', (e) => triggerPigeonWithLetterAndOpenMaps(venueMehrabLink, e));
-      btnOpenMaps.addEventListener('click', (e) => triggerPigeonWithLetterAndOpenMaps(btnOpenMaps, e));
-
       /* ------------------------------------------------------------------------
-         9. LIVE COUNTDOWN TIMER TO 2026-12-20T16:00:00+05:30
+         9. LIVE WALIMA COUNTDOWN TIMER (20 DEC 2026, 4:00 PM IST)
          ------------------------------------------------------------------------ */
+      const cdDaysEl = document.getElementById('cd-days');
+      const cdHoursEl = document.getElementById('cd-hours');
+      const cdMinsEl = document.getElementById('cd-mins');
+      const cdSecsEl = document.getElementById('cd-secs');
       const targetTimestamp = new Date(TARGET_WALIMA_ISO).getTime();
-      const cdDays = document.getElementById('cd-days');
-      const cdHours = document.getElementById('cd-hours');
-      const cdMins = document.getElementById('cd-mins');
-      const cdSecs = document.getElementById('cd-secs');
 
-      function updateLiveCountdown() {
+      function updateCountdown() {
         const diff = Math.max(0, targetTimestamp - Date.now());
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const mins = Math.floor((diff / (1000 * 60)) % 60);
         const secs = Math.floor((diff / 1000) % 60);
 
-        cdDays.textContent = String(days).padStart(2, '0');
-        cdHours.textContent = String(hours).padStart(2, '0');
-        cdMins.textContent = String(mins).padStart(2, '0');
-        cdSecs.textContent = String(secs).padStart(2, '0');
+        if (cdDaysEl) cdDaysEl.textContent = String(days).padStart(2, '0');
+        if (cdHoursEl) cdHoursEl.textContent = String(hours).padStart(2, '0');
+        if (cdMinsEl) cdMinsEl.textContent = String(mins).padStart(2, '0');
+        if (cdSecsEl) cdSecsEl.textContent = String(secs).padStart(2, '0');
       }
 
-      updateLiveCountdown();
-      setInterval(updateLiveCountdown, 1000);
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
 
       /* ------------------------------------------------------------------------
-         10. ADD TO CALENDAR (.ICS DOWNLOAD: 4:00 PM TO 8:00 PM IST)
+         10. ADD TO CALENDAR (.ICS FILE GENERATOR & DOWNLOAD)
          ------------------------------------------------------------------------ */
       document.getElementById('btn-add-calendar').addEventListener('click', (e) => {
         e.stopPropagation();
         stopBookAutoSlide();
-        const icsLines = [
+
+        const icsContent = [
           'BEGIN:VCALENDAR',
           'VERSION:2.0',
-          'PRODID:-//Alfiyas & Sincila Walima Invitation//EN',
+          'PRODID:-//Alfiyas & Sincila Walima//EN',
           'CALSCALE:GREGORIAN',
           'METHOD:PUBLISH',
           'BEGIN:VEVENT',
-          'UID:walima-alfiyas-sincila-20261220@royalpalace',
-          'DTSTAMP:20261126T000000Z',
+          'UID:walima-alfiyas-sincila-20261220@walimainvite.local',
+          'DTSTAMP:20260101T000000Z',
           'DTSTART:20261220T103000Z',
           'DTEND:20261220T143000Z',
-          'SUMMARY:Walima Reception: Alfiyas Muhammed & Sincila K. M.',
-          'DESCRIPTION:Mr. Pareeth K. K. & Mrs. Zeenath Pareeth cordially request the honour of your presence and blessings to celebrate the Walima reception of Alfiyas Muhammed & Sincila K. M.',
-          'LOCATION:Diamond Banquet Hall A/C, Allapra, Perumbavoor, Kerala',
+          'SUMMARY:Walima Reception — Alfiyas Muhammed & Sincila K. M.',
+          'DESCRIPTION:Cordially invited to celebrate the Walima reception of Alfiyas Muhammed & Sincila K. M. at Diamond Banquet Hall A/C, Allapra, Perumbavoor. Maps: ' + GOOGLE_MAPS_URL,
+          'LOCATION:Diamond Banquet Hall A/C, Allapra, Perumbavoor',
           'URL:' + GOOGLE_MAPS_URL,
           'END:VEVENT',
           'END:VCALENDAR'
         ].join('\r\n');
 
-        const blob = new Blob([icsLines], { type: 'text/calendar;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'Walima-Alfiyas-and-Sincila-20Dec2026.ics');
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-        showToast('Calendar reminder (.ics) downloaded!');
+        try {
+          const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = 'Alfiyas_Sincila_Walima_2026.ics';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          setTimeout(() => URL.revokeObjectURL(url), 1500);
+          showToast('Walima Calendar Event (.ics) Downloaded');
+        } catch (err) {
+          showToast('Unable to download calendar file');
+        }
       });
 
       /* ------------------------------------------------------------------------
-         11. MODALS: CONNECT WITH WHATSAPP & SHARE INVITE (WITH SCANNABLE QR)
+         11. TOAST HELPER, WHATSAPP MODAL & SHARE INVITE SHEET
          ------------------------------------------------------------------------ */
+      let toastTimeout = null;
       function showToast(message) {
+        if (!toastBanner) return;
         toastBanner.textContent = message;
         toastBanner.classList.remove('opacity-0');
-        clearTimeout(toastBanner._timer);
-        toastBanner._timer = setTimeout(() => {
+        toastBanner.classList.add('opacity-100');
+        if (toastTimeout) clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toastBanner.classList.remove('opacity-100');
           toastBanner.classList.add('opacity-0');
-        }, 3000);
+        }, 2800);
       }
 
       function openModal(id) {
@@ -2250,12 +2373,22 @@
 
       ['whatsapp-modal', 'share-modal'].forEach((id) => {
         const el = document.getElementById(id);
-        el.addEventListener('click', (e) => {
-          if (e.target === el) closeModal(id);
-        });
+        if (el) {
+          el.addEventListener('click', (e) => {
+            if (e.target === el) closeModal(id);
+          });
+        }
       });
 
-      // Connect with WhatsApp Modal & Direct Launch
+      // Connect with WhatsApp Modal, Send via WhatsApp & Copy Message
+      function buildFormattedWhatsAppMessage() {
+        const guestName = document.getElementById('wa-name').value.trim();
+        const attendees = document.getElementById('wa-guests').value;
+        const customMsg = document.getElementById('wa-message').value.trim();
+        const headerLine = guestName ? `Guest: ${guestName} (${attendees})` : `Attendees: ${attendees}`;
+        return `${customMsg}\n\n${headerLine}\nWalima of Alfiyas Muhammed & Sincila K. M. (20 Dec 2026)`;
+      }
+
       document.getElementById('btn-connect-whatsapp').addEventListener('click', (e) => {
         e.stopPropagation();
         openModal('whatsapp-modal');
@@ -2263,13 +2396,15 @@
 
       document.getElementById('whatsapp-form').addEventListener('submit', (e) => {
         e.preventDefault();
-        const guestName = document.getElementById('wa-name').value.trim();
-        const presetMsg = document.getElementById('wa-preset').value;
-        const finalText = guestName ? `${presetMsg}\n— ${guestName}` : presetMsg;
+        const finalText = buildFormattedWhatsAppMessage();
         const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(finalText)}`;
         closeModal('whatsapp-modal');
         showToast('Opening WhatsApp...');
         window.open(waUrl, '_blank', 'noopener,noreferrer');
+      });
+
+      document.getElementById('btn-copy-wa-msg').addEventListener('click', () => {
+        copyTextSafe(buildFormattedWhatsAppMessage(), 'Walima message copied to clipboard!');
       });
 
       // Share Invite Sheet
@@ -2489,6 +2624,7 @@
          13. INITIALIZE BUTTERFLY ON UPPER-RIGHT LATTICE & 3-SECOND AUTO-OPEN
          ------------------------------------------------------------------------ */
       function initPalaceOpening() {
+        updateCoupleCrestResponsiveFit();
         placeButterflyOnDoorUpperRight();
         scheduleThreeSecondAutoOpen();
       }
