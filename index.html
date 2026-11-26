@@ -1,1498 +1,2261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050b12">
-<meta name="description" content="Join us to celebrate the Walima reception of Alfiyas Muhammed and Sincila KM on 20 December 2026.">
-<title>Walima 2026 | Alfiyas &amp; Sincila</title>
-
-<!-- Open Graph & Social Share Preview Tags -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Walima Reception | Alfiyas Muhammed &amp; Sincila KM">
-<meta property="og:description" content="Sunday, 20 December 2026 · 4:00 PM Onwards at Diamond Banquet Hall A/C, Allapra, Perumbavoor. Join us and shower your duas, Insha'Allah.">
-<meta property="og:image" content="https://placehold.co/1200x630/050b12/e9b967.png?text=Walima+Reception+%7C+Alfiyas+%26+Sincila%0A20+December+2026+%C2%B7+Perumbavoor">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Walima Reception | Alfiyas Muhammed &amp; Sincila KM">
-<meta name="twitter:description" content="Sunday, 20 December 2026 · 4:00 PM Onwards at Diamond Banquet Hall A/C, Allapra, Perumbavoor. Join us and shower your duas, Insha'Allah.">
-<meta name="twitter:image" content="https://placehold.co/1200x630/050b12/e9b967.png?text=Walima+Reception+%7C+Alfiyas+%26+Sincila%0A20+December+2026+%C2%B7+Perumbavoor">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-    --bg: #050b12;
-    --card: #0c1825;
-    --gold: #e9b967;
-    --cyan: #55dce9;
-    --text: #e8edf3;
-    --muted: #91a0b1;
-    --whatsapp: #25d366;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    padding: 24px 15px 116px;
-    background:
-        radial-gradient(ellipse at 50% 0%, #14283b 0%, transparent 58%),
-        var(--bg);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.container {
-    width: 100%;
-    max-width: 550px;
-    position: relative;
-    opacity: 1;
-}
-
-.card {
-    background: rgba(12, 24, 37, 0.96);
-    border: 1px solid rgba(85, 220, 233, 0.22);
-    border-radius: 20px;
-    padding: 28px 22px;
-    margin-bottom: 18px;
-    text-align: center;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
-}
-
-/* Opening Card Typography */
-.arabic {
-    font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
-    color: var(--gold);
-    font-size: 30px;
-    direction: rtl;
-    line-height: 1.55;
-    margin: 0;
-}
-
-.quran-verse {
-    font-family: 'Amiri', 'Traditional Arabic', Georgia, serif;
-    color: #b8eaf0;
-    font-size: 26px;
-    direction: rtl;
-    line-height: 1.55;
-    margin: 24px 0 0;
-}
-
-.verse-translation {
-    color: var(--muted);
-    font-size: 12.5px;
-    font-style: italic;
-    margin: 6px 0 0;
-}
-
-.surah-ref {
-    font: 600 9.5px 'Orbitron', sans-serif;
-    color: var(--gold);
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    margin-top: 6px;
-}
-
-/* Islamic Rub el Hizb (۞) Divider */
-.islamic-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin: 18px 0;
-}
-
-.islamic-divider .line {
-    height: 1px;
-    flex: 1;
-    max-width: 110px;
-    background: linear-gradient(90deg, transparent, rgba(233, 185, 103, 0.45), transparent);
-}
-
-.rub-el-hizb {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    filter: drop-shadow(0 0 6px rgba(233, 185, 103, 0.35));
-}
-
-/* Host & Couple Card */
-.tag {
-    display: inline-block;
-    border: 1px solid rgba(85, 220, 233, 0.32);
-    background: rgba(85, 220, 233, 0.08);
-    color: var(--cyan);
-    border-radius: 30px;
-    padding: 7px 14px;
-    font: 600 10px 'Orbitron', sans-serif;
-    letter-spacing: 2px;
-    margin-bottom: 18px;
-}
-
-.host {
-    color: var(--gold);
-    font-size: 13.5px;
-    font-weight: 700;
-    line-height: 1.75;
-}
-
-.host-address {
-    color: var(--muted);
-    font-size: 11.5px;
-    font-weight: 400;
-}
-
-.intro {
-    font-size: 13px;
-    color: #c2ccd7;
-    line-height: 1.85;
-    margin: 16px 0;
-}
-
-.couple {
-    padding: 24px 6px;
-    margin: 20px 0;
-    border-top: 1px solid rgba(85, 220, 233, 0.22);
-    border-bottom: 1px solid rgba(85, 220, 233, 0.22);
-}
-
-.name {
-    font-family: 'Orbitron', sans-serif;
-    font-size: clamp(19px, 5vw, 27px);
-    font-weight: 700;
-    color: var(--cyan);
-    letter-spacing: 1px;
-    text-shadow: 0 0 18px rgba(85, 220, 233, 0.22);
-}
-
-.ampersand-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 6px 0;
-}
-
-.ampersand {
-    color: var(--gold);
-    font-family: 'Amiri', Georgia, serif;
-    font-size: 30px;
-    line-height: 1;
-}
-
-.family {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.8;
-    margin-top: 15px;
-}
-
-.family strong {
-    color: var(--text);
-}
-
-.dua {
-    font-size: 12.5px;
-    line-height: 1.8;
-    color: #b8c6d3;
-    font-style: italic;
-    margin: 0;
-}
-
-/* Section Titles & Event Info */
-.section-title {
-    font: 600 11px 'Orbitron', sans-serif;
-    color: var(--cyan);
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-    text-transform: uppercase;
-}
-
-.event-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    text-align: left;
-}
-
-.info-box {
-    background: #101f2e;
-    border: 1px solid rgba(233, 185, 103, 0.24);
-    border-radius: 13px;
-    padding: 16px 12px;
-}
-
-.info-box.venue {
-    border-color: rgba(85, 220, 233, 0.24);
-}
-
-.info-icon {
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.info-label {
-    font: 600 9px 'Orbitron', sans-serif;
-    color: var(--muted);
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-}
-
-.info-value {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.55;
-}
-
-.gold { color: var(--gold); }
-.cyan { color: var(--cyan); }
-
-/* Countdown */
-.countdown {
-    margin: 26px 0 18px;
-}
-
-.timer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 9px;
-}
-
-.timer-box {
-    background: #07111c;
-    border: 1px solid rgba(85, 220, 233, 0.22);
-    padding: 13px 4px;
-    border-radius: 11px;
-}
-
-.timer-number {
-    font: 700 clamp(19px, 5vw, 26px) 'Orbitron', sans-serif;
-    color: var(--gold);
-    font-variant-numeric: tabular-nums;
-}
-
-.timer-label {
-    font: 500 9px 'Orbitron', sans-serif;
-    color: var(--muted);
-    margin-top: 6px;
-}
-
-.event-status {
-    color: var(--cyan);
-    font-size: 12px;
-    margin-top: 13px;
-}
-
-/* Action Buttons */
-.actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 18px;
-}
-
-.btn {
-    border: 1px solid rgba(85, 220, 233, 0.42);
-    background: rgba(85, 220, 233, 0.08);
-    color: var(--text);
-    text-decoration: none;
-    border-radius: 11px;
-    padding: 13px 10px;
-    font: 600 11px 'Inter', sans-serif;
-    cursor: pointer;
-    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-}
-
-.btn:hover {
-    background: rgba(85, 220, 233, 0.18);
-    border-color: var(--cyan);
-    transform: translateY(-1px);
-}
-
-.btn.primary {
-    background: linear-gradient(110deg, #b98942, #e9c57f);
-    border: none;
-    color: #111820;
-    font-weight: 700;
-}
-
-.btn.primary:hover {
-    box-shadow: 0 5px 20px rgba(233, 185, 103, 0.28);
-}
-
-.btn.whatsapp-btn {
-    background: linear-gradient(135deg, #1ebd5a, #25d366);
-    border: none;
-    color: #06130b;
-    font-weight: 700;
-}
-
-.btn.whatsapp-btn:hover {
-    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
-}
-
-.btn.full {
-    grid-column: 1 / -1;
-}
-
-/* Direct Duas & Wishes Section */
-.wish-chips {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin: 14px 0 12px;
-}
-
-.chip {
-    background: rgba(233, 185, 103, 0.08);
-    border: 1px solid rgba(233, 185, 103, 0.34);
-    color: var(--gold);
-    border-radius: 20px;
-    padding: 6px 12px;
-    font: 500 11px 'Inter', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.chip:hover,
-.chip.active {
-    background: rgba(233, 185, 103, 0.22);
-    border-color: var(--gold);
-}
-
-.wish-input {
-    width: 100%;
-    min-height: 76px;
-    resize: vertical;
-    background: #07111c;
-    border: 1px solid rgba(85, 220, 233, 0.28);
-    border-radius: 12px;
-    padding: 12px 14px;
-    color: var(--text);
-    font: 400 12.5px/1.6 'Inter', sans-serif;
-    outline: none;
-}
-
-.wish-input::placeholder {
-    color: #647587;
-}
-
-.wish-input:focus {
-    border-color: var(--cyan);
-}
-
-.contact-note {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.7;
-    margin: 6px 0 0;
-}
-
-.contact-note strong {
-    color: var(--cyan);
-    font-weight: 600;
-}
-
-.footer {
-    text-align: center;
-    color: #647587;
-    font: 500 9px 'Orbitron', sans-serif;
-    letter-spacing: 2px;
-    padding: 12px 0 4px;
-}
-
-/* Toast Notification */
-.toast {
-    position: fixed;
-    top: 18px;
-    left: 50%;
-    transform: translate(-50%, -24px);
-    background: #142d3e;
-    border: 1px solid var(--cyan);
-    color: #ffffff;
-    padding: 11px 18px;
-    border-radius: 30px;
-    font-size: 12px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    z-index: 10000;
-    text-align: center;
-    max-width: 90vw;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-}
-
-.toast.show {
-    opacity: 1;
-    transform: translate(-50%, 0);
-}
-
-/* Always-Visible Floating WhatsApp Quick-Connect Widget */
-.wa-widget {
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    max-width: calc(100vw - 32px);
-}
-
-.wa-popup {
-    width: 310px;
-    max-width: 100%;
-    background: #0c1825;
-    border: 1px solid rgba(37, 211, 102, 0.45);
-    border-radius: 16px;
-    padding: 14px;
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
-    display: none;
-}
-
-.wa-popup.open {
-    display: block;
-}
-
-.wa-popup-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(85, 220, 233, 0.16);
-}
-
-.wa-popup-title {
-    font: 600 12px 'Inter', sans-serif;
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.wa-status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--whatsapp);
-    box-shadow: 0 0 8px var(--whatsapp);
-    display: inline-block;
-}
-
-.wa-close-btn {
-    background: rgba(255, 255, 255, 0.08);
-    border: none;
-    color: var(--muted);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    font-size: 15px;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.wa-close-btn:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.16);
-}
-
-.wa-quick-links {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    margin-bottom: 10px;
-}
-
-.wa-quick-link {
-    display: block;
-    text-align: left;
-    text-decoration: none;
-    background: #101f2e;
-    border: 1px solid rgba(85, 220, 233, 0.22);
-    color: var(--text);
-    padding: 8px 11px;
-    border-radius: 10px;
-    font-size: 11.5px;
-    transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.wa-quick-link:hover {
-    border-color: var(--whatsapp);
-    background: rgba(37, 211, 102, 0.1);
-}
-
-.wa-popup-form {
-    display: flex;
-    gap: 6px;
-}
-
-.wa-popup-input {
-    flex: 1;
-    min-width: 0;
-    background: #07111c;
-    border: 1px solid rgba(85, 220, 233, 0.28);
-    border-radius: 9px;
-    padding: 8px 10px;
-    color: var(--text);
-    font: 400 11.5px 'Inter', sans-serif;
-    outline: none;
-}
-
-.wa-popup-input:focus {
-    border-color: var(--whatsapp);
-}
-
-.wa-popup-send {
-    background: var(--whatsapp);
-    color: #06130b;
-    border: none;
-    border-radius: 9px;
-    padding: 8px 12px;
-    font: 700 11px 'Inter', sans-serif;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.wa-fab {
-    background: linear-gradient(135deg, #1ebd5a, #25d366);
-    color: #06130b;
-    border: 1.5px solid #e9b967;
-    border-radius: 999px;
-    padding: 11px 16px;
-    font: 700 12px 'Inter', sans-serif;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(37, 211, 102, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.wa-fab:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), 0 0 22px rgba(37, 211, 102, 0.5);
-}
-
-/* Floating Google Maps Pin (Anchored in Bottom-Left Corner) */
-.maps-fab {
-    position: fixed;
-    bottom: 18px;
-    left: 18px;
-    z-index: 9998;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(12, 24, 37, 0.94);
-    border: 1.5px solid var(--gold);
-    color: var(--cyan);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55), 0 0 12px rgba(85, 220, 233, 0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.maps-fab:hover {
-    transform: translateY(-2px) scale(1.05);
-    border-color: var(--cyan);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65), 0 0 16px rgba(233, 185, 103, 0.4);
-}
-
-/* =========================================================
-   ROBOTIC INTERACTIVE MOTION DISPLAY (PRE-LOAD INTRO SPLASH)
-   ========================================================= */
-.intro-splash {
-    position: fixed;
-    inset: 0;
-    z-index: 20000;
-    background:
-        radial-gradient(circle at 50% 45%, rgba(20, 44, 68, 0.96) 0%, #050b12 72%),
-        #050b12;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    overflow: hidden;
-    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-                visibility 0.7s ease;
-}
-
-.intro-splash.dismissed {
-    opacity: 0;
-    transform: scale(1.04);
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.intro-grid-bg {
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(85, 220, 233, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(85, 220, 233, 0.045) 1px, transparent 1px);
-    background-size: 32px 32px;
-    mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
-    -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
-    pointer-events: none;
-}
-
-.hud-stage {
-    position: relative;
-    width: 100%;
-    max-width: 440px;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 24px;
-    background: rgba(10, 21, 33, 0.78);
-    border: 1px solid rgba(85, 220, 233, 0.3);
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.75),
-        inset 0 0 24px rgba(85, 220, 233, 0.08);
-    transform-style: preserve-3d;
-    transition: transform 0.14s ease-out;
-}
-
-/* Robotic Corner Brackets */
-.hud-corner {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    border-color: var(--gold);
-    border-style: solid;
-    pointer-events: none;
-}
-.hud-corner.tl { top: 10px; left: 10px; border-width: 2px 0 0 2px; border-top-left-radius: 6px; }
-.hud-corner.tr { top: 10px; right: 10px; border-width: 2px 2px 0 0; border-top-right-radius: 6px; }
-.hud-corner.bl { bottom: 10px; left: 10px; border-width: 0 0 2px 2px; border-bottom-left-radius: 6px; }
-.hud-corner.br { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; border-bottom-right-radius: 6px; }
-
-.hud-reticle-wrap {
-    position: relative;
-    width: 112px;
-    height: 112px;
-    margin: 0 auto 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hud-ring-outer {
-    animation: hudSpinCW 14s linear infinite;
-    transform-origin: 56px 56px;
-}
-
-.hud-ring-inner {
-    animation: hudSpinCCW 9s linear infinite;
-    transform-origin: 56px 56px;
-}
-
-@keyframes hudSpinCW {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes hudSpinCCW {
-    from { transform: rotate(360deg); }
-    to { transform: rotate(0deg); }
-}
-
-.hud-status-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 5px 12px;
-    border-radius: 999px;
-    background: rgba(85, 220, 233, 0.08);
-    border: 1px solid rgba(85, 220, 233, 0.28);
-    font: 600 9.5px 'Orbitron', sans-serif;
-    letter-spacing: 1.8px;
-    color: var(--cyan);
-    margin-bottom: 14px;
-}
-
-.hud-pulse-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--gold);
-    box-shadow: 0 0 8px var(--gold);
-    animation: hudBlink 1.2s ease-in-out infinite;
-}
-
-@keyframes hudBlink {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.35; transform: scale(0.75); }
-}
-
-.hud-arabic-dua {
-    font-family: 'Amiri', Georgia, serif;
-    font-size: clamp(24px, 6vw, 31px);
-    color: var(--gold);
-    direction: rtl;
-    line-height: 1.5;
-    margin: 0;
-    text-shadow: 0 0 18px rgba(233, 185, 103, 0.35);
-}
-
-.hud-arabic-sub {
-    font-size: 11.5px;
-    color: var(--muted);
-    font-style: italic;
-    margin: 4px 0 14px;
-}
-
-.hud-heading {
-    font: 700 11px 'Orbitron', sans-serif;
-    letter-spacing: 2.6px;
-    color: var(--cyan);
-    text-transform: uppercase;
-    margin: 0 0 8px;
-}
-
-.hud-couple {
-    font: 800 clamp(20px, 5.4vw, 27px) 'Orbitron', sans-serif;
-    color: #ffffff;
-    letter-spacing: 1.2px;
-    line-height: 1.35;
-    margin: 0 0 18px;
-    text-shadow: 0 0 22px rgba(85, 220, 233, 0.32);
-}
-
-.hud-couple span {
-    color: var(--gold);
-    font-family: 'Amiri', Georgia, serif;
-    font-size: 26px;
-    padding: 0 4px;
-}
-
-.hud-progress-track {
-    width: 100%;
-    height: 4px;
-    background: rgba(85, 220, 233, 0.14);
-    border-radius: 999px;
-    overflow: hidden;
-    margin-bottom: 16px;
-}
-
-.hud-progress-fill {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, var(--cyan), var(--gold));
-    border-radius: 999px;
-    transition: width 0.15s linear;
-}
-
-.hud-enter-btn {
-    width: 100%;
-    padding: 13px 18px;
-    border-radius: 12px;
-    border: 1px solid var(--gold);
-    background: linear-gradient(110deg, rgba(185, 137, 66, 0.24), rgba(85, 220, 233, 0.18));
-    color: #ffffff;
-    font: 700 11px 'Orbitron', sans-serif;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.hud-enter-btn:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(110deg, #b98942, #e9c57f);
-    color: #09131d;
-    box-shadow: 0 8px 24px rgba(233, 185, 103, 0.32);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hud-ring-outer, .hud-ring-inner, .hud-pulse-dot {
-        animation: none !important;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walima Invitation — Alfiyas Muhammed &amp; Sincila K. M. | 20 Dec 2026</title>
+
+  <!-- Embedded Google Fonts: Cinzel Decorative, Cormorant Garamond, Montserrat & Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ==========================================================================
+       1. ROYAL MUGHAL PALACE DESIGN TOKENS & TYPOGRAPHY
+       ========================================================================== */
+    :root {
+      --door-mahogany-deep: #2b0912;
+      --door-mahogany-rich: #4a0e1e;
+      --gold-leaf-primary: #d4af37;
+      --gold-leaf-highlight: #f3e5ab;
+      --gold-leaf-bronze: #aa771c;
+      --card-ivory: #fdfbf7;
+      --card-ivory-warm: #f7f1e3;
+      --crimson-royal: #7e1326;
+      --ink-charcoal: #231f20;
+      --door-swing-duration: 2.15s;
+      --door-swing-ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
-}
 
-@media (max-width: 400px) {
-    .card { padding: 22px 15px; }
-    .event-info { grid-template-columns: 1fr; }
-    .actions { gap: 8px; }
-    .btn { font-size: 10.5px; }
-    .wa-fab { padding: 10px 14px; font-size: 11.5px; }
-    .maps-fab { bottom: 18px; left: 16px; width: 40px; height: 40px; }
-}
-</style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      background-color: #170409;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--ink-charcoal);
+    }
+
+    .font-cinzel-dec { font-family: 'Cinzel Decorative', Georgia, serif; }
+    .font-cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-montserrat { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .font-amiri { font-family: 'Amiri', serif; }
+
+    /* ==========================================================================
+       2. PALACE COURTYARD ATMOSPHERE & 3D PORTAL PERSPECTIVE (1800px)
+       ========================================================================== */
+    .palace-courtyard-bg {
+      background:
+        radial-gradient(circle at 50% 35%, rgba(243, 229, 171, 0.14) 0%, rgba(74, 14, 30, 0.42) 45%, rgba(18, 3, 7, 0.98) 92%),
+        linear-gradient(168deg, #160308 0%, #2b0912 50%, #120206 100%);
+    }
+
+    /* Warm Golden Radial Glow Behind the Center Seam */
+    .seam-sanctuary-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 4;
+      background: radial-gradient(ellipse at 50% 44%, rgba(243, 229, 171, 0.32) 0%, rgba(212, 175, 55, 0.11) 40%, transparent 72%);
+      opacity: 0.65;
+      transition: opacity 1.8s ease, transform 2.1s ease;
+    }
+
+    body.doors-opened .seam-sanctuary-glow {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+
+    /* 3D Perspective Stage */
+    .palace-stage-3d {
+      perspective: 1800px;
+      perspective-origin: 50% 45%;
+      transform-style: preserve-3d;
+    }
+
+    /* Grand Palace Archway Frame */
+    .palace-portal {
+      position: relative;
+      width: min(94vw, 540px);
+      border-radius: 26px 26px 14px 14px;
+      padding: 10px;
+      background: linear-gradient(155deg, #3c0c19 0%, #22060d 52%, #380b17 100%);
+      border: 1.5px solid rgba(212, 175, 55, 0.68);
+      box-shadow:
+        0 34px 80px -14px rgba(0, 0, 0, 0.92),
+        0 0 60px rgba(212, 175, 55, 0.16),
+        inset 0 0 0 3px #1b040a,
+        inset 0 0 0 4px rgba(243, 229, 171, 0.32);
+      transform-style: preserve-3d;
+    }
+
+    @media (max-width: 480px) {
+      .palace-portal {
+        width: 95vw;
+        padding: 7px;
+        border-radius: 22px 22px 12px 12px;
+      }
+    }
+
+    /* ==========================================================================
+       3. INNER CREAM-IVORY INVITATION CARD (SCALE 0.94 -> 1.00 DEPTH GLIDE)
+       ========================================================================== */
+    .invitation-card {
+      position: relative;
+      width: 100%;
+      border-radius: 18px 18px 8px 8px;
+      background-color: var(--card-ivory);
+      /* Subtle inline SVG damask pattern + warm ivory radial light */
+      background-image:
+        radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.94) 0%, rgba(253, 251, 247, 0.78) 58%, rgba(244, 236, 218, 0.88) 100%),
+        url("data:image/svg+xml,%3Csvg width='96' height='96' viewBox='0 0 96 96' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4af37' fill-opacity='0.06'%3E%3Cpath d='M48 8c6 10 14 14 24 16-10 2-18 6-24 16-6-10-14-14-24-16 10-2 18-6 24-16zm0 48c6 10 14 14 24 16-10 2-18 6-24 16-6-10-14-14-24-16 10-2 18-6 24-16zM12 32c4 7 10 10 16 12-6 2-12 5-16 12-4-7-10-10-16-12 6-2 12-5 16-12zm72 0c4 7 10 10 16 12-6 2-12 5-16 12-4-7-10-10-16-12 6-2 12-5 16-12z'/%3E%3Ccircle cx='48' cy='48' r='2.2'/%3E%3Ccircle cx='12' cy='12' r='1.6'/%3E%3Ccircle cx='84' cy='12' r='1.6'/%3E%3Ccircle cx='12' cy='84' r='1.6'/%3E%3Ccircle cx='84' cy='84' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+      box-shadow:
+        inset 0 0 34px rgba(170, 119, 28, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.45);
+      /* Start at scale(0.94) behind the closed doors and glide smoothly to scale(1) */
+      transform: scale(0.94) translateZ(-24px);
+      transition: transform var(--door-swing-duration) var(--door-swing-ease);
+      will-change: transform;
+      z-index: 10;
+    }
+
+    body.doors-opened .invitation-card {
+      transform: scale(1) translateZ(0px);
+    }
+
+    /* CSS Metallic Gold-Foil Shimmer Animation */
+    @keyframes goldShimmerSweep {
+      0% { background-position: -180% center; }
+      100% { background-position: 180% center; }
+    }
+
+    .gold-foil-shimmer-text {
+      background: linear-gradient(
+        115deg,
+        #8a5d12 0%,
+        #d4af37 22%,
+        #f3e5ab 42%,
+        #ffffff 50%,
+        #f3e5ab 58%,
+        #aa771c 78%,
+        #8a5d12 100%
+      );
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: goldShimmerSweep 5.5s linear infinite;
+    }
+
+    .gold-border-shimmer {
+      position: relative;
+    }
+
+    .gold-border-shimmer::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(
+        120deg,
+        transparent 25%,
+        rgba(243, 229, 171, 0.55) 50%,
+        transparent 75%
+      );
+      background-size: 240% 100%;
+      animation: goldShimmerSweep 6s linear infinite;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      padding: 1.5px;
+    }
+
+    /* Large Crimson-Gold Couple Typography */
+    .couple-crimson-gold {
+      font-family: 'Cinzel Decorative', Georgia, serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      background: linear-gradient(
+        180deg,
+        #9e1931 0%,
+        #750f22 52%,
+        #4e0815 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 1px 0 #f3e5ab) drop-shadow(0 2px 6px rgba(212, 175, 55, 0.35));
+      line-height: 1.22;
+    }
+
+    /* Staggered IntersectionObserver Scroll Choreography */
+    .reveal-section {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .reveal-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       4. 3D ROYAL PALACE DOUBLE DOORS (SWING OUTWARD -122deg / +122deg)
+       ========================================================================== */
+    .palace-doors-overlay {
+      position: absolute;
+      inset: 7px;
+      z-index: 30;
+      transform-style: preserve-3d;
+      border-radius: 20px 20px 8px 8px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .palace-doors-overlay {
+        inset: 5px;
+      }
+    }
+
+    .palace-doors-overlay.is-open {
+      pointer-events: none;
+    }
+
+    /* Warm Golden Radial Glow Behind the Center Seam */
+    .center-seam-glow {
+      position: absolute;
+      top: 5%;
+      bottom: 5%;
+      left: 50%;
+      width: 10px;
+      transform: translateX(-50%) translateZ(14px);
+      background: radial-gradient(ellipse at center, rgba(243, 229, 171, 0.98) 0%, rgba(212, 175, 55, 0.6) 45%, transparent 80%);
+      filter: blur(2.5px);
+      z-index: 35;
+      pointer-events: none;
+      animation: seamRadiantPulse 2.4s ease-in-out infinite;
+      transition: opacity 0.75s ease, width 1.2s ease;
+    }
+
+    .palace-doors-overlay.is-open .center-seam-glow {
+      opacity: 0;
+      width: 110px;
+    }
+
+    @keyframes seamRadiantPulse {
+      0%, 100% { opacity: 0.58; transform: translateX(-50%) translateZ(14px) scaleY(0.96); }
+      50% { opacity: 1; transform: translateX(-50%) translateZ(14px) scaleY(1); }
+    }
+
+    /* Individual 3D Door Leaf */
+    .palace-door {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform var(--door-swing-duration) var(--door-swing-ease);
+      will-change: transform;
+    }
+
+    .palace-door-left {
+      left: 0;
+      transform-origin: left center;
+      transform: translateZ(12px) rotateY(0deg);
+    }
+
+    .palace-door-right {
+      right: 0;
+      transform-origin: right center;
+      transform: translateZ(12px) rotateY(0deg);
+    }
+
+    .palace-doors-overlay.is-open .palace-door-left {
+      transform: translateZ(12px) rotateY(-122deg);
+    }
+
+    .palace-doors-overlay.is-open .palace-door-right {
+      transform: translateZ(12px) rotateY(122deg);
+    }
+
+    .palace-door-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    /* Deep Mahogany-Burgundy (#2b0912 to #4a0e1e) Exterior Door Face */
+    .palace-door-front {
+      transform: translateZ(3px);
+      background:
+        radial-gradient(circle at 85% 48%, rgba(243, 229, 171, 0.16) 0%, transparent 56%),
+        linear-gradient(155deg, #2b0912 0%, #4a0e1e 50%, #2b0912 100%);
+      box-shadow:
+        inset 0 0 32px rgba(0, 0, 0, 0.84),
+        0 12px 28px rgba(0, 0, 0, 0.65);
+    }
+
+    .palace-door-left .palace-door-front {
+      border-top-left-radius: 18px;
+      border-bottom-left-radius: 8px;
+      border-right: 1px solid rgba(243, 229, 171, 0.36);
+    }
+
+    .palace-door-right .palace-door-front {
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 8px;
+      border-left: 1px solid rgba(20, 4, 8, 0.9);
+    }
+
+    /* Interior Backface of Palace Doors */
+    .palace-door-back {
+      transform: rotateY(180deg) translateZ(3px);
+      background: linear-gradient(160deg, #fdfbf7 0%, #efe3c8 100%);
+      box-shadow:
+        inset 0 0 0 8px #380b17,
+        inset 0 0 0 10px #d4af37,
+        inset 0 0 22px rgba(170, 119, 28, 0.3);
+    }
+
+    .palace-door-left .palace-door-back {
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .palace-door-right .palace-door-back {
+      border-top-left-radius: 18px;
+      border-bottom-left-radius: 8px;
+    }
+
+    /* Clipped 200%-Width Seamless Door Artwork Container */
+    .door-art-clip {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: inherit;
+    }
+
+    .full-door-canvas {
+      position: absolute;
+      top: 0;
+      width: 200%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .palace-door-left .full-door-canvas { left: 0; }
+    .palace-door-right .full-door-canvas { left: -100%; }
+
+    /* ==========================================================================
+       5. 3D WING-FLAPPING GOLD & IVORY BUTTERFLY (DOOR -> TOP-LEFT CARD CORNER)
+       ========================================================================== */
+    #butterfly-actor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 68px;
+      height: 68px;
+      pointer-events: none !important;
+      z-index: 60;
+      perspective: 750px;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    /* Once landed on top-left corner of the inner card frame, anchor cleanly to card */
+    #butterfly-actor.anchored-to-card {
+      position: absolute !important;
+      left: -14px !important;
+      top: -14px !important;
+      z-index: 28 !important;
+      transform: scale(0.82) rotateX(20deg) rotateY(10deg) rotateZ(24deg) !important;
+      transition: opacity 0.3s ease;
+    }
+
+    .butterfly-3d-rig {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      pointer-events: none !important;
+    }
+
+    .butterfly-body {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 4.5px;
+      height: 26px;
+      transform: translate(-50%, -46%) translateZ(2px);
+      border-radius: 999px;
+      background: linear-gradient(180deg, #f3e5ab 0%, #aa771c 50%, #3a111b 100%);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+    }
+
+    .butterfly-body::before,
+    .butterfly-body::after {
+      content: '';
+      position: absolute;
+      top: -9px;
+      width: 6px;
+      height: 11px;
+      border-top: 1.3px solid #d4af37;
+      border-radius: 50%;
+    }
+
+    .butterfly-body::before {
+      left: -4px;
+      border-right: 1px solid #d4af37;
+      transform: rotate(-18deg);
+    }
+
+    .butterfly-body::after {
+      right: -4px;
+      border-left: 1px solid #d4af37;
+      transform: rotate(18deg);
+    }
+
+    .wing-hinge {
+      position: absolute;
+      top: 8px;
+      width: 32px;
+      height: 48px;
+      transform-style: preserve-3d;
+    }
+
+    .wing-hinge-left {
+      right: 50%;
+      transform-origin: right center;
+      animation: flapLeftFlight 0.16s ease-in-out infinite alternate;
+    }
+
+    .wing-hinge-right {
+      left: 50%;
+      transform-origin: left center;
+      animation: flapRightFlight 0.16s ease-in-out infinite alternate;
+    }
+
+    #butterfly-actor.is-perched .wing-hinge-left {
+      animation: flapLeftRest 2.2s ease-in-out infinite alternate;
+    }
+
+    #butterfly-actor.is-perched .wing-hinge-right {
+      animation: flapRightRest 2.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes flapLeftFlight {
+      0% { transform: rotateY(-66deg) rotateZ(7deg); }
+      100% { transform: rotateY(24deg) rotateZ(-4deg); }
+    }
+
+    @keyframes flapRightFlight {
+      0% { transform: rotateY(66deg) rotateZ(-7deg); }
+      100% { transform: rotateY(-24deg) rotateZ(4deg); }
+    }
+
+    @keyframes flapLeftRest {
+      0% { transform: rotateY(-50deg) rotateZ(5deg); }
+      100% { transform: rotateY(-12deg) rotateZ(0deg); }
+    }
+
+    @keyframes flapRightRest {
+      0% { transform: rotateY(50deg) rotateZ(-5deg); }
+      100% { transform: rotateY(12deg) rotateZ(0deg); }
+    }
+
+    /* ==========================================================================
+       6. ROYAL MESSENGER PIGEON (FLIES ON GOOGLE MAPS / VENUE ARCH CLICK)
+       ========================================================================== */
+    #pigeon-actor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 92px;
+      height: 92px;
+      pointer-events: none !important;
+      z-index: 80;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    @keyframes pigeonWingBeat {
+      0% { transform: scaleY(1) rotate(-6deg); }
+      50% { transform: scaleY(-0.65) rotate(14deg); }
+      100% { transform: scaleY(1) rotate(-6deg); }
+    }
+
+    .pigeon-wing-flap {
+      transform-origin: 46px 46px;
+      animation: pigeonWingBeat 0.24s ease-in-out infinite;
+    }
+
+    /* ==========================================================================
+       7. DRIFTING BLUSH-ROSE & GOLD-FOIL PETALS
+       ========================================================================== */
+    #petals-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none !important;
+      overflow: hidden;
+      z-index: 50;
+    }
+
+    .petal-node {
+      position: absolute;
+      top: -40px;
+      pointer-events: none !important;
+      will-change: transform, opacity;
+      animation-name: petalDriftFall;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes petalDriftFall {
+      0% {
+        transform: translate3d(0, -30px, 0) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        opacity: 0;
+      }
+      10% { opacity: var(--petal-opacity, 0.88); }
+      50% {
+        transform: translate3d(var(--sway-mid, 40px), 52vh, 20px) rotateX(210deg) rotateY(160deg) rotateZ(140deg);
+      }
+      90% { opacity: var(--petal-opacity, 0.84); }
+      100% {
+        transform: translate3d(var(--sway-end, -30px), 108vh, -10px) rotateX(410deg) rotateY(330deg) rotateZ(290deg);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+<body class="palace-courtyard-bg flex flex-col items-center justify-between min-h-dvh py-3 px-2.5 sm:py-5 sm:px-5 relative">
 
-<body>
+  <!-- Warm Golden Radial Glow Behind the Doors -->
+  <div class="seam-sanctuary-glow" aria-hidden="true"></div>
 
-<!-- ROBOTIC INTERACTIVE MOTION DISPLAY (ISLAMIC MARRIAGE BLESSING SPLASH) -->
-<div class="intro-splash" id="introSplash" role="dialog" aria-modal="true" aria-label="Walima Greeting">
-    <div class="intro-grid-bg" aria-hidden="true"></div>
+  <!-- Drifting Blush-Rose & Gold-Foil Petals Layer (pointer-events: none) -->
+  <div id="petals-layer" aria-hidden="true"></div>
 
-    <div class="hud-stage" id="hudStage">
-        <span class="hud-corner tl" aria-hidden="true"></span>
-        <span class="hud-corner tr" aria-hidden="true"></span>
-        <span class="hud-corner bl" aria-hidden="true"></span>
-        <span class="hud-corner br" aria-hidden="true"></span>
+  <!-- 3D Gold & Ivory Butterfly (Starts Perched on Door -> Lands Top-Left Card Corner) -->
+  <div id="butterfly-actor" class="is-perched" aria-hidden="true">
+    <div class="butterfly-3d-rig">
+      <!-- Left Wing -->
+      <div class="wing-hinge wing-hinge-left">
+        <svg viewBox="0 0 64 100" class="w-full h-full overflow-visible drop-shadow-[0_4px_8px_rgba(0,0,0,0.42)]">
+          <defs>
+            <linearGradient id="mughalWingL" x1="100%" y1="12%" x2="0%" y2="88%">
+              <stop offset="0%" stop-color="#f3e5ab" stop-opacity="0.98" />
+              <stop offset="46%" stop-color="#fdfbf7" stop-opacity="0.95" />
+              <stop offset="82%" stop-color="#f6ccd6" stop-opacity="0.92" />
+              <stop offset="100%" stop-color="#d4af37" stop-opacity="0.96" />
+            </linearGradient>
+          </defs>
+          <path d="M62,38 C52,10 18,-2 5,12 C-4,22 8,48 34,50 C48,51 58,45 62,38 Z"
+                fill="url(#mughalWingL)" stroke="#aa771c" stroke-width="1.3" />
+          <path d="M62,46 C46,48 16,56 14,74 C12,89 34,96 48,84 C57,76 61,58 62,46 Z"
+                fill="url(#mughalWingL)" stroke="#aa771c" stroke-width="1.2" />
+          <path d="M60,38 Q34,22 10,15 M58,41 Q32,34 12,34 M60,48 Q36,64 20,76 M59,50 Q44,72 38,86"
+                fill="none" stroke="#aa771c" stroke-width="0.75" stroke-opacity="0.65" />
+          <circle cx="15" cy="18" r="1.7" fill="#fffdf7" opacity="0.9" />
+          <circle cx="23" cy="77" r="1.5" fill="#fffdf7" opacity="0.85" />
+        </svg>
+      </div>
 
-        <!-- Kinetic Robotic HUD + Islamic Crescent & Rub el Hizb Core -->
-        <div class="hud-reticle-wrap" aria-hidden="true">
-            <svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g class="hud-ring-outer">
-                    <circle cx="56" cy="56" r="50" stroke="#55dce9" stroke-opacity="0.32" stroke-width="1.2" stroke-dasharray="14 8 4 8"/>
-                    <circle cx="56" cy="6" r="2.5" fill="#e9b967"/>
-                    <circle cx="56" cy="106" r="2.5" fill="#55dce9"/>
-                </g>
-                <g class="hud-ring-inner">
-                    <circle cx="56" cy="56" r="38" stroke="#e9b967" stroke-opacity="0.45" stroke-width="1.2" stroke-dasharray="6 6"/>
-                </g>
-                <!-- Central Islamic Crescent & Rub el Hizb -->
-                <path d="M51 39C42.16 39 35 46.16 35 55C35 63.84 42.16 71 51 71C54.23 71 57.25 70.04 59.78 68.39C53.16 67.7 48 61.97 48 55C48 48.03 53.16 42.3 59.78 41.61C57.25 39.96 54.23 39 51 39Z" fill="#e9b967" fill-opacity="0.24" stroke="#e9b967" stroke-width="1.5"/>
-                <rect x="61" y="48" width="13" height="13" stroke="#e9b967" stroke-width="1.3"/>
-                <rect x="61" y="48" width="13" height="13" transform="rotate(45 67.5 54.5)" stroke="#55dce9" stroke-width="1.3"/>
-                <circle cx="67.5" cy="54.5" r="1.8" fill="#e9b967"/>
-            </svg>
-        </div>
+      <!-- Sculpted Body -->
+      <div class="butterfly-body"></div>
 
-        <div class="hud-status-pill">
-            <span class="hud-pulse-dot"></span>
-            <span id="hudTelemetry">BLESSING PROTOCOL · ACTIVE</span>
-        </div>
-
-        <!-- Islamic Marriage Blessing Variant -->
-        <p class="hud-arabic-dua" lang="ar">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا</p>
-        <p class="hud-arabic-sub">&ldquo;May Allah bless you both &amp; unite you in goodness&rdquo;</p>
-
-        <div class="hud-heading" id="hudHeading">HAPPY MARRIED LIFE</div>
-        <h2 class="hud-couple" id="hudCouple">ALFIYAS <span>&amp;</span> SINCILA</h2>
-
-        <div class="hud-progress-track" aria-hidden="true">
-            <div class="hud-progress-fill" id="hudProgressFill"></div>
-        </div>
-
-        <button type="button" class="hud-enter-btn" onclick="dismissIntroSplash()">
-            OPEN INVITATION ↗
-        </button>
+      <!-- Right Wing -->
+      <div class="wing-hinge wing-hinge-right">
+        <svg viewBox="0 0 64 100" class="w-full h-full overflow-visible drop-shadow-[0_4px_8px_rgba(0,0,0,0.42)]" style="transform: scaleX(-1);">
+          <defs>
+            <linearGradient id="mughalWingR" x1="100%" y1="12%" x2="0%" y2="88%">
+              <stop offset="0%" stop-color="#f3e5ab" stop-opacity="0.98" />
+              <stop offset="46%" stop-color="#fdfbf7" stop-opacity="0.95" />
+              <stop offset="82%" stop-color="#f6ccd6" stop-opacity="0.92" />
+              <stop offset="100%" stop-color="#d4af37" stop-opacity="0.96" />
+            </linearGradient>
+          </defs>
+          <path d="M62,38 C52,10 18,-2 5,12 C-4,22 8,48 34,50 C48,51 58,45 62,38 Z"
+                fill="url(#mughalWingR)" stroke="#aa771c" stroke-width="1.3" />
+          <path d="M62,46 C46,48 16,56 14,74 C12,89 34,96 48,84 C57,76 61,58 62,46 Z"
+                fill="url(#mughalWingR)" stroke="#aa771c" stroke-width="1.2" />
+          <path d="M60,38 Q34,22 10,15 M58,41 Q32,34 12,34 M60,48 Q36,64 20,76 M59,50 Q44,72 38,86"
+                fill="none" stroke="#aa771c" stroke-width="0.75" stroke-opacity="0.65" />
+          <circle cx="15" cy="18" r="1.7" fill="#fffdf7" opacity="0.9" />
+          <circle cx="23" cy="77" r="1.5" fill="#fffdf7" opacity="0.85" />
+        </svg>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- ALWAYS-VISIBLE FLOATING GOOGLE MAPS PIN (BOTTOM-LEFT THUMB ZONE) -->
-<a class="maps-fab"
-   href="https://maps.app.goo.gl/kc9tydjnTQtXhhy77"
-   target="_blank"
-   rel="noopener noreferrer"
-   title="Open Venue in Google Maps"
-   aria-label="Open Venue in Google Maps">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z" fill="#ea4335"/>
-        <path d="M12 2C8.13 2 5 5.13 5 9C5 11.4 6.5 14.4 8.4 17.1L15.4 5.3C14.4 3.3 13.3 2 12 2Z" fill="#4285f4"/>
-        <path d="M8.4 17.1C9.9 19.2 11.4 21.1 12 22C12.7 21 14.5 18.8 16.2 16.2L10.3 13.8L8.4 17.1Z" fill="#34a853"/>
-        <path d="M15.4 5.3L10.3 13.8L16.2 16.2C17.8 13.7 19 11.1 19 9C19 7.6 18.5 6.3 17.8 5.2L15.4 5.3Z" fill="#fbbc04"/>
-        <circle cx="12" cy="9" r="2.7" fill="#ffffff"/>
+  <!-- Royal Ivory & 24k Gold Messenger Pigeon (Flies on Google Maps / Venue Arch Click) -->
+  <div id="pigeon-actor" aria-hidden="true">
+    <svg viewBox="0 0 100 100" class="w-full h-full overflow-visible drop-shadow-[0_10px_18px_rgba(0,0,0,0.45)]">
+      <defs>
+        <linearGradient id="pigeonBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff" />
+          <stop offset="65%" stop-color="#fdfbf7" />
+          <stop offset="100%" stop-color="#f3e5ab" />
+        </linearGradient>
+        <linearGradient id="pigeonWingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fffdf9" />
+          <stop offset="60%" stop-color="#f3e5ab" />
+          <stop offset="100%" stop-color="#d4af37" />
+        </linearGradient>
+      </defs>
+
+      <!-- Far Wing (Subtle Depth) -->
+      <path d="M44,44 C34,20 14,14 8,24 C16,32 28,40 42,46 Z"
+            fill="#e8d49c" stroke="#aa771c" stroke-width="0.9" opacity="0.85" />
+
+      <!-- Tail Feathers with 24k Gold Tips -->
+      <path d="M24,56 L6,66 L10,58 L4,55 L22,49 Z"
+            fill="url(#pigeonBodyGrad)" stroke="#d4af37" stroke-width="1.1" />
+
+      <!-- Sculpted Dove / Royal Pigeon Body -->
+      <path d="M22,50 C32,42 48,38 62,38 C70,38 77,32 82,34 C86,36 85,43 79,47 C72,53 58,60 40,60 C31,60 25,56 22,50 Z"
+            fill="url(#pigeonBodyGrad)" stroke="#d4af37" stroke-width="1.2" />
+
+      <!-- Golden Beak & Royal Eye -->
+      <polygon points="84,35 92,38 83,40" fill="#d4af37" stroke="#aa771c" stroke-width="0.6" />
+      <circle cx="79" cy="36.5" r="1.4" fill="#2b0912" />
+
+      <!-- Olive / Gold Branch Held Gently in Beak -->
+      <path d="M86,39 Q94,45 97,50" fill="none" stroke="#aa771c" stroke-width="1" />
+      <ellipse cx="92" cy="43" rx="2.5" ry="1.2" transform="rotate(-25 92 43)" fill="#d4af37" />
+      <ellipse cx="95" cy="47" rx="2.5" ry="1.2" transform="rotate(20 95 47)" fill="#d4af37" />
+
+      <!-- Near Flapping Royal Wing -->
+      <g class="pigeon-wing-flap">
+        <path d="M48,44 C44,18 24,4 12,10 C18,22 26,34 38,44 Z"
+              fill="url(#pigeonWingGrad)" stroke="#aa771c" stroke-width="1.2" />
+        <path d="M44,42 Q30,24 16,13 M41,43 Q29,30 19,21"
+              fill="none" stroke="#aa771c" stroke-width="0.75" stroke-opacity="0.6" />
+      </g>
     </svg>
-</a>
+  </div>
 
-<!-- MAIN INVITATION CONTENT -->
-<main class="container">
+  <!-- ==========================================================================
+       TOP CORNER TRANSLUCENT PILL CONTROLS (SOUND ON/MUTED & REPLAY DOORS)
+       ========================================================================== -->
+  <header class="w-full max-w-[540px] flex items-center justify-between px-0.5 mb-2.5 z-40">
+    <!-- Top-Left: Sound On / Muted Toggle -->
+    <button id="btn-sound" type="button" title="Toggle Ceremonial Sound"
+            class="px-3 py-1.5 rounded-full border border-[#d4af37]/45 bg-[#2b0912]/75 text-[#f3e5ab] hover:border-[#f3e5ab] hover:bg-[#4a0e1e]/85 transition text-[11px] font-montserrat font-medium tracking-wider flex items-center gap-1.5 backdrop-blur-md shadow-lg cursor-pointer">
+      <svg id="icon-sound-on" class="w-3.5 h-3.5 text-[#f3e5ab]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+        <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      </svg>
+      <svg id="icon-sound-off" class="w-3.5 h-3.5 text-[#d4af37]/60 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+        <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>
+      </svg>
+      <span id="sound-label">Sound On</span>
+    </button>
 
-    <!-- CARD 1: BISMILLAH & SURAH AN-NABA -->
-    <section class="card">
-        <p class="arabic" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
-        <p class="quran-verse" lang="ar">وَخَلَقْنَاكُمْ أَزْوَاجًا</p>
-        <p class="verse-translation">&ldquo;And We created you in pairs.&rdquo;</p>
-        <p class="surah-ref">&mdash; Surah An-Naba (78:8)</p>
+    <!-- Top-Right: Replay Doors Button -->
+    <button id="btn-replay" type="button"
+            class="opacity-0 pointer-events-none px-3 py-1.5 rounded-full border border-[#d4af37]/50 bg-[#2b0912]/75 text-[#f3e5ab] hover:border-[#f3e5ab] hover:bg-[#4a0e1e]/85 transition-all duration-500 text-[11px] font-montserrat font-medium tracking-wider flex items-center gap-1.5 backdrop-blur-md shadow-lg cursor-pointer">
+      <svg class="w-3.5 h-3.5 text-[#f3e5ab]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9">
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+        <path d="M3 3v5h5"></path>
+      </svg>
+      <span>Replay Doors</span>
+    </button>
+  </header>
 
-        <div class="islamic-divider" aria-hidden="true">
-            <span class="line"></span>
-            <span class="rub-el-hizb">
-                <svg width="44" height="22" viewBox="0 0 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.5 3.5C6.36 3.5 3 6.86 3 11C3 15.14 6.36 18.5 10.5 18.5C12.01 18.5 13.42 18.05 14.61 17.28C11.51 16.96 9.1 14.27 9.1 11C9.1 7.73 11.51 5.04 14.61 4.72C13.42 3.95 12.01 3.5 10.5 3.5Z" fill="#e9b967" fill-opacity="0.28" stroke="#e9b967" stroke-width="1.3"/>
-                    <rect x="24.5" y="4.5" width="13" height="13" stroke="#e9b967" stroke-width="1.3"/>
-                    <rect x="24.5" y="4.5" width="13" height="13" transform="rotate(45 31 11)" stroke="#55dce9" stroke-width="1.3"/>
-                    <circle cx="31" cy="11" r="1.8" fill="#e9b967"/>
-                </svg>
-            </span>
-            <span class="line"></span>
-        </div>
+  <!-- ==========================================================================
+       MAIN 3D ROYAL MUGHAL PALACE PORTAL & INVITATION SANCTUARY
+       ========================================================================== -->
+  <main class="palace-stage-3d w-full flex flex-col items-center justify-center my-auto z-20">
+    <div id="palace-portal" class="palace-portal" role="region" aria-label="Walima Wedding Invitation">
 
-        <div class="section-title" style="margin-bottom: 6px;">A NEW JOURNEY BEGINS</div>
-        <p class="verse-translation" style="font-style: normal; margin: 0;">With the blessings of Allah and our families</p>
-    </section>
+      <!-- ======================================================================
+           1. INNER CREAM-IVORY INVITATION CARD (#fdfbf7)
+           ====================================================================== -->
+      <article id="invitation-card" class="invitation-card p-2.5 sm:p-4">
+        <!-- Double 24k Gold Hairline Border Frame with Subtle Metallic Shimmer -->
+        <div class="relative border-[1.5px] border-[#d4af37] rounded-2xl p-1 sm:p-1.5 gold-border-shimmer shadow-[inset_0_0_16px_rgba(212,175,55,0.18)]">
+          <div class="relative border border-[#aa771c]/55 rounded-xl px-4 py-6 sm:px-7 sm:py-8 text-center overflow-hidden">
 
-    <!-- CARD 2: HOSTS & COUPLE -->
-    <section class="card">
-        <div class="tag">WALIMA RECEPTION · 2026</div>
+            <!-- FOUR ORNATE MUGHAL CORNER FILIGREE INLINE SVGS -->
+            <!-- Top-Left Mughal Corner Filigree -->
+            <svg class="absolute top-1.5 left-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] pointer-events-none" viewBox="0 0 100 100" fill="none">
+              <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
+              <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
+              <path d="M12,22 C10,34 14,44 22,48 C22,38 18,28 12,22 Z" fill="currentColor"/>
+              <circle cx="18" cy="18" r="3" fill="#aa771c"/>
+            </svg>
 
-        <div class="host">
-            MR. PAREETH K K &amp; MRS. ZEENATH PAREETH
-            <div class="host-address">
+            <!-- Top-Right Mughal Corner Filigree -->
+            <svg class="absolute top-1.5 right-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] -scale-x-100 pointer-events-none" viewBox="0 0 100 100" fill="none">
+              <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
+              <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
+              <path d="M12,22 C10,34 14,44 22,48 C22,38 18,28 12,22 Z" fill="currentColor"/>
+              <circle cx="18" cy="18" r="3" fill="#aa771c"/>
+            </svg>
+
+            <!-- Bottom-Left Mughal Corner Filigree -->
+            <svg class="absolute bottom-1.5 left-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] -scale-y-100 pointer-events-none" viewBox="0 0 100 100" fill="none">
+              <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
+              <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
+              <path d="M12,22 C10,34 14,44 22,48 C22,38 18,28 12,22 Z" fill="currentColor"/>
+              <circle cx="18" cy="18" r="3" fill="#aa771c"/>
+            </svg>
+
+            <!-- Bottom-Right Mughal Corner Filigree -->
+            <svg class="absolute bottom-1.5 right-1.5 w-14 h-14 sm:w-20 sm:h-20 text-[#d4af37] scale-[-1] pointer-events-none" viewBox="0 0 100 100" fill="none">
+              <path d="M4,4 L70,4 C50,9 38,18 28,28 C18,38 9,50 4,70 Z" fill="currentColor" fill-opacity="0.14" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M8,8 C36,8 52,20 62,36 M8,8 C8,36 20,52 36,62" stroke="#aa771c" stroke-width="1.1"/>
+              <path d="M22,12 C34,10 44,14 48,22 C38,22 28,18 22,12 Z" fill="currentColor"/>
+              <path d="M12,22 C10,34 14,44 22,48 C22,38 18,28 12,22 Z" fill="currentColor"/>
+              <circle cx="18" cy="18" r="3" fill="#aa771c"/>
+            </svg>
+
+            <!-- SOFT BLUSH-ROSE BOTANICAL INLINE SVG SIDE ILLUSTRATIONS FLANKING COUPLE -->
+            <!-- Left Blush-Rose Botanical Illustration -->
+            <svg class="absolute left-0 top-[40%] -translate-y-1/2 w-14 h-44 sm:w-20 sm:h-52 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
+              <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
+              <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
+              <path d="M46,148 C56,154 62,164 58,172 C50,166 46,156 46,148 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
+              <!-- Ivory Rose Blossom -->
+              <g transform="translate(24, 96)">
+                <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
+                <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
+                <path d="M-5,-2 C-3,-7 3,-7 5,-2 C6,3 2,6 -2,5 C-5,4 -6,1 -5,-2 Z" fill="#edd39e"/>
+              </g>
+              <!-- Blush-Rose Blossom -->
+              <g transform="translate(20, 134)">
+                <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
+                <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
+                <path d="M-4,-2 C-2,-5 2,-5 4,-2 C5,2 2,5 -2,4 C-4,3 -5,1 -4,-2 Z" fill="#e6a1b2"/>
+              </g>
+              <circle cx="46" cy="92" r="4.5" fill="#f7cfd8" stroke="#d4af37" stroke-width="0.6"/>
+              <circle cx="54" cy="124" r="2" fill="#d4af37"/>
+            </svg>
+
+            <!-- Right Blush-Rose Botanical Illustration (Mirrored) -->
+            <svg class="absolute right-0 top-[40%] -translate-y-1/2 w-14 h-44 sm:w-20 sm:h-52 -scale-x-100 pointer-events-none opacity-85" viewBox="0 0 100 240" fill="none">
+              <path d="M2,120 Q34,90 50,56 M4,126 Q40,122 60,108 M2,132 Q32,160 46,194" stroke="#d4af37" stroke-width="1" stroke-opacity="0.65"/>
+              <path d="M40,74 C50,66 62,68 66,76 C56,80 46,78 40,74 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
+              <path d="M46,148 C56,154 62,164 58,172 C50,166 46,156 46,148 Z" fill="#f3e5ab" fill-opacity="0.45" stroke="#aa771c" stroke-width="0.7"/>
+              <g transform="translate(24, 96)">
+                <circle cx="0" cy="0" r="17" fill="#fdfbf7" stroke="#d4af37" stroke-width="0.8"/>
+                <path d="M-11,-4 C-7,-13 7,-13 11,-4 C13,5 5,13 -4,11 C-11,9 -13,2 -11,-4 Z" fill="#f7ebd2" stroke="#aa771c" stroke-width="0.65"/>
+                <path d="M-5,-2 C-3,-7 3,-7 5,-2 C6,3 2,6 -2,5 C-5,4 -6,1 -5,-2 Z" fill="#edd39e"/>
+              </g>
+              <g transform="translate(20, 134)">
+                <circle cx="0" cy="0" r="15" fill="#fae2e8" stroke="#d694a4" stroke-width="0.8"/>
+                <path d="M-9,-3 C-6,-11 6,-11 9,-3 C11,4 4,11 -3,9 C-9,7 -11,2 -9,-3 Z" fill="#f4c4cf" stroke="#c77d8f" stroke-width="0.65"/>
+                <path d="M-4,-2 C-2,-5 2,-5 4,-2 C5,2 2,5 -2,4 C-4,3 -5,1 -4,-2 Z" fill="#e6a1b2"/>
+              </g>
+              <circle cx="46" cy="92" r="4.5" fill="#f7cfd8" stroke="#d4af37" stroke-width="0.6"/>
+              <circle cx="54" cy="124" r="2" fill="#d4af37"/>
+            </svg>
+
+            <!-- ================================================================
+                 SECTION A: SACRED OPENING (TOP) — CUSTOM INLINE SVG ARABIC CALLIGRAPHY
+                 ================================================================ -->
+            <section class="reveal-section relative z-10 pt-1">
+              <!-- Custom Inline SVG Bismillah Calligraphy with Metallic Gold Shimmer -->
+              <svg class="w-60 sm:w-72 h-12 sm:h-14 mx-auto overflow-visible" viewBox="0 0 360 66" role="img" aria-label="Bismillah-ir-Rahman-ir-Rahim">
+                <defs>
+                  <linearGradient id="bismillahGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#8a5d12">
+                      <animate attributeName="stop-color" values="#8a5d12;#d4af37;#f3e5ab;#aa771c;#8a5d12" dur="5s" repeatCount="indefinite" />
+                    </stop>
+                    <stop offset="50%" stop-color="#f3e5ab">
+                      <animate attributeName="stop-color" values="#f3e5ab;#aa771c;#8a5d12;#d4af37;#f3e5ab" dur="5s" repeatCount="indefinite" />
+                    </stop>
+                    <stop offset="100%" stop-color="#aa771c">
+                      <animate attributeName="stop-color" values="#aa771c;#8a5d12;#d4af37;#f3e5ab;#aa771c" dur="5s" repeatCount="indefinite" />
+                    </stop>
+                  </linearGradient>
+                </defs>
+                <!-- Decorative Mughal Calligraphic Swash & Dots -->
+                <path d="M46,54 Q180,62 314,54" fill="none" stroke="url(#bismillahGoldGrad)" stroke-width="1.1" stroke-linecap="round" opacity="0.7" />
+                <circle cx="180" cy="58" r="2.2" fill="#d4af37" />
+                <text x="180" y="38" text-anchor="middle" direction="rtl" lang="ar"
+                      font-family="'Amiri', serif" font-weight="700" font-size="30"
+                      fill="url(#bismillahGoldGrad)">
+                  بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                </text>
+              </svg>
+
+              <!-- Quranic Verse: Surah An-Naba (78:8) -->
+              <p class="font-amiri text-xl sm:text-2xl font-bold text-[#8a631e] mt-0.5 leading-snug" dir="rtl" lang="ar">
+                وَخَلَقْنَاكُمْ أَزْوَاجًا
+              </p>
+              <p class="font-cormorant italic font-semibold text-sm sm:text-base text-[#6d4f1d] mt-0.5">
+                “And We created you in pairs.”
+              </p>
+              <p class="font-montserrat text-[10px] sm:text-[11px] font-medium tracking-[0.16em] uppercase text-[#8a682a] mt-0.5">
+                — Surah An-Naba (78:8) —
+              </p>
+            </section>
+
+            <!-- ================================================================
+                 SECTION B: GROOM'S PARENTS
+                 ================================================================ -->
+            <section class="reveal-section relative z-10 mt-4 sm:mt-5">
+              <h2 class="font-cinzel-dec text-xs sm:text-[14px] font-bold tracking-[0.05em] text-[#231f20] leading-snug">
+                Mr. Pareeth K. K. &amp; Mrs. Zeenath Pareeth
+              </h2>
+              <p class="font-cormorant font-semibold text-sm sm:text-[15.5px] text-[#3d3738] mt-0.5">
                 Kottanattupara (H), Pallikavala, Perumbavoor
-            </div>
-        </div>
+              </p>
 
-        <p class="intro">
-            Request the honour of your presence and blessings
-            to celebrate the Walima reception of their beloved son,
-        </p>
+              <p class="font-cormorant italic text-[15px] sm:text-[17px] text-[#2b2627] leading-snug mt-3 max-w-md mx-auto">
+                cordially request the honor of your presence and blessings to celebrate the Walima reception of their beloved son
+              </p>
+            </section>
 
-        <div class="couple">
-            <div class="name">ALFIYAS MUHAMMED</div>
+            <!-- ================================================================
+                 SECTION C: COUPLE'S NAMES (ALFIYAS MUHAMMED & SINCILA K. M.)
+                 ================================================================ -->
+            <section class="reveal-section relative z-10 my-3 sm:my-4 py-1">
+              <h1 class="couple-crimson-gold text-2xl sm:text-[32px]">
+                ALFIYAS MUHAMMED
+              </h1>
+              <div class="my-1 flex items-center justify-center gap-2.5">
+                <span class="h-[1px] w-10 bg-gradient-to-r from-transparent to-[#d4af37]"></span>
+                <span class="font-cinzel-dec text-lg sm:text-xl font-bold gold-foil-shimmer-text">&amp;</span>
+                <span class="h-[1px] w-10 bg-gradient-to-l from-transparent to-[#d4af37]"></span>
+              </div>
+              <h2 class="couple-crimson-gold text-2xl sm:text-[32px]">
+                SINCILA K. M.
+              </h2>
+            </section>
 
-            <div class="ampersand-row">
-                <span class="rub-el-hizb" aria-hidden="true">
-                    <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.5 2.5C5.19 2.5 2.5 5.19 2.5 8.5C2.5 11.81 5.19 14.5 8.5 14.5C9.71 14.5 10.84 14.14 11.79 13.52C9.31 13.26 7.38 11.11 7.38 8.5C7.38 5.89 9.31 3.74 11.79 3.48C10.84 2.86 9.71 2.5 8.5 2.5Z" fill="#e9b967" fill-opacity="0.28" stroke="#e9b967" stroke-width="1.2"/>
-                        <rect x="19.5" y="3.5" width="10" height="10" stroke="#e9b967" stroke-width="1.2"/>
-                        <rect x="19.5" y="3.5" width="10" height="10" transform="rotate(45 24.5 8.5)" stroke="#55dce9" stroke-width="1.2"/>
-                        <circle cx="24.5" cy="8.5" r="1.4" fill="#e9b967"/>
-                    </svg>
-                </span>
-                <span class="ampersand">&amp;</span>
-                <span class="rub-el-hizb" aria-hidden="true">
-                    <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="4.5" y="3.5" width="10" height="10" stroke="#e9b967" stroke-width="1.2"/>
-                        <rect x="4.5" y="3.5" width="10" height="10" transform="rotate(45 9.5 8.5)" stroke="#55dce9" stroke-width="1.2"/>
-                        <circle cx="9.5" cy="8.5" r="1.4" fill="#e9b967"/>
-                        <path d="M25.5 2.5C28.81 2.5 31.5 5.19 31.5 8.5C31.5 11.81 28.81 14.5 25.5 14.5C24.29 14.5 23.16 14.14 22.21 13.52C24.69 13.26 26.62 11.11 26.62 8.5C26.62 5.89 24.69 3.74 22.21 3.48C23.16 2.86 24.29 2.5 25.5 2.5Z" fill="#e9b967" fill-opacity="0.28" stroke="#e9b967" stroke-width="1.2"/>
-                    </svg>
-                </span>
-            </div>
+            <!-- ================================================================
+                 SECTION D: BRIDE'S PARENTS
+                 ================================================================ -->
+            <section class="reveal-section relative z-10">
+              <p class="font-cormorant italic text-sm sm:text-[16px] text-[#3d3738]">
+                Beloved daughter of
+              </p>
+              <h3 class="font-cinzel-dec text-xs sm:text-[14px] font-bold tracking-[0.05em] text-[#231f20] mt-0.5 leading-snug">
+                Mr. Moosa K. B. &amp; Mrs. Shyla M. M.
+              </h3>
+              <p class="font-cormorant font-semibold text-sm sm:text-[15.5px] text-[#3d3738] mt-0.5">
+                Kanjiramthadam (H), Randar P.O., Muvattupuzha
+              </p>
+            </section>
 
-            <div class="name">SINCILA KM</div>
+            <!-- ================================================================
+                 SECTION E: INVITATION & MARRIAGE DUA (INLINE SVG CALLIGRAPHY)
+                 ================================================================ -->
+            <section class="reveal-section relative z-10 mt-3.5 sm:mt-4">
+              <p class="font-cormorant italic text-sm sm:text-[16px] text-[#2b2627] leading-snug max-w-md mx-auto">
+                Invite you to share in our joy and shower your duas as we embark on a blessed journey together, Insha’Allah
+              </p>
 
-            <div class="family">
-                Beloved daughter of<br>
-                <strong>Moosa KB &amp; Shyla MM</strong><br>
-                Kanjirathamthadam (H), Randar P.O., Muvattupuzha
-            </div>
-        </div>
+              <!-- Custom Inline SVG Arabic Marriage Dua -->
+              <svg class="w-full max-w-[380px] h-12 sm:h-14 mx-auto mt-2 overflow-visible" viewBox="0 0 420 62" role="img" aria-label="Barakallahu lakuma wa baraka alaykuma wa jamaa baynakuma fi khayr">
+                <text x="210" y="36" text-anchor="middle" direction="rtl" lang="ar"
+                      font-family="'Amiri', serif" font-weight="700" font-size="25"
+                      fill="#7e5b19">
+                  بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
+                </text>
+                <path d="M90,50 Q210,57 330,50" fill="none" stroke="#d4af37" stroke-width="0.9" opacity="0.65" />
+              </svg>
+            </section>
 
-        <p class="dua">
-            &ldquo;Invite you to share in our joy and shower your duas
-            as we embark on a blessed journey together, Insha'Allah.&rdquo;
-        </p>
-    </section>
-
-    <!-- CARD 3: EVENT DETAILS & LIVE COUNTDOWN -->
-    <section class="card">
-        <div class="section-title">EVENT DETAILS</div>
-
-        <div class="event-info">
-            <div class="info-box">
-                <div class="info-icon">📅</div>
-                <div class="info-label">DATE &amp; TIME</div>
-                <div class="info-value gold">Sunday</div>
-                <div class="info-value">20 December 2026</div>
-                <div class="info-value cyan">4:00 PM Onwards</div>
-            </div>
-
-            <div class="info-box venue">
-                <div class="info-icon">📍</div>
-                <div class="info-label">VENUE</div>
-                <div class="info-value">Diamond Banquet Hall A/C</div>
-                <div class="host-address">Allapra, Perumbavoor</div>
-            </div>
-        </div>
-
-        <div class="countdown">
-            <div class="section-title">COUNTDOWN TO OUR SPECIAL DAY</div>
-
-            <div class="timer">
-                <div class="timer-box">
-                    <div class="timer-number" id="days">00</div>
-                    <div class="timer-label">DAYS</div>
-                </div>
-                <div class="timer-box">
-                    <div class="timer-number" id="hours">00</div>
-                    <div class="timer-label">HOURS</div>
-                </div>
-                <div class="timer-box">
-                    <div class="timer-number" id="minutes">00</div>
-                    <div class="timer-label">MINS</div>
-                </div>
-                <div class="timer-box">
-                    <div class="timer-number" id="seconds">00</div>
-                    <div class="timer-label">SECS</div>
-                </div>
-            </div>
-
-            <div class="event-status" id="eventStatus">
-                Counting down to our special day ✨
-            </div>
-        </div>
-
-        <div class="actions">
-            <a class="btn primary full"
-               href="https://maps.app.goo.gl/kc9tydjnTQtXhhy77"
-               target="_blank"
-               rel="noopener noreferrer">
-                📍 GET DIRECTIONS
-            </a>
-
-            <button type="button" class="btn" onclick="shareWhatsApp()">
-                <span>💬</span> WHATSAPP
-            </button>
-
-            <button type="button" class="btn" onclick="shareInvitation()">
-                <span>↗</span> SHARE INVITATION
-            </button>
-
-            <button type="button" class="btn full" onclick="addToCalendar()">
-                📆 ADD TO MY CALENDAR
-            </button>
-
-            <button type="button" class="btn full" onclick="copyDetails()">
-                📋 COPY INVITATION DETAILS
-            </button>
-        </div>
-    </section>
-
-    <!-- CARD 4: DIRECT DUAS, WISHES & CONTACT -->
-    <section class="card">
-        <div class="section-title">SEND DUAS &amp; WISHES</div>
-        <p class="contact-note">
-            Send your heartfelt duas or wishes directly to our WhatsApp, or reach out anytime for directions or queries.
-        </p>
-
-        <div class="wish-chips">
-            <button type="button" class="chip active" onclick="selectWish(this, 'BarakAllahu Lakuma wa Baraka Alaykuma wa Jama\'a Baynakuma fi Khayr! Heartfelt Walima wishes and duas to you both. 🤲❤️')">
-                🤲 BarakAllahu Lakuma
-            </button>
-            <button type="button" class="chip" onclick="selectWish(this, 'Walima Mubarak Alfiyas & Sincila! Wishing you a lifetime of love, peace, and Barakah together, Insha\'Allah. ✨')">
-                ✨ Walima Mubarak
-            </button>
-            <button type="button" class="chip" onclick="selectWish(this, 'Assalamu Alaikum! Looking forward to joining your Walima celebration at Diamond Banquet Hall, Insha\'Allah. 🎉')">
-                🎉 Joining Insha'Allah
-            </button>
-        </div>
-
-        <textarea id="wishMessage"
-                  class="wish-input"
-                  aria-label="Write your duas or message"
-                  placeholder="Write your custom dua or message here...">BarakAllahu Lakuma wa Baraka Alaykuma wa Jama'a Baynakuma fi Khayr! Heartfelt Walima wishes and duas to you both. 🤲❤️</textarea>
-
-        <div class="actions" style="margin-top: 14px;">
-            <button type="button" class="btn whatsapp-btn full" onclick="sendDirectWish()">
-                💬 SEND DUA / MESSAGE ON WHATSAPP
-            </button>
-
-            <a class="btn" href="tel:+917510628386">
-                📞 CALL 7510628386
-            </a>
-
-            <a class="btn"
-               href="https://wa.me/917510628386?text=Assalamu%20Alaikum%20Alfiyas%2C%20I%20have%20a%20query%20regarding%20the%20Walima%20reception."
-               target="_blank"
-               rel="noopener noreferrer">
-                ❓ ASK DOUBTS
-            </a>
-        </div>
-
-        <div class="islamic-divider" aria-hidden="true">
-            <span class="line"></span>
-            <span class="rub-el-hizb">
-                <svg width="44" height="22" viewBox="0 0 44 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.5 3.5C6.36 3.5 3 6.86 3 11C3 15.14 6.36 18.5 10.5 18.5C12.01 18.5 13.42 18.05 14.61 17.28C11.51 16.96 9.1 14.27 9.1 11C9.1 7.73 11.51 5.04 14.61 4.72C13.42 3.95 12.01 3.5 10.5 3.5Z" fill="#e9b967" fill-opacity="0.28" stroke="#e9b967" stroke-width="1.3"/>
-                    <rect x="24.5" y="4.5" width="13" height="13" stroke="#e9b967" stroke-width="1.3"/>
-                    <rect x="24.5" y="4.5" width="13" height="13" transform="rotate(45 31 11)" stroke="#55dce9" stroke-width="1.3"/>
-                    <circle cx="31" cy="11" r="1.8" fill="#e9b967"/>
+            <!-- ================================================================
+                 SECTION F: ORNAMENTAL GOLD DIVIDER, DATE & TIME (CLEAN EDITORIAL)
+                 ================================================================ -->
+            <section class="reveal-section relative z-10 mt-3 sm:mt-4">
+              <!-- Ornamental Gold Divider -->
+              <div class="flex items-center justify-center gap-2 my-2">
+                <span class="h-[1px] flex-1 max-w-[90px] bg-gradient-to-r from-transparent via-[#d4af37] to-[#aa771c]"></span>
+                <svg class="w-5 h-5 text-[#d4af37]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
                 </svg>
-            </span>
-            <span class="line"></span>
+                <span class="h-[1px] flex-1 max-w-[90px] bg-gradient-to-l from-transparent via-[#d4af37] to-[#aa771c]"></span>
+              </div>
+
+              <div class="py-1.5">
+                <p class="font-cinzel-dec text-base sm:text-xl font-bold tracking-[0.12em] text-[#7e1326]">
+                  SUNDAY, 20 DEC 2026
+                </p>
+                <p class="font-montserrat text-xs sm:text-[13px] font-semibold tracking-[0.22em] uppercase text-[#6d4f1d] mt-1">
+                  4:00 PM ONWARDS
+                </p>
+              </div>
+            </section>
+
+            <!-- ================================================================
+                 SECTION G: MUGHAL MEHRAB VENUE ARCH (CLICKABLE -> PIGEON + MAPS)
+                 ================================================================ -->
+            <section class="reveal-section relative z-10 mt-3 sm:mt-4 flex flex-col items-center">
+              <a id="venue-mehrab-link"
+                 href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 title="Tap to fly to Diamond Banquet Hall A/C on Google Maps"
+                 class="group relative w-full max-w-[330px] pt-8 pb-5 px-5 block cursor-pointer transition-transform duration-300 hover:scale-[1.015] active:scale-[0.99]">
+
+                <!-- Gold-Lined Mughal Pointed Mehrab Arch Silhouette SVG -->
+                <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 320 175" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="mehrabArchFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#f3e5ab" stop-opacity="0.32" />
+                      <stop offset="100%" stop-color="#fdfbf7" stop-opacity="0.78" />
+                    </linearGradient>
+                  </defs>
+                  <!-- Outer Pointed Mughal Mehrab Arch -->
+                  <path d="M12,171 L12,76 C12,46 58,34 114,22 C136,17 150,9 160,3 C170,9 184,17 206,22 C262,34 308,46 308,76 L308,171 Z"
+                        fill="url(#mehrabArchFill)" stroke="#d4af37" stroke-width="1.8" />
+                  <!-- Inner Hairline Pointed Arch -->
+                  <path d="M18,166 L18,79 C18,52 62,40 116,28 C137,23 150,16 160,10 C170,16 183,23 204,28 C258,40 302,52 302,79 L302,166 Z"
+                        fill="none" stroke="#aa771c" stroke-width="0.9" stroke-dasharray="3 2" />
+                  <!-- Crown Finial -->
+                  <circle cx="160" cy="18" r="2.5" fill="#d4af37" />
+                </svg>
+
+                <div class="relative z-10 text-center">
+                  <span class="inline-flex items-center gap-1 font-montserrat text-[9px] sm:text-[10px] font-semibold tracking-[0.22em] uppercase text-[#8a631e]">
+                    <svg class="w-3 h-3 text-[#7e1326]" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Walima Venue
+                  </span>
+                  <h4 class="font-cinzel-dec text-sm sm:text-base font-bold text-[#231f20] group-hover:text-[#7e1326] transition-colors mt-1 leading-snug">
+                    Diamond Banquet Hall A/C
+                  </h4>
+                  <p class="font-cormorant font-semibold text-base sm:text-lg text-[#3d3738] leading-tight">
+                    Allapra, Perumbavoor
+                  </p>
+                  <span class="inline-block mt-1.5 font-montserrat text-[9px] font-medium tracking-[0.14em] uppercase text-[#7e1326] underline decoration-[#d4af37] underline-offset-4">
+                    Tap for Directions →
+                  </span>
+                </div>
+              </a>
+            </section>
+
+            <!-- ================================================================
+                 SECTION H: WITH BEST WISHES & LIVE COUNTDOWN TIMER
+                 ================================================================ -->
+            <section class="reveal-section relative z-10 mt-3 sm:mt-4">
+              <p class="font-cormorant italic font-semibold text-xs sm:text-sm text-[#6d4f1d]">
+                With Best Wishes:
+              </p>
+              <p class="font-cormorant font-bold text-base sm:text-lg text-[#7e1326] mt-0.5">
+                Ashik Pareeth, Ashna &amp; Shameer
+              </p>
+
+              <!-- Real-Time Ticking Countdown in Gold-Rimmed Boxes -->
+              <div class="mt-4 pt-3 border-t border-[#d4af37]/35">
+                <p class="font-montserrat text-[9px] sm:text-[10px] font-semibold tracking-[0.2em] uppercase text-[#6d4f1d] mb-2">
+                  Counting Down to the Celebration
+                </p>
+                <div class="grid grid-cols-4 gap-2 max-w-xs sm:max-w-sm mx-auto">
+                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
+                    <span id="cd-days" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
+                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Days</span>
+                  </div>
+                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
+                    <span id="cd-hours" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
+                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Hours</span>
+                  </div>
+                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
+                    <span id="cd-mins" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
+                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Mins</span>
+                  </div>
+                  <div class="rounded-xl bg-[#fdfbf7] border border-[#d4af37] py-1.5 px-1 shadow-[0_2px_8px_rgba(212,175,55,0.16)]">
+                    <span id="cd-secs" class="block font-cinzel-dec text-base sm:text-xl font-bold text-[#7e1326] leading-tight">00</span>
+                    <span class="block font-montserrat text-[8px] sm:text-[9px] font-semibold tracking-widest uppercase text-[#6d4f1d]">Secs</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </article>
+
+      <!-- ======================================================================
+           2. 3D ROYAL PALACE DOUBLE DOORS (SWING OUTWARD AT 3s OR UPON TAP)
+           ====================================================================== -->
+      <div id="palace-doors-overlay" class="palace-doors-overlay" role="button" tabindex="0"
+           aria-label="Royal Mughal Palace Double Doors — Tap to Open Invitation">
+
+        <!-- Warm Golden Radial Glow Behind the Center Seam -->
+        <div class="center-seam-glow" aria-hidden="true"></div>
+
+        <!-- LEFT PALACE DOOR -->
+        <div id="palace-door-left" class="palace-door palace-door-left">
+          <div class="palace-door-face palace-door-front">
+            <div class="door-art-clip">
+              <div class="full-door-canvas" data-door-art-slot="left"></div>
+            </div>
+          </div>
+          <div class="palace-door-face palace-door-back flex items-center justify-center p-4">
+            <div class="text-center opacity-75">
+              <p class="font-amiri text-xl text-[#7e1326]">أهلاً وسهلاً</p>
+              <p class="font-montserrat text-[9px] font-semibold tracking-[0.22em] uppercase text-[#6d4f1d] mt-1">Welcome</p>
+            </div>
+          </div>
         </div>
 
-        <p class="contact-note">
-            Direct Contact: <strong>+91 7510628386</strong> (Call / WhatsApp)
-        </p>
-    </section>
-
-    <footer class="footer">
-        WITH LOVE &amp; DUAS · WALIMA 2026
-    </footer>
-
-</main>
-
-<!-- FLOATING WHATSAPP QUICK-CONNECT WIDGET (BOTTOM-RIGHT) -->
-<div class="wa-widget">
-    <div class="wa-popup" id="waPopup" role="region" aria-label="Quick WhatsApp Assistance">
-        <div class="wa-popup-header">
-            <span class="wa-popup-title">
-                <span class="wa-status-dot"></span>
-                Alfiyas · +91 7510628386
-            </span>
-            <button type="button" class="wa-close-btn" onclick="toggleWaPopup(false)" aria-label="Close WhatsApp helper">&times;</button>
+        <!-- RIGHT PALACE DOOR -->
+        <div id="palace-door-right" class="palace-door palace-door-right">
+          <div class="palace-door-face palace-door-front">
+            <div class="door-art-clip">
+              <div class="full-door-canvas" data-door-art-slot="right"></div>
+            </div>
+          </div>
+          <div class="palace-door-face palace-door-back flex items-center justify-center p-4">
+            <div class="text-center opacity-75">
+              <p class="font-amiri text-xl text-[#7e1326]">مبارك</p>
+              <p class="font-montserrat text-[9px] font-semibold tracking-[0.22em] uppercase text-[#6d4f1d] mt-1">Walima 2026</p>
+            </div>
+          </div>
         </div>
 
-        <div class="wa-quick-links">
-            <a class="wa-quick-link"
-               href="https://wa.me/917510628386?text=Assalamu%20Alaikum%20Alfiyas%2C%20please%20share%20the%20exact%20Google%20Maps%20location%20for%20Diamond%20Banquet%20Hall."
-               target="_blank"
-               rel="noopener noreferrer">
-                📍 Send me exact hall location
-            </a>
-            <a class="wa-quick-link"
-               href="https://wa.me/917510628386?text=Assalamu%20Alaikum%20Alfiyas%2C%20I%20need%20route%20directions%20to%20Diamond%20Banquet%20Hall%2C%20Allapra."
-               target="_blank"
-               rel="noopener noreferrer">
-                🧭 Need route help to Diamond Hall
-            </a>
-            <a class="wa-quick-link"
-               href="https://wa.me/917510628386?text=Assalamu%20Alaikum%20Alfiyas%20%26%20Sincila%2C%20BarakAllahu%20Lakuma!%20Sending%20our%20heartfelt%20Walima%20duas%20and%20wishes.%20%F0%9F%A4%B2%E2%9D%A4%EF%B8%8F"
-               target="_blank"
-               rel="noopener noreferrer">
-                🤲 Send Walima Duas
-            </a>
+        <!-- INVISIBLE PERCH ANCHOR ON THE DOOR BESIDE THE CENTRAL MEDALLION -->
+        <div id="door-butterfly-perch"
+             class="absolute left-[56%] top-[46%] w-2 h-2 pointer-events-none"
+             aria-hidden="true"></div>
+
+        <!-- BOTTOM DOOR PROMPT ("Tap to Open Invitation") & THIN 3-SECOND GOLDEN PROGRESS BAR -->
+        <div id="door-prompt-pill"
+             class="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#1d050c]/90 border border-[#d4af37]/65 shadow-[0_10px_28px_rgba(0,0,0,0.85)] backdrop-blur-md transition-opacity duration-500 pointer-events-none">
+          <span class="font-montserrat text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] uppercase text-[#f3e5ab] whitespace-nowrap">
+            Tap to Open Invitation
+          </span>
+          <div class="w-40 sm:w-48 h-[3px] rounded-full bg-[#4a0e1e] overflow-hidden">
+            <div id="door-countdown-bar"
+                 class="h-full w-full bg-gradient-to-r from-[#aa771c] via-[#f3e5ab] to-[#d4af37] origin-left"></div>
+          </div>
         </div>
 
-        <form class="wa-popup-form" onsubmit="sendPopupWhatsApp(event)">
-            <input type="text"
-                   id="waPopupInput"
-                   class="wa-popup-input"
-                   placeholder="Type a quick message..."
-                   aria-label="Type a quick WhatsApp message">
-            <button type="submit" class="wa-popup-send">Send</button>
-        </form>
+      </div>
     </div>
 
-    <button type="button" class="wa-fab" onclick="toggleWaPopup()" aria-expanded="false" aria-controls="waPopup" id="waFab">
-        <span>💬</span>
-        <span>Need Location? WhatsApp</span>
-    </button>
-</div>
+    <!-- ========================================================================
+         3. CONCIERGE 2×2 BOTTOM ACTION DOCK
+         ======================================================================== -->
+    <section id="concierge-action-dock" class="w-full max-w-[540px] mt-4 z-30">
+      <div class="grid grid-cols-2 gap-2.5">
+        <!-- 1. Open Google Maps (Flies Royal Pigeon -> Redirects to Google Maps) -->
+        <a id="btn-open-maps"
+           href="https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#2b0912] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37] hover:brightness-105 active:scale-[0.98] transition shadow-lg border border-[#f3e5ab] flex items-center justify-center gap-2 cursor-pointer text-center">
+          <svg class="w-4 h-4 shrink-0 text-[#2b0912]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Open Google Maps</span>
+        </a>
 
-<div class="toast" id="toast" role="status" aria-live="polite">Copied successfully!</div>
+        <!-- 2. Add to Calendar (.ICS Download) -->
+        <button id="btn-add-calendar" type="button"
+                class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#2b0912]/90 hover:bg-[#4a0e1e] active:scale-[0.98] transition shadow-lg border border-[#d4af37]/50 flex items-center justify-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Add to Calendar</span>
+        </button>
 
-<script>
-// EVENT DATE: 20 DECEMBER 2026, 4:00 PM IST
-const eventDate = new Date("2026-12-20T16:00:00+05:30");
-const pad = n => String(n).padStart(2, "0");
+        <!-- 3. Send Dua / RSVP (WhatsApp + Copy Message Modal) -->
+        <button id="btn-open-rsvp" type="button"
+                class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#2b0912]/90 hover:bg-[#4a0e1e] active:scale-[0.98] transition shadow-lg border border-[#d4af37]/50 flex items-center justify-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span>Send Dua / RSVP</span>
+        </button>
 
-// LIVE COUNTDOWN
-function updateCountdown() {
-    const now = Date.now();
-    const difference = eventDate.getTime() - now;
+        <!-- 4. Share Invite (Native Share + Copy Link + Scannable Inline SVG QR) -->
+        <button id="btn-share-invite" type="button"
+                class="py-3 px-3 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#f3e5ab] bg-[#2b0912]/90 hover:bg-[#4a0e1e] active:scale-[0.98] transition shadow-lg border border-[#d4af37]/50 flex items-center justify-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4 shrink-0 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span>Share Invite</span>
+        </button>
+      </div>
+    </section>
+  </main>
 
-    if (difference <= 0) {
-        ["days", "hours", "minutes", "seconds"].forEach(id => {
-            document.getElementById(id).textContent = "00";
-        });
+  <!-- ==========================================================================
+       MODAL 1: SEND DUA / RSVP (WHATSAPP + COPY MESSAGE)
+       ========================================================================== -->
+  <div id="rsvp-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl border-2 border-[#d4af37] bg-[#fdfbf7] text-[#231f20] p-5 sm:p-6 shadow-2xl">
+      <button type="button" data-close-modal="rsvp-modal"
+              class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full border border-[#aa771c]/35 text-[#231f20] hover:bg-[#f3e5ab]/50 flex items-center justify-center transition cursor-pointer"
+              aria-label="Close RSVP Modal">✕</button>
 
-        document.getElementById("eventStatus").textContent =
-            difference > -86400000
-                ? "The celebration has begun! ❤️"
-                : "Thank you for being part of our celebration! ❤️";
-        return;
-    }
+      <div class="text-center mb-4">
+        <span class="font-montserrat text-[10px] font-semibold tracking-[0.22em] uppercase text-[#8a631e]">
+          Warmest Blessings
+        </span>
+        <h2 class="font-cinzel-dec text-lg sm:text-xl font-bold text-[#7e1326] mt-0.5">
+          Send Dua &amp; RSVP
+        </h2>
+        <p class="font-cormorant italic text-sm text-[#4a4344]">
+          Walima of Alfiyas Muhammed &amp; Sincila K. M.
+        </p>
+      </div>
 
-    const days = Math.floor(difference / 86400000);
-    const hours = Math.floor((difference % 86400000) / 3600000);
-    const minutes = Math.floor((difference % 3600000) / 60000);
-    const seconds = Math.floor((difference % 60000) / 1000);
+      <form id="rsvp-form" class="space-y-3">
+        <div>
+          <label for="rsvp-name" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+            Guest Name / Family *
+          </label>
+          <input id="rsvp-name" type="text" required placeholder="e.g., Abdul Rahman & Family"
+                 class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]" />
+        </div>
 
-    document.getElementById("days").textContent = pad(days);
-    document.getElementById("hours").textContent = pad(hours);
-    document.getElementById("minutes").textContent = pad(minutes);
-    document.getElementById("seconds").textContent = pad(seconds);
+        <div>
+          <label for="rsvp-guests" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+            Number of Attendees
+          </label>
+          <select id="rsvp-guests"
+                  class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]">
+            <option value="1 Guest">1 Guest</option>
+            <option value="2 Guests" selected>2 Guests</option>
+            <option value="3 Guests">3 Guests</option>
+            <option value="4 Guests">4 Guests</option>
+            <option value="5+ Family Members">5+ Family Members</option>
+            <option value="Sending Duas Only">Sending Duas Only</option>
+          </select>
+        </div>
 
-    document.getElementById("eventStatus").textContent =
-        "Counting down to our special day ✨";
-}
+        <div>
+          <label for="rsvp-message" class="block font-montserrat text-[10px] font-semibold tracking-wider uppercase text-[#4a4344] mb-1">
+            Blessing / Dua Message
+          </label>
+          <textarea id="rsvp-message" rows="3"
+                    placeholder="BarakAllahu Lakuma wa Baraka Alaykuma wa Jama’a Baynakuma fi Khayr..."
+                    class="w-full px-3.5 py-2 rounded-xl border border-[#d4af37]/70 bg-white font-cormorant text-base focus:outline-none focus:border-[#7e1326]"></textarea>
+        </div>
 
-updateCountdown();
-setInterval(updateCountdown, 1000);
+        <div class="pt-1 flex flex-col sm:flex-row gap-2">
+          <button type="submit"
+                  class="flex-1 py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-white bg-[#1f7a44] hover:bg-[#196337] active:scale-[0.98] transition shadow-md flex items-center justify-center gap-1.5 cursor-pointer">
+            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+            <span>Send via WhatsApp</span>
+          </button>
 
-// INVITATION TEXT FOR SHARING & COPYING
-const invitationText = `بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          <button id="btn-copy-rsvp" type="button"
+                  class="py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#7e1326] bg-[#f3e5ab]/65 hover:bg-[#f3e5ab] border border-[#d4af37] transition cursor-pointer">
+            Copy Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-وَخَلَقْنَاكُمْ أَزْوَاجًا
-"And We created you in pairs." — Surah An-Naba (78:8)
+  <!-- ==========================================================================
+       MODAL 2: SHARE INVITE SHEET (NATIVE SHARE + COPY LINK + SCANNABLE QR CODE)
+       ========================================================================== -->
+  <div id="share-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-md rounded-2xl border-2 border-[#d4af37] bg-[#fdfbf7] text-[#231f20] p-5 sm:p-6 shadow-2xl text-center">
+      <button type="button" data-close-modal="share-modal"
+              class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full border border-[#aa771c]/35 text-[#231f20] hover:bg-[#f3e5ab]/50 flex items-center justify-center transition cursor-pointer"
+              aria-label="Close Share Modal">✕</button>
 
-WALIMA RECEPTION · 2026
-ALFIYAS MUHAMMED & SINCILA KM
+      <span class="font-montserrat text-[10px] font-semibold tracking-[0.22em] uppercase text-[#8a631e]">
+        Spread the Joy
+      </span>
+      <h2 class="font-cinzel-dec text-lg sm:text-xl font-bold text-[#7e1326] mt-0.5">
+        Share Walima Invitation
+      </h2>
+      <p class="font-cormorant italic text-sm text-[#4a4344]">
+        Alfiyas Muhammed &amp; Sincila K. M. • 20 Dec 2026
+      </p>
 
-With the blessings of our families, we request the honour of your presence and duas.
+      <!-- Scannable Inline SVG QR Code for Venue Location -->
+      <div class="mt-4 flex flex-col items-center">
+        <div class="p-3 rounded-2xl bg-white border-2 border-[#d4af37] shadow-md">
+          <div id="venue-qr-container" class="w-40 h-40 sm:w-44 sm:h-44 flex items-center justify-center"></div>
+        </div>
+        <p class="font-montserrat text-[10px] font-semibold tracking-[0.14em] uppercase text-[#6d4f1d] mt-2">
+          Scan QR for Diamond Banquet Hall Location
+        </p>
+      </div>
 
-Date: Sunday, 20 December 2026
-Time: 4:00 PM Onwards
-Venue: Diamond Banquet Hall A/C, Allapra, Perumbavoor
+      <div class="mt-4 space-y-2">
+        <button id="btn-native-share" type="button"
+                class="w-full py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#2b0912] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37] border border-[#f3e5ab] shadow-md hover:brightness-105 transition cursor-pointer">
+          Share Invitation Sheet
+        </button>
 
-Hosted by:
-Mr. Pareeth K K & Mrs. Zeenath Pareeth
+        <button id="btn-copy-invite-link" type="button"
+                class="w-full py-2.5 px-4 rounded-xl font-montserrat text-[11px] font-semibold tracking-wider uppercase text-[#7e1326] bg-[#f3e5ab]/55 hover:bg-[#f3e5ab]/85 border border-[#d4af37]/70 transition cursor-pointer">
+          Copy Invite Link
+        </button>
+      </div>
+    </div>
+  </div>
 
-Beloved daughter of:
-Moosa KB & Shyla MM
+  <!-- Non-Intrusive Toast Notification -->
+  <div id="toast-banner"
+       class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 rounded-full border border-[#d4af37]/80 bg-[#2b0912]/95 text-[#f3e5ab] font-montserrat text-[11px] font-medium tracking-wider shadow-2xl opacity-0 pointer-events-none transition-all duration-300 text-center max-w-[90vw]">
+  </div>
 
-Insha'Allah ❤️
+  <!-- ==========================================================================
+       TEMPLATE: 200%-WIDTH CLEAN ROYAL MUGHAL PALACE DOUBLE-DOOR ARTWORK
+       (No floral garlands on doors — crisp gold arabesque latticework, carved
+        architectural panels, circular brass ring handles & split central medallion)
+       ========================================================================== -->
+  <template id="palace-door-artwork-template">
+    <div class="relative w-full h-full flex flex-col items-center justify-center p-5">
 
-Location Map:
-https://maps.app.goo.gl/kc9tydjnTQtXhhy77`;
+      <!-- Outer & Inner 24k Gold Leaf Architectural Frame Moldings -->
+      <div class="absolute inset-3 rounded-xl border-[1.5px] border-[#d4af37]/85 shadow-[inset_0_0_20px_rgba(243,229,171,0.22)]"></div>
+      <div class="absolute inset-5 rounded-lg border border-[#f3e5ab]/45"></div>
 
-// TOAST NOTIFICATION
-let toastTimeout;
-function showToast(message) {
-    const toast = document.getElementById("toast");
-    toast.textContent = message;
-    toast.classList.add("show");
+      <!-- Intricate Mughal / Islamic Floral Arabesque SVG Latticework -->
+      <svg class="absolute inset-5 w-[calc(100%-2.5rem)] h-[calc(100%-2.5rem)] opacity-30 pointer-events-none" viewBox="0 0 240 360" preserveAspectRatio="none">
+        <defs>
+          <pattern id="mughalArabesqueLattice" width="48" height="48" patternUnits="userSpaceOnUse">
+            <path d="M24,0 L48,24 L24,48 L0,24 Z" fill="none" stroke="#d4af37" stroke-width="0.75"/>
+            <circle cx="24" cy="24" r="9" fill="none" stroke="#f3e5ab" stroke-width="0.65"/>
+            <path d="M24,6 C28,13 28,18 24,24 C20,18 20,13 24,6 Z M24,42 C28,35 28,30 24,24 C20,30 20,35 24,42 Z M6,24 C13,28 18,28 24,24 C18,20 13,20 6,24 Z M42,24 C35,28 30,28 24,24 C30,20 35,20 42,24 Z" fill="#d4af37" fill-opacity="0.38"/>
+            <circle cx="24" cy="24" r="2.2" fill="#f3e5ab"/>
+          </pattern>
+        </defs>
+        <rect width="240" height="360" fill="url(#mughalArabesqueLattice)"/>
+      </svg>
 
-    clearTimeout(toastTimeout);
-    toastTimeout = setTimeout(() => {
-        toast.classList.remove("show");
-    }, 2600);
-}
+      <!-- Carved Upper & Lower Architectural Wainscoting Panels (Left & Right Leaves) -->
+      <div class="absolute top-9 bottom-[54%] left-8 right-[53.5%] rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
+      <div class="absolute top-9 bottom-[54%] left-[53.5%] right-8 rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
+      <div class="absolute top-[55%] bottom-16 left-8 right-[53.5%] rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
+      <div class="absolute top-[55%] bottom-16 left-[53.5%] right-8 rounded-lg border border-[#d4af37]/60 bg-[#22060d]/45 shadow-[inset_0_0_16px_rgba(0,0,0,0.82)]"></div>
 
-// COPY INVITATION (with fallback for sandboxed iframes)
-async function copyDetails() {
-    try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-            await navigator.clipboard.writeText(invitationText);
-            showToast("Invitation details copied successfully!");
-            return;
-        }
-    } catch (e) {
-        // Fallback below
-    }
+      <!-- Center Brass Ring Handles & Split Royal Medallion ("A & S • WALIMA • 20 DEC 2026") -->
+      <div class="relative z-20 flex items-center justify-center w-full">
+        <svg class="w-76 h-76 sm:w-84 sm:h-84 drop-shadow-[0_14px_26px_rgba(0,0,0,0.92)]" viewBox="0 0 340 340" fill="none">
+          <defs>
+            <linearGradient id="mughalGoldLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f3e5ab"/>
+              <stop offset="38%" stop-color="#d4af37"/>
+              <stop offset="72%" stop-color="#aa771c"/>
+              <stop offset="100%" stop-color="#f3e5ab"/>
+            </linearGradient>
+          </defs>
 
-    const ta = document.createElement("textarea");
-    ta.value = invitationText;
-    ta.style.position = "fixed";
-    ta.style.opacity = "0";
-    document.body.appendChild(ta);
-    ta.select();
-    try {
-        document.execCommand("copy");
-        showToast("Invitation details copied successfully!");
-    } catch (err) {
-        showToast("Please use the Share button instead.");
-    }
-    document.body.removeChild(ta);
-}
+          <!-- Left Door Engraved Circular Brass Ring Handle -->
+          <g transform="translate(88, 170)">
+            <circle cx="0" cy="0" r="23" fill="#2b0912" stroke="url(#mughalGoldLeafGrad)" stroke-width="2.2"/>
+            <circle cx="0" cy="0" r="15" stroke="#f3e5ab" stroke-width="0.9" stroke-dasharray="2 2"/>
+            <circle cx="0" cy="14" r="14.5" fill="none" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.8"/>
+            <circle cx="0" cy="0" r="4.5" fill="url(#mughalGoldLeafGrad)"/>
+          </g>
 
-// WHATSAPP INVITATION SHARE
-function shareWhatsApp() {
-    const url = "https://wa.me/?text=" + encodeURIComponent(invitationText);
-    window.open(url, "_blank", "noopener,noreferrer");
-}
+          <!-- Right Door Engraved Circular Brass Ring Handle -->
+          <g transform="translate(252, 170)">
+            <circle cx="0" cy="0" r="23" fill="#2b0912" stroke="url(#mughalGoldLeafGrad)" stroke-width="2.2"/>
+            <circle cx="0" cy="0" r="15" stroke="#f3e5ab" stroke-width="0.9" stroke-dasharray="2 2"/>
+            <circle cx="0" cy="14" r="14.5" fill="none" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.8"/>
+            <circle cx="0" cy="0" r="4.5" fill="url(#mughalGoldLeafGrad)"/>
+          </g>
 
-// NATIVE SHARE
-async function shareInvitation() {
-    if (navigator.share) {
+          <!-- Split Central Royal Gold Medallion Perfectly Spanning the Seam -->
+          <circle cx="170" cy="170" r="94" fill="#22060d" stroke="url(#mughalGoldLeafGrad)" stroke-width="3.5"/>
+          <circle cx="170" cy="170" r="85" stroke="#f3e5ab" stroke-width="1.1" stroke-dasharray="4 3"/>
+          <circle cx="170" cy="170" r="78" stroke="#aa771c" stroke-width="1"/>
+
+          <!-- Mughal Compass Starburst Finials -->
+          <polygon points="170,66 177,78 163,78" fill="#f3e5ab"/>
+          <polygon points="170,274 177,262 163,262" fill="#f3e5ab"/>
+          <polygon points="66,170 78,163 78,177" fill="#f3e5ab"/>
+          <polygon points="274,170 262,163 262,177" fill="#f3e5ab"/>
+        </svg>
+
+        <!-- Engraved Central Medallion Typography -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+          <span class="font-cinzel-dec text-2xl sm:text-3xl font-bold tracking-[0.14em] pl-[0.14em] gold-foil-shimmer-text">
+            A &amp; S
+          </span>
+          <span class="my-1 px-3 py-0.5 rounded-full border border-[#d4af37]/65 bg-[#2b0912]/95 font-montserrat text-[9px] sm:text-[10px] font-bold tracking-[0.26em] pl-[0.26em] text-[#f3e5ab]">
+            WALIMA
+          </span>
+          <span class="font-montserrat text-[10px] sm:text-[11px] font-semibold tracking-[0.2em] pl-[0.2em] text-[#f3e5ab]/90 mt-0.5">
+            20 DEC 2026
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </template>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: 3D PALACE DOORS, SOFT VELVET-HARP AUDIO, BUTTERFLY, PIGEON & QR
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ------------------------------------------------------------------------
+         CONSTANTS & TARGET URLS
+         ------------------------------------------------------------------------ */
+      const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac';
+      const WHATSAPP_NUMBER = '917510628386';
+      const TARGET_WALIMA_ISO = '2026-12-20T16:00:00+05:30';
+
+      /* ------------------------------------------------------------------------
+         1. HYDRATE 200%-WIDTH SEAMLESS ROYAL PALACE DOOR ARTWORK
+         ------------------------------------------------------------------------ */
+      const doorTemplate = document.getElementById('palace-door-artwork-template');
+      document.querySelectorAll('[data-door-art-slot]').forEach((slot) => {
+        slot.appendChild(doorTemplate.content.cloneNode(true));
+      });
+
+      /* ------------------------------------------------------------------------
+         2. DOM REFERENCES & STATE
+         ------------------------------------------------------------------------ */
+      const palaceDoorsOverlay = document.getElementById('palace-doors-overlay');
+      const doorPromptPill = document.getElementById('door-prompt-pill');
+      const doorCountdownBar = document.getElementById('door-countdown-bar');
+      const doorButterflyPerch = document.getElementById('door-butterfly-perch');
+      const invitationCard = document.getElementById('invitation-card');
+      const butterflyActor = document.getElementById('butterfly-actor');
+      const pigeonActor = document.getElementById('pigeon-actor');
+      const petalsLayer = document.getElementById('petals-layer');
+      const btnReplay = document.getElementById('btn-replay');
+      const btnSound = document.getElementById('btn-sound');
+      const soundLabel = document.getElementById('sound-label');
+      const iconSoundOn = document.getElementById('icon-sound-on');
+      const iconSoundOff = document.getElementById('icon-sound-off');
+      const toastBanner = document.getElementById('toast-banner');
+
+      let isDoorsOpen = false;
+      let autoOpenTimer = null;
+      let countdownAnim = null;
+      let ambientPetalInterval = null;
+      let butterflyAnimFrame = null;
+      let butterflyState = 'perched-door'; // 'perched-door' | 'flying' | 'perched-card'
+      let isPigeonFlying = false;
+      let soundEnabled = true;
+      let sharedAudioCtx = null;
+
+      /* ------------------------------------------------------------------------
+         3. WEB AUDIO API: SOFT VELVET AIR WHOOSH + SHIMMERING HARP/CHIME CHORD
+            (No harsh creaking sounds; respects mobile browser autoplay policies)
+         ------------------------------------------------------------------------ */
+      function getUnlockedAudioContext() {
         try {
-            await navigator.share({
-                title: "Walima Reception | Alfiyas & Sincila",
-                text: invitationText
-            });
-        } catch (error) {
-            if (error.name !== "AbortError") {
-                showToast("Unable to share right now.");
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (!AudioCtx) return null;
+          if (!sharedAudioCtx) {
+            sharedAudioCtx = new AudioCtx();
+          }
+          if (sharedAudioCtx.state === 'suspended') {
+            sharedAudioCtx.resume().catch(() => {});
+          }
+          return sharedAudioCtx;
+        } catch (err) {
+          return null;
+        }
+      }
+
+      ['pointerdown', 'touchstart', 'keydown'].forEach((evt) => {
+        window.addEventListener(evt, () => {
+          if (soundEnabled) getUnlockedAudioContext();
+        }, { passive: true });
+      });
+
+      function playCeremonialDoorChime() {
+        if (!soundEnabled) return;
+        const ctx = getUnlockedAudioContext();
+        if (!ctx || ctx.state !== 'running') return;
+
+        try {
+          const now = ctx.currentTime;
+
+          // --- LAYER 1: Soft Velvet Air Whoosh (Smoothly Filtered Pink Noise Sweep) ---
+          const duration = 2.1;
+          const bufferSize = Math.floor(ctx.sampleRate * duration);
+          const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+          const output = noiseBuffer.getChannelData(0);
+          let b0 = 0, b1 = 0, b2 = 0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            b0 = 0.997 * b0 + white * 0.025;
+            b1 = 0.985 * b1 + white * 0.028;
+            b2 = 0.950 * b2 + white * 0.042;
+            output[i] = (b0 + b1 + b2 + white * 0.015) * 0.45;
+          }
+
+          const noiseSource = ctx.createBufferSource();
+          noiseSource.buffer = noiseBuffer;
+
+          const velvetFilter = ctx.createBiquadFilter();
+          velvetFilter.type = 'lowpass';
+          velvetFilter.frequency.setValueAtTime(140, now);
+          velvetFilter.frequency.exponentialRampToValueAtTime(480, now + 0.85);
+          velvetFilter.frequency.exponentialRampToValueAtTime(160, now + duration);
+
+          const velvetGain = ctx.createGain();
+          velvetGain.gain.setValueAtTime(0.0001, now);
+          velvetGain.gain.linearRampToValueAtTime(0.08, now + 0.55);
+          velvetGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+          noiseSource.connect(velvetFilter);
+          velvetFilter.connect(velvetGain);
+          velvetGain.connect(ctx.destination);
+          noiseSource.start(now);
+          noiseSource.stop(now + duration + 0.05);
+
+          // --- LAYER 2: Warm Shimmering Harp / Bell Harmonic Chord (Dmaj9 Lydian) ---
+          const harpChord = [293.66, 440.0, 554.37, 659.25, 739.99, 880.0, 1174.66];
+          harpChord.forEach((freq, idx) => {
+            const startAt = now + 0.25 + idx * 0.14;
+            const osc = ctx.createOscillator();
+            const overtone = ctx.createOscillator();
+            const noteGain = ctx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, startAt);
+
+            overtone.type = 'triangle';
+            overtone.frequency.setValueAtTime(freq * 2, startAt);
+
+            const overtoneGain = ctx.createGain();
+            overtoneGain.gain.setValueAtTime(0.14, startAt);
+
+            noteGain.gain.setValueAtTime(0.0001, startAt);
+            noteGain.gain.exponentialRampToValueAtTime(0.042, startAt + 0.045);
+            noteGain.gain.exponentialRampToValueAtTime(0.0001, startAt + 2.2);
+
+            osc.connect(noteGain);
+            overtone.connect(overtoneGain);
+            overtoneGain.connect(noteGain);
+            noteGain.connect(ctx.destination);
+
+            osc.start(startAt);
+            overtone.start(startAt);
+            osc.stop(startAt + 2.25);
+            overtone.stop(startAt + 2.25);
+          });
+        } catch (err) {
+          // Ignore gracefully if restricted
+        }
+      }
+
+      function playPigeonSoftChime() {
+        if (!soundEnabled) return;
+        const ctx = getUnlockedAudioContext();
+        if (!ctx || ctx.state !== 'running') return;
+
+        try {
+          const now = ctx.currentTime;
+          const notes = [587.33, 880.0, 1174.66];
+          notes.forEach((freq, i) => {
+            const t = now + i * 0.09;
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, t);
+            gain.gain.setValueAtTime(0.0001, t);
+            gain.gain.exponentialRampToValueAtTime(0.036, t + 0.03);
+            gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.9);
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.start(t);
+            osc.stop(t + 0.95);
+          });
+        } catch (err) {
+          // Ignore gracefully
+        }
+      }
+
+      btnSound.addEventListener('click', () => {
+        soundEnabled = !soundEnabled;
+        iconSoundOn.classList.toggle('hidden', !soundEnabled);
+        iconSoundOff.classList.toggle('hidden', soundEnabled);
+        soundLabel.textContent = soundEnabled ? 'Sound On' : 'Muted';
+        if (soundEnabled) {
+          getUnlockedAudioContext();
+          showToast('Ceremonial Sound Enabled');
+        } else {
+          showToast('Sound Muted');
+        }
+      });
+
+      /* ------------------------------------------------------------------------
+         4. DRIFTING BLUSH-ROSE & GOLD-FOIL SVG PETALS
+         ------------------------------------------------------------------------ */
+      const PETAL_SHAPES = [
+        'M15,2 C25,5 30,16 25,26 C20,33 10,33 5,26 C0,16 5,5 15,2 Z',
+        'M15,5 C22,-1 31,7 27,19 C24,27 15,32 15,32 C15,32 6,27 3,19 C-1,7 8,-1 15,5 Z',
+        'M15,1 C23,8 24,22 15,33 C6,22 7,8 15,1 Z'
+      ];
+
+      function spawnSinglePetal() {
+        const isGold = Math.random() < 0.45;
+        const size = 12 + Math.random() * 13;
+        const startX = Math.random() * 100;
+        const duration = 6.5 + Math.random() * 4.8;
+        const swayMid = (Math.random() - 0.5) * 110;
+        const swayEnd = (Math.random() - 0.5) * 140;
+        const opacity = isGold ? (0.8 + Math.random() * 0.16) : (0.74 + Math.random() * 0.2);
+        const shapePath = PETAL_SHAPES[Math.floor(Math.random() * PETAL_SHAPES.length)];
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'petal-node';
+        wrapper.style.left = `${startX}vw`;
+        wrapper.style.width = `${size}px`;
+        wrapper.style.height = `${size * 1.15}px`;
+        wrapper.style.animationDuration = `${duration}s`;
+        wrapper.style.setProperty('--sway-mid', `${swayMid}px`);
+        wrapper.style.setProperty('--sway-end', `${swayEnd}px`);
+        wrapper.style.setProperty('--petal-opacity', opacity.toFixed(2));
+        if (Math.random() < 0.24) {
+          wrapper.style.filter = 'blur(1px)';
+        }
+
+        const fillColors = isGold
+          ? ['#f3e5ab', '#d4af37', '#e6c15c']
+          : ['#fae2e8', '#f4c4cf', '#ffe8ee', '#eab0c0'];
+        const chosenFill = fillColors[Math.floor(Math.random() * fillColors.length)];
+        const strokeColor = isGold ? '#aa771c' : '#d694a4';
+
+        wrapper.innerHTML = `
+          <svg viewBox="0 0 30 35" class="w-full h-full overflow-visible">
+            <path d="${shapePath}" fill="${chosenFill}" stroke="${strokeColor}" stroke-width="0.6" />
+          </svg>
+        `;
+
+        petalsLayer.appendChild(wrapper);
+        wrapper.addEventListener('animationend', () => wrapper.remove());
+      }
+
+      function startPetalShower() {
+        stopPetalShower();
+        for (let i = 0; i < 26; i++) {
+          setTimeout(() => {
+            if (isDoorsOpen) spawnSinglePetal();
+          }, i * 65);
+        }
+        ambientPetalInterval = setInterval(() => {
+          if (isDoorsOpen && petalsLayer.childElementCount < 42) {
+            spawnSinglePetal();
+          }
+        }, 440);
+      }
+
+      function stopPetalShower() {
+        if (ambientPetalInterval) {
+          clearInterval(ambientPetalInterval);
+          ambientPetalInterval = null;
+        }
+        petalsLayer.innerHTML = '';
+      }
+
+      /* ------------------------------------------------------------------------
+         5. 3D BUTTERFLY FLIGHT: PERCHED ON DOOR -> S-CURVE -> TOP-LEFT CARD CORNER
+         ------------------------------------------------------------------------ */
+      function evalCubicBezier(p0, p1, p2, p3, t) {
+        const u = 1 - t;
+        const tt = t * t;
+        const uu = u * u;
+        const uuu = uu * u;
+        const ttt = tt * t;
+        return {
+          x: uuu * p0.x + 3 * uu * t * p1.x + 3 * u * tt * p2.x + ttt * p3.x,
+          y: uuu * p0.y + 3 * uu * t * p1.y + 3 * u * tt * p2.y + ttt * p3.y
+        };
+      }
+
+      function getDoorPerchViewportCoords() {
+        const rect = doorButterflyPerch.getBoundingClientRect();
+        return {
+          x: rect.left + rect.width * 0.5,
+          y: rect.top + rect.height * 0.5
+        };
+      }
+
+      function getCardTopLeftViewportCoords() {
+        const cardRect = invitationCard.getBoundingClientRect();
+        return {
+          x: cardRect.left + 20,
+          y: cardRect.top + 20
+        };
+      }
+
+      function placeButterflyOnDoor() {
+        butterflyState = 'perched-door';
+        // Ensure butterfly is attached to document.body while perched on the 3D door
+        if (butterflyActor.parentElement !== document.body) {
+          document.body.appendChild(butterflyActor);
+        }
+        butterflyActor.classList.remove('anchored-to-card');
+        butterflyActor.classList.add('is-perched');
+
+        const pos = getDoorPerchViewportCoords();
+        butterflyActor.style.opacity = '1';
+        butterflyActor.style.transform = `translate3d(${pos.x - 34}px, ${pos.y - 34}px, 40px) scale(0.94) rotateX(18deg) rotateZ(-16deg)`;
+      }
+
+      function anchorButterflyToCardTopLeft() {
+        butterflyState = 'perched-card';
+        butterflyActor.classList.add('is-perched', 'anchored-to-card');
+        // Attach inside #invitation-card so it naturally stays on the top-left gold frame during scroll
+        if (butterflyActor.parentElement !== invitationCard) {
+          invitationCard.appendChild(butterflyActor);
+        }
+        butterflyActor.style.opacity = '1';
+      }
+
+      function launchButterflyFromDoorToTopLeftCard() {
+        if (butterflyAnimFrame) cancelAnimationFrame(butterflyAnimFrame);
+        butterflyState = 'flying';
+        if (butterflyActor.parentElement !== document.body) {
+          document.body.appendChild(butterflyActor);
+        }
+        butterflyActor.classList.remove('is-perched', 'anchored-to-card');
+
+        const startPos = getDoorPerchViewportCoords();
+        const flightDuration = 3200; // 3.2s graceful sweeping S-curve
+        let startTime = null;
+
+        function step(timestamp) {
+          if (!isDoorsOpen) return;
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+          const rawT = Math.min(1, elapsed / flightDuration);
+
+          const t = rawT < 0.5
+            ? 2 * rawT * rawT
+            : 1 - Math.pow(-2 * rawT + 2, 2) / 2;
+
+          const cardRect = invitationCard.getBoundingClientRect();
+          const finalPerch = getCardTopLeftViewportCoords();
+
+          // Sweeping S-curve across the right & lower-center of the card before ascending to top-left corner
+          const rightArcSwing = {
+            x: Math.min(window.innerWidth - 36, cardRect.right - cardRect.width * 0.18),
+            y: cardRect.top + cardRect.height * 0.34
+          };
+          const centerDip = {
+            x: cardRect.left + cardRect.width * 0.46,
+            y: cardRect.top + cardRect.height * 0.56
+          };
+
+          let pos, nextPos;
+          if (t < 0.5) {
+            const localT = t / 0.5;
+            const c1 = { x: startPos.x + 65, y: startPos.y - 75 };
+            const c2 = { x: rightArcSwing.x + 15, y: rightArcSwing.y - 25 };
+            pos = evalCubicBezier(startPos, c1, c2, centerDip, localT);
+            nextPos = evalCubicBezier(startPos, c1, c2, centerDip, Math.min(1, localT + 0.02));
+          } else {
+            const localT = (t - 0.5) / 0.5;
+            const c1 = { x: centerDip.x - 85, y: centerDip.y + 35 };
+            const c2 = { x: finalPerch.x + 40, y: finalPerch.y - 45 };
+            pos = evalCubicBezier(centerDip, c1, c2, finalPerch, localT);
+            nextPos = evalCubicBezier(centerDip, c1, c2, finalPerch, Math.min(1, localT + 0.02));
+          }
+
+          const dx = nextPos.x - pos.x;
+          const dy = nextPos.y - pos.y;
+          const headingDeg = (Math.atan2(dy, dx) * 180) / Math.PI + 90;
+
+          const settleBlend = rawT > 0.85 ? (rawT - 0.85) / 0.15 : 0;
+          const finalAngle = headingDeg * (1 - settleBlend) + 24 * settleBlend;
+          const scale = 0.94 + Math.sin(rawT * Math.PI) * 0.14 - rawT * 0.12;
+
+          butterflyActor.style.opacity = '1';
+          butterflyActor.style.transform = `translate3d(${pos.x - 34}px, ${pos.y - 34}px, 40px) scale(${scale.toFixed(3)}) rotateX(22deg) rotateZ(${finalAngle.toFixed(1)}deg)`;
+
+          if (rawT < 1) {
+            butterflyAnimFrame = requestAnimationFrame(step);
+          } else {
+            anchorButterflyToCardTopLeft();
+          }
+        }
+
+        butterflyAnimFrame = requestAnimationFrame(step);
+      }
+
+      window.addEventListener('resize', () => {
+        if (butterflyState === 'perched-door') placeButterflyOnDoor();
+      });
+
+      /* ------------------------------------------------------------------------
+         6. 3-SECOND AUTO-OPEN & TAP-TO-OPEN PALACE DOORS CHOREOGRAPHY
+         ------------------------------------------------------------------------ */
+      function openPalaceDoors() {
+        if (isDoorsOpen) return;
+        isDoorsOpen = true;
+
+        if (autoOpenTimer) {
+          clearTimeout(autoOpenTimer);
+          autoOpenTimer = null;
+        }
+        if (countdownAnim) {
+          countdownAnim.cancel();
+          countdownAnim = null;
+        }
+
+        // Play soft velvet whoosh + shimmering harp chord
+        playCeremonialDoorChime();
+
+        // Swing doors outward in 3D & smoothly glide inner card from scale(0.94) to scale(1)
+        palaceDoorsOverlay.classList.add('is-open');
+        document.body.classList.add('doors-opened');
+        doorPromptPill.style.opacity = '0';
+        btnReplay.classList.remove('opacity-0', 'pointer-events-none');
+
+        // Launch butterfly from door to top-left corner of inner gold card frame
+        launchButterflyFromDoorToTopLeftCard();
+
+        // Start drifting blush-rose & gold-foil petals
+        setTimeout(() => {
+          if (isDoorsOpen) startPetalShower();
+        }, 260);
+      }
+
+      function scheduleThreeSecondAutoOpen() {
+        if (autoOpenTimer) clearTimeout(autoOpenTimer);
+        if (countdownAnim) countdownAnim.cancel();
+
+        if (doorCountdownBar && doorCountdownBar.animate) {
+          countdownAnim = doorCountdownBar.animate(
+            [{ transform: 'scaleX(1)' }, { transform: 'scaleX(0)' }],
+            { duration: 3000, easing: 'linear', fill: 'forwards' }
+          );
+        }
+
+        autoOpenTimer = setTimeout(() => {
+          openPalaceDoors();
+        }, 3000);
+      }
+
+      function replayPalaceDoors() {
+        if (autoOpenTimer) clearTimeout(autoOpenTimer);
+        if (butterflyAnimFrame) cancelAnimationFrame(butterflyAnimFrame);
+        isDoorsOpen = false;
+
+        stopPetalShower();
+        palaceDoorsOverlay.classList.remove('is-open');
+        document.body.classList.remove('doors-opened');
+        doorPromptPill.style.opacity = '1';
+        btnReplay.classList.add('opacity-0', 'pointer-events-none');
+
+        setTimeout(() => {
+          placeButterflyOnDoor();
+          scheduleThreeSecondAutoOpen();
+        }, 240);
+      }
+
+      palaceDoorsOverlay.addEventListener('click', () => {
+        if (!isDoorsOpen) openPalaceDoors();
+      });
+
+      palaceDoorsOverlay.addEventListener('keydown', (e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && !isDoorsOpen) {
+          e.preventDefault();
+          openPalaceDoors();
+        }
+      });
+
+      btnReplay.addEventListener('click', replayPalaceDoors);
+
+      /* ------------------------------------------------------------------------
+         7. INTERSECTION OBSERVER: STAGGERED SCROLL CHOREOGRAPHY (0.6s ease-out)
+         ------------------------------------------------------------------------ */
+      const revealSections = document.querySelectorAll('.reveal-section');
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const idx = Array.from(revealSections).indexOf(entry.target);
+              entry.target.style.transitionDelay = `${Math.min(idx * 70, 350)}ms`;
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
             }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      revealSections.forEach((sec) => revealObserver.observe(sec));
+
+      /* ------------------------------------------------------------------------
+         8. ROYAL MESSENGER PIGEON FLIGHT -> REDIRECT TO GOOGLE MAPS
+         ------------------------------------------------------------------------ */
+      function triggerPigeonFlightAndOpenMaps(originElement, e) {
+        if (e) e.preventDefault();
+        if (isPigeonFlying) return;
+        isPigeonFlying = true;
+
+        playPigeonSoftChime();
+        showToast('Guiding you to Diamond Banquet Hall A/C...');
+
+        const originRect = originElement.getBoundingClientRect();
+        const start = {
+          x: originRect.left + originRect.width * 0.5,
+          y: originRect.top + originRect.height * 0.5
+        };
+
+        const end = {
+          x: window.innerWidth + 70,
+          y: Math.max(40, start.y - 340)
+        };
+
+        const c1 = {
+          x: start.x - 45,
+          y: start.y - 130
+        };
+        const c2 = {
+          x: start.x + (end.x - start.x) * 0.55,
+          y: end.y - 45
+        };
+
+        const flightMs = 1350;
+        let startTime = null;
+
+        function animatePigeon(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+          const rawT = Math.min(1, elapsed / flightMs);
+          // Smooth ease-in-out acceleration
+          const t = rawT < 0.5 ? 2 * rawT * rawT : 1 - Math.pow(-2 * rawT + 2, 2) / 2;
+
+          const pos = evalCubicBezier(start, c1, c2, end, t);
+          const nextPos = evalCubicBezier(start, c1, c2, end, Math.min(1, t + 0.02));
+          const angleDeg = (Math.atan2(nextPos.y - pos.y, nextPos.x - pos.x) * 180) / Math.PI;
+          const scale = 0.85 + Math.sin(rawT * Math.PI) * 0.35;
+
+          pigeonActor.style.opacity = rawT < 0.08 ? (rawT / 0.08).toFixed(2) : '1';
+          pigeonActor.style.transform = `translate3d(${pos.x - 46}px, ${pos.y - 46}px, 0) scale(${scale.toFixed(3)}) rotate(${angleDeg.toFixed(1)}deg)`;
+
+          if (rawT < 1) {
+            requestAnimationFrame(animatePigeon);
+          } else {
+            pigeonActor.style.opacity = '0';
+            isPigeonFlying = false;
+            window.location.href = GOOGLE_MAPS_URL;
+          }
         }
-    } else {
-        await copyDetails();
-    }
-}
 
-// OPEN DIRECTLY IN GOOGLE CALENDAR (with .ics fallback)
-function addToCalendar() {
-    const mapUrl = "https://maps.app.goo.gl/kc9tydjnTQtXhhy77";
-    const title = "Walima Reception - Alfiyas & Sincila";
-    const location = "Diamond Banquet Hall A/C, Allapra, Perumbavoor";
-    const details =
-        "Walima reception of Alfiyas Muhammed and Sincila KM.\n\n" +
-        "Hosted by: Mr. Pareeth K K & Mrs. Zeenath Pareeth\n" +
-        "Google Maps Venue Link: " + mapUrl;
+        requestAnimationFrame(animatePigeon);
+      }
 
-    const gcalUrl =
-        "https://calendar.google.com/calendar/render?action=TEMPLATE" +
-        "&text=" + encodeURIComponent(title) +
-        "&dates=20261220T103000Z/20261220T153000Z" +
-        "&ctz=" + encodeURIComponent("Asia/Kolkata") +
-        "&location=" + encodeURIComponent(location) +
-        "&details=" + encodeURIComponent(details);
+      // Reset pigeon cleanly if guest navigates back from Google Maps
+      window.addEventListener('pageshow', () => {
+        pigeonActor.style.opacity = '0';
+        isPigeonFlying = false;
+      });
 
-    const popup = window.open(gcalUrl, "_blank", "noopener,noreferrer");
-    if (popup) {
-        showToast("Opening Google Calendar...");
-        return;
-    }
+      const btnOpenMaps = document.getElementById('btn-open-maps');
+      const venueMehrabLink = document.getElementById('venue-mehrab-link');
 
-    // Fallback to .ics download if browser blocks popups
-    const ics = [
-        "BEGIN:VCALENDAR",
-        "VERSION:2.0",
-        "PRODID:-//Walima 2026//Alfiyas and Sincila//EN",
-        "CALSCALE:GREGORIAN",
-        "METHOD:PUBLISH",
-        "BEGIN:VEVENT",
-        "UID:walima-alfiyas-sincila-20261220@walima2026",
-        "DTSTAMP:20261116T180000Z",
-        "DTSTART:20261220T103000Z",
-        "DTEND:20261220T153000Z",
-        "SUMMARY:" + title,
-        "LOCATION:" + location,
-        "DESCRIPTION:Walima reception of Alfiyas Muhammed and Sincila KM.\\nVenue Map: " + mapUrl,
-        "URL:" + mapUrl,
-        "STATUS:CONFIRMED",
-        "BEGIN:VALARM",
-        "TRIGGER:-PT2H",
-        "ACTION:DISPLAY",
-        "DESCRIPTION:Reminder: Walima Reception of Alfiyas & Sincila starts in 2 hours.",
-        "END:VALARM",
-        "END:VEVENT",
-        "END:VCALENDAR"
-    ].join("\r\n");
+      btnOpenMaps.addEventListener('click', (e) => triggerPigeonFlightAndOpenMaps(btnOpenMaps, e));
+      venueMehrabLink.addEventListener('click', (e) => triggerPigeonFlightAndOpenMaps(venueMehrabLink, e));
 
-    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "Walima-Alfiyas-Sincila.ics";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    showToast("Calendar invitation downloaded!");
-}
+      /* ------------------------------------------------------------------------
+         9. LIVE COUNTDOWN TIMER TO 2026-12-20T16:00:00+05:30
+         ------------------------------------------------------------------------ */
+      const targetTimestamp = new Date(TARGET_WALIMA_ISO).getTime();
+      const cdDays = document.getElementById('cd-days');
+      const cdHours = document.getElementById('cd-hours');
+      const cdMins = document.getElementById('cd-mins');
+      const cdSecs = document.getElementById('cd-secs');
 
-// DIRECT DUAS & WISHES TO +91 7510628386
-function selectWish(btn, text) {
-    document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById("wishMessage").value = text;
-}
+      function updateLiveCountdown() {
+        const diff = Math.max(0, targetTimestamp - Date.now());
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
 
-function sendDirectWish() {
-    const input = document.getElementById("wishMessage").value.trim();
-    const message = input
-        ? `Assalamu Alaikum Alfiyas & Sincila,\n\n${input}`
-        : `Assalamu Alaikum Alfiyas & Sincila,\n\nBarakAllahu Lakuma wa Baraka Alaykuma wa Jama'a Baynakuma fi Khayr! Heartfelt Walima wishes and duas to you both. 🤲❤️`;
+        cdDays.textContent = String(days).padStart(2, '0');
+        cdHours.textContent = String(hours).padStart(2, '0');
+        cdMins.textContent = String(mins).padStart(2, '0');
+        cdSecs.textContent = String(secs).padStart(2, '0');
+      }
 
-    const url = "https://wa.me/917510628386?text=" + encodeURIComponent(message);
-    window.open(url, "_blank", "noopener,noreferrer");
-}
+      updateLiveCountdown();
+      setInterval(updateLiveCountdown, 1000);
 
-// FLOATING WHATSAPP POPUP CONTROLS
-function toggleWaPopup(forceState) {
-    const popup = document.getElementById("waPopup");
-    const fab = document.getElementById("waFab");
-    const isOpen = typeof forceState === "boolean"
-        ? forceState
-        : !popup.classList.contains("open");
+      /* ------------------------------------------------------------------------
+         10. ADD TO CALENDAR (.ICS DOWNLOAD: 4:00 PM TO 8:00 PM IST)
+         ------------------------------------------------------------------------ */
+      document.getElementById('btn-add-calendar').addEventListener('click', () => {
+        const icsLines = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//Alfiyas & Sincila Walima Invitation//EN',
+          'CALSCALE:GREGORIAN',
+          'METHOD:PUBLISH',
+          'BEGIN:VEVENT',
+          'UID:walima-alfiyas-sincila-20261220@royalpalace',
+          'DTSTAMP:20261126T000000Z',
+          'DTSTART:20261220T103000Z',
+          'DTEND:20261220T143000Z',
+          'SUMMARY:Walima Reception: Alfiyas Muhammed & Sincila K. M.',
+          'DESCRIPTION:Mr. Pareeth K. K. & Mrs. Zeenath Pareeth cordially request the honor of your presence and blessings to celebrate the Walima reception of Alfiyas Muhammed & Sincila K. M.',
+          'LOCATION:Diamond Banquet Hall A/C, Allapra, Perumbavoor, Kerala',
+          'URL:' + GOOGLE_MAPS_URL,
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
 
-    popup.classList.toggle("open", isOpen);
-    fab.setAttribute("aria-expanded", String(isOpen));
-}
+        const blob = new Blob([icsLines], { type: 'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'Walima-Alfiyas-and-Sincila-20Dec2026.ics');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+        showToast('Calendar reminder (.ics) downloaded!');
+      });
 
-function sendPopupWhatsApp(event) {
-    event.preventDefault();
-    const input = document.getElementById("waPopupInput");
-    const text = input.value.trim() || "Assalamu Alaikum Alfiyas, I need help with the Walima reception location.";
-    const url = "https://wa.me/917510628386?text=" + encodeURIComponent(text);
-    window.open(url, "_blank", "noopener,noreferrer");
-    input.value = "";
-}
+      /* ------------------------------------------------------------------------
+         11. MODALS: SEND DUA / RSVP (WHATSAPP + COPY) & SHARE INVITE (WITH QR)
+         ------------------------------------------------------------------------ */
+      function showToast(message) {
+        toastBanner.textContent = message;
+        toastBanner.classList.remove('opacity-0');
+        clearTimeout(toastBanner._timer);
+        toastBanner._timer = setTimeout(() => {
+          toastBanner.classList.add('opacity-0');
+        }, 3200);
+      }
 
-// =========================================================
-// ROBOTIC INTERACTIVE MOTION DISPLAY CONTROLLER
-// =========================================================
-(function initRoboticSplash() {
-    const splash = document.getElementById("introSplash");
-    const stage = document.getElementById("hudStage");
-    const progressFill = document.getElementById("hudProgressFill");
-    const telemetry = document.getElementById("hudTelemetry");
-    const heading = document.getElementById("hudHeading");
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
 
-    if (!splash || !stage) return;
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
 
-    // Interactive 3D tilt following pointer or touch drag
-    function handleTilt(clientX, clientY) {
-        const rect = stage.getBoundingClientRect();
-        const relX = (clientX - rect.left) / rect.width - 0.5;
-        const relY = (clientY - rect.top) / rect.height - 0.5;
-        const rotateY = Math.max(-10, Math.min(10, relX * 16));
-        const rotateX = Math.max(-10, Math.min(10, -relY * 16));
-        stage.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    }
+      document.querySelectorAll('[data-close-modal]').forEach((btn) => {
+        btn.addEventListener('click', () => closeModal(btn.getAttribute('data-close-modal')));
+      });
 
-    splash.addEventListener("mousemove", e => handleTilt(e.clientX, e.clientY));
-    splash.addEventListener("touchmove", e => {
-        if (e.touches && e.touches[0]) {
-            handleTilt(e.touches[0].clientX, e.touches[0].clientY);
+      ['rsvp-modal', 'share-modal'].forEach((id) => {
+        const el = document.getElementById(id);
+        el.addEventListener('click', (e) => {
+          if (e.target === el) closeModal(id);
+        });
+      });
+
+      // Build formatted RSVP & Dua text
+      function formatRsvpMessage() {
+        const name = document.getElementById('rsvp-name').value.trim() || 'Honoured Guest';
+        const guests = document.getElementById('rsvp-guests').value;
+        const msg =
+          document.getElementById('rsvp-message').value.trim() ||
+          'BarakAllahu Lakuma wa Baraka Alaykuma wa Jama’a Baynakuma fi Khayr.';
+
+        return (
+          `Assalamu Alaikum!\n` +
+          `*Walima RSVP & Blessings — Alfiyas Muhammed & Sincila K. M.*\n\n` +
+          `• *Guest:* ${name}\n` +
+          `• *Attendees:* ${guests}\n` +
+          `• *Dua / Wishes:* ${msg}`
+        );
+      }
+
+      document.getElementById('btn-open-rsvp').addEventListener('click', () => openModal('rsvp-modal'));
+
+      // Send via WhatsApp (https://wa.me/917510628386)
+      document.getElementById('rsvp-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formattedText = formatRsvpMessage();
+        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(formattedText)}`;
+        closeModal('rsvp-modal');
+        showToast('Opening WhatsApp to send your Dua & RSVP...');
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+      });
+
+      // Copy Message Button
+      document.getElementById('btn-copy-rsvp').addEventListener('click', () => {
+        const nameInput = document.getElementById('rsvp-name');
+        if (!nameInput.value.trim()) {
+          nameInput.focus();
+          showToast('Please enter your name first');
+          return;
         }
-    }, { passive: true });
-    splash.addEventListener("mouseleave", () => {
-        stage.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg)";
-    });
+        copyTextSafe(formatRsvpMessage(), 'Dua & RSVP message copied to clipboard!');
+      });
 
-    // Subtle robotic character decode effect on "HAPPY MARRIED LIFE"
-    const targetPhrase = "HAPPY MARRIED LIFE";
-    const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789◈✦";
-    let step = 0;
-    const decodeTimer = setInterval(() => {
-        step += 1;
-        heading.textContent = targetPhrase
-            .split("")
-            .map((ch, idx) => {
-                if (ch === " ") return " ";
-                if (idx < step) return ch;
-                return glyphs[Math.floor(Math.random() * glyphs.length)];
-            })
-            .join("");
+      // Share Invite Sheet
+      document.getElementById('btn-share-invite').addEventListener('click', () => openModal('share-modal'));
 
-        if (step >= targetPhrase.length) {
-            clearInterval(decodeTimer);
-            heading.textContent = targetPhrase;
+      document.getElementById('btn-native-share').addEventListener('click', async () => {
+        const sharePayload = {
+          title: 'Walima Invitation — Alfiyas Muhammed & Sincila K. M.',
+          text:
+            'Assalamu Alaikum! You are cordially invited to the Walima reception of Alfiyas Muhammed & Sincila K. M. on Sunday, 20 Dec 2026 at 4:00 PM onwards at Diamond Banquet Hall A/C, Allapra, Perumbavoor.',
+          url: window.location.href
+        };
+
+        if (navigator.share) {
+          try {
+            await navigator.share(sharePayload);
+            return;
+          } catch (err) {
+            // Fallback to clipboard copy if dismissed or unsupported
+          }
         }
-    }, 45);
+        copyTextSafe(`${sharePayload.text}\n${sharePayload.url}`, 'Invitation link copied to share!');
+      });
 
-    // Smooth auto-progress bar (auto-enters after 3.8s unless tapped earlier)
-    let progress = 0;
-    const progressTimer = setInterval(() => {
-        progress += 4;
-        if (progressFill) progressFill.style.width = Math.min(progress, 100) + "%";
-        if (progress === 52 && telemetry) {
-            telemetry.textContent = "WALIMA 2026 · SYNCED";
+      document.getElementById('btn-copy-invite-link').addEventListener('click', () => {
+        copyTextSafe(window.location.href, 'Invitation link copied to clipboard!');
+      });
+
+      function copyTextSafe(text, successMsg) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          showToast(successMsg);
+        } catch (err) {
+          showToast('Copied!');
         }
-        if (progress >= 100) {
-            clearInterval(progressTimer);
-            dismissIntroSplash();
+        document.body.removeChild(textarea);
+      }
+
+      /* ------------------------------------------------------------------------
+         12. SELF-CONTAINED ISO/IEC 18004 VERSION 3-L QR CODE INLINE SVG GENERATOR
+             Encodes: https://maps.app.goo.gl/pQMBuCTRuKht4SZk9?g_st=ac
+         ------------------------------------------------------------------------ */
+      function renderScannableQrSvg(text, containerEl) {
+        const SIZE = 29; // Version 3 (29x29 modules)
+        const DATA_CW = 55;
+        const EC_CW = 15;
+
+        // GF(256) exp & log tables (primitive poly 0x11D)
+        const gfExp = new Uint8Array(512);
+        const gfLog = new Uint8Array(256);
+        let x = 1;
+        for (let i = 0; i < 255; i++) {
+          gfExp[i] = x;
+          gfLog[x] = i;
+          x <<= 1;
+          if (x & 0x100) x ^= 0x11d;
         }
-    }, 145);
+        for (let i = 255; i < 512; i++) gfExp[i] = gfExp[i - 255];
 
-    window.dismissIntroSplash = function () {
-        clearInterval(decodeTimer);
-        clearInterval(progressTimer);
-        splash.classList.add("dismissed");
-    };
-})();
+        function gfMul(a, b) {
+          if (a === 0 || b === 0) return 0;
+          return gfExp[gfLog[a] + gfLog[b]];
+        }
 
-// Open the quick-help popup automatically on wider desktop screens while keeping mobile clean
-if (window.innerWidth >= 768) {
-    toggleWaPopup(true);
-}
-</script>
+        // Reed-Solomon generator polynomial of degree 15
+        let gen = [1];
+        for (let i = 0; i < EC_CW; i++) {
+          const next = new Array(gen.length + 1).fill(0);
+          const factor = gfExp[i];
+          for (let j = 0; j < gen.length; j++) {
+            next[j] ^= gen[j];
+            next[j + 1] ^= gfMul(gen[j], factor);
+          }
+          gen = next;
+        }
 
+        // Encode UTF-8 bytes in Byte Mode (0100)
+        const bytes = Array.from(new TextEncoder().encode(text));
+        const bits = [];
+        const pushBits = (val, len) => {
+          for (let i = len - 1; i >= 0; i--) bits.push((val >>> i) & 1);
+        };
+
+        pushBits(0b0100, 4); // Byte mode
+        pushBits(bytes.length, 8); // Char count (Version 1-9)
+        bytes.forEach((b) => pushBits(b, 8));
+        pushBits(0, Math.min(4, DATA_CW * 8 - bits.length)); // Terminator
+        while (bits.length % 8 !== 0) bits.push(0);
+
+        const dataCodewords = new Uint8Array(DATA_CW);
+        for (let i = 0; i < bits.length / 8 && i < DATA_CW; i++) {
+          let byte = 0;
+          for (let b = 0; b < 8; b++) byte = (byte << 1) | bits[i * 8 + b];
+          dataCodewords[i] = byte;
+        }
+        const padBytes = [0xec, 0x11];
+        for (let i = bits.length / 8; i < DATA_CW; i++) {
+          dataCodewords[i] = padBytes[(i - bits.length / 8) % 2];
+        }
+
+        // Compute 15 Reed-Solomon EC codewords
+        const msg = new Uint8Array(DATA_CW + EC_CW);
+        msg.set(dataCodewords);
+        for (let i = 0; i < DATA_CW; i++) {
+          const coef = msg[i];
+          if (coef !== 0) {
+            for (let j = 1; j < gen.length; j++) {
+              msg[i + j] ^= gfMul(gen[j], coef);
+            }
+          }
+        }
+        const ecCodewords = msg.slice(DATA_CW);
+        const allCodewords = new Uint8Array(DATA_CW + EC_CW);
+        allCodewords.set(dataCodewords);
+        allCodewords.set(ecCodewords, DATA_CW);
+
+        // Matrix setup (-1 = unreserved, 0 = light, 1 = dark)
+        const modules = Array.from({ length: SIZE }, () => new Int8Array(SIZE).fill(-1));
+        const isFunction = Array.from({ length: SIZE }, () => new Uint8Array(SIZE));
+
+        function setFunc(r, c, val) {
+          if (r >= 0 && r < SIZE && c >= 0 && c < SIZE) {
+            modules[r][c] = val ? 1 : 0;
+            isFunction[r][c] = 1;
+          }
+        }
+
+        function drawFinder(topR, leftC) {
+          for (let r = -1; r <= 7; r++) {
+            for (let c = -1; c <= 7; c++) {
+              const inOuter = r >= 0 && r <= 6 && c >= 0 && c <= 6;
+              const inBorder = r === 0 || r === 6 || c === 0 || c === 6;
+              const inCore = r >= 2 && r <= 4 && c >= 2 && c <= 4;
+              setFunc(topR + r, leftC + c, inOuter && (inBorder || inCore));
+            }
+          }
+        }
+
+        drawFinder(0, 0);
+        drawFinder(0, SIZE - 7);
+        drawFinder(SIZE - 7, 0);
+
+        // Version 3 Alignment Pattern at (22, 22)
+        for (let r = -2; r <= 2; r++) {
+          for (let c = -2; c <= 2; c++) {
+            const dark = Math.max(Math.abs(r), Math.abs(c)) !== 1;
+            setFunc(22 + r, 22 + c, dark);
+          }
+        }
+
+        // Timing Patterns
+        for (let i = 8; i < SIZE - 8; i++) {
+          setFunc(6, i, i % 2 === 0);
+          setFunc(i, 6, i % 2 === 0);
+        }
+
+        // Dark Module & Format Information (Level L, Mask 0 -> 0x77C4)
+        setFunc(SIZE - 8, 8, 1);
+        const fmt = 0x77c4; // 111011111000100
+        for (let i = 0; i < 15; i++) {
+          const bit = (fmt >>> i) & 1;
+          // Copy 1 (around top-left finder)
+          if (i < 6) setFunc(8, i, bit);
+          else if (i < 8) setFunc(8, i + 1, bit);
+          else if (i === 8) setFunc(7, 8, bit);
+          else setFunc(14 - i, 8, bit);
+
+          // Copy 2 (bottom-left & top-right)
+          if (i < 7) setFunc(SIZE - 1 - i, 8, bit);
+          else setFunc(8, SIZE - 15 + i, bit);
+        }
+
+        // Zig-Zag Data Placement + Mask 0 ((r + c) % 2 === 0)
+        const allBits = [];
+        allCodewords.forEach((cw) => {
+          for (let b = 7; b >= 0; b--) allBits.push((cw >>> b) & 1);
+        });
+        while (allBits.length < 566) allBits.push(0);
+
+        let bitIdx = 0;
+        let upward = true;
+        for (let rightCol = SIZE - 1; rightCol >= 1; rightCol -= 2) {
+          if (rightCol === 6) rightCol = 5; // Skip vertical timing column
+          for (let step = 0; step < SIZE; step++) {
+            const r = upward ? SIZE - 1 - step : step;
+            for (let dx = 0; dx < 2; dx++) {
+              const c = rightCol - dx;
+              if (!isFunction[r][c]) {
+                const rawBit = bitIdx < allBits.length ? allBits[bitIdx++] : 0;
+                const maskBit = (r + c) % 2 === 0 ? 1 : 0;
+                modules[r][c] = rawBit ^ maskBit;
+              }
+            }
+          }
+          upward = !upward;
+        }
+
+        // Render Crisp Inline SVG with Quiet Zone
+        const quiet = 2;
+        const total = SIZE + quiet * 2;
+        let rects = `<rect width="${total}" height="${total}" fill="#ffffff"/>`;
+        for (let r = 0; r < SIZE; r++) {
+          for (let c = 0; c < SIZE; c++) {
+            if (modules[r][c] === 1) {
+              rects += `<rect x="${c + quiet}" y="${r + quiet}" width="1" height="1" fill="#2b0912"/>`;
+            }
+          }
+        }
+
+        containerEl.innerHTML = `
+          <svg viewBox="0 0 ${total} ${total}" class="w-full h-full" shape-rendering="crispEdges" role="img" aria-label="QR Code for Diamond Banquet Hall A/C Google Maps Location">
+            ${rects}
+          </svg>
+        `;
+      }
+
+      renderScannableQrSvg(GOOGLE_MAPS_URL, document.getElementById('venue-qr-container'));
+
+      /* ------------------------------------------------------------------------
+         13. INITIALIZE BUTTERFLY PERCHED ON DOOR & 3-SECOND AUTO-OPEN
+         ------------------------------------------------------------------------ */
+      function initPalaceOpening() {
+        placeButterflyOnDoor();
+        scheduleThreeSecondAutoOpen();
+      }
+
+      if (document.readyState === 'complete') {
+        initPalaceOpening();
+      } else {
+        window.addEventListener('load', initPalaceOpening);
+      }
+    })();
+  </script>
 </body>
 </html>
